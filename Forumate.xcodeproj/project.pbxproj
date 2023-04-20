@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		27579FE329F0EDD300EDD4A5 /* NewCommunityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27579FE229F0EDD300EDD4A5 /* NewCommunityView.swift */; };
+		2765BEF829EFE1200001FBE7 /* Community.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2765BEF729EFE1200001FBE7 /* Community.swift */; };
+		2765BEFB29EFE1B60001FBE7 /* CommunityList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2765BEFA29EFE1B60001FBE7 /* CommunityList.swift */; };
 		27EEA08A29EFCD1B00ADA5BE /* ForumateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27EEA08929EFCD1B00ADA5BE /* ForumateApp.swift */; };
 		27EEA08C29EFCD1B00ADA5BE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27EEA08B29EFCD1B00ADA5BE /* ContentView.swift */; };
 		27EEA08E29EFCD1C00ADA5BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27EEA08D29EFCD1C00ADA5BE /* Assets.xcassets */; };
@@ -14,6 +17,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		27579FE229F0EDD300EDD4A5 /* NewCommunityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCommunityView.swift; sourceTree = "<group>"; };
+		27579FE429F0EF3500EDD4A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		2765BEF729EFE1200001FBE7 /* Community.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Community.swift; sourceTree = "<group>"; };
+		2765BEFA29EFE1B60001FBE7 /* CommunityList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityList.swift; sourceTree = "<group>"; };
 		27EEA08629EFCD1B00ADA5BE /* Forumate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Forumate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27EEA08929EFCD1B00ADA5BE /* ForumateApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForumateApp.swift; sourceTree = "<group>"; };
 		27EEA08B29EFCD1B00ADA5BE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -33,6 +40,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2765BEF629EFE1040001FBE7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2765BEF729EFE1200001FBE7 /* Community.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2765BEF929EFE1A60001FBE7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2765BEFA29EFE1B60001FBE7 /* CommunityList.swift */,
+				27579FE229F0EDD300EDD4A5 /* NewCommunityView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		27EEA07D29EFCD1B00ADA5BE = {
 			isa = PBXGroup;
 			children = (
@@ -52,8 +76,11 @@
 		27EEA08829EFCD1B00ADA5BE /* Forumate */ = {
 			isa = PBXGroup;
 			children = (
+				27579FE429F0EF3500EDD4A5 /* Info.plist */,
 				27EEA08929EFCD1B00ADA5BE /* ForumateApp.swift */,
 				27EEA08B29EFCD1B00ADA5BE /* ContentView.swift */,
+				2765BEF929EFE1A60001FBE7 /* View */,
+				2765BEF629EFE1040001FBE7 /* Model */,
 				27EEA08D29EFCD1C00ADA5BE /* Assets.xcassets */,
 				27EEA08F29EFCD1C00ADA5BE /* Forumate.entitlements */,
 				27EEA09029EFCD1C00ADA5BE /* Preview Content */,
@@ -139,8 +166,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2765BEF829EFE1200001FBE7 /* Community.swift in Sources */,
 				27EEA08C29EFCD1B00ADA5BE /* ContentView.swift in Sources */,
 				27EEA08A29EFCD1B00ADA5BE /* ForumateApp.swift in Sources */,
+				27579FE329F0EDD300EDD4A5 /* NewCommunityView.swift in Sources */,
+				2765BEFB29EFE1B60001FBE7 /* CommunityList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,6 +299,8 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Forumate/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -279,10 +311,10 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = top.kyleye.Forumate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -307,6 +339,8 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Forumate/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -317,10 +351,10 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = top.kyleye.Forumate;
 				PRODUCT_NAME = "$(TARGET_NAME)";

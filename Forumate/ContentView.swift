@@ -7,15 +7,32 @@
 
 import SwiftUI
 
+class ForumateController: ObservableObject {
+    
+}
+// @Published var selectedCommunityID
+// @Published var selectedCommunity
+// @Published var selectedCategory
+
 struct ContentView: View {
+//    @EnvironmentObject var forumateController
+    
+    @State private var a = false
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        NavigationSplitView {
+            CommunityList()
+        } content: {
+            Text("2")
+        } detail: {
+            Text("3")
+                .onTapGesture {
+                    a.toggle()
+                }
+                .sheet(isPresented: $a) {
+                    Text("3")
+                }
         }
-        .padding()
     }
 }
 
