@@ -7,12 +7,24 @@
 
 import Foundation
 
-struct Community {
+struct Community: Codable {
     var host: URL
     
     var name: String
     
 //    var icon: URL
+    
+    /// Verify a Discourse
+    init(host: URL) throws {
+        self.host = host
+        // TODO
+        self.name = host.absoluteString
+    }
+    
+    private init(host: URL, name: String) {
+        self.host = host
+        self.name = name
+    }
 }
 
 extension Community: Identifiable {

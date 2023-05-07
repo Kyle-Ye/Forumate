@@ -10,10 +10,12 @@ import SwiftUI
 @main
 struct ForumateApp: App {
     @UIApplicationDelegateAdaptor private var delegate: AppDelegate
-
+    @StateObject private var appState = AppState()
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(appState)
         }
 //        WindowGroup(id: "add-community") {
 //            NewCommunityView()
@@ -43,4 +45,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             window.makeKeyAndVisible()
         }
     }
+    
+//    let options = UIWindowScene.ActivationRequestOptions()
+//    options.preferredPresentationStyle = .prominent
+//    let userActivity = NSUserActivity(activityType: "top.kyleye.Forumate.add-community")
+//    userActivity.targetContentIdentifier = "top.kyleye.Forumate.add-community"
+//    UIApplication.shared.requestSceneSessionActivation(nil,
+//        userActivity: userActivity,
+//        options: options,
+//        errorHandler: nil)
 }

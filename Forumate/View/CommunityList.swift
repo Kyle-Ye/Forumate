@@ -8,12 +8,15 @@
 import SwiftUI
 
 struct CommunityList: View {
-    @Environment(\.openWindow) var openWindow
-
+    @EnvironmentObject var appState: AppState
+    @State private var presentNewCommunityView = false
+    
     var body: some View {
         List {
             Section {
-                Text("1")
+                ForEach(appState.communities) { community in
+                    Text(community.name)
+                }
             } header: {
                 Text("My Communities")
             }
@@ -22,19 +25,13 @@ struct CommunityList: View {
         .toolbar {
             ToolbarItem(placement: .primaryAction) {
                 Button {
-//                    openWindow(id: "add-community")
-                    
-                    let options = UIWindowScene.ActivationRequestOptions()
-                    options.preferredPresentationStyle = .prominent
-                    let userActivity = NSUserActivity(activityType: "top.kyleye.Forumate.add-community")
-                    userActivity.targetContentIdentifier = "top.kyleye.Forumate.add-community"
-                    UIApplication.shared.requestSceneSessionActivation(nil,
-                        userActivity: userActivity,
-                        options: options,
-                        errorHandler: nil)
+                    presentNewCommunityView = true
                 } label: {
                     Label("Add Community", systemImage: "plus.circle.fill")
                         .symbolRenderingMode(.hierarchical)
+                }
+                .sheet(isPresented: $presentNewCommunityView) {
+                    NewCommunityView()
                 }
             }
         }

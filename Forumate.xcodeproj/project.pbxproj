@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2735CF352A080E370026F378 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2735CF342A080E370026F378 /* AppState.swift */; };
 		27579FE329F0EDD300EDD4A5 /* NewCommunityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27579FE229F0EDD300EDD4A5 /* NewCommunityView.swift */; };
 		2765BEF829EFE1200001FBE7 /* Community.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2765BEF729EFE1200001FBE7 /* Community.swift */; };
 		2765BEFB29EFE1B60001FBE7 /* CommunityList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2765BEFA29EFE1B60001FBE7 /* CommunityList.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2735CF342A080E370026F378 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		27579FE229F0EDD300EDD4A5 /* NewCommunityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCommunityView.swift; sourceTree = "<group>"; };
 		27579FE429F0EF3500EDD4A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		2765BEF729EFE1200001FBE7 /* Community.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Community.swift; sourceTree = "<group>"; };
@@ -40,6 +42,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2735CF332A080E1A0026F378 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				2735CF342A080E370026F378 /* AppState.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		2765BEF629EFE1040001FBE7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -79,6 +89,7 @@
 				27579FE429F0EF3500EDD4A5 /* Info.plist */,
 				27EEA08929EFCD1B00ADA5BE /* ForumateApp.swift */,
 				27EEA08B29EFCD1B00ADA5BE /* ContentView.swift */,
+				2735CF332A080E1A0026F378 /* ViewModel */,
 				2765BEF929EFE1A60001FBE7 /* View */,
 				2765BEF629EFE1040001FBE7 /* Model */,
 				27EEA08D29EFCD1C00ADA5BE /* Assets.xcassets */,
@@ -169,6 +180,7 @@
 				2765BEF829EFE1200001FBE7 /* Community.swift in Sources */,
 				27EEA08C29EFCD1B00ADA5BE /* ContentView.swift in Sources */,
 				27EEA08A29EFCD1B00ADA5BE /* ForumateApp.swift in Sources */,
+				2735CF352A080E370026F378 /* AppState.swift in Sources */,
 				27579FE329F0EDD300EDD4A5 /* NewCommunityView.swift in Sources */,
 				2765BEFB29EFE1B60001FBE7 /* CommunityList.swift in Sources */,
 			);
