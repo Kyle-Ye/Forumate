@@ -30,5 +30,7 @@ class CommunityDetailState: ObservableObject {
         } receiveValue: { categories in
             self.categories = categories
         }.store(in: &cancellables)
+        
+//        client.getCategory(<#T##id: Int##Int#>)
     }
 }
