@@ -8,12 +8,12 @@
 import DiscourseKit
 import SwiftUI
 
-struct CommunityView: View {
+struct CommunityDetail: View {
     init(community: Community) {
-        _state = StateObject(wrappedValue: CommunityState(community: community))
+        _state = StateObject(wrappedValue: CommunityDetailState(community: community))
     }
     
-    @StateObject private var state: CommunityState
+    @StateObject private var state: CommunityDetailState
         
     var body: some View {
         NavigationStack {
@@ -41,6 +41,6 @@ struct CommunityView: View {
 
 struct CommunityView_Previews: PreviewProvider {
     static var previews: some View {
-        CommunityView(community: .swift)
+        CommunityDetail(community: .swift)
     }
 }

@@ -8,32 +8,20 @@
 import DiscourseKit
 import SwiftUI
 
-class ForumateController: ObservableObject {
-    @Published var selectedCommunity: Community?
-    
-//    var client: DKClient
-}
-
-// @Published var selectedCommunityID
-// @Published var selectedCategory
-
 struct ContentView: View {
-    @EnvironmentObject var forumateController: ForumateController
-    
-    @State private var a = false
-    
     var body: some View {
-        NavigationSplitView {
-            CommunityList()
-        } content: {
-            Text("No Community is selected")
-        } detail: {
-            Text("3")
-                .onTapGesture {
-                    a.toggle()
+        TabView {
+            TopicsTab()
+                .tabItem {
+                    Label("Topics", systemImage: "doc.text.image")
                 }
-                .sheet(isPresented: $a) {
-                    Text("3")
+            InboxTab()
+                .tabItem {
+                    Label("Inbox", systemImage: "tray")
+                }
+            SettingsTab()
+                .tabItem {
+                    Label("Settings", systemImage: "gearshape")
                 }
         }
     }
@@ -42,6 +30,6 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
-            .environmentObject(ForumateController())
+            .environmentObject(TopicsTabState())
     }
 }

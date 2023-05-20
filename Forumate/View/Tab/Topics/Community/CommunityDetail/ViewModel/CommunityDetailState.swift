@@ -1,5 +1,5 @@
 //
-//  CommunityState.swift
+//  CommunityDetailState.swift
 //  Forumate
 //
 //  Created by Kyle on 2023/5/20.
@@ -11,7 +11,7 @@ import Combine
 
 typealias Category = DiscourseKit.Category
 
-class CommunityState: ObservableObject {
+class CommunityDetailState: ObservableObject {
     init(community: Community) {
         self.community = community
         client = DKClient(baseURL: community.host)

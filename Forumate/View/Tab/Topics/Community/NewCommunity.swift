@@ -1,5 +1,5 @@
 //
-//  NewCommunityView.swift
+//  NewCommunity.swift
 //  Forumate
 //
 //  Created by Kyle on 2023/4/20.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct NewCommunityView: View {
+struct NewCommunity: View {
     @Environment(\.dismiss) private var dismiss
     @EnvironmentObject private var appState: AppState
 
@@ -58,6 +58,6 @@ struct NewCommunityView: View {
 
 struct NewCommunityView_Previews: PreviewProvider {
     static var previews: some View {
-        NewCommunityView()
+        NewCommunity()
     }
 }
