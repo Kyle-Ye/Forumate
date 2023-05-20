@@ -5,17 +5,20 @@
 //  Created by Kyle on 2023/4/19.
 //
 
+import DiscourseKit
 import SwiftUI
 
 class ForumateController: ObservableObject {
+    @Published var selectedCommunity: Community?
     
+//    var client: DKClient
 }
+
 // @Published var selectedCommunityID
-// @Published var selectedCommunity
 // @Published var selectedCategory
 
 struct ContentView: View {
-//    @EnvironmentObject var forumateController
+    @EnvironmentObject var forumateController: ForumateController
     
     @State private var a = false
     
@@ -23,7 +26,7 @@ struct ContentView: View {
         NavigationSplitView {
             CommunityList()
         } content: {
-            Text("2")
+            Text("No Community is selected")
         } detail: {
             Text("3")
                 .onTapGesture {
@@ -39,5 +42,6 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .environmentObject(ForumateController())
     }
 }

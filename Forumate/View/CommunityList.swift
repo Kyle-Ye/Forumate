@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct CommunityList: View {
+    @EnvironmentObject var forumateController: ForumateController
     @EnvironmentObject var appState: AppState
     @State private var presentNewCommunityView = false
     
@@ -15,7 +16,9 @@ struct CommunityList: View {
         List {
             Section {
                 ForEach(appState.communities) { community in
-                    Text(community.name)
+                    NavigationLink(value: community) {
+                        Text(community.name)
+                    }
                 }
             } header: {
                 Text("My Communities")
@@ -35,8 +38,12 @@ struct CommunityList: View {
                 }
             }
         }
-        
-
+        .navigationDestination(for: Community.self) { community in
+            CommunityView(community: community)
+                .onAppear {
+                    forumateController.selectedCommunity = community
+                }
+        }
     }
 }
 

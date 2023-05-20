@@ -16,6 +16,7 @@ struct ForumateApp: App {
         WindowGroup {
             ContentView()
                 .environmentObject(appState)
+                .environmentObject(ForumateController())
         }
 //        WindowGroup(id: "add-community") {
 //            NewCommunityView()

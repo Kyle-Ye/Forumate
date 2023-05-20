@@ -5,6 +5,7 @@
 //  Created by Kyle on 2023/4/19.
 //
 
+import DiscourseKit
 import Foundation
 
 struct Community: Codable {
@@ -17,7 +18,7 @@ struct Community: Codable {
     /// Verify a Discourse
     init(host: URL) throws {
         self.host = host
-        // TODO
+        // TODO:
         self.name = host.absoluteString
     }
     
@@ -30,6 +31,8 @@ struct Community: Codable {
 extension Community: Identifiable {
     var id: URL { host }
 }
+
+extension Community: Hashable {}
 
 extension Community {
     static var swift = Community(host: URL(string: "https://forums.swift.org")!, name: "Swift Forums")
