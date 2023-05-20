@@ -14,23 +14,19 @@ typealias Category = DiscourseKit.Category
 class CommunityDetailState: ObservableObject {
     init(community: Community) {
         self.community = community
-        client = DKClient(baseURL: community.host)
+        client = Client(baseURL: community.host)!
     }
     
-    private var client: DKClient
+    private var client: Client
     
     let community: Community
     @Published var categories: [Category]?
     
-    private var cancellables: Set<AnyCancellable> = []
     
     func fetchCategories() {
-        client.listCategories().sink { _ in
-            print("Hello")
-        } receiveValue: { categories in
-            self.categories = categories
-        }.store(in: &cancellables)
-        
-//        client.getCategory(<#T##id: Int##Int#>)
+        Task.detached { [weak self] in
+            guard let self else { return }
+            categories = try await self.client.fetchCategories().categories
+        }
     }
 }

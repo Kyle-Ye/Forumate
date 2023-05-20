@@ -18,11 +18,13 @@ struct CategoryLabel: View {
                 }
                 Text(category.name)
             }
-            Text(category.descriptionText)
-                .foregroundColor(.secondary)
+            if let descriptionText = category.descriptionText {
+                Text(descriptionText)
+                    .foregroundColor(.secondary)
+            }
             
             LazyVGrid(columns: [.init(.adaptive(minimum: 10))]) {
-                ForEach(category.subcategoryIds, id: \.self) { id in
+                ForEach(category.subcategoryIDs, id: \.self) { id in
                     SubcategoryLabel(id: id)
                 }
             }
