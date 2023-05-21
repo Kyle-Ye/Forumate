@@ -12,19 +12,34 @@ struct CommunityLabel: View {
     
     var body: some View {
         HStack {
-            // TODO: Add community icon support
-            AsyncImage(url: nil) { image in
+            AsyncImage(url: community.icon) { image in
                 image
+                    .resizable()
+                    .frame(width: 30, height: 30)
             } placeholder: {
                 Image(systemName: "rectangle.3.group.bubble.left")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 30)
             }
-            Text(community.name)
+            VStack(alignment: .leading) {
+                Text(community.title)
+                    .font(.system(.body, design: .rounded))
+//                HStack {
+//                    Text("14 New 167 Unread")
+//                }
+//                .font(.footnote)
+//                .foregroundColor(.secondary)
+            }
         }
     }
 }
 
 struct CommunityLabel_Previews: PreviewProvider {
     static var previews: some View {
-        CommunityLabel(community: .swift)
+        List {
+            CommunityLabel(community: .swift)
+            CommunityLabel(community: .swift)
+        }
     }
 }

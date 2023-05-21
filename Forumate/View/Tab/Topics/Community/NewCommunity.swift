@@ -5,13 +5,19 @@
 //  Created by Kyle on 2023/4/20.
 //
 
+import DiscourseKit
 import SwiftUI
+import os.log
 
 struct NewCommunity: View {
     @Environment(\.dismiss) private var dismiss
     @EnvironmentObject private var appState: AppState
 
     @State private var urlInput = ""
+    @State private var loading = false
+    @State private var loadingError = false
+
+    private static let logger = Logger(subsystem: Bundle.main.bundleIdentifier ?? "", category: "NewCommunity")
     
     private var url: URL? { URL(string: urlInput) }
     
@@ -38,9 +44,24 @@ struct NewCommunity: View {
                         .buttonStyle(.bordered)
                 }
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    Button("Add") { tryAddCommunity() }
-                        .buttonStyle(.bordered)
-                        .disabled(url == nil)
+                    Group {
+                        if loading {
+                            ProgressView()
+                        } else {
+                            Button("Add") { tryAddCommunity() }
+                                .buttonStyle(.bordered)
+                                .disabled(url == nil)
+                        }
+                    }
+                    .alert("Could not add community", isPresented: $loadingError) {
+                        Button(role: .cancel) {
+                            NewCommunity.logger.info("Failed to add community for \(urlInput)")
+                        } label: {
+                            Text("OK")
+                        }
+                    } message: {
+                        Text("The community provided does not like a Discourse community.")
+                    }
                 }
             }
         }
@@ -48,11 +69,26 @@ struct NewCommunity: View {
     
     @MainActor
     private func tryAddCommunity() {
-        guard let url,
-              let community = try? Community(host: url)
-        else { return }
-        appState.addCommunity(community)
-        dismiss()
+        guard let url else { return }
+        loading = true
+        Task.detached {
+            let client = Client(baseURL: url)
+            do {
+                let info = try await client.fetchSiteBasicInfo()
+                let community = Community(host: url, title: info.title, icon: info.appleTouchIconURL)
+                await MainActor.run {
+                    appState.addCommunity(community)
+                    dismiss()
+                }
+            } catch {
+                await MainActor.run {
+                    loadingError = true
+                }
+            }
+            await MainActor.run {
+                loading = false
+            }
+        }
     }
 }
 

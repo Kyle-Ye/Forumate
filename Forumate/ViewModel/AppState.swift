@@ -8,12 +8,12 @@
 import Foundation
 import SwiftUI
 
+@MainActor
 class AppState: ObservableObject {
-    /// TODO: Use Local storage to store community info temportary. Will use CoreData to add iCloud sync Support
-    @Published private(set) var communities: [Community] = [.swift]
+    // TODO: Use Local storage to store community info temportary. Will use CoreData to add iCloud sync Support
+    @AppStorage("communities") private(set) var communities: [Community] = [.swift]
     
     func addCommunity(_ community: Community) {
-        // TODO: 去重
         communities.append(community)
     }
 }

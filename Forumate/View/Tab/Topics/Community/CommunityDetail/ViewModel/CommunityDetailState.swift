@@ -14,7 +14,7 @@ typealias Category = DiscourseKit.Category
 class CommunityDetailState: ObservableObject {
     init(community: Community) {
         self.community = community
-        client = Client(baseURL: community.host)!
+        client = Client(baseURL: community.host)
     }
     
     private var client: Client

@@ -34,7 +34,7 @@ struct CommunityDetail: View {
                 }
             }
         }
-        .navigationTitle(state.community.name)
+        .navigationTitle(state.community.title)
         .onAppear {
             state.fetchCategories()
         }

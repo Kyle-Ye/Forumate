@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		272193A12A19CCFA00C221BC /* JSONRawRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272193A02A19CCFA00C221BC /* JSONRawRepresentable.swift */; };
 		2747FD312A18BDD0003CB67B /* DiscourseKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2747FD302A18BDD0003CB67B /* DiscourseKit */; };
 		277C15BE2A18EF00007940C7 /* CategoryLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277C15BD2A18EF00007940C7 /* CategoryLabel.swift */; };
 		277C15C12A18EF6B007940C7 /* CategoryDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277C15C02A18EF6B007940C7 /* CategoryDetail.swift */; };
 		277C15C42A18F033007940C7 /* HexToColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277C15C32A18F033007940C7 /* HexToColor.swift */; };
 		277C15C72A18F52A007940C7 /* SubcategoryLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277C15C62A18F52A007940C7 /* SubcategoryLabel.swift */; };
-		277C15DC2A194C47007940C7 /* Category+Hashable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277C15DB2A194C47007940C7 /* Category+Hashable.swift */; };
 		278E54022A18E83000DCD159 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E53E42A18E83000DCD159 /* AppState.swift */; };
 		278E54032A18E83000DCD159 /* ForumateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E53E52A18E83000DCD159 /* ForumateApp.swift */; };
 		278E54042A18E83000DCD159 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 278E53E62A18E83000DCD159 /* Assets.xcassets */; };
@@ -33,12 +33,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		272193A02A19CCFA00C221BC /* JSONRawRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONRawRepresentable.swift; sourceTree = "<group>"; };
 		2747FD2E2A18BDB8003CB67B /* DiscourseKit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = DiscourseKit; path = ../DiscourseKit; sourceTree = "<group>"; };
 		277C15BD2A18EF00007940C7 /* CategoryLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryLabel.swift; sourceTree = "<group>"; };
 		277C15C02A18EF6B007940C7 /* CategoryDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryDetail.swift; sourceTree = "<group>"; };
 		277C15C32A18F033007940C7 /* HexToColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexToColor.swift; sourceTree = "<group>"; };
 		277C15C62A18F52A007940C7 /* SubcategoryLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubcategoryLabel.swift; sourceTree = "<group>"; };
-		277C15DB2A194C47007940C7 /* Category+Hashable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Category+Hashable.swift"; sourceTree = "<group>"; };
 		278E53E42A18E83000DCD159 /* AppState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		278E53E52A18E83000DCD159 /* ForumateApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForumateApp.swift; sourceTree = "<group>"; };
 		278E53E62A18E83000DCD159 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -83,8 +83,8 @@
 		277C15C22A18F021007940C7 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				272193A02A19CCFA00C221BC /* JSONRawRepresentable.swift */,
 				277C15C32A18F033007940C7 /* HexToColor.swift */,
-				277C15DB2A194C47007940C7 /* Category+Hashable.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -325,10 +325,10 @@
 				278E540E2A18E83000DCD159 /* CommunityLabel.swift in Sources */,
 				278E54072A18E83000DCD159 /* SettingsTab.swift in Sources */,
 				278E54032A18E83000DCD159 /* ForumateApp.swift in Sources */,
-				277C15DC2A194C47007940C7 /* Category+Hashable.swift in Sources */,
 				278E54112A18E83000DCD159 /* TopicsTab.swift in Sources */,
 				278E540F2A18E83000DCD159 /* Community.swift in Sources */,
 				278E540A2A18E83000DCD159 /* CommunityList.swift in Sources */,
+				272193A12A19CCFA00C221BC /* JSONRawRepresentable.swift in Sources */,
 				278E54022A18E83000DCD159 /* AppState.swift in Sources */,
 				278E54102A18E83000DCD159 /* NewCommunity.swift in Sources */,
 				278E54092A18E83000DCD159 /* TopicsTabState.swift in Sources */,
