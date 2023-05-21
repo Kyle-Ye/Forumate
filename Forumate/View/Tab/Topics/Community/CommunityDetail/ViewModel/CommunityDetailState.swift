@@ -27,6 +27,10 @@ class CommunityDetailState: ObservableObject {
         }
     }
     
+    func updateLatestTopics() async throws {
+        
+    }
+    
     func fetchSite() async throws -> Site {
         try await client.fetchSite()
     }
@@ -34,6 +38,19 @@ class CommunityDetailState: ObservableObject {
     private var client: Client
     
     @Published private(set) var categories: [Category]?
+    
+    @Published private(set) var latestestTopics: [Int]?
+
+    enum ViewByType: String, Hashable, CaseIterable {
+        case categories
+        case latest
+        case top
+        case new
+        case unread
+        case bookmard
+    }
+    
+    @Published var viewByType: ViewByType = .categories
     
     @Published var selectedCategories: [Category] = []
 }

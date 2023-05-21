@@ -10,16 +10,5 @@ import Foundation
 class TopicsTabState: ObservableObject {
     @Published var selectedCommunity: Community?
     
-    enum ViewByType: String {
-        case categories
-        case latest
-        case top
-        case new
-        case unread
-        case bookmard
-    }
-    
-    @Published var viewByType: ViewByType = .categories
-
     // @Published var selectedCategory
 }

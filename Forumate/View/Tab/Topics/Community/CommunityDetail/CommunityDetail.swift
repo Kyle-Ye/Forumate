@@ -18,38 +18,32 @@ struct CommunityDetail: View {
         
     var body: some View {
         NavigationStack(path: $state.selectedCategories) {
-            Group {
-                if let categories = state.categories {
-                    List(categories, id: \.id) { category in
-                        Button {
-                            state.selectedCategories.append(category)
-                        } label: {
-                            CategoryLabel(category: category)
-                        }
-                        .environmentObject(state)
-                    }
-                    .navigationDestination(for: Category.self) { category in
-                        CategoryDetail(category: category)
-                    }
-                    .searchable(text: .constant("Search"))
-                } else {
-                    Text("Loading")
+            List {
+                switch state.viewByType {
+                case .categories:
+                    CategoryListView()
+                    LatestTopicsView(showButton: false)
+                case .latest:
+                    LatestTopicsView()
+                default:
+                    Text("Unimplemented")
                 }
+            }
+            .listStyle(.plain)
+            .scrollIndicators(.hidden)
+            .navigationDestination(for: Category.self) { category in
+                CategoryDetail(category: category)
             }
         }
         .navigationTitle(state.community.title)
-        .task {
-            guard let site = try? await state.fetchSite() else {
-                return
-            }
-            appState.cache(id: state.community.id, endPoint: .site, value: site)
-            try? await state.updateCategories()
-        }
+        .environmentObject(state)
     }
 }
 
 struct CommunityView_Previews: PreviewProvider {
     static var previews: some View {
         CommunityDetail(community: .swift)
+            .environmentObject(AppState())
+            .environmentObject(TopicsTabState())
     }
 }
