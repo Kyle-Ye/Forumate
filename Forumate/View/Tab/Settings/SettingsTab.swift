@@ -8,13 +8,20 @@
 import SwiftUI
 
 struct SettingsTab: View {
+    @StateObject var tabState = SettingsTabState()
+    
     var body: some View {
-        Text("TODO")
+        NavigationView {
+            SettingsTabRoot()
+                .environmentObject(tabState)
+        }
+        .navigationViewStyle(.columns)
     }
 }
 
 struct SettingsTab_Previews: PreviewProvider {
     static var previews: some View {
         SettingsTab()
+            .environmentObject(AppState())
     }
 }

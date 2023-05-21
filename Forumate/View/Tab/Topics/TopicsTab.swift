@@ -8,12 +8,12 @@
 import SwiftUI
 
 struct TopicsTab: View {
-    @StateObject var topicsTabState = TopicsTabState()
+    @StateObject var tabState = TopicsTabState()
     
     var body: some View {
         NavigationSplitView {
             TopicsTabRoot()
-                .environmentObject(topicsTabState)
+                .environmentObject(tabState)
         } content: {
             PlaceholderView(text: "No Community Selected",
                             image: "rectangle.3.group.bubble.left")
