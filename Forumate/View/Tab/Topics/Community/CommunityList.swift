@@ -23,6 +23,10 @@ struct CommunityList: View {
                 Text("My Communities")
             }
         }
+        .navigationDestination(for: Community.self) { community in
+            CommunityDetail(community: community)
+                .id(community.id)
+        }
         #else
         List(selection: $tabState.selectedCommunity) {
             Section {

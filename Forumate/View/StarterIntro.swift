@@ -15,19 +15,25 @@ struct StarterIntro: View {
             ScrollView {
                 Text("Welcome to Forumate")
                     .font(.system(.title, design: .serif, weight: .bold))
+                    #if !os(watchOS)
                     .padding(.top, 200)
+                    #endif
             }
             Button {
                 dismiss()
             } label: {
                 Text("Continue")
                     .font(.system(.body, design: .rounded, weight: .bold))
+                    #if !os(watchOS)
                     .padding(.vertical, 5)
+                    #endif
                     .frame(maxWidth: .infinity)
             }
             .buttonStyle(.borderedProminent)
+            #if !os(watchOS)
             .padding(.horizontal, 50)
             .padding(.vertical)
+            #endif
         }
     }
 }

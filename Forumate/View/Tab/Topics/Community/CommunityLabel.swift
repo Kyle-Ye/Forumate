@@ -15,12 +15,16 @@ struct CommunityLabel: View {
             AsyncImage(url: community.icon) { image in
                 image
                     .resizable()
+                    #if os(watchOS)
                     .frame(width: 30, height: 30)
+                    #else
+                    .frame(width: 40, height: 40)
+                    #endif
             } placeholder: {
                 Image(systemName: "rectangle.3.group.bubble.left")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-                    .frame(width: 30)
+                    .frame(width: 40)
             }
             VStack(alignment: .leading) {
                 Text(community.title)
