@@ -7,6 +7,9 @@
 
 import Foundation
 import UIKit
+#if os(watchOS)
+import WatchKit
+#endif
 
 enum AppInfo {
     static var name: String {
@@ -22,6 +25,11 @@ enum AppInfo {
     }
 
     static var OSVersion: String {
+        #if os(watchOS)
+        WKInterfaceDevice.current().systemName + " " + WKInterfaceDevice.current().systemVersion
+        #else
         UIDevice.current.systemName + " " + UIDevice.current.systemVersion
+        #endif
+        
     }
 }

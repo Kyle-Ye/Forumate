@@ -18,7 +18,9 @@ struct CommunitySectionHeader: View {
                 .font(.headline)
                 .padding(.vertical)
             Spacer()
+            #if !os(watchOS)
             ViewByMenuButton().opacity(showButton ? 1.0 : 0.0)
+            #endif
         }
     }
 }

@@ -11,6 +11,19 @@ struct CommunityList: View {
     @EnvironmentObject var appState: AppState
     @EnvironmentObject var tabState: TopicsTabState
     var body: some View {
+        #if os(watchOS)
+        List {
+            Section {
+                ForEach(appState.communities) { community in
+                    NavigationLink(value: community) {
+                        CommunityLabel(community: community)
+                    }
+                }
+            } header: {
+                Text("My Communities")
+            }
+        }
+        #else
         List(selection: $tabState.selectedCommunity) {
             Section {
                 ForEach(appState.communities) { community in
@@ -22,6 +35,7 @@ struct CommunityList: View {
                 Text("My Communities")
             }
         }
+        #endif
     }
 }
 

@@ -15,7 +15,9 @@ struct SettingsTab: View {
             SettingsTabRoot()
                 .environmentObject(tabState)
         }
+        #if !os(watchOS)
         .navigationViewStyle(.columns)
+        #endif
     }
 }
 

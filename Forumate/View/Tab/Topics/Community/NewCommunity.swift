@@ -38,6 +38,7 @@ struct NewCommunity: View {
             }
             .submitLabel(.send)
             .onSubmit { tryAddCommunity() }
+            #if !os(watchOS)
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
                     Button("Cancel") { dismiss() }
@@ -64,6 +65,7 @@ struct NewCommunity: View {
                     }
                 }
             }
+            #endif
         }
     }
     
