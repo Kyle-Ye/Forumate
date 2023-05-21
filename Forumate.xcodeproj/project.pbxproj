@@ -11,8 +11,11 @@
 		270097CF2A19D68700CA01B5 /* SettingsTabState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270097CE2A19D68700CA01B5 /* SettingsTabState.swift */; };
 		270097D12A19D7E300CA01B5 /* StarterIntro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270097D02A19D7E300CA01B5 /* StarterIntro.swift */; };
 		272193A12A19CCFA00C221BC /* JSONRawRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272193A02A19CCFA00C221BC /* JSONRawRepresentable.swift */; };
+		2726053F2A1A005C0018B908 /* ForumateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2726053E2A1A005C0018B908 /* ForumateTests.swift */; };
+		272605472A1A02260018B908 /* Hello.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272605452A1A021F0018B908 /* Hello.swift */; };
 		2747FD312A18BDD0003CB67B /* DiscourseKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2747FD302A18BDD0003CB67B /* DiscourseKit */; };
 		277546D82A19DE3F000FDAA0 /* AppInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277546D72A19DE3F000FDAA0 /* AppInfo.swift */; };
+		277546E12A19EF0F000FDAA0 /* String+HTMLLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277546E02A19EF0F000FDAA0 /* String+HTMLLink.swift */; };
 		277C15BE2A18EF00007940C7 /* CategoryLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277C15BD2A18EF00007940C7 /* CategoryLabel.swift */; };
 		277C15C12A18EF6B007940C7 /* CategoryDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277C15C02A18EF6B007940C7 /* CategoryDetail.swift */; };
 		277C15C42A18F033007940C7 /* HexToColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277C15C32A18F033007940C7 /* HexToColor.swift */; };
@@ -36,13 +39,27 @@
 		278E54122A18E83000DCD159 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E53FF2A18E83000DCD159 /* ContentView.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		272605402A1A005C0018B908 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 27EEA07E29EFCD1B00ADA5BE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 27EEA08529EFCD1B00ADA5BE;
+			remoteInfo = Forumate;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		270097CB2A19D66E00CA01B5 /* SettingsTabRoot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTabRoot.swift; sourceTree = "<group>"; };
 		270097CE2A19D68700CA01B5 /* SettingsTabState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTabState.swift; sourceTree = "<group>"; };
 		270097D02A19D7E300CA01B5 /* StarterIntro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarterIntro.swift; sourceTree = "<group>"; };
 		272193A02A19CCFA00C221BC /* JSONRawRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONRawRepresentable.swift; sourceTree = "<group>"; };
+		2726053C2A1A005C0018B908 /* ForumateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ForumateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2726053E2A1A005C0018B908 /* ForumateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForumateTests.swift; sourceTree = "<group>"; };
+		272605452A1A021F0018B908 /* Hello.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hello.swift; sourceTree = "<group>"; };
 		2747FD2E2A18BDB8003CB67B /* DiscourseKit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = DiscourseKit; path = ../DiscourseKit; sourceTree = "<group>"; };
 		277546D72A19DE3F000FDAA0 /* AppInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInfo.swift; sourceTree = "<group>"; };
+		277546E02A19EF0F000FDAA0 /* String+HTMLLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+HTMLLink.swift"; sourceTree = "<group>"; };
 		277C15BD2A18EF00007940C7 /* CategoryLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryLabel.swift; sourceTree = "<group>"; };
 		277C15C02A18EF6B007940C7 /* CategoryDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryDetail.swift; sourceTree = "<group>"; };
 		277C15C32A18F033007940C7 /* HexToColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexToColor.swift; sourceTree = "<group>"; };
@@ -70,6 +87,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		272605392A1A005C0018B908 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		27EEA08329EFCD1B00ADA5BE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -89,6 +113,14 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		2726053D2A1A005C0018B908 /* ForumateTests */ = {
+			isa = PBXGroup;
+			children = (
+				2726053E2A1A005C0018B908 /* ForumateTests.swift */,
+			);
+			path = ForumateTests;
+			sourceTree = "<group>";
+		};
 		2747FD2F2A18BDD0003CB67B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +133,7 @@
 			children = (
 				272193A02A19CCFA00C221BC /* JSONRawRepresentable.swift */,
 				277C15C32A18F033007940C7 /* HexToColor.swift */,
+				277546E02A19EF0F000FDAA0 /* String+HTMLLink.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -142,6 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				278E53E82A18E83000DCD159 /* Preview Assets.xcassets */,
+				272605452A1A021F0018B908 /* Hello.swift */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -256,6 +290,7 @@
 			children = (
 				2747FD2E2A18BDB8003CB67B /* DiscourseKit */,
 				278E53E22A18E83000DCD159 /* Forumate */,
+				2726053D2A1A005C0018B908 /* ForumateTests */,
 				27EEA08729EFCD1B00ADA5BE /* Products */,
 				2747FD2F2A18BDD0003CB67B /* Frameworks */,
 			);
@@ -265,6 +300,7 @@
 			isa = PBXGroup;
 			children = (
 				27EEA08629EFCD1B00ADA5BE /* Forumate.app */,
+				2726053C2A1A005C0018B908 /* ForumateTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -272,6 +308,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		2726053B2A1A005C0018B908 /* ForumateTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 272605442A1A005C0018B908 /* Build configuration list for PBXNativeTarget "ForumateTests" */;
+			buildPhases = (
+				272605382A1A005C0018B908 /* Sources */,
+				272605392A1A005C0018B908 /* Frameworks */,
+				2726053A2A1A005C0018B908 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				272605412A1A005C0018B908 /* PBXTargetDependency */,
+			);
+			name = ForumateTests;
+			productName = ForumateTests;
+			productReference = 2726053C2A1A005C0018B908 /* ForumateTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		27EEA08529EFCD1B00ADA5BE /* Forumate */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 27EEA09529EFCD1C00ADA5BE /* Build configuration list for PBXNativeTarget "Forumate" */;
@@ -302,6 +356,10 @@
 				LastSwiftUpdateCheck = 1430;
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
+					2726053B2A1A005C0018B908 = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = 27EEA08529EFCD1B00ADA5BE;
+					};
 					27EEA08529EFCD1B00ADA5BE = {
 						CreatedOnToolsVersion = 14.3;
 					};
@@ -316,16 +374,26 @@
 				Base,
 			);
 			mainGroup = 27EEA07D29EFCD1B00ADA5BE;
+			packageReferences = (
+			);
 			productRefGroup = 27EEA08729EFCD1B00ADA5BE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				27EEA08529EFCD1B00ADA5BE /* Forumate */,
+				2726053B2A1A005C0018B908 /* ForumateTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		2726053A2A1A005C0018B908 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		27EEA08429EFCD1B00ADA5BE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -338,11 +406,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		272605382A1A005C0018B908 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2726053F2A1A005C0018B908 /* ForumateTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		27EEA08229EFCD1B00ADA5BE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				270097CC2A19D66E00CA01B5 /* SettingsTabRoot.swift in Sources */,
+				277546E12A19EF0F000FDAA0 /* String+HTMLLink.swift in Sources */,
 				278E540E2A18E83000DCD159 /* CommunityLabel.swift in Sources */,
 				278E54072A18E83000DCD159 /* SettingsTab.swift in Sources */,
 				278E54032A18E83000DCD159 /* ForumateApp.swift in Sources */,
@@ -361,6 +438,7 @@
 				278E540B2A18E83000DCD159 /* CommunityDetailState.swift in Sources */,
 				278E54122A18E83000DCD159 /* ContentView.swift in Sources */,
 				277C15BE2A18EF00007940C7 /* CategoryLabel.swift in Sources */,
+				272605472A1A02260018B908 /* Hello.swift in Sources */,
 				277C15C42A18F033007940C7 /* HexToColor.swift in Sources */,
 				277C15C72A18F52A007940C7 /* SubcategoryLabel.swift in Sources */,
 				278E54082A18E83000DCD159 /* InboxTab.swift in Sources */,
@@ -371,7 +449,60 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		272605412A1A005C0018B908 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 27EEA08529EFCD1B00ADA5BE /* Forumate */;
+			targetProxy = 272605402A1A005C0018B908 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		272605422A1A005C0018B908 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = top.kyleye.ForumateTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Forumate.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Forumate";
+			};
+			name = Debug;
+		};
+		272605432A1A005C0018B908 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = top.kyleye.ForumateTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Forumate.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Forumate";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		27EEA09329EFCD1C00ADA5BE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -568,6 +699,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		272605442A1A005C0018B908 /* Build configuration list for PBXNativeTarget "ForumateTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				272605422A1A005C0018B908 /* Debug */,
+				272605432A1A005C0018B908 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		27EEA08129EFCD1B00ADA5BE /* Build configuration list for PBXProject "Forumate" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
