@@ -13,8 +13,8 @@ struct CommunityDetail: View {
         _state = StateObject(wrappedValue: CommunityDetailState(community: community))
     }
     
+    @EnvironmentObject private var appState: AppState
     @StateObject private var state: CommunityDetailState
-    @EnvironmentObject private var tabState: TopicsTabState
         
     var body: some View {
         NavigationStack {
@@ -23,6 +23,7 @@ struct CommunityDetail: View {
                     List(categories, id: \.id) { category in
                         NavigationLink(value: category) {
                             CategoryLabel(category: category)
+                                .environmentObject(state)
                         }
                     }
                     .navigationDestination(for: Category.self) { category in
@@ -35,8 +36,12 @@ struct CommunityDetail: View {
             }
         }
         .navigationTitle(state.community.title)
-        .onAppear {
-            state.fetchCategories()
+        .task {
+            guard let site = try? await state.fetchSite() else {
+                return
+            }
+            appState.cache(id: state.community.id, endPoint: .site, value: site)
+            try? await state.updateCategories()
         }
     }
 }

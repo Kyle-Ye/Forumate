@@ -5,9 +5,9 @@
 //  Created by Kyle on 2023/5/20.
 //
 
+import Combine
 import DiscourseKit
 import Foundation
-import Combine
 
 typealias Category = DiscourseKit.Category
 
@@ -17,16 +17,20 @@ class CommunityDetailState: ObservableObject {
         client = Client(baseURL: community.host)
     }
     
-    private var client: Client
-    
     let community: Community
-    @Published var categories: [Category]?
-    
-    
-    func fetchCategories() {
-        Task.detached { [weak self] in
-            guard let self else { return }
-            categories = try await self.client.fetchCategories().categories
+
+    func updateCategories() async throws {
+        let result = try await client.fetchCategories().categories
+        await MainActor.run {
+            self.categories = result
         }
     }
+    
+    func fetchSite() async throws -> Site {
+        try await client.fetchSite()
+    }
+    
+    private var client: Client
+    
+    @Published private(set) var categories: [Category]?
 }

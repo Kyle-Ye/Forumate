@@ -8,28 +8,22 @@
 import SwiftUI
 
 struct SubcategoryLabel: View {
-    init(id _: Int) {
-        color = ""
-        name = ""
-    }
-    
-    private let color: String
-    private let name: String
-    
+    let category: Category
+
     var body: some View {
-        Group {
-            if let color = Color(hex: color) {
-                color
+        HStack {
+            if let color = Color(hex: category.color) {
+                color.frame(width: 10, height: 10)
             }
-            Text(name)
-                .bold()
+            Text(category.name)
+                .lineLimit(1)
                 .foregroundColor(.secondary)
         }
     }
 }
 
-// struct SubcategoryLabel_Previews: PreviewProvider {
-//    static var previews: some View {
-//        SubcategoryLabel()
-//    }
-// }
+struct SubcategoryLabel_Previews: PreviewProvider {
+    static var previews: some View {
+        SubcategoryLabel(category: .announcements)
+    }
+}
