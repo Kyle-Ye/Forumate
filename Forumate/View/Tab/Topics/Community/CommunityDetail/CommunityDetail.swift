@@ -17,14 +17,16 @@ struct CommunityDetail: View {
     @StateObject private var state: CommunityDetailState
         
     var body: some View {
-        NavigationStack {
+        NavigationStack(path: $state.selectedCategories) {
             Group {
                 if let categories = state.categories {
                     List(categories, id: \.id) { category in
-                        NavigationLink(value: category) {
+                        Button {
+                            state.selectedCategories.append(category)
+                        } label: {
                             CategoryLabel(category: category)
-                                .environmentObject(state)
                         }
+                        .environmentObject(state)
                     }
                     .navigationDestination(for: Category.self) { category in
                         CategoryDetail(category: category)

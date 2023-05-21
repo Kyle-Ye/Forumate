@@ -8,6 +8,7 @@
 import Combine
 import DiscourseKit
 import Foundation
+import SwiftUI
 
 typealias Category = DiscourseKit.Category
 
@@ -33,4 +34,6 @@ class CommunityDetailState: ObservableObject {
     private var client: Client
     
     @Published private(set) var categories: [Category]?
+    
+    @Published var selectedCategories: [Category] = []
 }

@@ -9,8 +9,9 @@ import SwiftUI
 
 struct CommunityList: View {
     @EnvironmentObject var appState: AppState
+    @EnvironmentObject var tabState: TopicsTabState
     var body: some View {
-        List {
+        List(selection: $tabState.selectedCommunity) {
             Section {
                 ForEach(appState.communities) { community in
                     NavigationLink(value: community) {

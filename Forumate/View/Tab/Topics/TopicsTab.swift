@@ -15,8 +15,13 @@ struct TopicsTab: View {
             TopicsTabRoot()
                 .environmentObject(tabState)
         } content: {
-            PlaceholderView(text: "No Community Selected",
-                            image: "rectangle.3.group.bubble.left")
+            if let community = tabState.selectedCommunity {
+                CommunityDetail(community: community)
+                    .id(community.id)
+            } else {
+                PlaceholderView(text: "No Community Selected",
+                                image: "rectangle.3.group.bubble.left")
+            }
         } detail: {
             PlaceholderView(text: "No Topic Selected")
         }

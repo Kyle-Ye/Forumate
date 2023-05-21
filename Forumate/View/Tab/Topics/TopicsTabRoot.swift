@@ -28,12 +28,6 @@ struct TopicsTabRoot: View {
                     }
                 }
             }
-            .navigationDestination(for: Community.self) { community in
-                CommunityDetail(community: community)
-                    .onAppear {
-                        tabState.selectedCommunity = community
-                    }
-            }
     }
 }
 

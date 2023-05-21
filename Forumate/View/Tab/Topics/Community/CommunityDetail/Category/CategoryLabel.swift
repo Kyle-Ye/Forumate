@@ -31,7 +31,11 @@ struct CategoryLabel: View {
                 HFlow {
                     ForEach(category.subcategoryIDs, id: \.self) { id in
                         if let subcategory = appState.fetchSubCategory(communityID: state.community.id, subcategoryID: id) {
-                            SubcategoryLabel(category: subcategory)
+                            Button {
+                                state.selectedCategories.append(subcategory)
+                            } label: {
+                                SubcategoryLabel(category: subcategory)
+                            }
                         }
                     }
                 }
