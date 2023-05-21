@@ -25,6 +25,7 @@ struct TopicsTab: View {
         } detail: {
             PlaceholderView(text: "No Topic Selected")
         }
+        .navigationSplitViewStyle(.prominentDetail)
     }
 }
 

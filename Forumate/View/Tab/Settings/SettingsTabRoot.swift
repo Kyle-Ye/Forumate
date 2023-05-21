@@ -9,17 +9,49 @@ import SwiftUI
 
 struct SettingsTabRoot: View {
     @EnvironmentObject private var appState: AppState
-    @EnvironmentObject private var tabState: TopicsTabState
+    @EnvironmentObject private var tabState: SettingsTabState
     @State private var showStarterInfo = false
 
+    func navigationItem(text: String, icon: () -> some View, destination: () -> some View) -> some View {
+        NavigationLink {
+            destination()
+                .navigationTitle(text)
+                .navigationBarTitleDisplayMode(.inline)
+        } label: {
+            Label {
+                Text(text)
+            } icon: {
+                icon()
+            }
+        }
+    }
+    
     var body: some View {
         List {
             Section {
-                Text("TODO")
+                navigationItem(text: "General") {
+                    SettingIcon(icon: "gear", style: .gray)
+                } destination: {
+                    GeneralSettings()
+                }
+                navigationItem(text: "Notifications") {
+                    SettingIcon(icon: "bell.badge.fill", style: .red)
+                } destination: {
+                    Text("Unimplemented")
+                }
+            }
+            
+            Section {
+                navigationItem(text: "Privacy Policy") {
+                    SettingIcon(icon: "lock.fill", style: .purple)
+                } destination: {
+                    Text("Unimplemented")
+                }
             } footer: {
                 Text("\(AppInfo.name) v\(AppInfo.version) Build \(AppInfo.buildNumber) · \(AppInfo.OSVersion)")
             }
         }
+        .listStyle(.insetGrouped)
         .toolbar {
             ToolbarItem(placement: .primaryAction) {
                 Button {
