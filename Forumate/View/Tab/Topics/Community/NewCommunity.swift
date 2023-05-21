@@ -95,5 +95,6 @@ struct NewCommunity: View {
 struct NewCommunityView_Previews: PreviewProvider {
     static var previews: some View {
         NewCommunity()
+            .environmentObject(AppState())
     }
 }

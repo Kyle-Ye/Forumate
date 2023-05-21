@@ -28,7 +28,10 @@ class CommunityDetailState: ObservableObject {
     }
     
     func updateLatestTopics() async throws {
-        
+        let result = try await client.fetchLatest().topicList.topics
+        await MainActor.run {
+            self.latestestTopics = result
+        }
     }
     
     func fetchSite() async throws -> Site {
@@ -39,7 +42,7 @@ class CommunityDetailState: ObservableObject {
     
     @Published private(set) var categories: [Category]?
     
-    @Published private(set) var latestestTopics: [Int]?
+    @Published private(set) var latestestTopics: [Topic]?
 
     enum ViewByType: String, Hashable, CaseIterable {
         case categories

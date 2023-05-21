@@ -6,9 +6,9 @@
 //
 
 import Foundation
+import DiscourseKit
 
 class TopicsTabState: ObservableObject {
     @Published var selectedCommunity: Community?
-    
-    // @Published var selectedCategory
+    @Published var selectedTopic: Topic?
 }

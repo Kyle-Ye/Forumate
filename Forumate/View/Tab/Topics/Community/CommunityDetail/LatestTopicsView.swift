@@ -8,11 +8,30 @@
 import SwiftUI
 
 struct LatestTopicsView: View {
+    @EnvironmentObject private var tabState: TopicsTabState
+    @EnvironmentObject private var state: CommunityDetailState
+    
     var showButton = true
 
     var body: some View {
-        Section {} header: {
+        Section {
+            if let topics = state.latestestTopics {
+                ForEach(topics, id: \.id) { topic in
+                    Button {
+                        tabState.selectedTopic = topic
+                    } label: {
+                        TopicLabel(topic: topic)
+                    }
+                }
+            } else {
+                ProgressView()
+                    .padding()
+            }
+        } header: {
             CommunitySectionHeader(text: "Latest Topics", showButton: showButton)
+        }
+        .task {
+            try? await state.updateLatestTopics()
         }
     }
 }
