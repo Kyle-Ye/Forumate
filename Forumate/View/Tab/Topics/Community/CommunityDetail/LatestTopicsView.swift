@@ -19,6 +19,7 @@ struct LatestTopicsView: View {
                 ForEach(topics, id: \.id) { topic in
                     Button {
                         tabState.selectedTopic = topic
+                        tabState.columnVisibility = .detailOnly
                     } label: {
                         TopicLabel(topic: topic)
                     }

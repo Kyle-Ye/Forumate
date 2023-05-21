@@ -11,7 +11,7 @@ struct TopicsTab: View {
     @StateObject var tabState = TopicsTabState()
     
     var body: some View {
-        NavigationSplitView {
+        NavigationSplitView(columnVisibility: $tabState.columnVisibility) {
             TopicsTabRoot()
                 .environmentObject(tabState)
         } content: {
@@ -23,9 +23,15 @@ struct TopicsTab: View {
                                 image: "rectangle.3.group.bubble.left")
             }
         } detail: {
-            PlaceholderView(text: "No Topic Selected")
+            if let topic = tabState.selectedTopic {
+                TopicDetail(topic: topic)
+                    .id(topic.id)
+            } else {
+                PlaceholderView(text: "No Topic Selected")
+            }
         }
         .navigationSplitViewStyle(.prominentDetail)
+        .environmentObject(tabState)
     }
 }
 

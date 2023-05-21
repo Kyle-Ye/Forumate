@@ -7,8 +7,11 @@
 
 import Foundation
 import DiscourseKit
+import SwiftUI
 
 class TopicsTabState: ObservableObject {
     @Published var selectedCommunity: Community?
     @Published var selectedTopic: Topic?
+    
+    @Published var columnVisibility: NavigationSplitViewVisibility = .automatic
 }

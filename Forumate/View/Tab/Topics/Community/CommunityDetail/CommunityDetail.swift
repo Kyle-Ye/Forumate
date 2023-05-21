@@ -14,6 +14,7 @@ struct CommunityDetail: View {
     }
     
     @EnvironmentObject private var appState: AppState
+    @EnvironmentObject private var tabState: TopicsTabState
     @StateObject private var state: CommunityDetailState
         
     var body: some View {
