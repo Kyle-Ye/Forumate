@@ -32,7 +32,7 @@ struct SettingsTabRoot: View {
                 navigationItem(text: "General") {
                     SettingIcon(icon: "gear", style: .gray)
                 } destination: {
-                    GeneralSettings()
+                    GeneralSection()
                 }
                 navigationItem(text: "Notifications") {
                     SettingIcon(icon: "bell.badge.fill", style: .red)
@@ -46,6 +46,11 @@ struct SettingsTabRoot: View {
                     SettingIcon(icon: "lock.fill", style: .purple)
                 } destination: {
                     Text("Unimplemented")
+                }
+                navigationItem(text: "Acknowledgement") {
+                    SettingIcon(icon: "heart.fill", style: .pink)
+                } destination: {
+                    AcknowSection()
                 }
             } footer: {
                 Text("\(AppInfo.name) v\(AppInfo.version) Build \(AppInfo.buildNumber) · \(AppInfo.OSVersion)")
