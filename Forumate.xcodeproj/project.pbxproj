@@ -130,6 +130,9 @@
 		27CDD3C02A1BB758003E3D00 /* TopicLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273AFBD82A1A86A000DD08F5 /* TopicLabel.swift */; };
 		27CDD3C12A1BB75A003E3D00 /* CommunityDetailState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E53F72A18E83000DCD159 /* CommunityDetailState.swift */; };
 		27CDD3C22A1BB769003E3D00 /* TopicsTabState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E53F22A18E83000DCD159 /* TopicsTabState.swift */; };
+		27CDD3C42A1BCC01003E3D00 /* TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CDD3C32A1BCC01003E3D00 /* TagView.swift */; };
+		27CDD3C52A1BCC3F003E3D00 /* TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CDD3C32A1BCC01003E3D00 /* TagView.swift */; };
+		27CDD3C62A1BCC40003E3D00 /* TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CDD3C32A1BCC01003E3D00 /* TagView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -211,6 +214,7 @@
 		278E54012A18E83000DCD159 /* Forumate.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = Forumate.entitlements; sourceTree = "<group>"; };
 		27CDD3882A1BB06D003E3D00 /* ForumateTVApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ForumateTVApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27CDD3912A1BB06E003E3D00 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		27CDD3C32A1BCC01003E3D00 /* TagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagView.swift; sourceTree = "<group>"; };
 		27EEA08629EFCD1B00ADA5BE /* Forumate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Forumate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -294,6 +298,7 @@
 			children = (
 				273AFBD82A1A86A000DD08F5 /* TopicLabel.swift */,
 				273AFBE12A1A928C00DD08F5 /* TopicDetail.swift */,
+				27CDD3C32A1BCC01003E3D00 /* TagView.swift */,
 			);
 			path = Topic;
 			sourceTree = "<group>";
@@ -749,6 +754,7 @@
 				273AFC1A2A1A967D00DD08F5 /* NewCommunity.swift in Sources */,
 				273AFC122A1A966900DD08F5 /* CommunityDetailState.swift in Sources */,
 				27CDD3972A1BB5B9003E3D00 /* ForumateApp.swift in Sources */,
+				27CDD3C52A1BCC3F003E3D00 /* TagView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -791,6 +797,7 @@
 				27CDD3C22A1BB769003E3D00 /* TopicsTabState.swift in Sources */,
 				27CDD3B92A1BB728003E3D00 /* CategoryListView.swift in Sources */,
 				27CDD3B72A1BB728003E3D00 /* LatestTopicsView.swift in Sources */,
+				27CDD3C62A1BCC40003E3D00 /* TagView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -817,6 +824,7 @@
 				278E540F2A18E83000DCD159 /* Community.swift in Sources */,
 				278E540A2A18E83000DCD159 /* CommunityList.swift in Sources */,
 				272193A12A19CCFA00C221BC /* JSONRawRepresentable.swift in Sources */,
+				27CDD3C42A1BCC01003E3D00 /* TagView.swift in Sources */,
 				278E54022A18E83000DCD159 /* AppState.swift in Sources */,
 				278E54102A18E83000DCD159 /* NewCommunity.swift in Sources */,
 				270097CF2A19D68700CA01B5 /* SettingsTabState.swift in Sources */,
