@@ -5,11 +5,8 @@
 //  Created by Kyle on 2023/5/20.
 //
 
-import SwiftUI
-#if !os(watchOS)
-// https://github.com/tevelee/SwiftUI-Flow/issues/3
 import Flow
-#endif
+import SwiftUI
 
 struct CategoryLabel: View {
     @EnvironmentObject private var appState: AppState
@@ -29,7 +26,6 @@ struct CategoryLabel: View {
                 Text(LocalizedStringKey(description.replacingHTMLLink()))
                     .foregroundColor(.secondary)
             }
-            #if !os(watchOS)
             if category.hasChildren {
                 HFlow {
                     ForEach(category.subcategoryIDs, id: \.self) { id in
@@ -43,7 +39,6 @@ struct CategoryLabel: View {
                     }
                 }
             }
-            #endif
         }
     }
 }

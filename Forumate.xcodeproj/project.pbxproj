@@ -92,6 +92,7 @@
 		278E54102A18E83000DCD159 /* NewCommunity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E53FD2A18E83000DCD159 /* NewCommunity.swift */; };
 		278E54112A18E83000DCD159 /* TopicsTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E53FE2A18E83000DCD159 /* TopicsTab.swift */; };
 		278E54122A18E83000DCD159 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E53FF2A18E83000DCD159 /* ContentView.swift */; };
+		27CDD3832A1BAEAC003E3D00 /* Flow in Frameworks */ = {isa = PBXBuildFile; productRef = 27CDD3822A1BAEAC003E3D00 /* Flow */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -188,6 +189,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27CDD3832A1BAEAC003E3D00 /* Flow in Frameworks */,
 				273AFC022A1A954900DD08F5 /* AcknowKit in Frameworks */,
 				273AFBFE2A1A954500DD08F5 /* DiscourseModel in Frameworks */,
 				273AFBFC2A1A954200DD08F5 /* DiscourseKit in Frameworks */,
@@ -499,6 +501,7 @@
 				273AFBFB2A1A954200DD08F5 /* DiscourseKit */,
 				273AFBFD2A1A954500DD08F5 /* DiscourseModel */,
 				273AFC012A1A954900DD08F5 /* AcknowKit */,
+				27CDD3822A1BAEAC003E3D00 /* Flow */,
 			);
 			productName = "ForumateWatch Watch App";
 			productReference = 273AFBE72A1A94E100DD08F5 /* Forumate.app */;
@@ -1102,6 +1105,11 @@
 		2747FD302A18BDD0003CB67B /* DiscourseKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = DiscourseKit;
+		};
+		27CDD3822A1BAEAC003E3D00 /* Flow */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 273AFBC42A1A3DFD00DD08F5 /* XCRemoteSwiftPackageReference "SwiftUI-Flow" */;
+			productName = Flow;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -1,0 +1,59 @@
+{
+  "pins" : [
+    {
+      "identity" : "acknowkit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Kyle-Ye/AcknowKit.git",
+      "state" : {
+        "revision" : "c3a47ecb352b08009eb4756fe4a0ea95f3139019",
+        "version" : "0.0.3"
+      }
+    },
+    {
+      "identity" : "mocker",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/WeTransfer/Mocker.git",
+      "state" : {
+        "revision" : "5d86f27a8f80d4ba388bc1a379a3c2289a1f3d18",
+        "version" : "2.6.0"
+      }
+    },
+    {
+      "identity" : "swift-argument-parser",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-argument-parser",
+      "state" : {
+        "revision" : "fee6933f37fde9a5e12a1e4aeaa93fe60116ff2a",
+        "version" : "1.2.2"
+      }
+    },
+    {
+      "identity" : "swift-http",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/binarybirds/swift-http",
+      "state" : {
+        "revision" : "ae927adafb4e65630cdd2e96c82ef0169e0b90d7",
+        "version" : "1.2.1"
+      }
+    },
+    {
+      "identity" : "swift-log",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-log",
+      "state" : {
+        "revision" : "32e8d724467f8fe623624570367e3d50c5638e46",
+        "version" : "1.5.2"
+      }
+    },
+    {
+      "identity" : "swiftui-flow",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/tevelee/SwiftUI-Flow.git",
+      "state" : {
+        "revision" : "d592b610a92869b74ede8ee4c0435a29219be9d8",
+        "version" : "1.2.0"
+      }
+    }
+  ],
+  "version" : 2
+}
