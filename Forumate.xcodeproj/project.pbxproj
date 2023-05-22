@@ -25,13 +25,11 @@
 		273AFBDE2A1A8CF100DD08F5 /* AcknowKit in Frameworks */ = {isa = PBXBuildFile; productRef = 273AFBDD2A1A8CF100DD08F5 /* AcknowKit */; };
 		273AFBE02A1A8D1800DD08F5 /* AcknowSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273AFBDF2A1A8D1800DD08F5 /* AcknowSection.swift */; };
 		273AFBE22A1A928C00DD08F5 /* TopicDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273AFBE12A1A928C00DD08F5 /* TopicDetail.swift */; };
-		273AFBEA2A1A94E100DD08F5 /* ForumateWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273AFBE92A1A94E100DD08F5 /* ForumateWatchApp.swift */; };
 		273AFBF12A1A94E100DD08F5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 273AFBF02A1A94E100DD08F5 /* Preview Assets.xcassets */; };
 		273AFBF42A1A94E100DD08F5 /* Forumate.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 273AFBE72A1A94E100DD08F5 /* Forumate.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		273AFBF92A1A951200DD08F5 /* AppInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277546D72A19DE3F000FDAA0 /* AppInfo.swift */; };
 		273AFBFA2A1A951C00DD08F5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E53FF2A18E83000DCD159 /* ContentView.swift */; };
 		273AFBFC2A1A954200DD08F5 /* DiscourseKit in Frameworks */ = {isa = PBXBuildFile; productRef = 273AFBFB2A1A954200DD08F5 /* DiscourseKit */; };
-		273AFBFE2A1A954500DD08F5 /* DiscourseModel in Frameworks */ = {isa = PBXBuildFile; productRef = 273AFBFD2A1A954500DD08F5 /* DiscourseModel */; };
 		273AFC022A1A954900DD08F5 /* AcknowKit in Frameworks */ = {isa = PBXBuildFile; productRef = 273AFC012A1A954900DD08F5 /* AcknowKit */; };
 		273AFC032A1A95FD00DD08F5 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E53E42A18E83000DCD159 /* AppState.swift */; };
 		273AFC042A1A960600DD08F5 /* Category+Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2726057F2A1A12450018B908 /* Category+Preview.swift */; };
@@ -91,6 +89,47 @@
 		278E54112A18E83000DCD159 /* TopicsTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E53FE2A18E83000DCD159 /* TopicsTab.swift */; };
 		278E54122A18E83000DCD159 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E53FF2A18E83000DCD159 /* ContentView.swift */; };
 		27CDD3832A1BAEAC003E3D00 /* Flow in Frameworks */ = {isa = PBXBuildFile; productRef = 27CDD3822A1BAEAC003E3D00 /* Flow */; };
+		27CDD3922A1BB06E003E3D00 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27CDD3912A1BB06E003E3D00 /* Preview Assets.xcassets */; };
+		27CDD3962A1BB573003E3D00 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 278E53E62A18E83000DCD159 /* Assets.xcassets */; };
+		27CDD3972A1BB5B9003E3D00 /* ForumateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E53E52A18E83000DCD159 /* ForumateApp.swift */; };
+		27CDD3982A1BB5BA003E3D00 /* ForumateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E53E52A18E83000DCD159 /* ForumateApp.swift */; };
+		27CDD3992A1BB5EE003E3D00 /* Topic+Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273AFBDA2A1A870F00DD08F5 /* Topic+Preview.swift */; };
+		27CDD39A2A1BB5EE003E3D00 /* Category+Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2726057F2A1A12450018B908 /* Category+Preview.swift */; };
+		27CDD39B2A1BB5F4003E3D00 /* JSONRawRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272193A02A19CCFA00C221BC /* JSONRawRepresentable.swift */; };
+		27CDD39C2A1BB5F4003E3D00 /* HexToColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277C15C32A18F033007940C7 /* HexToColor.swift */; };
+		27CDD39D2A1BB5F4003E3D00 /* String+HTMLLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277546E02A19EF0F000FDAA0 /* String+HTMLLink.swift */; };
+		27CDD39E2A1BB5F7003E3D00 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E53E42A18E83000DCD159 /* AppState.swift */; };
+		27CDD39F2A1BB5FE003E3D00 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E53FF2A18E83000DCD159 /* ContentView.swift */; };
+		27CDD3A02A1BB608003E3D00 /* PlaceholderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E53EA2A18E83000DCD159 /* PlaceholderView.swift */; };
+		27CDD3A12A1BB608003E3D00 /* StarterIntro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270097D02A19D7E300CA01B5 /* StarterIntro.swift */; };
+		27CDD3A22A1BB622003E3D00 /* InboxTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E53EF2A18E83000DCD159 /* InboxTab.swift */; };
+		27CDD3A32A1BB626003E3D00 /* SettingsTabRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270097CB2A19D66E00CA01B5 /* SettingsTabRoot.swift */; };
+		27CDD3A42A1BB626003E3D00 /* SettingIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273AFBD22A1A7AE400DD08F5 /* SettingIcon.swift */; };
+		27CDD3A52A1BB626003E3D00 /* SettingsTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E53ED2A18E83000DCD159 /* SettingsTab.swift */; };
+		27CDD3A62A1BB628003E3D00 /* AcknowSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273AFBDF2A1A8D1800DD08F5 /* AcknowSection.swift */; };
+		27CDD3A72A1BB628003E3D00 /* GeneralSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273AFBD52A1A801500DD08F5 /* GeneralSection.swift */; };
+		27CDD3A82A1BB62C003E3D00 /* SettingsTabState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270097CE2A19D68700CA01B5 /* SettingsTabState.swift */; };
+		27CDD3AA2A1BB65B003E3D00 /* DiscourseKit in Frameworks */ = {isa = PBXBuildFile; productRef = 27CDD3A92A1BB65B003E3D00 /* DiscourseKit */; };
+		27CDD3AC2A1BB65F003E3D00 /* Flow in Frameworks */ = {isa = PBXBuildFile; productRef = 27CDD3AB2A1BB65F003E3D00 /* Flow */; };
+		27CDD3AE2A1BB662003E3D00 /* AcknowKit in Frameworks */ = {isa = PBXBuildFile; productRef = 27CDD3AD2A1BB662003E3D00 /* AcknowKit */; };
+		27CDD3AF2A1BB68E003E3D00 /* Community.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E53FC2A18E83000DCD159 /* Community.swift */; };
+		27CDD3B02A1BB6BC003E3D00 /* AppInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277546D72A19DE3F000FDAA0 /* AppInfo.swift */; };
+		27CDD3B12A1BB723003E3D00 /* TopicsTabRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E53F92A18E83000DCD159 /* TopicsTabRoot.swift */; };
+		27CDD3B22A1BB723003E3D00 /* TopicsTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E53FE2A18E83000DCD159 /* TopicsTab.swift */; };
+		27CDD3B32A1BB726003E3D00 /* NewCommunity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E53FD2A18E83000DCD159 /* NewCommunity.swift */; };
+		27CDD3B42A1BB726003E3D00 /* CommunityLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E53FA2A18E83000DCD159 /* CommunityLabel.swift */; };
+		27CDD3B52A1BB726003E3D00 /* CommunityList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E53F42A18E83000DCD159 /* CommunityList.swift */; };
+		27CDD3B62A1BB728003E3D00 /* CommunitySectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273AFBD02A1A750A00DD08F5 /* CommunitySectionHeader.swift */; };
+		27CDD3B72A1BB728003E3D00 /* LatestTopicsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273AFBCC2A1A643700DD08F5 /* LatestTopicsView.swift */; };
+		27CDD3B92A1BB728003E3D00 /* CategoryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273AFBCA2A1A642900DD08F5 /* CategoryListView.swift */; };
+		27CDD3BA2A1BB728003E3D00 /* CommunityDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E53F82A18E83000DCD159 /* CommunityDetail.swift */; };
+		27CDD3BC2A1BB755003E3D00 /* CategoryDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277C15C02A18EF6B007940C7 /* CategoryDetail.swift */; };
+		27CDD3BD2A1BB755003E3D00 /* SubcategoryLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277C15C62A18F52A007940C7 /* SubcategoryLabel.swift */; };
+		27CDD3BE2A1BB755003E3D00 /* CategoryLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277C15BD2A18EF00007940C7 /* CategoryLabel.swift */; };
+		27CDD3BF2A1BB758003E3D00 /* TopicDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273AFBE12A1A928C00DD08F5 /* TopicDetail.swift */; };
+		27CDD3C02A1BB758003E3D00 /* TopicLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273AFBD82A1A86A000DD08F5 /* TopicLabel.swift */; };
+		27CDD3C12A1BB75A003E3D00 /* CommunityDetailState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E53F72A18E83000DCD159 /* CommunityDetailState.swift */; };
+		27CDD3C22A1BB769003E3D00 /* TopicsTabState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E53F22A18E83000DCD159 /* TopicsTabState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -143,7 +182,6 @@
 		273AFBDF2A1A8D1800DD08F5 /* AcknowSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcknowSection.swift; sourceTree = "<group>"; };
 		273AFBE12A1A928C00DD08F5 /* TopicDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicDetail.swift; sourceTree = "<group>"; };
 		273AFBE72A1A94E100DD08F5 /* Forumate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Forumate.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		273AFBE92A1A94E100DD08F5 /* ForumateWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForumateWatchApp.swift; sourceTree = "<group>"; };
 		273AFBF02A1A94E100DD08F5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2747FD2E2A18BDB8003CB67B /* DiscourseKit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = DiscourseKit; path = ../DiscourseKit; sourceTree = "<group>"; };
 		277546D72A19DE3F000FDAA0 /* AppInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInfo.swift; sourceTree = "<group>"; };
@@ -171,6 +209,8 @@
 		278E53FF2A18E83000DCD159 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		278E54002A18E83000DCD159 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		278E54012A18E83000DCD159 /* Forumate.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = Forumate.entitlements; sourceTree = "<group>"; };
+		27CDD3882A1BB06D003E3D00 /* ForumateTVApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ForumateTVApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		27CDD3912A1BB06E003E3D00 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		27EEA08629EFCD1B00ADA5BE /* Forumate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Forumate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -188,8 +228,17 @@
 			files = (
 				27CDD3832A1BAEAC003E3D00 /* Flow in Frameworks */,
 				273AFC022A1A954900DD08F5 /* AcknowKit in Frameworks */,
-				273AFBFE2A1A954500DD08F5 /* DiscourseModel in Frameworks */,
 				273AFBFC2A1A954200DD08F5 /* DiscourseKit in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27CDD3852A1BB06D003E3D00 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27CDD3AE2A1BB662003E3D00 /* AcknowKit in Frameworks */,
+				27CDD3AC2A1BB65F003E3D00 /* Flow in Frameworks */,
+				27CDD3AA2A1BB65B003E3D00 /* DiscourseKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,7 +301,6 @@
 		273AFBE82A1A94E100DD08F5 /* ForumateWatch Watch App */ = {
 			isa = PBXGroup;
 			children = (
-				273AFBE92A1A94E100DD08F5 /* ForumateWatchApp.swift */,
 				273AFBEF2A1A94E100DD08F5 /* Preview Content */,
 			);
 			path = "ForumateWatch Watch App";
@@ -437,6 +485,22 @@
 			path = Community;
 			sourceTree = "<group>";
 		};
+		27CDD3892A1BB06D003E3D00 /* ForumateTVApp */ = {
+			isa = PBXGroup;
+			children = (
+				27CDD3902A1BB06E003E3D00 /* Preview Content */,
+			);
+			path = ForumateTVApp;
+			sourceTree = "<group>";
+		};
+		27CDD3902A1BB06E003E3D00 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				27CDD3912A1BB06E003E3D00 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
 		27EEA07D29EFCD1B00ADA5BE = {
 			isa = PBXGroup;
 			children = (
@@ -444,6 +508,7 @@
 				278E53E22A18E83000DCD159 /* Forumate */,
 				2726053D2A1A005C0018B908 /* ForumateTests */,
 				273AFBE82A1A94E100DD08F5 /* ForumateWatch Watch App */,
+				27CDD3892A1BB06D003E3D00 /* ForumateTVApp */,
 				27EEA08729EFCD1B00ADA5BE /* Products */,
 				2747FD2F2A18BDD0003CB67B /* Frameworks */,
 			);
@@ -455,6 +520,7 @@
 				27EEA08629EFCD1B00ADA5BE /* Forumate.app */,
 				2726053C2A1A005C0018B908 /* ForumateTests.xctest */,
 				273AFBE72A1A94E100DD08F5 /* Forumate.app */,
+				27CDD3882A1BB06D003E3D00 /* ForumateTVApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -495,12 +561,33 @@
 			name = "Forumate Watch App";
 			packageProductDependencies = (
 				273AFBFB2A1A954200DD08F5 /* DiscourseKit */,
-				273AFBFD2A1A954500DD08F5 /* DiscourseModel */,
 				273AFC012A1A954900DD08F5 /* AcknowKit */,
 				27CDD3822A1BAEAC003E3D00 /* Flow */,
 			);
 			productName = "ForumateWatch Watch App";
 			productReference = 273AFBE72A1A94E100DD08F5 /* Forumate.app */;
+			productType = "com.apple.product-type.application";
+		};
+		27CDD3872A1BB06D003E3D00 /* ForumateTVApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 27CDD3932A1BB06E003E3D00 /* Build configuration list for PBXNativeTarget "ForumateTVApp" */;
+			buildPhases = (
+				27CDD3842A1BB06D003E3D00 /* Sources */,
+				27CDD3852A1BB06D003E3D00 /* Frameworks */,
+				27CDD3862A1BB06D003E3D00 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ForumateTVApp;
+			packageProductDependencies = (
+				27CDD3A92A1BB65B003E3D00 /* DiscourseKit */,
+				27CDD3AB2A1BB65F003E3D00 /* Flow */,
+				27CDD3AD2A1BB662003E3D00 /* AcknowKit */,
+			);
+			productName = ForumateTVApp;
+			productReference = 27CDD3882A1BB06D003E3D00 /* ForumateTVApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 		27EEA08529EFCD1B00ADA5BE /* Forumate */ = {
@@ -544,6 +631,9 @@
 					273AFBE62A1A94E100DD08F5 = {
 						CreatedOnToolsVersion = 14.3.1;
 					};
+					27CDD3872A1BB06D003E3D00 = {
+						CreatedOnToolsVersion = 14.3;
+					};
 					27EEA08529EFCD1B00ADA5BE = {
 						CreatedOnToolsVersion = 14.3;
 					};
@@ -569,6 +659,7 @@
 				27EEA08529EFCD1B00ADA5BE /* Forumate */,
 				2726053B2A1A005C0018B908 /* ForumateTests */,
 				273AFBE62A1A94E100DD08F5 /* Forumate Watch App */,
+				27CDD3872A1BB06D003E3D00 /* ForumateTVApp */,
 			);
 		};
 /* End PBXProject section */
@@ -587,6 +678,15 @@
 			files = (
 				273AFC252A1A997B00DD08F5 /* Assets.xcassets in Resources */,
 				273AFBF12A1A94E100DD08F5 /* Preview Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27CDD3862A1BB06D003E3D00 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27CDD3962A1BB573003E3D00 /* Assets.xcassets in Resources */,
+				27CDD3922A1BB06E003E3D00 /* Preview Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -619,7 +719,6 @@
 				273AFC142A1A967D00DD08F5 /* LatestTopicsView.swift in Sources */,
 				273AFC0D2A1A964200DD08F5 /* SettingsTabRoot.swift in Sources */,
 				273AFC242A1A97CC00DD08F5 /* InboxTab.swift in Sources */,
-				273AFBEA2A1A94E100DD08F5 /* ForumateWatchApp.swift in Sources */,
 				273AFC072A1A961F00DD08F5 /* HexToColor.swift in Sources */,
 				273AFBFA2A1A951C00DD08F5 /* ContentView.swift in Sources */,
 				273AFC1F2A1A967D00DD08F5 /* CommunityDetail.swift in Sources */,
@@ -649,6 +748,49 @@
 				273AFC202A1A967D00DD08F5 /* CategoryDetail.swift in Sources */,
 				273AFC1A2A1A967D00DD08F5 /* NewCommunity.swift in Sources */,
 				273AFC122A1A966900DD08F5 /* CommunityDetailState.swift in Sources */,
+				27CDD3972A1BB5B9003E3D00 /* ForumateApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27CDD3842A1BB06D003E3D00 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27CDD3C02A1BB758003E3D00 /* TopicLabel.swift in Sources */,
+				27CDD3BC2A1BB755003E3D00 /* CategoryDetail.swift in Sources */,
+				27CDD3A12A1BB608003E3D00 /* StarterIntro.swift in Sources */,
+				27CDD3A22A1BB622003E3D00 /* InboxTab.swift in Sources */,
+				27CDD3B62A1BB728003E3D00 /* CommunitySectionHeader.swift in Sources */,
+				27CDD3A72A1BB628003E3D00 /* GeneralSection.swift in Sources */,
+				27CDD3B02A1BB6BC003E3D00 /* AppInfo.swift in Sources */,
+				27CDD3AF2A1BB68E003E3D00 /* Community.swift in Sources */,
+				27CDD3A62A1BB628003E3D00 /* AcknowSection.swift in Sources */,
+				27CDD3A42A1BB626003E3D00 /* SettingIcon.swift in Sources */,
+				27CDD3992A1BB5EE003E3D00 /* Topic+Preview.swift in Sources */,
+				27CDD3A82A1BB62C003E3D00 /* SettingsTabState.swift in Sources */,
+				27CDD3BD2A1BB755003E3D00 /* SubcategoryLabel.swift in Sources */,
+				27CDD3BE2A1BB755003E3D00 /* CategoryLabel.swift in Sources */,
+				27CDD39D2A1BB5F4003E3D00 /* String+HTMLLink.swift in Sources */,
+				27CDD3B32A1BB726003E3D00 /* NewCommunity.swift in Sources */,
+				27CDD3B22A1BB723003E3D00 /* TopicsTab.swift in Sources */,
+				27CDD39F2A1BB5FE003E3D00 /* ContentView.swift in Sources */,
+				27CDD3BF2A1BB758003E3D00 /* TopicDetail.swift in Sources */,
+				27CDD3A52A1BB626003E3D00 /* SettingsTab.swift in Sources */,
+				27CDD39E2A1BB5F7003E3D00 /* AppState.swift in Sources */,
+				27CDD39B2A1BB5F4003E3D00 /* JSONRawRepresentable.swift in Sources */,
+				27CDD39A2A1BB5EE003E3D00 /* Category+Preview.swift in Sources */,
+				27CDD3B42A1BB726003E3D00 /* CommunityLabel.swift in Sources */,
+				27CDD3A32A1BB626003E3D00 /* SettingsTabRoot.swift in Sources */,
+				27CDD3C12A1BB75A003E3D00 /* CommunityDetailState.swift in Sources */,
+				27CDD3982A1BB5BA003E3D00 /* ForumateApp.swift in Sources */,
+				27CDD3BA2A1BB728003E3D00 /* CommunityDetail.swift in Sources */,
+				27CDD39C2A1BB5F4003E3D00 /* HexToColor.swift in Sources */,
+				27CDD3A02A1BB608003E3D00 /* PlaceholderView.swift in Sources */,
+				27CDD3B12A1BB723003E3D00 /* TopicsTabRoot.swift in Sources */,
+				27CDD3B52A1BB726003E3D00 /* CommunityList.swift in Sources */,
+				27CDD3C22A1BB769003E3D00 /* TopicsTabState.swift in Sources */,
+				27CDD3B92A1BB728003E3D00 /* CategoryListView.swift in Sources */,
+				27CDD3B72A1BB728003E3D00 /* LatestTopicsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -814,6 +956,63 @@
 				TARGETED_DEVICE_FAMILY = 4;
 				VALIDATE_PRODUCT = YES;
 				WATCHOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Release;
+		};
+		27CDD3942A1BB06E003E3D00 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"ForumateTVApp/Preview Content\"";
+				DEVELOPMENT_TEAM = VB7MJ8R223;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Automatic;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = top.kyleye.Forumate;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 16.4;
+			};
+			name = Debug;
+		};
+		27CDD3952A1BB06E003E3D00 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"ForumateTVApp/Preview Content\"";
+				DEVELOPMENT_TEAM = VB7MJ8R223;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Automatic;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = top.kyleye.Forumate;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 16.4;
+				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
@@ -1033,6 +1232,15 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		27CDD3932A1BB06E003E3D00 /* Build configuration list for PBXNativeTarget "ForumateTVApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				27CDD3942A1BB06E003E3D00 /* Debug */,
+				27CDD3952A1BB06E003E3D00 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		27EEA08129EFCD1B00ADA5BE /* Build configuration list for PBXProject "Forumate" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1087,10 +1295,6 @@
 			isa = XCSwiftPackageProductDependency;
 			productName = DiscourseKit;
 		};
-		273AFBFD2A1A954500DD08F5 /* DiscourseModel */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = DiscourseModel;
-		};
 		273AFC012A1A954900DD08F5 /* AcknowKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 273AFBDC2A1A8CF100DD08F5 /* XCRemoteSwiftPackageReference "AcknowKit" */;
@@ -1104,6 +1308,20 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 273AFBC42A1A3DFD00DD08F5 /* XCRemoteSwiftPackageReference "SwiftUI-Flow" */;
 			productName = Flow;
+		};
+		27CDD3A92A1BB65B003E3D00 /* DiscourseKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = DiscourseKit;
+		};
+		27CDD3AB2A1BB65F003E3D00 /* Flow */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 273AFBC42A1A3DFD00DD08F5 /* XCRemoteSwiftPackageReference "SwiftUI-Flow" */;
+			productName = Flow;
+		};
+		27CDD3AD2A1BB662003E3D00 /* AcknowKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 273AFBDC2A1A8CF100DD08F5 /* XCRemoteSwiftPackageReference "AcknowKit" */;
+			productName = AcknowKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -41,6 +41,36 @@
         }
       },
       "idiom" : "watch"
+    },
+    {
+      "color" : {
+        "color-space" : "display-p3",
+        "components" : {
+          "alpha" : "1.000",
+          "blue" : "1.000",
+          "green" : "0.000",
+          "red" : "0.139"
+        }
+      },
+      "idiom" : "tv"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "color" : {
+        "color-space" : "display-p3",
+        "components" : {
+          "alpha" : "1.000",
+          "blue" : "0.878",
+          "green" : "0.729",
+          "red" : "0.050"
+        }
+      },
+      "idiom" : "tv"
     }
   ],
   "info" : {

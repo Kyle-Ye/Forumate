@@ -9,7 +9,9 @@ import SwiftUI
 
 @main
 struct ForumateApp: App {
+    #if os(iOS)
     @UIApplicationDelegateAdaptor private var delegate: AppDelegate
+    #endif
     @StateObject private var appState = AppState()
     
     var body: some Scene {
@@ -23,6 +25,7 @@ struct ForumateApp: App {
     }
 }
 
+#if os(iOS)
 class AppDelegate: NSObject, UIApplicationDelegate {
     func application(_: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
         if options.userActivities.first?.activityType == "top.kyleye.Forumate.add-community" {
@@ -55,3 +58,4 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 //        options: options,
 //        errorHandler: nil)
 }
+#endif

@@ -16,7 +16,9 @@ struct SettingsTabRoot: View {
         NavigationLink {
             destination()
                 .navigationTitle(text)
+                #if !os(tvOS)
                 .navigationBarTitleDisplayMode(.inline)
+                #endif
         } label: {
             Label {
                 Text(text)
@@ -56,7 +58,7 @@ struct SettingsTabRoot: View {
                 Text("\(AppInfo.name) v\(AppInfo.version) Build \(AppInfo.buildNumber) · \(AppInfo.OSVersion)")
             }
         }
-        #if !os(watchOS)
+        #if os(iOS) || targetEnvironment(macCatalyst)
         .listStyle(.insetGrouped)
         #endif
         .toolbar {

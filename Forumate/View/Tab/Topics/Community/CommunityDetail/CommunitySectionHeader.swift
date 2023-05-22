@@ -18,7 +18,7 @@ struct CommunitySectionHeader: View {
                 .font(.headline)
                 .padding(.vertical)
             Spacer()
-            #if !os(watchOS)
+            #if os(iOS) || targetEnvironment(macCatalyst)
             ViewByMenuButton().opacity(showButton ? 1.0 : 0.0)
             #endif
         }
