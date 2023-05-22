@@ -30,8 +30,9 @@ struct CommunityDetail: View {
                     Text("Unimplemented")
                 }
             }
+            #if os(iOS)
             .listStyle(.plain)
-            .scrollIndicators(.hidden)
+            #endif
             .navigationDestination(for: Category.self) { category in
                 CategoryDetail(category: category)
             }
@@ -43,8 +44,10 @@ struct CommunityDetail: View {
 
 struct CommunityView_Previews: PreviewProvider {
     static var previews: some View {
-        CommunityDetail(community: .swift)
-            .environmentObject(AppState())
-            .environmentObject(TopicsTabState())
+        NavigationStack {
+            CommunityDetail(community: .swift)
+        }
+        .environmentObject(AppState())
+        .environmentObject(TopicsTabState())
     }
 }

@@ -20,6 +20,7 @@ struct CategoryLabel: View {
                     color.frame(width: 15, height: 15)
                 }
                 Text(category.name)
+                    .foregroundColor(.primary)
                     .bold()
             }
             if let description = category.description {
