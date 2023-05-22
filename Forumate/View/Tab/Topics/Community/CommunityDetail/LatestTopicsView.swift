@@ -21,7 +21,7 @@ struct LatestTopicsView: View {
                         tabState.selectedTopic = topic
                         tabState.columnVisibility = .detailOnly
                     } label: {
-                        TopicLabel(topic: topic)
+                        TopicLabel(topic: topic, showCategory: showButton)
                     }
                 }
             } else {

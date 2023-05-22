@@ -46,9 +46,9 @@ class AppState: ObservableObject {
         memoryCache[id]?[endPoint.rawValue] as? Value
     }
     
-    func fetchSubCategory(communityID: UUID, subcategoryID: Int) -> Category? {
+    func fetchCategory(communityID: UUID, categoryID: Int) -> Category? {
         guard let site = get(id: communityID, endPoint: .site),
-              let subcategory = site.categories.first(where: { $0.id == subcategoryID }) else {
+              let subcategory = site.categories.first(where: { $0.id == categoryID }) else {
             return nil
         }
         return subcategory

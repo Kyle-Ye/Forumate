@@ -10,15 +10,31 @@ import Flow
 import SwiftUI
 
 struct TopicLabel: View {
+    @EnvironmentObject private var appState: AppState
     @EnvironmentObject private var state: CommunityDetailState
 
     let topic: Topic
+    let showCategory: Bool
+    
+    init(topic: Topic, showCategory: Bool = false) {
+        self.topic = topic
+        self.showCategory = showCategory
+    }
     
     var body: some View {
         VStack(alignment: .leading, spacing: 4) {
+            categoryInfo
             mainInfo
             authorInfo
             extensionInfo
+        }
+    }
+    
+    @ViewBuilder
+    var categoryInfo: some View {
+        if showCategory,
+           let category = state.category(appState: appState, for: topic.categoryID) {
+            SubcategoryLabel(category: category)
         }
     }
 
@@ -81,6 +97,7 @@ struct TopicLabel: View {
 struct TopicLabel_Previews: PreviewProvider {
     static var previews: some View {
         TopicLabel(topic: .test)
+            .environmentObject(AppState())
             .environmentObject(CommunityDetailState(community: .swift))
     }
 }

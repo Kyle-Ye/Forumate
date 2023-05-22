@@ -13,6 +13,8 @@ import SwiftUI
 typealias Category = DiscourseKit.Category
 
 class CommunityDetailState: ObservableObject {
+    @EnvironmentObject var appState: AppState
+    
     init(community: Community) {
         self.community = community
         client = Client(baseURL: community.host)
@@ -70,6 +72,10 @@ class CommunityDetailState: ObservableObject {
             return nil
         }
         return user.userName
+    }
+    
+    func category(appState: AppState, for categoryID: Int) -> Category? {
+        appState.fetchCategory(communityID: community.id, categoryID: categoryID)
     }
     
     enum ViewByType: String, Hashable, CaseIterable {
