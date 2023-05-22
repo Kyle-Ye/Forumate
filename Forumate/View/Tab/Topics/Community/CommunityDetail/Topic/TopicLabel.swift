@@ -10,6 +10,8 @@ import Flow
 import SwiftUI
 
 struct TopicLabel: View {
+    @EnvironmentObject private var state: CommunityDetailState
+
     let topic: Topic
     
     var body: some View {
@@ -27,17 +29,33 @@ struct TopicLabel: View {
             }
             Text(topic.title)
                 .bold()
+                .layoutPriority(1)
             ForEach(topic.tags, id: \.self) { tag in
                 TagView(tag)
             }
         }
     }
     
+    @ViewBuilder
     var authorInfo: some View {
-        HStack {
-            Text("by")
+        if let op = topic.op,
+           let avatarURL = state.avatarURL(for: op.userID),
+           let name = state.userName(for: op.userID) {
+            HStack(spacing: 2) {
+                Text("by")
+                AsyncImage(url: avatarURL) { image in
+                    image.resizable()
+                } placeholder: {
+                    Color.gray
+                }
+                .frame(width: 15, height: 15)
+                .clipShape(Circle())
+                Text(name)
+            }
+            .bold()
+            .foregroundColor(.secondary)
+            .font(.footnote)
         }
-        .font(.footnote)
     }
 
     var extensionInfo: some View {
@@ -63,5 +81,6 @@ struct TopicLabel: View {
 struct TopicLabel_Previews: PreviewProvider {
     static var previews: some View {
         TopicLabel(topic: .test)
+            .environmentObject(CommunityDetailState(community: .swift))
     }
 }

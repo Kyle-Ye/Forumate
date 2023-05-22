@@ -28,9 +28,10 @@ class CommunityDetailState: ObservableObject {
     }
     
     func updateLatestTopics() async throws {
-        let result = try await client.fetchLatest().topicList.topics
+        let latest = try await client.fetchLatest()
         await MainActor.run {
-            self.latestestTopics = result
+            self.latestestTopics = latest.topicList.topics
+            self.users.formUnion(latest.users)
         }
     }
     
@@ -43,7 +44,34 @@ class CommunityDetailState: ObservableObject {
     @Published private(set) var categories: [Category]?
     
     @Published private(set) var latestestTopics: [Topic]?
+    
+    // MARK: - User
 
+    @Published private var users: Set<User> = []
+
+    func avatarURL(for userID: Int) -> URL? {
+        guard let user = users.first(where: { $0.id == userID }),
+              let url = user.avatar(size: 48),
+              var components = URLComponents(url: url, resolvingAgainstBaseURL: false) else {
+            return nil
+        }
+
+        if components.scheme == nil {
+            components.scheme = "https"
+        }
+        if components.host == nil {
+            components.host = community.host.host()
+        }
+        return components.url
+    }
+    
+    func userName(for userID: Int) -> String? {
+        guard let user = users.first(where: { $0.id == userID }) else {
+            return nil
+        }
+        return user.userName
+    }
+    
     enum ViewByType: String, Hashable, CaseIterable {
         case categories
         case latest

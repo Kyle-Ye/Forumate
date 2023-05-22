@@ -20,7 +20,9 @@ struct TagView: View {
             .padding(.horizontal, 6)
             .padding(.vertical, 2)
             .foregroundColor(.secondary)
-            .background(.tertiary, in: RoundedRectangle(cornerRadius: 5))
+            #if !os(watchOS)
+            .background(.regularMaterial, in: RoundedRectangle(cornerRadius: 5))
+            #endif
     }
 }
 
