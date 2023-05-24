@@ -15,8 +15,8 @@ struct CategoryDetail: View {
     }
 }
 
-//struct CategoryDetail_Previews: PreviewProvider {
-//    static var previews: some View {
-//        CategoryDetail()
-//    }
-//}
+struct CategoryDetail_Previews: PreviewProvider {
+    static var previews: some View {
+        CategoryDetail(category: .announcements)
+    }
+}

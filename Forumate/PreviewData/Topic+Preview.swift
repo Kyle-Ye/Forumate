@@ -16,7 +16,7 @@ extension Topic {
             "id": 1,
             "category_id": 1,
             "created_at": "2023-03-19T13:51:09.286Z",
-            "title": "Test Title",
+            "title": "Very Very Very Very Long Test Title",
             "fancy_title": "Test Title",
             "posts_count": 25,
             "new_posts": 2,

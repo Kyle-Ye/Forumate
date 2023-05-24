@@ -24,7 +24,8 @@ struct TopicLabel: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 4) {
             categoryInfo
-            mainInfo
+            titleInfo
+            tagInfo
             authorInfo
             extensionInfo
         }
@@ -37,15 +38,28 @@ struct TopicLabel: View {
             SubcategoryLabel(category: category)
         }
     }
+    
+    func getTopicTitle(_ topic: Topic) -> Text {
+        var images: [String] = []
+        if topic.closed {
+            images.append("lock.fill")
+        }
+        if topic.pinned || topic.pinnedGlobally {
+            images.append("pin.fill")
+        }
+        return images.reduce(Text("")) { partialResult, image in
+            partialResult + Text(Image(systemName: image))
+        } + Text(topic.title)
+    }
 
-    var mainInfo: some View {
+    var titleInfo: some View {
+        getTopicTitle(topic)
+            .bold()
+            .layoutPriority(1)
+    }
+    
+    var tagInfo: some View {
         HFlow(spacing: 2) {
-            if topic.pinned {
-                Image(systemName: "pin.fill")
-            }
-            Text(topic.title)
-                .bold()
-                .layoutPriority(1)
             ForEach(topic.tags, id: \.self) { tag in
                 TagView(tag)
             }
@@ -57,7 +71,7 @@ struct TopicLabel: View {
         if let op = topic.op,
            let avatarURL = state.avatarURL(for: op.userID),
            let name = state.userName(for: op.userID) {
-            HStack(spacing: 2) {
+            HStack(spacing: 5) {
                 Text("by")
                 AsyncImage(url: avatarURL) { image in
                     image.resizable()
@@ -91,12 +105,14 @@ struct TopicLabel: View {
         }
         .font(.caption)
         .foregroundColor(.secondary)
+        .padding(.top, 4)
     }
 }
 
 struct TopicLabel_Previews: PreviewProvider {
     static var previews: some View {
         TopicLabel(topic: .test)
+            .padding(50)
             .environmentObject(AppState())
             .environmentObject(CommunityDetailState(community: .swift))
     }
