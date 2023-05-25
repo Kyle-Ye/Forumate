@@ -212,7 +212,7 @@
 		278E53FF2A18E83000DCD159 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		278E54002A18E83000DCD159 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		278E54012A18E83000DCD159 /* Forumate.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = Forumate.entitlements; sourceTree = "<group>"; };
-		27CDD3882A1BB06D003E3D00 /* ForumateTVApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ForumateTVApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		27CDD3882A1BB06D003E3D00 /* ForumateTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ForumateTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27CDD3912A1BB06E003E3D00 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		27CDD3C32A1BCC01003E3D00 /* TagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagView.swift; sourceTree = "<group>"; };
 		27EEA08629EFCD1B00ADA5BE /* Forumate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Forumate.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -525,7 +525,7 @@
 				27EEA08629EFCD1B00ADA5BE /* Forumate.app */,
 				2726053C2A1A005C0018B908 /* ForumateTests.xctest */,
 				273AFBE72A1A94E100DD08F5 /* Forumate.app */,
-				27CDD3882A1BB06D003E3D00 /* ForumateTVApp.app */,
+				27CDD3882A1BB06D003E3D00 /* ForumateTV.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -573,9 +573,9 @@
 			productReference = 273AFBE72A1A94E100DD08F5 /* Forumate.app */;
 			productType = "com.apple.product-type.application";
 		};
-		27CDD3872A1BB06D003E3D00 /* ForumateTVApp */ = {
+		27CDD3872A1BB06D003E3D00 /* ForumateTV */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 27CDD3932A1BB06E003E3D00 /* Build configuration list for PBXNativeTarget "ForumateTVApp" */;
+			buildConfigurationList = 27CDD3932A1BB06E003E3D00 /* Build configuration list for PBXNativeTarget "ForumateTV" */;
 			buildPhases = (
 				27CDD3842A1BB06D003E3D00 /* Sources */,
 				27CDD3852A1BB06D003E3D00 /* Frameworks */,
@@ -585,14 +585,14 @@
 			);
 			dependencies = (
 			);
-			name = ForumateTVApp;
+			name = ForumateTV;
 			packageProductDependencies = (
 				27CDD3A92A1BB65B003E3D00 /* DiscourseKit */,
 				27CDD3AB2A1BB65F003E3D00 /* Flow */,
 				27CDD3AD2A1BB662003E3D00 /* AcknowKit */,
 			);
 			productName = ForumateTVApp;
-			productReference = 27CDD3882A1BB06D003E3D00 /* ForumateTVApp.app */;
+			productReference = 27CDD3882A1BB06D003E3D00 /* ForumateTV.app */;
 			productType = "com.apple.product-type.application";
 		};
 		27EEA08529EFCD1B00ADA5BE /* Forumate */ = {
@@ -664,7 +664,7 @@
 				27EEA08529EFCD1B00ADA5BE /* Forumate */,
 				2726053B2A1A005C0018B908 /* ForumateTests */,
 				273AFBE62A1A94E100DD08F5 /* Forumate Watch App */,
-				27CDD3872A1BB06D003E3D00 /* ForumateTVApp */,
+				27CDD3872A1BB06D003E3D00 /* ForumateTV */,
 			);
 		};
 /* End PBXProject section */
@@ -1240,7 +1240,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		27CDD3932A1BB06E003E3D00 /* Build configuration list for PBXNativeTarget "ForumateTVApp" */ = {
+		27CDD3932A1BB06E003E3D00 /* Build configuration list for PBXNativeTarget "ForumateTV" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				27CDD3942A1BB06E003E3D00 /* Debug */,

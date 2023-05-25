@@ -23,10 +23,11 @@ struct TopicsTabRoot: View {
                         Label("Add Community", systemImage: "plus.circle.fill")
                             .symbolRenderingMode(.hierarchical)
                     }
-                    .sheet(isPresented: $presentNewCommunityView) {
-                        NewCommunity()
-                    }
+                    
                 }
+            }
+            .sheet(isPresented: $presentNewCommunityView) {
+                NewCommunity()
             }
     }
 }
