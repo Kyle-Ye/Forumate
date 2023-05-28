@@ -96,11 +96,7 @@ struct TopicLabel: View {
             }
             HStack(spacing: 2) {
                 Image(systemName: "calendar.badge.clock")
-                HStack(spacing: 5) {
-                    Text(topic.lastPostedAt, style: .relative)
-                    Text("·")
-                    Text(topic.lastPosterUsername)
-                }
+                Text("\(topic.lastPostedAt, style: .relative) ago · \(topic.lastPosterUsername)")
             }
         }
         .font(.caption)
