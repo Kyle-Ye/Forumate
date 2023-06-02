@@ -12,7 +12,7 @@ struct TopicDetail: View {
     @EnvironmentObject private var appState: AppState
     @EnvironmentObject private var state: CommunityDetailState
     
-    let topic: Topic
+    @State var topic: Topic
     var body: some View {
         List {
             categoryInfo
@@ -25,6 +25,14 @@ struct TopicDetail: View {
         }
         .navigationTitle("\(topic.replyCount) Replies")
         .navigationBarTitleDisplayMode(.inline)
+        .task {
+            if topic.postStream == nil,
+               let newTopic = try? await state.fetchTopicDetail(id: topic.id) {
+                await MainActor.run {
+                    topic = newTopic
+                }
+            }
+        }
     }
     
     @ViewBuilder

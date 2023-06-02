@@ -37,6 +37,10 @@ class CommunityDetailState: ObservableObject {
         }
     }
     
+    func fetchTopicDetail(id: Int) async throws -> Topic {
+        try await client.fetchTopicDetail(id: id)
+    }
+    
     func fetchSite() async throws -> Site {
         try await client.fetchSite()
     }
