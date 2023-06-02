@@ -31,10 +31,8 @@ struct CommunityDetail: View {
             }
             .navigationDestination(for: Category.self) { category in
                 CategoryDetail(category: category)
+                    .environmentObject(state)
             }
-        }
-        .navigationDestination(for: Topic.self) { topic in
-            TopicDetail(topic: topic)
         }
         .navigationTitle(state.community.title)
         .environmentObject(state)

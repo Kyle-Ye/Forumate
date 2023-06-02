@@ -23,8 +23,10 @@ struct TopicsTab: View {
                                 image: "rectangle.3.group.bubble.left")
             }
         } detail: {
-            if let topic = tabState.selectedTopic {
+            if let community = tabState.selectedCommunity,
+               let topic = tabState.selectedTopic {
                 TopicDetail(topic: topic)
+                    .environmentObject(CommunityDetailState(community: community))
                     .id(topic.id)
             } else {
                 PlaceholderView(text: "No Topic Selected")

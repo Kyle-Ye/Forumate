@@ -14,10 +14,6 @@ struct TopicsTabRoot: View {
     
     var body: some View {
         CommunityList()
-            .navigationDestination(for: Community.self) { community in
-                CommunityDetail(community: community)
-                    .id(community.id)
-            }
             .navigationTitle("Communities")
             .toolbar {
                 ToolbarItem(placement: .primaryAction) {
