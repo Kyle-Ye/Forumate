@@ -52,4 +52,10 @@ extension Topic {
         """#.data(using: .utf8)!
         return try! decoder.decode(Topic.self, from: data)
     }
+    
+    static var detail: Topic {
+        let decoder = JSONDecoder.discourse
+        let data = try! Data(contentsOf: URL(string: "https://forums.swift.org/t/2.json")!)
+        return try! decoder.decode(Topic.self, from: data)
+    }
 }
