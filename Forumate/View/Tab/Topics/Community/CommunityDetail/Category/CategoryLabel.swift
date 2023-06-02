@@ -15,9 +15,19 @@ struct CategoryLabel: View {
     
     var body: some View {
         VStack(alignment: .leading) {
-            HStack {
+            #if os(tvOS)
+            let spacing = 30.0
+            #else
+            let spacing: CGFloat? = nil
+            #endif
+            HStack(spacing: spacing) {
                 if let color = Color(hex: category.color) {
-                    color.frame(width: 15, height: 15)
+                    color
+                    #if os(tvOS)
+                    .frame(width: 30, height: 30)
+                    #else
+                    .frame(width: 15, height: 15)
+                    #endif
                 }
                 Text(category.name)
                     .foregroundColor(.primary)

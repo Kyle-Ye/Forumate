@@ -11,19 +11,33 @@ struct SubcategoryLabel: View {
     let category: Category
 
     var body: some View {
-        HStack {
+        #if os(tvOS)
+        let spacing = 20.0
+        #else
+        let spacing: CGFloat? = nil
+        #endif
+        HStack(spacing: spacing) {
             if let color = Color(hex: category.color) {
-                color.frame(width: 10, height: 10)
+                color
+                #if os(tvOS)
+                .frame(width: 20, height: 20)
+                #else
+                .frame(width: 10, height: 10)
+                #endif
             }
             Text(category.name)
                 .lineLimit(1)
                 .foregroundColor(.secondary)
+                .font(.caption)
         }
     }
 }
 
 struct SubcategoryLabel_Previews: PreviewProvider {
     static var previews: some View {
-        SubcategoryLabel(category: .announcements)
+        VStack {
+            SubcategoryLabel(category: .announcements)
+            SubcategoryLabel(category: .evolution)
+        }
     }
 }

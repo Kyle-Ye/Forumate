@@ -52,6 +52,12 @@ class CommunityDetailState: ObservableObject {
     @Published private var users: Set<User> = []
 
     func avatarURL(for userID: Int) -> URL? {
+        #if DEBUG
+        if PreviewChecker.isPreview {
+            return URL(string: "https://picsum.photos/50/50")
+        }
+        #endif
+            
         guard let user = users.first(where: { $0.id == userID }),
               let url = user.avatar(size: 48),
               var components = URLComponents(url: url, resolvingAgainstBaseURL: false) else {
@@ -68,6 +74,12 @@ class CommunityDetailState: ObservableObject {
     }
     
     func userName(for userID: Int) -> String? {
+        #if DEBUG
+        if PreviewChecker.isPreview {
+            return "Kyle"
+        }
+        #endif
+        
         guard let user = users.first(where: { $0.id == userID }) else {
             return nil
         }

@@ -65,6 +65,9 @@
 		273AFC242A1A97CC00DD08F5 /* InboxTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E53EF2A18E83000DCD159 /* InboxTab.swift */; };
 		273AFC252A1A997B00DD08F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 278E53E62A18E83000DCD159 /* Assets.xcassets */; };
 		2747FD312A18BDD0003CB67B /* DiscourseKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2747FD302A18BDD0003CB67B /* DiscourseKit */; };
+		276F9F422A2A348100020B1B /* PreviewChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276F9F412A2A348100020B1B /* PreviewChecker.swift */; };
+		276F9F432A2A348100020B1B /* PreviewChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276F9F412A2A348100020B1B /* PreviewChecker.swift */; };
+		276F9F442A2A348100020B1B /* PreviewChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276F9F412A2A348100020B1B /* PreviewChecker.swift */; };
 		277546D82A19DE3F000FDAA0 /* AppInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277546D72A19DE3F000FDAA0 /* AppInfo.swift */; };
 		277546E12A19EF0F000FDAA0 /* String+HTMLLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277546E02A19EF0F000FDAA0 /* String+HTMLLink.swift */; };
 		277C15BE2A18EF00007940C7 /* CategoryLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277C15BD2A18EF00007940C7 /* CategoryLabel.swift */; };
@@ -187,6 +190,7 @@
 		273AFBE72A1A94E100DD08F5 /* Forumate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Forumate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		273AFBF02A1A94E100DD08F5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2747FD2E2A18BDB8003CB67B /* DiscourseKit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = DiscourseKit; path = ../DiscourseKit; sourceTree = "<group>"; };
+		276F9F412A2A348100020B1B /* PreviewChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewChecker.swift; sourceTree = "<group>"; };
 		277546D72A19DE3F000FDAA0 /* AppInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInfo.swift; sourceTree = "<group>"; };
 		277546E02A19EF0F000FDAA0 /* String+HTMLLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+HTMLLink.swift"; sourceTree = "<group>"; };
 		277C15BD2A18EF00007940C7 /* CategoryLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryLabel.swift; sourceTree = "<group>"; };
@@ -332,6 +336,7 @@
 				272193A02A19CCFA00C221BC /* JSONRawRepresentable.swift */,
 				277C15C32A18F033007940C7 /* HexToColor.swift */,
 				277546E02A19EF0F000FDAA0 /* String+HTMLLink.swift */,
+				276F9F412A2A348100020B1B /* PreviewChecker.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -728,6 +733,7 @@
 				273AFC072A1A961F00DD08F5 /* HexToColor.swift in Sources */,
 				273AFBFA2A1A951C00DD08F5 /* ContentView.swift in Sources */,
 				273AFC1F2A1A967D00DD08F5 /* CommunityDetail.swift in Sources */,
+				276F9F432A2A348100020B1B /* PreviewChecker.swift in Sources */,
 				273AFC102A1A964700DD08F5 /* SettingsTabState.swift in Sources */,
 				273AFC152A1A967D00DD08F5 /* CommunitySectionHeader.swift in Sources */,
 				273AFC0F2A1A964500DD08F5 /* AcknowSection.swift in Sources */,
@@ -771,6 +777,7 @@
 				27CDD3A72A1BB628003E3D00 /* GeneralSection.swift in Sources */,
 				27CDD3B02A1BB6BC003E3D00 /* AppInfo.swift in Sources */,
 				27CDD3AF2A1BB68E003E3D00 /* Community.swift in Sources */,
+				276F9F442A2A348100020B1B /* PreviewChecker.swift in Sources */,
 				27CDD3A62A1BB628003E3D00 /* AcknowSection.swift in Sources */,
 				27CDD3A42A1BB626003E3D00 /* SettingIcon.swift in Sources */,
 				27CDD3992A1BB5EE003E3D00 /* Topic+Preview.swift in Sources */,
@@ -838,6 +845,7 @@
 				277C15BE2A18EF00007940C7 /* CategoryLabel.swift in Sources */,
 				277C15C42A18F033007940C7 /* HexToColor.swift in Sources */,
 				277C15C72A18F52A007940C7 /* SubcategoryLabel.swift in Sources */,
+				276F9F422A2A348100020B1B /* PreviewChecker.swift in Sources */,
 				273AFBD62A1A801500DD08F5 /* GeneralSection.swift in Sources */,
 				278E54082A18E83000DCD159 /* InboxTab.swift in Sources */,
 				278E54062A18E83000DCD159 /* PlaceholderView.swift in Sources */,

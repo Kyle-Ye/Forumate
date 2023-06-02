@@ -78,8 +78,12 @@ struct TopicLabel: View {
                 } placeholder: {
                     Color.gray
                 }
+                #if os(tvOS)
+                .frame(width: 30, height: 30)
+                #else
                 .frame(width: 15, height: 15)
-                .clipShape(Circle())
+                #endif
+                .clipShape(Circle())                
                 Text(name)
             }
             .bold()
