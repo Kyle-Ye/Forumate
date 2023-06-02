@@ -13,33 +13,25 @@ struct CommunityList: View {
     var body: some View {
         #if os(watchOS)
         List {
-            Section {
-                ForEach(appState.communities) { community in
-                    NavigationLink(value: community) {
-                        CommunityLabel(community: community)
-                    }
-                }
-            } header: {
-                Text("My Communities")
-            }
-        }
-        .navigationDestination(for: Community.self) { community in
-            CommunityDetail(community: community)
-                .id(community.id)
+            content
         }
         #else
         List(selection: $tabState.selectedCommunity) {
-            Section {
-                ForEach(appState.communities) { community in
-                    NavigationLink(value: community) {
-                        CommunityLabel(community: community)
-                    }
-                }
-            } header: {
-                Text("My Communities")
-            }
+            content
         }
         #endif
+    }
+        
+    var content: some View {
+        Section {
+            ForEach(appState.communities) { community in
+                NavigationLink(value: community) {
+                    CommunityLabel(community: community)
+                }
+            }
+        } header: {
+            Text("My Communities")
+        }
     }
 }
 

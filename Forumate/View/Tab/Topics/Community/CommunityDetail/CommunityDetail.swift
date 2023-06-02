@@ -19,26 +19,35 @@ struct CommunityDetail: View {
         
     var body: some View {
         NavigationStack(path: $state.selectedCategories) {
-            List {
-                switch state.viewByType {
-                case .categories:
-                    CategoryListView()
-                    LatestTopicsView(showButton: false)
-                case .latest:
-                    LatestTopicsView()
-                default:
-                    Text("Unimplemented")
+            Group {
+                #if os(watchOS)
+                List { content }
+                #else
+                List(selection: $tabState.selectedTopic) {
+                    content
                 }
+                .listStyle(.plain)
+                #endif
             }
-            #if os(iOS)
-            .listStyle(.plain)
-            #endif
             .navigationDestination(for: Category.self) { category in
                 CategoryDetail(category: category)
             }
         }
         .navigationTitle(state.community.title)
         .environmentObject(state)
+    }
+    
+    @ViewBuilder
+    var content: some View {
+        switch state.viewByType {
+        case .categories:
+            CategoryListView()
+            LatestTopicsView(showButton: false)
+        case .latest:
+            LatestTopicsView()
+        default:
+            Text("Unimplemented")
+        }
     }
 }
 
