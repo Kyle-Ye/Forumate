@@ -73,7 +73,7 @@ class CommunityDetailState: ObservableObject {
         return components.url
     }
     
-    func userName(for userID: Int) -> String? {
+    func username(for userID: Int) -> String? {
         #if DEBUG
         if PreviewChecker.isPreview {
             return "Kyle"
@@ -83,7 +83,7 @@ class CommunityDetailState: ObservableObject {
         guard let user = users.first(where: { $0.id == userID }) else {
             return nil
         }
-        return user.userName
+        return user.username
     }
     
     func category(appState: AppState, for categoryID: Int) -> Category? {

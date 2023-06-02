@@ -70,7 +70,7 @@ struct TopicLabel: View {
     var authorInfo: some View {
         if let op = topic.op,
            let avatarURL = state.avatarURL(for: op.userID),
-           let name = state.userName(for: op.userID) {
+           let name = state.username(for: op.userID) {
             HStack(spacing: 5) {
                 Text("by")
                 AsyncImage(url: avatarURL) { image in
