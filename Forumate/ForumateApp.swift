@@ -5,6 +5,7 @@
 //  Created by Kyle on 2023/4/19.
 //
 
+import DiscourseKit
 import SwiftUI
 
 @main
@@ -19,9 +20,15 @@ struct ForumateApp: App {
             ContentView()
                 .environmentObject(appState)
         }
-//        WindowGroup(id: "add-community") {
-//            NewCommunityView()
-//        }
+        #if os(iOS) || os(macOS)
+        WindowGroup("Topic Detail", id: "topic", for: TopicDetailWindowModel.self) { $model in
+            if let model {
+                TopicDetail(topic: model.topic)
+                    .environmentObject(appState)
+                    .environmentObject(CommunityDetailState(community: model.community))
+            }
+        }
+        #endif
     }
 }
 
@@ -44,6 +51,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)
             window.rootViewController = UIHostingController(rootView: NewCommunity())
+//            TopicDetail(topic: <#T##Topic#>)
             self.window = window
             window.makeKeyAndVisible()
         }
