@@ -35,7 +35,10 @@ struct TopicLabel: View {
     var categoryInfo: some View {
         if showCategory,
            let category = state.category(appState: appState, for: topic.categoryID) {
-            SubcategoryLabel(category: category)
+            CategoryText(category: category)
+                .lineLimit(1)
+                .foregroundColor(.secondary)
+                .font(.caption)
         }
     }
     

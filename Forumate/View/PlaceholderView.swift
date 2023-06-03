@@ -24,6 +24,7 @@ struct PlaceholderView: View {
         }
         .font(.title)
         .foregroundColor(.gray)
+        .multilineTextAlignment(.center)
     }
 }
 

@@ -59,7 +59,7 @@
 		273AFC1E2A1A967D00DD08F5 /* CategoryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273AFBCA2A1A642900DD08F5 /* CategoryListView.swift */; };
 		273AFC1F2A1A967D00DD08F5 /* CommunityDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E53F82A18E83000DCD159 /* CommunityDetail.swift */; };
 		273AFC202A1A967D00DD08F5 /* CategoryDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277C15C02A18EF6B007940C7 /* CategoryDetail.swift */; };
-		273AFC212A1A967D00DD08F5 /* SubcategoryLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277C15C62A18F52A007940C7 /* SubcategoryLabel.swift */; };
+		273AFC212A1A967D00DD08F5 /* CategoryText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277C15C62A18F52A007940C7 /* CategoryText.swift */; };
 		273AFC222A1A968100DD08F5 /* TopicsTabRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E53F92A18E83000DCD159 /* TopicsTabRoot.swift */; };
 		273AFC232A1A968100DD08F5 /* TopicsTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E53FE2A18E83000DCD159 /* TopicsTab.swift */; };
 		273AFC242A1A97CC00DD08F5 /* InboxTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E53EF2A18E83000DCD159 /* InboxTab.swift */; };
@@ -76,7 +76,7 @@
 		277C15BE2A18EF00007940C7 /* CategoryLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277C15BD2A18EF00007940C7 /* CategoryLabel.swift */; };
 		277C15C12A18EF6B007940C7 /* CategoryDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277C15C02A18EF6B007940C7 /* CategoryDetail.swift */; };
 		277C15C42A18F033007940C7 /* HexToColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277C15C32A18F033007940C7 /* HexToColor.swift */; };
-		277C15C72A18F52A007940C7 /* SubcategoryLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277C15C62A18F52A007940C7 /* SubcategoryLabel.swift */; };
+		277C15C72A18F52A007940C7 /* CategoryText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277C15C62A18F52A007940C7 /* CategoryText.swift */; };
 		278E54022A18E83000DCD159 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E53E42A18E83000DCD159 /* AppState.swift */; };
 		278E54032A18E83000DCD159 /* ForumateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E53E52A18E83000DCD159 /* ForumateApp.swift */; };
 		278E54042A18E83000DCD159 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 278E53E62A18E83000DCD159 /* Assets.xcassets */; };
@@ -130,7 +130,7 @@
 		27CDD3B92A1BB728003E3D00 /* CategoryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273AFBCA2A1A642900DD08F5 /* CategoryListView.swift */; };
 		27CDD3BA2A1BB728003E3D00 /* CommunityDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E53F82A18E83000DCD159 /* CommunityDetail.swift */; };
 		27CDD3BC2A1BB755003E3D00 /* CategoryDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277C15C02A18EF6B007940C7 /* CategoryDetail.swift */; };
-		27CDD3BD2A1BB755003E3D00 /* SubcategoryLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277C15C62A18F52A007940C7 /* SubcategoryLabel.swift */; };
+		27CDD3BD2A1BB755003E3D00 /* CategoryText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277C15C62A18F52A007940C7 /* CategoryText.swift */; };
 		27CDD3BE2A1BB755003E3D00 /* CategoryLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277C15BD2A18EF00007940C7 /* CategoryLabel.swift */; };
 		27CDD3BF2A1BB758003E3D00 /* TopicDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273AFBE12A1A928C00DD08F5 /* TopicDetail.swift */; };
 		27CDD3C02A1BB758003E3D00 /* TopicLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273AFBD82A1A86A000DD08F5 /* TopicLabel.swift */; };
@@ -211,7 +211,7 @@
 		277C15BD2A18EF00007940C7 /* CategoryLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryLabel.swift; sourceTree = "<group>"; };
 		277C15C02A18EF6B007940C7 /* CategoryDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryDetail.swift; sourceTree = "<group>"; };
 		277C15C32A18F033007940C7 /* HexToColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexToColor.swift; sourceTree = "<group>"; };
-		277C15C62A18F52A007940C7 /* SubcategoryLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubcategoryLabel.swift; sourceTree = "<group>"; };
+		277C15C62A18F52A007940C7 /* CategoryText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryText.swift; sourceTree = "<group>"; };
 		278E53E42A18E83000DCD159 /* AppState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		278E53E52A18E83000DCD159 /* ForumateApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForumateApp.swift; sourceTree = "<group>"; };
 		278E53E62A18E83000DCD159 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -377,7 +377,7 @@
 			children = (
 				277C15BD2A18EF00007940C7 /* CategoryLabel.swift */,
 				277C15C02A18EF6B007940C7 /* CategoryDetail.swift */,
-				277C15C62A18F52A007940C7 /* SubcategoryLabel.swift */,
+				277C15C62A18F52A007940C7 /* CategoryText.swift */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -796,7 +796,7 @@
 				273AFC0C2A1A964200DD08F5 /* SettingsTab.swift in Sources */,
 				273AFC222A1A968100DD08F5 /* TopicsTabRoot.swift in Sources */,
 				273AFC182A1A967D00DD08F5 /* TopicDetail.swift in Sources */,
-				273AFC212A1A967D00DD08F5 /* SubcategoryLabel.swift in Sources */,
+				273AFC212A1A967D00DD08F5 /* CategoryText.swift in Sources */,
 				273AFC1C2A1A967D00DD08F5 /* CommunityList.swift in Sources */,
 				273AFC132A1A967300DD08F5 /* Community.swift in Sources */,
 				276F9F482A2A606600020B1B /* PostView.swift in Sources */,
@@ -829,7 +829,7 @@
 				27CDD3A42A1BB626003E3D00 /* SettingIcon.swift in Sources */,
 				27CDD3992A1BB5EE003E3D00 /* Topic+Preview.swift in Sources */,
 				27CDD3A82A1BB62C003E3D00 /* SettingsTabState.swift in Sources */,
-				27CDD3BD2A1BB755003E3D00 /* SubcategoryLabel.swift in Sources */,
+				27CDD3BD2A1BB755003E3D00 /* CategoryText.swift in Sources */,
 				27CDD3BE2A1BB755003E3D00 /* CategoryLabel.swift in Sources */,
 				27DFFCE12A2AF64A005661BD /* ColorToImageText.swift in Sources */,
 				27CDD39D2A1BB5F4003E3D00 /* String+HTMLLink.swift in Sources */,
@@ -898,7 +898,7 @@
 				278E54122A18E83000DCD159 /* ContentView.swift in Sources */,
 				277C15BE2A18EF00007940C7 /* CategoryLabel.swift in Sources */,
 				277C15C42A18F033007940C7 /* HexToColor.swift in Sources */,
-				277C15C72A18F52A007940C7 /* SubcategoryLabel.swift in Sources */,
+				277C15C72A18F52A007940C7 /* CategoryText.swift in Sources */,
 				276F9F422A2A348100020B1B /* PreviewChecker.swift in Sources */,
 				273AFBD62A1A801500DD08F5 /* GeneralSection.swift in Sources */,
 				278E54082A18E83000DCD159 /* InboxTab.swift in Sources */,

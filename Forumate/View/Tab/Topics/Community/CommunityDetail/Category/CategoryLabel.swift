@@ -15,13 +15,10 @@ struct CategoryLabel: View {
     
     var body: some View {
         VStack(alignment: .leading) {
-            (
-                category.color.colorToImageText(image: "square.fill")
-                    + Text(category.name)
-            )
-            .lineLimit(1)
-            .foregroundColor(.primary)
-            .bold()
+            CategoryText(category: category)
+                .lineLimit(1)
+                .foregroundColor(.primary)
+                .bold()
             if let description = category.description {
                 Text(LocalizedStringKey(description.replacingHTMLLink()))
                     .foregroundColor(.secondary)
@@ -33,7 +30,10 @@ struct CategoryLabel: View {
                             Button {
                                 state.selectedCategories.append(subcategory)
                             } label: {
-                                SubcategoryLabel(category: subcategory)
+                                CategoryText(category: subcategory)
+                                    .lineLimit(1)
+                                    .foregroundColor(.secondary)
+                                    .font(.caption)
                             }
                         }
                     }

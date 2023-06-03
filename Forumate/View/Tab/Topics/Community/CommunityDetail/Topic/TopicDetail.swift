@@ -28,6 +28,7 @@ struct TopicDetail: View {
                     }
                 }
             }
+            .padding(.horizontal)
         }
         .navigationTitle("\(topic.replyCount) Replies")
         .navigationBarTitleDisplayMode(.inline)
@@ -44,7 +45,10 @@ struct TopicDetail: View {
     @ViewBuilder
     var categoryInfo: some View {
         if let category = state.category(appState: appState, for: topic.categoryID) {
-            SubcategoryLabel(category: category)
+            CategoryText(category: category)
+                .lineLimit(1)
+                .foregroundColor(.secondary)
+                .padding(.horizontal)
         }
     }
     
@@ -65,6 +69,7 @@ struct TopicDetail: View {
         getTopicTitle(topic)
             .bold()
             .font(.title)
+            .padding(.horizontal)
     }
     
     var tagInfo: some View {
