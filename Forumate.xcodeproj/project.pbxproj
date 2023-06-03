@@ -705,6 +705,7 @@
 				273AFBC42A1A3DFD00DD08F5 /* XCRemoteSwiftPackageReference "SwiftUI-Flow" */,
 				273AFBDC2A1A8CF100DD08F5 /* XCRemoteSwiftPackageReference "AcknowKit" */,
 				27DFFCD42A2A6D3E005661BD /* XCRemoteSwiftPackageReference "HtmlText" */,
+				27DFFCEB2A2B1EFF005661BD /* XCRemoteSwiftPackageReference "LookinServer" */,
 			);
 			productRefGroup = 27EEA08729EFCD1B00ADA5BE /* Products */;
 			projectDirPath = "";
@@ -1354,6 +1355,14 @@
 		27DFFCD42A2A6D3E005661BD /* XCRemoteSwiftPackageReference "HtmlText" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Jnis/HtmlText.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		27DFFCEB2A2B1EFF005661BD /* XCRemoteSwiftPackageReference "LookinServer" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/QMUI/LookinServer/";
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 1.0.0;

@@ -19,6 +19,15 @@
       }
     },
     {
+      "identity" : "lookinserver",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/QMUI/LookinServer/",
+      "state" : {
+        "revision" : "dfff53bcdbd89740e68c90736be9079344491784",
+        "version" : "1.1.7"
+      }
+    },
+    {
       "identity" : "mocker",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/WeTransfer/Mocker.git",

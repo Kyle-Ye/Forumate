@@ -53,9 +53,9 @@ extension Topic {
         return try! decoder.decode(Topic.self, from: data)
     }
     
-    static var detail: Topic {
+    static func detail(for id: Int) -> Topic {
         let decoder = JSONDecoder.discourse
-        let data = try! Data(contentsOf: URL(string: "https://forums.swift.org/t/2.json")!)
+        let data = try! Data(contentsOf: URL(string: "https://forums.swift.org/t/\(id).json")!)
         return try! decoder.decode(Topic.self, from: data)
     }
 }

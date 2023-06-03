@@ -6,8 +6,8 @@
 //
 
 import DiscourseKit
-import SwiftUI
 import Flow
+import SwiftUI
 
 struct TopicDetail: View {
     @EnvironmentObject private var appState: AppState
@@ -17,14 +17,13 @@ struct TopicDetail: View {
     var body: some View {
         ScrollView {
             LazyVStack(alignment: .leading) {
-                Divider()
                 categoryInfo
                 titleInfo
                 tagInfo
                 if let postStream = topic.postStream {
                     ForEach(postStream.posts, id: \.id) { post in
+                        Divider().padding(.vertical)
                         PostView(post: post)
-                        Divider()
                     }
                 }
             }
@@ -48,7 +47,7 @@ struct TopicDetail: View {
             CategoryText(category: category)
                 .lineLimit(1)
                 .foregroundColor(.secondary)
-                .padding(.horizontal)
+                .padding(.bottom)
         }
     }
     
@@ -69,7 +68,6 @@ struct TopicDetail: View {
         getTopicTitle(topic)
             .bold()
             .font(.title)
-            .padding(.horizontal)
     }
     
     var tagInfo: some View {
@@ -77,14 +75,20 @@ struct TopicDetail: View {
             ForEach(topic.tags, id: \.self) { tag in
                 TagView(tag)
             }
+            .padding(.vertical)
         }
     }
 }
 
 struct TopicDetail_Previews: PreviewProvider {
     static var previews: some View {
-        NavigationStack {
-            TopicDetail(topic: .detail)
+        Group {
+            NavigationStack {
+                TopicDetail(topic: .detail(for: 2))
+            }
+            NavigationStack {
+                TopicDetail(topic: .detail(for: 8))
+            }
         }
         .environmentObject(AppState())
         .environmentObject(TopicsTabState())
