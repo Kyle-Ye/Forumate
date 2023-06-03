@@ -38,21 +38,24 @@ struct PostView: View {
         }
     }
     
+    @State private var size: CGSize = .zero
+    
     var authorArea: some View {
         HStack {
-            if let avatarURL = state.avatarURL(for: post) {
-                AsyncImage(url: avatarURL) { image in
-                    image.resizable()
-                } placeholder: {
-                    Color.gray
-                }
-                .frame(width: 30, height: 30)
-                .clipShape(Circle())
+            AsyncImage(url: state.avatarURL(for: post)) { image in
+                image.resizable()
+            } placeholder: {
+                Color.gray
             }
+            .frame(width: size.height, height: size.height)
+            .clipShape(Circle())
+                
             VStack(alignment: .leading) {
                 Text(post.username) + Text(" ") + Text(post.name).foregroundColor(.secondary)
                 Text("\(post.createdAt, style: .relative) ago").foregroundColor(.secondary)
             }
+            .lineLimit(1)
+            .readSize { size = $0 }
         }
     }
     

@@ -141,6 +141,12 @@
 		27CDD3C62A1BCC40003E3D00 /* TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CDD3C32A1BCC01003E3D00 /* TagView.swift */; };
 		27DFFCD62A2A6D3E005661BD /* HtmlText in Frameworks */ = {isa = PBXBuildFile; productRef = 27DFFCD52A2A6D3E005661BD /* HtmlText */; };
 		27DFFCDA2A2A6D9F005661BD /* HtmlText in Frameworks */ = {isa = PBXBuildFile; productRef = 27DFFCD92A2A6D9F005661BD /* HtmlText */; };
+		27DFFCDF2A2AF64A005661BD /* ColorToImageText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DFFCDE2A2AF64A005661BD /* ColorToImageText.swift */; };
+		27DFFCE02A2AF64A005661BD /* ColorToImageText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DFFCDE2A2AF64A005661BD /* ColorToImageText.swift */; };
+		27DFFCE12A2AF64A005661BD /* ColorToImageText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DFFCDE2A2AF64A005661BD /* ColorToImageText.swift */; };
+		27DFFCE32A2B0509005661BD /* View+Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DFFCE22A2B0509005661BD /* View+Size.swift */; };
+		27DFFCE42A2B0509005661BD /* View+Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DFFCE22A2B0509005661BD /* View+Size.swift */; };
+		27DFFCE52A2B0509005661BD /* View+Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DFFCE22A2B0509005661BD /* View+Size.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -225,6 +231,8 @@
 		27CDD3882A1BB06D003E3D00 /* ForumateTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ForumateTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27CDD3912A1BB06E003E3D00 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		27CDD3C32A1BCC01003E3D00 /* TagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagView.swift; sourceTree = "<group>"; };
+		27DFFCDE2A2AF64A005661BD /* ColorToImageText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorToImageText.swift; sourceTree = "<group>"; };
+		27DFFCE22A2B0509005661BD /* View+Size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Size.swift"; sourceTree = "<group>"; };
 		27EEA08629EFCD1B00ADA5BE /* Forumate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Forumate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -354,6 +362,8 @@
 				277C15C32A18F033007940C7 /* HexToColor.swift */,
 				277546E02A19EF0F000FDAA0 /* String+HTMLLink.swift */,
 				276F9F412A2A348100020B1B /* PreviewChecker.swift */,
+				27DFFCDE2A2AF64A005661BD /* ColorToImageText.swift */,
+				27DFFCE22A2B0509005661BD /* View+Size.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -760,9 +770,11 @@
 				273AFC0A2A1A963A00DD08F5 /* StarterIntro.swift in Sources */,
 				273AFC192A1A967D00DD08F5 /* CommunityLabel.swift in Sources */,
 				273AFC172A1A967D00DD08F5 /* CategoryLabel.swift in Sources */,
+				27DFFCE02A2AF64A005661BD /* ColorToImageText.swift in Sources */,
 				273AFBF92A1A951200DD08F5 /* AppInfo.swift in Sources */,
 				273AFC0B2A1A964200DD08F5 /* SettingIcon.swift in Sources */,
 				273AFC1E2A1A967D00DD08F5 /* CategoryListView.swift in Sources */,
+				27DFFCE42A2B0509005661BD /* View+Size.swift in Sources */,
 				273AFC0E2A1A964500DD08F5 /* GeneralSection.swift in Sources */,
 				273AFC1D2A1A967D00DD08F5 /* TopicLabel.swift in Sources */,
 				273AFC052A1A960900DD08F5 /* Topic+Preview.swift in Sources */,
@@ -805,9 +817,11 @@
 				27CDD3A82A1BB62C003E3D00 /* SettingsTabState.swift in Sources */,
 				27CDD3BD2A1BB755003E3D00 /* SubcategoryLabel.swift in Sources */,
 				27CDD3BE2A1BB755003E3D00 /* CategoryLabel.swift in Sources */,
+				27DFFCE12A2AF64A005661BD /* ColorToImageText.swift in Sources */,
 				27CDD39D2A1BB5F4003E3D00 /* String+HTMLLink.swift in Sources */,
 				27CDD3B32A1BB726003E3D00 /* NewCommunity.swift in Sources */,
 				27CDD3B22A1BB723003E3D00 /* TopicsTab.swift in Sources */,
+				27DFFCE52A2B0509005661BD /* View+Size.swift in Sources */,
 				27CDD39F2A1BB5FE003E3D00 /* ContentView.swift in Sources */,
 				27CDD3BF2A1BB758003E3D00 /* TopicDetail.swift in Sources */,
 				27CDD3A52A1BB626003E3D00 /* SettingsTab.swift in Sources */,
@@ -838,8 +852,10 @@
 				273AFBD92A1A86A000DD08F5 /* TopicLabel.swift in Sources */,
 				272605802A1A12450018B908 /* Category+Preview.swift in Sources */,
 				270097CC2A19D66E00CA01B5 /* SettingsTabRoot.swift in Sources */,
+				27DFFCDF2A2AF64A005661BD /* ColorToImageText.swift in Sources */,
 				277546E12A19EF0F000FDAA0 /* String+HTMLLink.swift in Sources */,
 				278E540E2A18E83000DCD159 /* CommunityLabel.swift in Sources */,
+				27DFFCE32A2B0509005661BD /* View+Size.swift in Sources */,
 				278E54072A18E83000DCD159 /* SettingsTab.swift in Sources */,
 				278E54032A18E83000DCD159 /* ForumateApp.swift in Sources */,
 				278E54112A18E83000DCD159 /* TopicsTab.swift in Sources */,

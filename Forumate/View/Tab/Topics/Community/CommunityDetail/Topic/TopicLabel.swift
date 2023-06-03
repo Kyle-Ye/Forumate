@@ -66,6 +66,8 @@ struct TopicLabel: View {
         }
     }
     
+    @Environment(\.font) private var font
+
     @ViewBuilder
     var authorInfo: some View {
         if let op = topic.op,
@@ -73,22 +75,22 @@ struct TopicLabel: View {
            let name = state.username(for: op.userID) {
             HStack(spacing: 5) {
                 Text("by")
-                AsyncImage(url: avatarURL) { image in
-                    image.resizable()
-                } placeholder: {
-                    Color.gray
-                }
-                #if os(tvOS)
-                .frame(width: 30, height: 30)
-                #else
-                .frame(width: 15, height: 15)
-                #endif
-                .clipShape(Circle())                
+                    .layoutPriority(-1)
+                Image(systemName: "circle.fill")
+                    .overlay {
+                        AsyncImage(url: avatarURL) { image in
+                            image.resizable()
+                        } placeholder: {
+                            Color.gray
+                        }
+                        .clipShape(Circle())
+                    }
                 Text(name)
             }
             .bold()
             .foregroundColor(.secondary)
             .font(.footnote)
+            .lineLimit(1)
         }
     }
 
@@ -105,6 +107,7 @@ struct TopicLabel: View {
         }
         .font(.caption)
         .foregroundColor(.secondary)
+        .lineLimit(1)
         .padding(.top, 4)
     }
 }

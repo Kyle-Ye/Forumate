@@ -11,25 +11,13 @@ struct SubcategoryLabel: View {
     let category: Category
 
     var body: some View {
-        #if os(tvOS)
-        let spacing = 20.0
-        #else
-        let spacing: CGFloat? = nil
-        #endif
-        HStack(spacing: spacing) {
-            if let color = Color(hex: category.color) {
-                color
-                #if os(tvOS)
-                .frame(width: 20, height: 20)
-                #else
-                .frame(width: 10, height: 10)
-                #endif
-            }
-            Text(category.name)
-                .lineLimit(1)
-                .foregroundColor(.secondary)
-                .font(.caption)
-        }
+        (
+            category.color.colorToImageText(image: "square.fill")
+                + Text("\(category.name)")
+        )
+        .lineLimit(1)
+        .foregroundColor(.secondary)
+        .font(.caption)
     }
 }
 

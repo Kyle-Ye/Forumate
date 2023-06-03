@@ -15,30 +15,19 @@ struct CategoryLabel: View {
     
     var body: some View {
         VStack(alignment: .leading) {
-            #if os(tvOS)
-            let spacing = 30.0
-            #else
-            let spacing: CGFloat? = nil
-            #endif
-            HStack(spacing: spacing) {
-                if let color = Color(hex: category.color) {
-                    color
-                    #if os(tvOS)
-                    .frame(width: 30, height: 30)
-                    #else
-                    .frame(width: 15, height: 15)
-                    #endif
-                }
-                Text(category.name)
-                    .foregroundColor(.primary)
-                    .bold()
-            }
+            (
+                category.color.colorToImageText(image: "square.fill")
+                    + Text(category.name)
+            )
+            .lineLimit(1)
+            .foregroundColor(.primary)
+            .bold()
             if let description = category.description {
                 Text(LocalizedStringKey(description.replacingHTMLLink()))
                     .foregroundColor(.secondary)
             }
             if category.hasChildren {
-                HFlow {
+                HFlow(rowSpacing: 5) {
                     ForEach(category.subcategoryIDs, id: \.self) { id in
                         if let subcategory = appState.fetchCategory(communityID: state.community.id, categoryID: id) {
                             Button {
