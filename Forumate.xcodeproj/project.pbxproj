@@ -137,7 +137,6 @@
 		27CDD3C52A1BCC3F003E3D00 /* TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CDD3C32A1BCC01003E3D00 /* TagView.swift */; };
 		27CDD3C62A1BCC40003E3D00 /* TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CDD3C32A1BCC01003E3D00 /* TagView.swift */; };
 		27DFFCD62A2A6D3E005661BD /* HtmlText in Frameworks */ = {isa = PBXBuildFile; productRef = 27DFFCD52A2A6D3E005661BD /* HtmlText */; };
-		27DFFCDA2A2A6D9F005661BD /* HtmlText in Frameworks */ = {isa = PBXBuildFile; productRef = 27DFFCD92A2A6D9F005661BD /* HtmlText */; };
 		27DFFCDF2A2AF64A005661BD /* ColorToImageText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DFFCDE2A2AF64A005661BD /* ColorToImageText.swift */; };
 		27DFFCE02A2AF64A005661BD /* ColorToImageText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DFFCDE2A2AF64A005661BD /* ColorToImageText.swift */; };
 		27DFFCE12A2AF64A005661BD /* ColorToImageText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DFFCDE2A2AF64A005661BD /* ColorToImageText.swift */; };
@@ -268,7 +267,6 @@
 				27CDD3AE2A1BB662003E3D00 /* AcknowKit in Frameworks */,
 				27DFFCFB2A2B35BA005661BD /* DiscourseKit in Frameworks */,
 				27CDD3AC2A1BB65F003E3D00 /* Flow in Frameworks */,
-				27DFFCDA2A2A6D9F005661BD /* HtmlText in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -645,7 +643,6 @@
 			packageProductDependencies = (
 				27CDD3AB2A1BB65F003E3D00 /* Flow */,
 				27CDD3AD2A1BB662003E3D00 /* AcknowKit */,
-				27DFFCD92A2A6D9F005661BD /* HtmlText */,
 				27DFFCFA2A2B35BA005661BD /* DiscourseKit */,
 			);
 			productName = ForumateTVApp;
@@ -1425,11 +1422,6 @@
 			productName = AcknowKit;
 		};
 		27DFFCD52A2A6D3E005661BD /* HtmlText */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 27DFFCD42A2A6D3E005661BD /* XCRemoteSwiftPackageReference "HtmlText" */;
-			productName = HtmlText;
-		};
-		27DFFCD92A2A6D9F005661BD /* HtmlText */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 27DFFCD42A2A6D3E005661BD /* XCRemoteSwiftPackageReference "HtmlText" */;
 			productName = HtmlText;

@@ -42,7 +42,7 @@ struct ContentView: View {
         .sheet(isPresented: $showStartedIntro) {
             StarterIntro()
         }
-        #if !os(watchOS)
+        #if os(iOS) || os(macOS)
         .environment(\.openURL, OpenURLAction { url in
             let style = UserDefaults.standard
                 .string(forKey: SettingKeys.openLinkStyle)

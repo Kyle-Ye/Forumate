@@ -30,7 +30,9 @@ struct TopicDetail: View {
             .padding(.horizontal)
         }
         .navigationTitle("\(topic.replyCount) Replies")
+        #if !os(tvOS)
         .navigationBarTitleDisplayMode(.inline)
+        #endif
         .task {
             if topic.postStream == nil,
                let newTopic = try? await state.fetchTopicDetail(id: topic.id) {

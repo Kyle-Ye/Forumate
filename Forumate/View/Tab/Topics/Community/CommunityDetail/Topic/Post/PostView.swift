@@ -6,7 +6,10 @@
 //
 
 import DiscourseKit
-#if os(watchOS)
+
+#if os(iOS) || os(macOS)
+import HtmlText
+#else
 struct HTMLText: View {
     let html: String
     
@@ -20,8 +23,6 @@ struct HTMLText: View {
         }
     }
 }
-#else
-import HtmlText
 #endif
 import SwiftUI
 
@@ -63,7 +64,7 @@ struct PostView: View {
         }
     }
     
-    #if !os(watchOS)
+    #if os(iOS) || os(macOS)
     private var tapMethod: HtmlText.HttpLinkTap {
         let style = UserDefaults.standard
             .string(forKey: SettingKeys.openLinkStyle)
@@ -77,9 +78,7 @@ struct PostView: View {
     #endif
     
     var bodyArea: some View {
-        #if os(watchOS)
-        HTMLText(html: post.cooked)
-        #else
+        #if os(iOS) || os(macOS)
         // TODO: Dynamic font change
         HtmlText(
             body: post.cooked,
@@ -92,6 +91,8 @@ struct PostView: View {
             """#),
             linkTap: HtmlText.defaultLinkTapHandler(httpLinkTap: tapMethod)
         )
+        #else
+        HTMLText(html: post.cooked)
         #endif
     }
     

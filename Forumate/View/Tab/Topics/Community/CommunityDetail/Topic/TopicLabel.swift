@@ -34,7 +34,7 @@ struct TopicLabel: View {
             authorInfo
             extensionInfo
         }
-        #if !os(watchOS)
+        #if os(iOS) || os(macOS)
         .contextMenu {
             if supportsMultipleWindows {
                 Button {
