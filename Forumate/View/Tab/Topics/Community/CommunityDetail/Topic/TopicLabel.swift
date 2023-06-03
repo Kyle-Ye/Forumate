@@ -11,6 +11,7 @@ import SwiftUI
 
 struct TopicLabel: View {
     @EnvironmentObject private var appState: AppState
+    @EnvironmentObject private var tabState: TopicsTabState
     @EnvironmentObject private var state: CommunityDetailState
 
     let topic: Topic
@@ -20,7 +21,7 @@ struct TopicLabel: View {
         self.topic = topic
         self.showCategory = showCategory
     }
-    
+
     var body: some View {
         VStack(alignment: .leading, spacing: 4) {
             categoryInfo
@@ -29,6 +30,31 @@ struct TopicLabel: View {
             authorInfo
             extensionInfo
         }
+        #if !os(watchOS)
+        .contextMenu {
+            if UIDevice.current.userInterfaceIdiom == .pad {
+                Button {
+                    // Open In New Window
+                } label: {
+                    #if targetEnvironment(macCatalyst)
+                    Label("Open In New Window", systemImage: "rectangle.badge.plus")
+                    #else
+                    Label("Open In New Window", systemImage: "macwindow.badge.plus")
+                    #endif
+                }
+                Divider()
+            }
+            Button {} label: {
+                Label("Mark as read", systemImage: "doc.text.image")
+            }
+        } preview: {
+            TopicDetail(topic: topic)
+                .frame(maxHeight: 800)
+                .environmentObject(appState)
+                .environmentObject(tabState)
+                .environmentObject(state)
+        }
+        #endif
     }
     
     @ViewBuilder
@@ -117,9 +143,14 @@ struct TopicLabel: View {
 
 struct TopicLabel_Previews: PreviewProvider {
     static var previews: some View {
-        TopicLabel(topic: .test)
-            .padding(50)
-            .environmentObject(AppState())
-            .environmentObject(CommunityDetailState(community: .swift))
+        NavigationStack {
+            List {
+                TopicLabel(topic: .test)
+            }
+            .listStyle(.plain)
+        }
+        .environmentObject(AppState())
+        .environmentObject(TopicsTabState())
+        .environmentObject(CommunityDetailState(community: .swift))
     }
 }
