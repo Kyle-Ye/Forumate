@@ -18,6 +18,9 @@ class CommunityDetailState: ObservableObject {
     init(community: Community) {
         self.community = community
         client = Client(baseURL: community.host)
+        let defaultValue = UserDefaults.standard.string(forKey: SettingKeys.defaultViewByType).flatMap { ViewByType(rawValue: $0) }
+        let store = UserDefaults(suiteName: community.id.uuidString)!
+        _viewByType = AppStorage(wrappedValue: defaultValue ?? .categories, "view_by_type", store: store)
     }
     
     let community: Community
@@ -124,7 +127,7 @@ class CommunityDetailState: ObservableObject {
         case bookmard
     }
     
-    @Published var viewByType: ViewByType = .categories
+    @AppStorage var viewByType: ViewByType
     
     @Published var selectedCategories: [Category] = []
 }

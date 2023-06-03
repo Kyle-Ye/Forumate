@@ -63,6 +63,19 @@ struct PostView: View {
         }
     }
     
+    #if !os(watchOS)
+    private var tapMethod: HtmlText.HttpLinkTap {
+        let style = UserDefaults.standard
+            .string(forKey: SettingKeys.openLinkStyle)
+            .flatMap { OpenLinkStyle(rawValue: $0) }
+            ?? .unspecified
+        switch style {
+        case .modal: return .openSFSafariModal
+        case .safari: return .openSafariApp
+        }
+    }
+    #endif
+    
     var bodyArea: some View {
         #if os(watchOS)
         HTMLText(html: post.cooked)
@@ -77,7 +90,7 @@ struct PostView: View {
                 supported-color-schemes: light dark; /* enable light and dark mode */
             }
             """#),
-            linkTap: HtmlText.defaultLinkTapHandler(httpLinkTap: .openSFSafariModal)
+            linkTap: HtmlText.defaultLinkTapHandler(httpLinkTap: tapMethod)
         )
         #endif
     }

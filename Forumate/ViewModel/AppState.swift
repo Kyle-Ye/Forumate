@@ -18,12 +18,15 @@ class AppState: ObservableObject {
     var hasShowedStarterIntro: Bool { _hasShowedStarterIntro }
     
     // TODO: Migrate to use CoreData or others to add iCloud sync Support
-    @AppStorage("communities") private var _communities: [Community] = [.swift]
+    @AppStorage("communities") private var _communities: [Community] = []
     var communities: [Community] { _communities }
     
     func didFirstLaunch() {
         _isFirstLaunch = true
         _hasShowedStarterIntro = true
+        if _communities.isEmpty {
+            _communities = [.swift]            
+        }
     }
     
     func addCommunity(_ community: Community) {

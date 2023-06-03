@@ -47,7 +47,8 @@ struct SettingsTabRoot: View {
                 navigationItem(text: "Privacy Policy") {
                     SettingIcon(icon: "lock.fill", style: .purple)
                 } destination: {
-                    Text("Unimplemented")
+                    Text("We do not collect any infomation from you and your device".uppercased())
+                        .font(.system(.largeTitle, design: .monospaced, weight: .bold))
                 }
                 navigationItem(text: "Acknowledgement") {
                     SettingIcon(icon: "heart.fill", style: .pink)

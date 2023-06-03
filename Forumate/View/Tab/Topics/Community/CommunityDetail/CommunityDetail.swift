@@ -47,7 +47,11 @@ struct CommunityDetail: View {
         case .latest:
             LatestTopicsView()
         default:
-            Text("Unimplemented")
+            Section {
+                Text("Unimplemented")
+            } header: {
+                CommunitySectionHeader(text: state.viewByType.rawValue.uppercased(), showButton: true)
+            }
         }
     }
 }
