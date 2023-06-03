@@ -55,7 +55,11 @@ struct PostView: View {
                 Text("\(post.createdAt, style: .relative) ago").foregroundColor(.secondary)
             }
             .lineLimit(1)
-            .readSize { size = $0 }
+            .readSize { size in
+                DispatchQueue.main.async {
+                    self.size = size
+                }
+            }
         }
     }
     
@@ -63,9 +67,16 @@ struct PostView: View {
         #if os(watchOS)
         HTMLText(html: post.cooked)
         #else
+        // TODO: Dynamic font change
         HtmlText(
             body: post.cooked,
-            css: .init(fontFaces: [], css: ""),
+            css: .init(fontFaces: [], css: #"""
+            :root {
+                font: -apple-system-body;
+                color-scheme: light dark; /* enable light and dark mode compatibility */
+                supported-color-schemes: light dark; /* enable light and dark mode */
+            }
+            """#),
             linkTap: HtmlText.defaultLinkTapHandler(httpLinkTap: .openSFSafariModal)
         )
         #endif
