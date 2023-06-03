@@ -77,6 +77,27 @@ class CommunityDetailState: ObservableObject {
         return components.url
     }
     
+    func avatarURL(for post: Post) -> URL? {
+        #if DEBUG
+        if PreviewChecker.isPreview {
+            return URL(string: "https://picsum.photos/50/50")
+        }
+        #endif
+            
+        guard let url = post.avatar(size: 48),
+              var components = URLComponents(url: url, resolvingAgainstBaseURL: false) else {
+            return nil
+        }
+
+        if components.scheme == nil {
+            components.scheme = "https"
+        }
+        if components.host == nil {
+            components.host = community.host.host()
+        }
+        return components.url
+    }
+    
     func username(for userID: Int) -> String? {
         #if DEBUG
         if PreviewChecker.isPreview {

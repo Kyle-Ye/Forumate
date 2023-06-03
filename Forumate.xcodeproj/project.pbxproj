@@ -139,6 +139,8 @@
 		27CDD3C42A1BCC01003E3D00 /* TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CDD3C32A1BCC01003E3D00 /* TagView.swift */; };
 		27CDD3C52A1BCC3F003E3D00 /* TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CDD3C32A1BCC01003E3D00 /* TagView.swift */; };
 		27CDD3C62A1BCC40003E3D00 /* TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CDD3C32A1BCC01003E3D00 /* TagView.swift */; };
+		27DFFCD62A2A6D3E005661BD /* HtmlText in Frameworks */ = {isa = PBXBuildFile; productRef = 27DFFCD52A2A6D3E005661BD /* HtmlText */; };
+		27DFFCDA2A2A6D9F005661BD /* HtmlText in Frameworks */ = {isa = PBXBuildFile; productRef = 27DFFCD92A2A6D9F005661BD /* HtmlText */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -250,6 +252,7 @@
 			files = (
 				27CDD3AE2A1BB662003E3D00 /* AcknowKit in Frameworks */,
 				27CDD3AC2A1BB65F003E3D00 /* Flow in Frameworks */,
+				27DFFCDA2A2A6D9F005661BD /* HtmlText in Frameworks */,
 				27CDD3AA2A1BB65B003E3D00 /* DiscourseKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -260,6 +263,7 @@
 			files = (
 				273AFBDE2A1A8CF100DD08F5 /* AcknowKit in Frameworks */,
 				273AFBC62A1A3DFE00DD08F5 /* Flow in Frameworks */,
+				27DFFCD62A2A6D3E005661BD /* HtmlText in Frameworks */,
 				2747FD312A18BDD0003CB67B /* DiscourseKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -304,10 +308,10 @@
 		273AFBD72A1A868A00DD08F5 /* Topic */ = {
 			isa = PBXGroup;
 			children = (
-				276F9F452A2A604D00020B1B /* Post */,
 				273AFBD82A1A86A000DD08F5 /* TopicLabel.swift */,
 				273AFBE12A1A928C00DD08F5 /* TopicDetail.swift */,
 				27CDD3C32A1BCC01003E3D00 /* TagView.swift */,
+				276F9F452A2A604D00020B1B /* Post */,
 			);
 			path = Topic;
 			sourceTree = "<group>";
@@ -608,6 +612,7 @@
 				27CDD3A92A1BB65B003E3D00 /* DiscourseKit */,
 				27CDD3AB2A1BB65F003E3D00 /* Flow */,
 				27CDD3AD2A1BB662003E3D00 /* AcknowKit */,
+				27DFFCD92A2A6D9F005661BD /* HtmlText */,
 			);
 			productName = ForumateTVApp;
 			productReference = 27CDD3882A1BB06D003E3D00 /* ForumateTV.app */;
@@ -632,6 +637,7 @@
 				2747FD302A18BDD0003CB67B /* DiscourseKit */,
 				273AFBC52A1A3DFE00DD08F5 /* Flow */,
 				273AFBDD2A1A8CF100DD08F5 /* AcknowKit */,
+				27DFFCD52A2A6D3E005661BD /* HtmlText */,
 			);
 			productName = Forumate;
 			productReference = 27EEA08629EFCD1B00ADA5BE /* Forumate.app */;
@@ -675,6 +681,7 @@
 			packageReferences = (
 				273AFBC42A1A3DFD00DD08F5 /* XCRemoteSwiftPackageReference "SwiftUI-Flow" */,
 				273AFBDC2A1A8CF100DD08F5 /* XCRemoteSwiftPackageReference "AcknowKit" */,
+				27DFFCD42A2A6D3E005661BD /* XCRemoteSwiftPackageReference "HtmlText" */,
 			);
 			productRefGroup = 27EEA08729EFCD1B00ADA5BE /* Products */;
 			projectDirPath = "";
@@ -1312,6 +1319,14 @@
 				minimumVersion = 0.0.3;
 			};
 		};
+		27DFFCD42A2A6D3E005661BD /* XCRemoteSwiftPackageReference "HtmlText" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Jnis/HtmlText.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1356,6 +1371,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 273AFBDC2A1A8CF100DD08F5 /* XCRemoteSwiftPackageReference "AcknowKit" */;
 			productName = AcknowKit;
+		};
+		27DFFCD52A2A6D3E005661BD /* HtmlText */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 27DFFCD42A2A6D3E005661BD /* XCRemoteSwiftPackageReference "HtmlText" */;
+			productName = HtmlText;
+		};
+		27DFFCD92A2A6D9F005661BD /* HtmlText */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 27DFFCD42A2A6D3E005661BD /* XCRemoteSwiftPackageReference "HtmlText" */;
+			productName = HtmlText;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

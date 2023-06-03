@@ -7,6 +7,7 @@
 
 import DiscourseKit
 import SwiftUI
+import Flow
 
 struct TopicDetail: View {
     @EnvironmentObject private var appState: AppState
@@ -14,12 +15,17 @@ struct TopicDetail: View {
     
     @State var topic: Topic
     var body: some View {
-        List {
-            categoryInfo
-            titleInfo
-            if let postStream = topic.postStream {
-                ForEach(postStream.posts, id: \.id) { post in
-                    PostView(post: post)
+        ScrollView {
+            LazyVStack(alignment: .leading) {
+                Divider()
+                categoryInfo
+                titleInfo
+                tagInfo
+                if let postStream = topic.postStream {
+                    ForEach(postStream.posts, id: \.id) { post in
+                        PostView(post: post)
+                        Divider()
+                    }
                 }
             }
         }
@@ -58,7 +64,15 @@ struct TopicDetail: View {
     var titleInfo: some View {
         getTopicTitle(topic)
             .bold()
-            .layoutPriority(1)
+            .font(.title)
+    }
+    
+    var tagInfo: some View {
+        HFlow(spacing: 2) {
+            ForEach(topic.tags, id: \.self) { tag in
+                TagView(tag)
+            }
+        }
     }
 }
 
