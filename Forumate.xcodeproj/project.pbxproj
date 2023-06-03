@@ -29,7 +29,6 @@
 		273AFBF42A1A94E100DD08F5 /* Forumate.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 273AFBE72A1A94E100DD08F5 /* Forumate.app */; platformFilter = ios; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		273AFBF92A1A951200DD08F5 /* AppInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277546D72A19DE3F000FDAA0 /* AppInfo.swift */; };
 		273AFBFA2A1A951C00DD08F5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E53FF2A18E83000DCD159 /* ContentView.swift */; };
-		273AFBFC2A1A954200DD08F5 /* DiscourseKit in Frameworks */ = {isa = PBXBuildFile; productRef = 273AFBFB2A1A954200DD08F5 /* DiscourseKit */; };
 		273AFC022A1A954900DD08F5 /* AcknowKit in Frameworks */ = {isa = PBXBuildFile; productRef = 273AFC012A1A954900DD08F5 /* AcknowKit */; };
 		273AFC032A1A95FD00DD08F5 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E53E42A18E83000DCD159 /* AppState.swift */; };
 		273AFC042A1A960600DD08F5 /* Category+Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2726057F2A1A12450018B908 /* Category+Preview.swift */; };
@@ -64,7 +63,6 @@
 		273AFC232A1A968100DD08F5 /* TopicsTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E53FE2A18E83000DCD159 /* TopicsTab.swift */; };
 		273AFC242A1A97CC00DD08F5 /* InboxTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E53EF2A18E83000DCD159 /* InboxTab.swift */; };
 		273AFC252A1A997B00DD08F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 278E53E62A18E83000DCD159 /* Assets.xcassets */; };
-		2747FD312A18BDD0003CB67B /* DiscourseKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2747FD302A18BDD0003CB67B /* DiscourseKit */; };
 		276F9F422A2A348100020B1B /* PreviewChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276F9F412A2A348100020B1B /* PreviewChecker.swift */; };
 		276F9F432A2A348100020B1B /* PreviewChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276F9F412A2A348100020B1B /* PreviewChecker.swift */; };
 		276F9F442A2A348100020B1B /* PreviewChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276F9F412A2A348100020B1B /* PreviewChecker.swift */; };
@@ -115,7 +113,6 @@
 		27CDD3A62A1BB628003E3D00 /* AcknowSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273AFBDF2A1A8D1800DD08F5 /* AcknowSection.swift */; };
 		27CDD3A72A1BB628003E3D00 /* GeneralSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273AFBD52A1A801500DD08F5 /* GeneralSection.swift */; };
 		27CDD3A82A1BB62C003E3D00 /* SettingsTabState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270097CE2A19D68700CA01B5 /* SettingsTabState.swift */; };
-		27CDD3AA2A1BB65B003E3D00 /* DiscourseKit in Frameworks */ = {isa = PBXBuildFile; productRef = 27CDD3A92A1BB65B003E3D00 /* DiscourseKit */; };
 		27CDD3AC2A1BB65F003E3D00 /* Flow in Frameworks */ = {isa = PBXBuildFile; productRef = 27CDD3AB2A1BB65F003E3D00 /* Flow */; };
 		27CDD3AE2A1BB662003E3D00 /* AcknowKit in Frameworks */ = {isa = PBXBuildFile; productRef = 27CDD3AD2A1BB662003E3D00 /* AcknowKit */; };
 		27CDD3AF2A1BB68E003E3D00 /* Community.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E53FC2A18E83000DCD159 /* Community.swift */; };
@@ -140,7 +137,6 @@
 		27CDD3C52A1BCC3F003E3D00 /* TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CDD3C32A1BCC01003E3D00 /* TagView.swift */; };
 		27CDD3C62A1BCC40003E3D00 /* TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CDD3C32A1BCC01003E3D00 /* TagView.swift */; };
 		27DFFCD62A2A6D3E005661BD /* HtmlText in Frameworks */ = {isa = PBXBuildFile; productRef = 27DFFCD52A2A6D3E005661BD /* HtmlText */; };
-		27DFFCDA2A2A6D9F005661BD /* HtmlText in Frameworks */ = {isa = PBXBuildFile; productRef = 27DFFCD92A2A6D9F005661BD /* HtmlText */; };
 		27DFFCDF2A2AF64A005661BD /* ColorToImageText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DFFCDE2A2AF64A005661BD /* ColorToImageText.swift */; };
 		27DFFCE02A2AF64A005661BD /* ColorToImageText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DFFCDE2A2AF64A005661BD /* ColorToImageText.swift */; };
 		27DFFCE12A2AF64A005661BD /* ColorToImageText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DFFCDE2A2AF64A005661BD /* ColorToImageText.swift */; };
@@ -153,6 +149,9 @@
 		27DFFCF02A2B2FD3005661BD /* TopicDetailWindowModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DFFCEF2A2B2FD3005661BD /* TopicDetailWindowModel.swift */; };
 		27DFFCF12A2B2FD3005661BD /* TopicDetailWindowModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DFFCEF2A2B2FD3005661BD /* TopicDetailWindowModel.swift */; };
 		27DFFCF22A2B2FD3005661BD /* TopicDetailWindowModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DFFCEF2A2B2FD3005661BD /* TopicDetailWindowModel.swift */; };
+		27DFFCF72A2B35AB005661BD /* DiscourseKit in Frameworks */ = {isa = PBXBuildFile; productRef = 27DFFCF62A2B35AB005661BD /* DiscourseKit */; };
+		27DFFCF92A2B35B3005661BD /* DiscourseKit in Frameworks */ = {isa = PBXBuildFile; productRef = 27DFFCF82A2B35B3005661BD /* DiscourseKit */; };
+		27DFFCFB2A2B35BA005661BD /* DiscourseKit in Frameworks */ = {isa = PBXBuildFile; productRef = 27DFFCFA2A2B35BA005661BD /* DiscourseKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -206,7 +205,6 @@
 		273AFBE12A1A928C00DD08F5 /* TopicDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicDetail.swift; sourceTree = "<group>"; };
 		273AFBE72A1A94E100DD08F5 /* Forumate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Forumate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		273AFBF02A1A94E100DD08F5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		2747FD2E2A18BDB8003CB67B /* DiscourseKit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = DiscourseKit; path = ../DiscourseKit; sourceTree = "<group>"; };
 		276F9F412A2A348100020B1B /* PreviewChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewChecker.swift; sourceTree = "<group>"; };
 		276F9F462A2A606600020B1B /* PostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
 		277546D72A19DE3F000FDAA0 /* AppInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInfo.swift; sourceTree = "<group>"; };
@@ -257,8 +255,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				27CDD3832A1BAEAC003E3D00 /* Flow in Frameworks */,
+				27DFFCF92A2B35B3005661BD /* DiscourseKit in Frameworks */,
 				273AFC022A1A954900DD08F5 /* AcknowKit in Frameworks */,
-				273AFBFC2A1A954200DD08F5 /* DiscourseKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,9 +265,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				27CDD3AE2A1BB662003E3D00 /* AcknowKit in Frameworks */,
+				27DFFCFB2A2B35BA005661BD /* DiscourseKit in Frameworks */,
 				27CDD3AC2A1BB65F003E3D00 /* Flow in Frameworks */,
-				27DFFCDA2A2A6D9F005661BD /* HtmlText in Frameworks */,
-				27CDD3AA2A1BB65B003E3D00 /* DiscourseKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,9 +275,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				273AFBDE2A1A8CF100DD08F5 /* AcknowKit in Frameworks */,
+				27DFFCF72A2B35AB005661BD /* DiscourseKit in Frameworks */,
 				273AFBC62A1A3DFE00DD08F5 /* Flow in Frameworks */,
 				27DFFCD62A2A6D3E005661BD /* HtmlText in Frameworks */,
-				2747FD312A18BDD0003CB67B /* DiscourseKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -567,7 +564,6 @@
 		27EEA07D29EFCD1B00ADA5BE = {
 			isa = PBXGroup;
 			children = (
-				2747FD2E2A18BDB8003CB67B /* DiscourseKit */,
 				278E53E22A18E83000DCD159 /* Forumate */,
 				2726053D2A1A005C0018B908 /* ForumateTests */,
 				273AFBE82A1A94E100DD08F5 /* ForumateWatch Watch App */,
@@ -623,9 +619,9 @@
 			);
 			name = "Forumate Watch App";
 			packageProductDependencies = (
-				273AFBFB2A1A954200DD08F5 /* DiscourseKit */,
 				273AFC012A1A954900DD08F5 /* AcknowKit */,
 				27CDD3822A1BAEAC003E3D00 /* Flow */,
+				27DFFCF82A2B35B3005661BD /* DiscourseKit */,
 			);
 			productName = "ForumateWatch Watch App";
 			productReference = 273AFBE72A1A94E100DD08F5 /* Forumate.app */;
@@ -645,10 +641,9 @@
 			);
 			name = ForumateTV;
 			packageProductDependencies = (
-				27CDD3A92A1BB65B003E3D00 /* DiscourseKit */,
 				27CDD3AB2A1BB65F003E3D00 /* Flow */,
 				27CDD3AD2A1BB662003E3D00 /* AcknowKit */,
-				27DFFCD92A2A6D9F005661BD /* HtmlText */,
+				27DFFCFA2A2B35BA005661BD /* DiscourseKit */,
 			);
 			productName = ForumateTVApp;
 			productReference = 27CDD3882A1BB06D003E3D00 /* ForumateTV.app */;
@@ -670,10 +665,10 @@
 			);
 			name = Forumate;
 			packageProductDependencies = (
-				2747FD302A18BDD0003CB67B /* DiscourseKit */,
 				273AFBC52A1A3DFE00DD08F5 /* Flow */,
 				273AFBDD2A1A8CF100DD08F5 /* AcknowKit */,
 				27DFFCD52A2A6D3E005661BD /* HtmlText */,
+				27DFFCF62A2B35AB005661BD /* DiscourseKit */,
 			);
 			productName = Forumate;
 			productReference = 27EEA08629EFCD1B00ADA5BE /* Forumate.app */;
@@ -719,6 +714,7 @@
 				273AFBDC2A1A8CF100DD08F5 /* XCRemoteSwiftPackageReference "AcknowKit" */,
 				27DFFCD42A2A6D3E005661BD /* XCRemoteSwiftPackageReference "HtmlText" */,
 				27DFFCEB2A2B1EFF005661BD /* XCRemoteSwiftPackageReference "LookinServer" */,
+				27DFFCF32A2B3574005661BD /* XCRemoteSwiftPackageReference "DiscourseKit" */,
 			);
 			productRefGroup = 27EEA08729EFCD1B00ADA5BE /* Products */;
 			projectDirPath = "";
@@ -1006,7 +1002,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.1;
+				MARKETING_VERSION = 0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = top.kyleye.Forumate.watchkitapp;
 				PRODUCT_NAME = Forumate;
 				SDKROOT = watchos;
@@ -1036,7 +1032,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.1;
+				MARKETING_VERSION = 0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = top.kyleye.Forumate.watchkitapp;
 				PRODUCT_NAME = Forumate;
 				SDKROOT = watchos;
@@ -1066,7 +1062,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.1;
+				MARKETING_VERSION = 0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = top.kyleye.Forumate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
@@ -1094,7 +1090,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.1;
+				MARKETING_VERSION = 0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = top.kyleye.Forumate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
@@ -1245,7 +1241,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
-				MARKETING_VERSION = 0.1;
+				MARKETING_VERSION = 0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = top.kyleye.Forumate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
@@ -1288,7 +1284,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
-				MARKETING_VERSION = 0.1;
+				MARKETING_VERSION = 0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = top.kyleye.Forumate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
@@ -1384,6 +1380,14 @@
 				minimumVersion = 1.0.0;
 			};
 		};
+		27DFFCF32A2B3574005661BD /* XCRemoteSwiftPackageReference "DiscourseKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Kyle-Ye/DiscourseKit";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 0.2.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1397,27 +1401,15 @@
 			package = 273AFBDC2A1A8CF100DD08F5 /* XCRemoteSwiftPackageReference "AcknowKit" */;
 			productName = AcknowKit;
 		};
-		273AFBFB2A1A954200DD08F5 /* DiscourseKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = DiscourseKit;
-		};
 		273AFC012A1A954900DD08F5 /* AcknowKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 273AFBDC2A1A8CF100DD08F5 /* XCRemoteSwiftPackageReference "AcknowKit" */;
 			productName = AcknowKit;
 		};
-		2747FD302A18BDD0003CB67B /* DiscourseKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = DiscourseKit;
-		};
 		27CDD3822A1BAEAC003E3D00 /* Flow */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 273AFBC42A1A3DFD00DD08F5 /* XCRemoteSwiftPackageReference "SwiftUI-Flow" */;
 			productName = Flow;
-		};
-		27CDD3A92A1BB65B003E3D00 /* DiscourseKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = DiscourseKit;
 		};
 		27CDD3AB2A1BB65F003E3D00 /* Flow */ = {
 			isa = XCSwiftPackageProductDependency;
@@ -1434,10 +1426,20 @@
 			package = 27DFFCD42A2A6D3E005661BD /* XCRemoteSwiftPackageReference "HtmlText" */;
 			productName = HtmlText;
 		};
-		27DFFCD92A2A6D9F005661BD /* HtmlText */ = {
+		27DFFCF62A2B35AB005661BD /* DiscourseKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 27DFFCD42A2A6D3E005661BD /* XCRemoteSwiftPackageReference "HtmlText" */;
-			productName = HtmlText;
+			package = 27DFFCF32A2B3574005661BD /* XCRemoteSwiftPackageReference "DiscourseKit" */;
+			productName = DiscourseKit;
+		};
+		27DFFCF82A2B35B3005661BD /* DiscourseKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 27DFFCF32A2B3574005661BD /* XCRemoteSwiftPackageReference "DiscourseKit" */;
+			productName = DiscourseKit;
+		};
+		27DFFCFA2A2B35BA005661BD /* DiscourseKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 27DFFCF32A2B3574005661BD /* XCRemoteSwiftPackageReference "DiscourseKit" */;
+			productName = DiscourseKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-#if !os(watchOS)
+#if os(iOS) || os(macOS)
 import HtmlText
 #endif
 
