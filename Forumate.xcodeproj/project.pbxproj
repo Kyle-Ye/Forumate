@@ -150,6 +150,9 @@
 		27DFFCE82A2B13EB005661BD /* SettingKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DFFCE72A2B13EB005661BD /* SettingKeys.swift */; };
 		27DFFCE92A2B13EB005661BD /* SettingKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DFFCE72A2B13EB005661BD /* SettingKeys.swift */; };
 		27DFFCEA2A2B13EB005661BD /* SettingKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DFFCE72A2B13EB005661BD /* SettingKeys.swift */; };
+		27DFFCF02A2B2FD3005661BD /* TopicDetailWindowModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DFFCEF2A2B2FD3005661BD /* TopicDetailWindowModel.swift */; };
+		27DFFCF12A2B2FD3005661BD /* TopicDetailWindowModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DFFCEF2A2B2FD3005661BD /* TopicDetailWindowModel.swift */; };
+		27DFFCF22A2B2FD3005661BD /* TopicDetailWindowModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DFFCEF2A2B2FD3005661BD /* TopicDetailWindowModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -237,6 +240,7 @@
 		27DFFCDE2A2AF64A005661BD /* ColorToImageText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorToImageText.swift; sourceTree = "<group>"; };
 		27DFFCE22A2B0509005661BD /* View+Size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Size.swift"; sourceTree = "<group>"; };
 		27DFFCE72A2B13EB005661BD /* SettingKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingKeys.swift; sourceTree = "<group>"; };
+		27DFFCEF2A2B2FD3005661BD /* TopicDetailWindowModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicDetailWindowModel.swift; sourceTree = "<group>"; };
 		27EEA08629EFCD1B00ADA5BE /* Forumate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Forumate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -389,6 +393,7 @@
 				277546D72A19DE3F000FDAA0 /* AppInfo.swift */,
 				278E53FF2A18E83000DCD159 /* ContentView.swift */,
 				278E53E92A18E83000DCD159 /* View */,
+				27DFFCEE2A2B2FC4005661BD /* Model */,
 				278E53E32A18E83000DCD159 /* ViewModel */,
 				277C15C22A18F021007940C7 /* Extension */,
 				2726057E2A1A12360018B908 /* PreviewData */,
@@ -547,6 +552,14 @@
 			isa = PBXGroup;
 			children = (
 				27DFFCE72A2B13EB005661BD /* SettingKeys.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		27DFFCEE2A2B2FC4005661BD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				27DFFCEF2A2B2FD3005661BD /* TopicDetailWindowModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -795,6 +808,7 @@
 				273AFC052A1A960900DD08F5 /* Topic+Preview.swift in Sources */,
 				273AFC062A1A961B00DD08F5 /* String+HTMLLink.swift in Sources */,
 				273AFC0C2A1A964200DD08F5 /* SettingsTab.swift in Sources */,
+				27DFFCF12A2B2FD3005661BD /* TopicDetailWindowModel.swift in Sources */,
 				273AFC222A1A968100DD08F5 /* TopicsTabRoot.swift in Sources */,
 				273AFC182A1A967D00DD08F5 /* TopicDetail.swift in Sources */,
 				273AFC212A1A967D00DD08F5 /* CategoryText.swift in Sources */,
@@ -843,6 +857,7 @@
 				27CDD3A52A1BB626003E3D00 /* SettingsTab.swift in Sources */,
 				27CDD39E2A1BB5F7003E3D00 /* AppState.swift in Sources */,
 				27CDD39B2A1BB5F4003E3D00 /* JSONRawRepresentable.swift in Sources */,
+				27DFFCF22A2B2FD3005661BD /* TopicDetailWindowModel.swift in Sources */,
 				27CDD39A2A1BB5EE003E3D00 /* Category+Preview.swift in Sources */,
 				27CDD3B42A1BB726003E3D00 /* CommunityLabel.swift in Sources */,
 				27CDD3A32A1BB626003E3D00 /* SettingsTabRoot.swift in Sources */,
@@ -880,6 +895,7 @@
 				27DFFCE82A2B13EB005661BD /* SettingKeys.swift in Sources */,
 				273AFBCF2A1A73F600DD08F5 /* ViewByMenuButton.swift in Sources */,
 				270097D12A19D7E300CA01B5 /* StarterIntro.swift in Sources */,
+				27DFFCF02A2B2FD3005661BD /* TopicDetailWindowModel.swift in Sources */,
 				273AFBCD2A1A643700DD08F5 /* LatestTopicsView.swift in Sources */,
 				273AFBDB2A1A870F00DD08F5 /* Topic+Preview.swift in Sources */,
 				273AFBE02A1A8D1800DD08F5 /* AcknowSection.swift in Sources */,

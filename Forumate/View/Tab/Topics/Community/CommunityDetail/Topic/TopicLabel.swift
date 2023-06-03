@@ -21,7 +21,11 @@ struct TopicLabel: View {
         self.topic = topic
         self.showCategory = showCategory
     }
-
+    
+    @Environment(\.supportsMultipleWindows) private var supportsMultipleWindows
+    #if os(iOS) || os(macOS)
+    @Environment(\.openWindow) private var openWindow
+    #endif
     var body: some View {
         VStack(alignment: .leading, spacing: 4) {
             categoryInfo
@@ -32,9 +36,9 @@ struct TopicLabel: View {
         }
         #if !os(watchOS)
         .contextMenu {
-            if UIDevice.current.userInterfaceIdiom == .pad {
+            if supportsMultipleWindows {
                 Button {
-                    // Open In New Window
+                    openWindow(value: TopicDetailWindowModel(topic: topic, community: state.community))
                 } label: {
                     #if targetEnvironment(macCatalyst)
                     Label("Open In New Window", systemImage: "rectangle.badge.plus")
