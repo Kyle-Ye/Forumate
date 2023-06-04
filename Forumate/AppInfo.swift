@@ -6,9 +6,12 @@
 //
 
 import Foundation
+#if os(iOS) || os(tvOS)
 import UIKit
-#if os(watchOS)
+#elseif os(watchOS)
 import WatchKit
+#elseif os(macOS)
+import AppKit
 #endif
 
 enum AppInfo {
@@ -25,11 +28,13 @@ enum AppInfo {
     }
 
     static var OSVersion: String {
-        #if os(watchOS)
-        WKInterfaceDevice.current().systemName + " " + WKInterfaceDevice.current().systemVersion
-        #else
+        #if (os(iOS) && !targetEnvironment(macCatalyst)) || os(tvOS)
         UIDevice.current.systemName + " " + UIDevice.current.systemVersion
+        #elseif os(watchOS)
+        WKInterfaceDevice.current().systemName + " " + WKInterfaceDevice.current().systemVersion
+        #elseif os(macOS) || targetEnvironment(macCatalyst)
+        let version = ProcessInfo.processInfo.operatingSystemVersion
+        return "macOS \(version.majorVersion).\(version.minorVersion).\(version.patchVersion)"
         #endif
-        
     }
 }
