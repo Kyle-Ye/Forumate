@@ -36,11 +36,11 @@ struct SettingsTabRoot: View {
                 } destination: {
                     GeneralSection()
                 }
-                navigationItem(text: "Notifications") {
-                    SettingIcon(icon: "bell.badge.fill", style: .red)
-                } destination: {
-                    Text("Unimplemented")
-                }
+//                navigationItem(text: "Notifications") {
+//                    SettingIcon(icon: "bell.badge.fill", style: .red)
+//                } destination: {
+//                    Text("Unimplemented")
+//                }
             }
             
             Section {

@@ -11,8 +11,6 @@ struct CategoryListView: View {
     @EnvironmentObject private var appState: AppState
     @EnvironmentObject private var state: CommunityDetailState
     
-    var showButton = true
-
     var body: some View {
         Section {
             if let categories = state.categories {
@@ -28,7 +26,7 @@ struct CategoryListView: View {
                     .padding()
             }
         } header: {
-            CommunitySectionHeader(text: "Categories", showButton: showButton)
+            CommunitySectionHeader(text: "Categories")
         }
         .task {
             guard let site = try? await state.fetchSite() else {

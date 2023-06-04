@@ -43,6 +43,9 @@ struct CommunityDetail: View {
             }
             #endif
         }
+        .toolbar {
+            ViewByMenuButton()
+        }
         .navigationTitle(state.community.title)
         .environmentObject(state)
     }
@@ -52,14 +55,14 @@ struct CommunityDetail: View {
         switch state.viewByType {
         case .categories:
             CategoryListView()
-            LatestTopicsView(showButton: false)
+            LatestTopicsView()
         case .latest:
             LatestTopicsView()
         default:
             Section {
                 Text("Unimplemented")
             } header: {
-                CommunitySectionHeader(text: state.viewByType.rawValue.uppercased(), showButton: true)
+                CommunitySectionHeader(text: state.viewByType.rawValue.uppercased())
             }
         }
     }

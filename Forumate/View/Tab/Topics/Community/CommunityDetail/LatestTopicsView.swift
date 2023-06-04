@@ -12,22 +12,20 @@ struct LatestTopicsView: View {
     @EnvironmentObject private var tabState: TopicsTabState
     @EnvironmentObject private var state: CommunityDetailState
     
-    var showButton = true
-
     var body: some View {
         Section {
             if let topics = state.latestestTopics {
                 ForEach(topics, id: \.id) { topic in
                     #if os(watchOS)
                     NavigationLink(value: topic) {
-                        TopicLabel(topic: topic, showCategory: showButton)
+                        TopicLabel(topic: topic, showCategory: true)
                     }
                     #else
                     Button {
                         tabState.selectedTopic = topic
                         tabState.columnVisibility = .detailOnly
                     } label: {
-                        TopicLabel(topic: topic, showCategory: showButton)
+                        TopicLabel(topic: topic, showCategory: true)
                     }
                     #endif
                 }
@@ -36,7 +34,7 @@ struct LatestTopicsView: View {
                     .padding()
             }
         } header: {
-            CommunitySectionHeader(text: "Latest Topics", showButton: showButton)
+            CommunitySectionHeader(text: "Latest Topics")
         }
         .task {
             try? await state.updateLatestTopics()
