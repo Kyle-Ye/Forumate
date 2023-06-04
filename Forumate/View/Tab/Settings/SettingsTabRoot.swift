@@ -59,7 +59,7 @@ struct SettingsTabRoot: View {
                 Text("\(AppInfo.name) v\(AppInfo.version) Build \(AppInfo.buildNumber) · \(AppInfo.OSVersion)")
             }
         }
-        #if os(iOS) || targetEnvironment(macCatalyst)
+        #if os(iOS) || os(macOS)
         .listStyle(.insetGrouped)
         #endif
         .toolbar {

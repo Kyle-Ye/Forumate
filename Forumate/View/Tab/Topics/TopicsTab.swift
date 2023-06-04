@@ -11,6 +11,7 @@ struct TopicsTab: View {
     @StateObject var tabState = TopicsTabState()
     
     var body: some View {
+        #if os(iOS) || os(macOS) || os(tvOS)
         NavigationSplitView(columnVisibility: $tabState.columnVisibility) {
             TopicsTabRoot()
                 .environmentObject(tabState)
@@ -34,12 +35,19 @@ struct TopicsTab: View {
         }
         .navigationSplitViewStyleType(SplitViewStyleTypeSetting.value)
         .environmentObject(tabState)
+        #else
+        NavigationStack {
+            TopicsTabRoot()
+        }
+        .environmentObject(tabState)
+        #endif
     }
 }
 
 struct TopicsTab_Previews: PreviewProvider {
     static var previews: some View {
         Group {
+            #if os(iOS)
             TopicsTab()
                 .previewDevice("iPhone 14")
                 .previewDisplayName("iPhone")
@@ -47,6 +55,9 @@ struct TopicsTab_Previews: PreviewProvider {
                 .previewInterfaceOrientation(.landscapeLeft)
                 .previewDevice("iPad Pro (12.9-inch) (6th generation)")
                 .previewDisplayName("iPad")
+            #else
+            TopicsTab()
+            #endif
         }
         .environmentObject(AppState())
     }

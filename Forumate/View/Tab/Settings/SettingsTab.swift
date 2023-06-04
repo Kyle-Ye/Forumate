@@ -15,7 +15,7 @@ struct SettingsTab: View {
             SettingsTabRoot()
                 .environmentObject(tabState)
         }
-        #if os(iOS) || targetEnvironment(macCatalyst)
+        #if os(iOS) || os(macOS)
         .navigationViewStyle(.columns)
         #endif
     }

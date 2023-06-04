@@ -15,6 +15,12 @@ struct CommunityList: View {
         List {
             content
         }
+        .navigationDestination(for: Community.self) { community in
+            CommunityDetail(community: community)
+                .onAppear {
+                    tabState.selectedCommunity = community
+                }
+        }
         #else
         List(selection: $tabState.selectedCommunity) {
             content
