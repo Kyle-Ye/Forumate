@@ -13,6 +13,10 @@ struct TopicDetail: View {
     @EnvironmentObject private var appState: AppState
     @EnvironmentObject private var state: CommunityDetailState
     
+    @Environment(\.supportsMultipleWindows) private var supportsMultipleWindows
+    #if os(iOS) || os(macOS)
+    @Environment(\.openWindow) private var openWindow
+    #endif
     @State var topic: Topic
     var body: some View {
         ScrollView {
@@ -31,16 +35,33 @@ struct TopicDetail: View {
         }
         .navigationTitle("\(topic.replyCount) Replies")
         #if !os(tvOS)
-        .navigationBarTitleDisplayMode(.inline)
+            .navigationBarTitleDisplayMode(.inline)
         #endif
-        .task {
-            if topic.postStream == nil,
-               let newTopic = try? await state.fetchTopicDetail(id: topic.id) {
-                await MainActor.run {
-                    topic = newTopic
+            .task {
+                if topic.postStream == nil,
+                   let newTopic = try? await state.fetchTopicDetail(id: topic.id) {
+                    await MainActor.run {
+                        topic = newTopic
+                    }
                 }
             }
-        }
+        #if os(iOS) || os(macOS)
+            .toolbar {
+                if supportsMultipleWindows {
+                    ToolbarItem(placement: .navigationBarLeading) {
+                        Button {
+                            openWindow(value: TopicDetailWindowModel(topic: topic, community: state.community))
+                        } label: {
+                            #if os(macOS)
+                            Label("Open In New Window", systemImage: "rectangle.badge.plus")
+                            #else
+                            Label("Open In New Window", systemImage: "macwindow.badge.plus")
+                            #endif
+                        }
+                    }
+                }
+            }
+        #endif
     }
     
     @ViewBuilder
