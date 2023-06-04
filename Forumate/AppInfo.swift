@@ -28,14 +28,13 @@ enum AppInfo {
     }
 
     static var OSVersion: String {
-        #if os(iOS) || os(tvOS)
-        // FIXME: mac catalyst should show macOS instead of iPadOS
+        #if (os(iOS) && !targetEnvironment(macCatalyst)) || os(tvOS)
         UIDevice.current.systemName + " " + UIDevice.current.systemVersion
         #elseif os(watchOS)
         WKInterfaceDevice.current().systemName + " " + WKInterfaceDevice.current().systemVersion
-        #elseif os(macOS)
-        // FIXME
-        ProcessInfo().operatingSystemVersionString
+        #elseif os(macOS) || targetEnvironment(macCatalyst)
+        let version = ProcessInfo.processInfo.operatingSystemVersion
+        return "macOS \(version.majorVersion).\(version.minorVersion).\(version.patchVersion)"
         #endif
     }
 }
