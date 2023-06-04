@@ -13,5 +13,7 @@ class TopicsTabState: ObservableObject {
     @Published var selectedCommunity: Community?
     @Published var selectedTopic: Topic?
     
+    #if os(iOS) || os(macOS) || os(tvOS)
     @Published var columnVisibility: NavigationSplitViewVisibility = .automatic
+    #endif
 }

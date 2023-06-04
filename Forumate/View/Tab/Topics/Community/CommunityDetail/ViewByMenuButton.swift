@@ -11,6 +11,7 @@ struct ViewByMenuButton: View {
     @EnvironmentObject private var state: CommunityDetailState
 
     var body: some View {
+        #if os(iOS) || os(macOS)
         Menu {
             Picker(selection: $state.viewByType) {
                 ForEach(CommunityDetailState.ViewByType.allCases, id: \.rawValue) { type in
@@ -25,6 +26,21 @@ struct ViewByMenuButton: View {
                 .resizable()
                 .frame(width: 30, height: 30)
         }
+        #else
+        Picker(selection: $state.viewByType) {
+            ForEach(CommunityDetailState.ViewByType.allCases, id: \.rawValue) { type in
+                Text(type.rawValue.capitalized).tag(type)
+            }
+        } label: {
+            Label {
+                Text("View By Type")
+            } icon: {
+                Image(systemName: "line.3.horizontal.decrease.circle.fill")
+                    .symbolRenderingMode(.hierarchical)
+            }
+        }
+        .pickerStyle(.navigationLink)
+        #endif
     }
 }
 

@@ -36,11 +36,11 @@ struct SettingsTabRoot: View {
                 } destination: {
                     GeneralSection()
                 }
-                navigationItem(text: "Notifications") {
-                    SettingIcon(icon: "bell.badge.fill", style: .red)
-                } destination: {
-                    Text("Unimplemented")
-                }
+//                navigationItem(text: "Notifications") {
+//                    SettingIcon(icon: "bell.badge.fill", style: .red)
+//                } destination: {
+//                    Text("Unimplemented")
+//                }
             }
             
             Section {
@@ -59,7 +59,7 @@ struct SettingsTabRoot: View {
                 Text("\(AppInfo.name) v\(AppInfo.version) Build \(AppInfo.buildNumber) · \(AppInfo.OSVersion)")
             }
         }
-        #if os(iOS) || targetEnvironment(macCatalyst)
+        #if os(iOS) || os(macOS)
         .listStyle(.insetGrouped)
         #endif
         .toolbar {

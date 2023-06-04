@@ -63,6 +63,8 @@
 		273AFC232A1A968100DD08F5 /* TopicsTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E53FE2A18E83000DCD159 /* TopicsTab.swift */; };
 		273AFC242A1A97CC00DD08F5 /* InboxTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E53EF2A18E83000DCD159 /* InboxTab.swift */; };
 		273AFC252A1A997B00DD08F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 278E53E62A18E83000DCD159 /* Assets.xcassets */; };
+		275E04102A2CE75900A91F5B /* ViewByMenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273AFBCE2A1A73F600DD08F5 /* ViewByMenuButton.swift */; };
+		275E04112A2CE78A00A91F5B /* ViewByMenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273AFBCE2A1A73F600DD08F5 /* ViewByMenuButton.swift */; };
 		276F9F422A2A348100020B1B /* PreviewChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276F9F412A2A348100020B1B /* PreviewChecker.swift */; };
 		276F9F432A2A348100020B1B /* PreviewChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276F9F412A2A348100020B1B /* PreviewChecker.swift */; };
 		276F9F442A2A348100020B1B /* PreviewChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276F9F412A2A348100020B1B /* PreviewChecker.swift */; };
@@ -832,6 +834,7 @@
 				27DFFCE42A2B0509005661BD /* View+Size.swift in Sources */,
 				27DFFCE92A2B13EB005661BD /* Settings.swift in Sources */,
 				273AFC0E2A1A964500DD08F5 /* GeneralSection.swift in Sources */,
+				275E04102A2CE75900A91F5B /* ViewByMenuButton.swift in Sources */,
 				273AFC1D2A1A967D00DD08F5 /* TopicLabel.swift in Sources */,
 				273AFC052A1A960900DD08F5 /* Topic+Preview.swift in Sources */,
 				273AFC062A1A961B00DD08F5 /* String+HTMLLink.swift in Sources */,
@@ -884,6 +887,7 @@
 				27DFFCE52A2B0509005661BD /* View+Size.swift in Sources */,
 				27DFFCEA2A2B13EB005661BD /* Settings.swift in Sources */,
 				27CDD39F2A1BB5FE003E3D00 /* ContentView.swift in Sources */,
+				275E04112A2CE78A00A91F5B /* ViewByMenuButton.swift in Sources */,
 				27CDD3BF2A1BB758003E3D00 /* TopicDetail.swift in Sources */,
 				27CDD3A52A1BB626003E3D00 /* SettingsTab.swift in Sources */,
 				27CDD39E2A1BB5F7003E3D00 /* AppState.swift in Sources */,

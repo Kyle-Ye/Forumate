@@ -18,21 +18,33 @@ struct CommunityDetail: View {
     @StateObject private var state: CommunityDetailState
         
     var body: some View {
-        NavigationStack(path: $state.selectedCategories) {
-            Group {
-                #if os(watchOS)
-                List { content }
-                #else
+        Group {
+            #if os(watchOS)
+            List { content }
+                .listStyle(.plain)
+                .navigationDestination(for: Topic.self) { topic in
+                    TopicDetail(topic: topic)
+                        .onAppear {
+                            tabState.selectedTopic = topic
+                        }
+                        .environmentObject(appState)
+                        .environmentObject(state)
+                }
+                .navigationDestination(for: Category.self) { category in
+                    CategoryDetail(category: category)
+                        .environmentObject(state)
+                }
+            #else
+            NavigationStack(path: $state.selectedCategories) {
                 List(selection: $tabState.selectedTopic) {
                     content
                 }
                 .listStyle(.plain)
-                #endif
             }
-            .navigationDestination(for: Category.self) { category in
-                CategoryDetail(category: category)
-                    .environmentObject(state)
-            }
+            #endif
+        }
+        .toolbar {
+            ViewByMenuButton()
         }
         .navigationTitle(state.community.title)
         .environmentObject(state)
@@ -43,14 +55,14 @@ struct CommunityDetail: View {
         switch state.viewByType {
         case .categories:
             CategoryListView()
-            LatestTopicsView(showButton: false)
+            LatestTopicsView()
         case .latest:
             LatestTopicsView()
         default:
             Section {
                 Text("Unimplemented")
             } header: {
-                CommunitySectionHeader(text: state.viewByType.rawValue.uppercased(), showButton: true)
+                CommunitySectionHeader(text: state.viewByType.rawValue.uppercased())
             }
         }
     }

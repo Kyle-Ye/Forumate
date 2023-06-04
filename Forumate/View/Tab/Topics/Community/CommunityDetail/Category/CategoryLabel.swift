@@ -23,6 +23,7 @@ struct CategoryLabel: View {
                 Text(LocalizedStringKey(description.replacingHTMLLink()))
                     .foregroundColor(.secondary)
             }
+            #if os(iOS) || os(macOS)
             if category.hasChildren {
                 HFlow(rowSpacing: 5) {
                     ForEach(category.subcategoryIDs, id: \.self) { id in
@@ -39,6 +40,7 @@ struct CategoryLabel: View {
                     }
                 }
             }
+            #endif
         }
     }
 }

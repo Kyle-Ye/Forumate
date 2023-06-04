@@ -9,7 +9,6 @@ import SwiftUI
 
 struct CommunitySectionHeader: View {
     let text: String
-    let showButton: Bool
     var body: some View {
         HStack {
             Text(text)
@@ -17,24 +16,25 @@ struct CommunitySectionHeader: View {
                 .bold()
                 .font(.headline)
                 .padding(.vertical)
-            Spacer()
-            #if os(iOS) || targetEnvironment(macCatalyst)
-            ViewByMenuButton().opacity(showButton ? 1.0 : 0.0)
-            #endif
         }
     }
 }
 
 struct CommunitySectionHeader_Previews: PreviewProvider {
     static var previews: some View {
-        List {
-            Section {
-                Text("Hello")
-            } header: {
-                CommunitySectionHeader(text: "Categories", showButton: true)
+        NavigationStack {
+            List {
+                Section {
+                    Text("Hello")
+                } header: {
+                    CommunitySectionHeader(text: "Categories")
+                }
+            }
+            .listStyle(.plain)
+            .toolbar {
+                ViewByMenuButton()
             }
         }
-        .listStyle(.plain)
-        
+        .environmentObject(CommunityDetailState(community: .swift))
     }
 }

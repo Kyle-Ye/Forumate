@@ -21,14 +21,23 @@ struct ContentView: View {
             TopicsTab()
                 .tabItem {
                     Label("Topics", systemImage: "doc.text.image")
+                    #if os(watchOS)
+                        .labelStyle(.titleOnly)
+                    #endif
                 }
-            InboxTab()
-                .tabItem {
-                    Label("Inbox", systemImage: "tray")
-                }
+//            InboxTab()
+//                .tabItem {
+//                    Label("Inbox", systemImage: "tray")
+//                    #if os(watchOS)
+//                        .labelStyle(.titleOnly)
+//                    #endif
+//                }
             SettingsTab()
                 .tabItem {
                     Label("Settings", systemImage: "gearshape")
+                    #if os(watchOS)
+                        .labelStyle(.titleOnly)
+                    #endif
                 }
         }
         .onAppear {
