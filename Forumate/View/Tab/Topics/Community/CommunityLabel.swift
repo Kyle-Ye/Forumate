@@ -10,22 +10,20 @@ import SwiftUI
 struct CommunityLabel: View {
     let community: Community
     
+    @State private var size: CGSize = .zero
+    
     var body: some View {
         HStack {
             AsyncImage(url: community.icon) { image in
                 image
                     .resizable()
-                    #if os(watchOS)
-                    .frame(width: 30, height: 30)
-                    #else
-                    .frame(width: 40, height: 40)
-                    #endif
+                    .aspectRatio(contentMode: .fit)
             } placeholder: {
                 Image(systemName: "rectangle.3.group.bubble.left")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-                    .frame(width: 40)
             }
+            .frame(width: size.height, height: size.height)
             VStack(alignment: .leading) {
                 Text(community.title)
                     .font(.system(.body, design: .rounded))
@@ -34,6 +32,12 @@ struct CommunityLabel: View {
 //                }
 //                .font(.footnote)
 //                .foregroundColor(.secondary)
+            }
+            .lineLimit(1)
+            .readSize { size in
+                DispatchQueue.main.async {
+                    self.size = size
+                }
             }
         }
     }

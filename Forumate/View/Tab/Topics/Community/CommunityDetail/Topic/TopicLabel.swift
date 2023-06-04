@@ -110,6 +110,7 @@ struct TopicLabel: View {
                 Text("by")
                     .layoutPriority(-1)
                 Image(systemName: "circle.fill")
+                    .foregroundColor(.clear)
                     .overlay {
                         AsyncImage(url: avatarURL) { image in
                             image.resizable()
