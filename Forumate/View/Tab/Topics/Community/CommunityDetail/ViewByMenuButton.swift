@@ -23,8 +23,6 @@ struct ViewByMenuButton: View {
         } label: {
             Image(systemName: "line.3.horizontal.decrease.circle.fill")
                 .symbolRenderingMode(.hierarchical)
-                .resizable()
-                .frame(width: 30, height: 30)
         }
         #else
         Picker(selection: $state.viewByType) {
