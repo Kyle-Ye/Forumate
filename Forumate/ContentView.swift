@@ -25,13 +25,15 @@ struct ContentView: View {
                         .labelStyle(.titleOnly)
                     #endif
                 }
-//            InboxTab()
-//                .tabItem {
-//                    Label("Inbox", systemImage: "tray")
-//                    #if os(watchOS)
-//                        .labelStyle(.titleOnly)
-//                    #endif
-//                }
+            #if DEBUG
+            InboxTab()
+                .tabItem {
+                    Label("Inbox", systemImage: "tray")
+                    #if os(watchOS)
+                        .labelStyle(.titleOnly)
+                    #endif
+                }
+            #endif
             SettingsTab()
                 .tabItem {
                     Label("Settings", systemImage: "gearshape")

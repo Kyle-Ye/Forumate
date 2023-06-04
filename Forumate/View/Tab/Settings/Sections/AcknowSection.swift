@@ -16,6 +16,7 @@ struct AcknowSection: View {
         .Mocker,
         .swift_http,
         .swift_log,
+        .HtmlText,
     ])
     
     var body: some View {

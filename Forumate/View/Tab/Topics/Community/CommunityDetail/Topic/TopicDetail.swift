@@ -77,7 +77,6 @@ struct TopicDetail: View {
             ForEach(topic.tags, id: \.self) { tag in
                 TagView(tag)
             }
-            .padding(.vertical)
         }
     }
 }

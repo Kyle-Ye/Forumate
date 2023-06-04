@@ -11,19 +11,22 @@ struct SettingsTab: View {
     @StateObject var tabState = SettingsTabState()
     
     var body: some View {
-        NavigationView {
+        NavigationSplitView(columnVisibility: .constant(.all)) {
             SettingsTabRoot()
-                .environmentObject(tabState)
+        } content: {
+            EmptyView()
+        } detail: {
+            EmptyView()
         }
-        #if os(iOS) || os(macOS)
-        .navigationViewStyle(.columns)
-        #endif
+        .navigationSplitViewStyleType(SplitViewStyleTypeSetting.value)
+        .environmentObject(tabState)
     }
 }
 
 struct SettingsTab_Previews: PreviewProvider {
     static var previews: some View {
         SettingsTab()
+//            .previewInterfaceOrientation(.landscapeLeft)
             .environmentObject(AppState())
     }
 }

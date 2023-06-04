@@ -42,7 +42,7 @@ struct GeneralSection: View {
                 Text("System UI Style")
             } footer: {
                 VStack(alignment: .leading) {
-                    Text("Navigation Split View Style is used in Topic tab")
+                    Text("Navigation Split View Style is used in Tabs")
                     Text("Picker Style is used in Settings tab")
                 }
             }
@@ -59,6 +59,9 @@ struct GeneralSection: View {
             #endif
         }
         .pickerStyleType(PickerStyleTypeSetting.value)
+        #if os(iOS)
+        .listStyle(.insetGrouped)
+        #endif
     }
 }
 

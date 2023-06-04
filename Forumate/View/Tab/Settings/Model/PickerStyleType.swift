@@ -30,7 +30,7 @@ extension View {
     func pickerStyleType(_ type: PickerStyleType) -> some View {
         switch type {
         case .automatic: pickerStyle(.automatic)
-        case .navigationLink: pickerStyle(.navigationLink)
+        case .navigationLink: pickerStyle(.navigationLink) // FIXME: Known dark text issue on iPadOS 16
         #if os(iOS) || os(macOS)
         case .menu: pickerStyle(.menu)
         #endif
