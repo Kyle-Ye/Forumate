@@ -7,7 +7,7 @@
 
 import Foundation
 
-#if !os(watchOS)
+#if os(iOS)
 enum OpenLinkType: String, Hashable, CaseIterable {
     case modal = "In-App Safari"
     case safari = "Safari App"

@@ -6,8 +6,8 @@
 //
 
 import DiscourseKit
-import SwiftUI
 import os.log
+import SwiftUI
 
 struct NewCommunity: View {
     @Environment(\.dismiss) private var dismiss
@@ -39,32 +39,39 @@ struct NewCommunity: View {
             .submitLabel(.send)
             .onSubmit { tryAddCommunity() }
             #if !os(watchOS)
-            .toolbar {
-                ToolbarItem(placement: .navigationBarLeading) {
-                    Button("Cancel") { dismiss() }
-                        .buttonStyle(.bordered)
-                }
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    Group {
-                        if loading {
-                            ProgressView()
-                        } else {
-                            Button("Add") { tryAddCommunity() }
-                                .buttonStyle(.bordered)
-                                .disabled(url == nil)
+                .toolbar {
+                    #if os(iOS)
+                    let cancelPlacement: ToolbarItemPlacement = .navigationBarLeading
+                    let conformPlacement: ToolbarItemPlacement = .navigationBarTrailing
+                    #else
+                    let cancelPlacement: ToolbarItemPlacement = .cancellationAction
+                    let conformPlacement: ToolbarItemPlacement = .confirmationAction
+                    #endif
+                    ToolbarItem(placement: cancelPlacement) {
+                        Button("Cancel") { dismiss() }
+                            .buttonStyle(.bordered)
+                    }
+                    ToolbarItem(placement: conformPlacement) {
+                        Group {
+                            if loading {
+                                ProgressView()
+                            } else {
+                                Button("Add") { tryAddCommunity() }
+                                    .buttonStyle(.bordered)
+                                    .disabled(url == nil)
+                            }
+                        }
+                        .alert("Could not add community", isPresented: $loadingError) {
+                            Button(role: .cancel) {
+                                NewCommunity.logger.info("Failed to add community for \(urlInput)")
+                            } label: {
+                                Text("OK")
+                            }
+                        } message: {
+                            Text("The community provided does not like a Discourse community.")
                         }
                     }
-                    .alert("Could not add community", isPresented: $loadingError) {
-                        Button(role: .cancel) {
-                            NewCommunity.logger.info("Failed to add community for \(urlInput)")
-                        } label: {
-                            Text("OK")
-                        }
-                    } message: {
-                        Text("The community provided does not like a Discourse community.")
-                    }
                 }
-            }
             #endif
         }
     }

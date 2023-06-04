@@ -40,11 +40,7 @@ struct TopicLabel: View {
                 Button {
                     openWindow(value: TopicDetailWindowModel(topic: topic, community: state.community))
                 } label: {
-                    #if os(macOS)
-                    Label("Open In New Window", systemImage: "rectangle.badge.plus")
-                    #else
                     Label("Open In New Window", systemImage: "macwindow.badge.plus")
-                    #endif
                 }
                 Divider()
             }

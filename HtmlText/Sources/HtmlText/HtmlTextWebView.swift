@@ -10,6 +10,7 @@ import os.log
 import SwiftUI
 import WebKit
 
+#if os(iOS)
 struct HtmlTextWebView: UIViewRepresentable {
     @Binding var dynamicHeight: CGFloat
     let html: String
@@ -39,6 +40,35 @@ struct HtmlTextWebView: UIViewRepresentable {
         uiView.navigationDelegate = nil
     }
 }
+
+#elseif os(macOS)
+struct HtmlTextWebView: NSViewRepresentable {
+    @Binding var dynamicHeight: CGFloat
+    let html: String
+    let linkTap: ((URL) -> Void)?
+    
+    func makeNSView(context: Context) -> WKWebView {
+        let webView = WKWebView()
+        webView.navigationDelegate = context.coordinator
+        DispatchQueue.main.async {
+            webView.loadHTMLString(html, baseURL: Bundle.main.bundleURL)
+        }
+        return webView
+    }
+    
+    func updateNSView(_: WKWebView, context _: Context) {}
+    
+    func makeCoordinator() -> Coordinator {
+        Coordinator(self)
+    }
+    
+    static func dismantleNSView(_ uiView: WKWebView, coordinator _: Coordinator) {
+        uiView.navigationDelegate = nil
+    }
+}
+
+#endif
+
 
 extension HtmlTextWebView {
     class Coordinator: NSObject, WKNavigationDelegate {

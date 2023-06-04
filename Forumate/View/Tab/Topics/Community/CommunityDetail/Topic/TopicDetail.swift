@@ -34,7 +34,7 @@ struct TopicDetail: View {
             .padding(.horizontal)
         }
         .navigationTitle("\(topic.replyCount) Replies")
-        #if !os(tvOS)
+        #if os(iOS) || os(watchOS)
             .navigationBarTitleDisplayMode(.inline)
         #endif
             .task {
@@ -48,15 +48,16 @@ struct TopicDetail: View {
         #if os(iOS) || os(macOS)
             .toolbar {
                 if supportsMultipleWindows {
-                    ToolbarItem(placement: .navigationBarLeading) {
+                    #if os(iOS)
+                    let placement: ToolbarItemPlacement = .navigationBarLeading
+                    #else
+                    let placement: ToolbarItemPlacement = .primaryAction
+                    #endif
+                    ToolbarItem(placement: placement) {
                         Button {
                             openWindow(value: TopicDetailWindowModel(topic: topic, community: state.community))
                         } label: {
-                            #if os(macOS)
-                            Label("Open In New Window", systemImage: "rectangle.badge.plus")
-                            #else
                             Label("Open In New Window", systemImage: "macwindow.badge.plus")
-                            #endif
                         }
                     }
                 }

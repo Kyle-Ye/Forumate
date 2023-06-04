@@ -12,7 +12,7 @@ struct GeneralSection: View {
     @AppStorage(SplitViewStyleTypeSetting.self) var navigationSplitViewStyle
     @AppStorage(PickerStyleTypeSetting.self) var pickerStyle
 
-    #if !os(watchOS)
+    #if os(iOS)
     @AppStorage(OpenLinkTypeSetting.self) var openLinkType
     #endif
 
@@ -46,7 +46,7 @@ struct GeneralSection: View {
                     Text("Picker Style is used in Settings tab")
                 }
             }
-            #if !os(watchOS)
+            #if os(iOS)
             Section {
                 Picker("Open Link In", selection: $openLinkType) {
                     ForEach(OpenLinkType.allCases, id: \.rawValue) { type in
@@ -60,7 +60,7 @@ struct GeneralSection: View {
         }
         .pickerStyleType(PickerStyleTypeSetting.value)
         #if os(iOS)
-        .listStyle(.insetGrouped)
+            .listStyle(.insetGrouped)
         #endif
     }
 }
@@ -70,7 +70,7 @@ struct GeneralSection_Previews: PreviewProvider {
         NavigationStack {
             GeneralSection()
                 .navigationTitle("General")
-            #if !os(tvOS)
+            #if os(iOS) || os(watchOS)
                 .navigationBarTitleDisplayMode(.inline)
             #endif
         }

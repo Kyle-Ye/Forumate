@@ -53,7 +53,7 @@ struct ContentView: View {
         .sheet(isPresented: $showStartedIntro) {
             StarterIntro()
         }
-        #if os(iOS) || os(macOS)
+        #if os(iOS)
         .environment(\.openURL, OpenURLAction { url in
             let type = OpenLinkTypeSetting.value
             switch type {
