@@ -19,15 +19,6 @@
       }
     },
     {
-      "identity" : "htmltext",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/Jnis/HtmlText.git",
-      "state" : {
-        "revision" : "4b0e01bd772619570a30ce6cda303cd0d2a98360",
-        "version" : "1.0.0"
-      }
-    },
-    {
       "identity" : "lookinserver",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/QMUI/LookinServer/",

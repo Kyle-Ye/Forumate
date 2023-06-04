@@ -6,9 +6,6 @@
 //
 
 import SwiftUI
-#if os(iOS) || os(macOS)
-import HtmlText
-#endif
 
 enum OpenLinkStyle: String, Hashable, CaseIterable {
     case modal = "In-App Safari"

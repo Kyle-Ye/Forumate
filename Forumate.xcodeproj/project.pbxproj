@@ -92,6 +92,9 @@
 		278E54102A18E83000DCD159 /* NewCommunity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E53FD2A18E83000DCD159 /* NewCommunity.swift */; };
 		278E54112A18E83000DCD159 /* TopicsTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E53FE2A18E83000DCD159 /* TopicsTab.swift */; };
 		278E54122A18E83000DCD159 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E53FF2A18E83000DCD159 /* ContentView.swift */; };
+		27C00A2C2A2CC10700CA9ACD /* HtmlText in Frameworks */ = {isa = PBXBuildFile; productRef = 27C00A2B2A2CC10700CA9ACD /* HtmlText */; };
+		27C00A2E2A2CC10C00CA9ACD /* HtmlText in Frameworks */ = {isa = PBXBuildFile; productRef = 27C00A2D2A2CC10C00CA9ACD /* HtmlText */; };
+		27C00A302A2CC10F00CA9ACD /* HtmlText in Frameworks */ = {isa = PBXBuildFile; productRef = 27C00A2F2A2CC10F00CA9ACD /* HtmlText */; };
 		27CDD3832A1BAEAC003E3D00 /* Flow in Frameworks */ = {isa = PBXBuildFile; productRef = 27CDD3822A1BAEAC003E3D00 /* Flow */; };
 		27CDD3922A1BB06E003E3D00 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27CDD3912A1BB06E003E3D00 /* Preview Assets.xcassets */; };
 		27CDD3962A1BB573003E3D00 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 278E53E62A18E83000DCD159 /* Assets.xcassets */; };
@@ -136,7 +139,6 @@
 		27CDD3C42A1BCC01003E3D00 /* TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CDD3C32A1BCC01003E3D00 /* TagView.swift */; };
 		27CDD3C52A1BCC3F003E3D00 /* TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CDD3C32A1BCC01003E3D00 /* TagView.swift */; };
 		27CDD3C62A1BCC40003E3D00 /* TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CDD3C32A1BCC01003E3D00 /* TagView.swift */; };
-		27DFFCD62A2A6D3E005661BD /* HtmlText in Frameworks */ = {isa = PBXBuildFile; productRef = 27DFFCD52A2A6D3E005661BD /* HtmlText */; };
 		27DFFCDF2A2AF64A005661BD /* ColorToImageText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DFFCDE2A2AF64A005661BD /* ColorToImageText.swift */; };
 		27DFFCE02A2AF64A005661BD /* ColorToImageText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DFFCDE2A2AF64A005661BD /* ColorToImageText.swift */; };
 		27DFFCE12A2AF64A005661BD /* ColorToImageText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DFFCDE2A2AF64A005661BD /* ColorToImageText.swift */; };
@@ -232,6 +234,7 @@
 		278E53FF2A18E83000DCD159 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		278E54002A18E83000DCD159 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		278E54012A18E83000DCD159 /* Forumate.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = Forumate.entitlements; sourceTree = "<group>"; };
+		27C00A2A2A2CC0FE00CA9ACD /* HtmlText */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = HtmlText; sourceTree = "<group>"; };
 		27CDD3882A1BB06D003E3D00 /* ForumateTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ForumateTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27CDD3912A1BB06E003E3D00 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		27CDD3C32A1BCC01003E3D00 /* TagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagView.swift; sourceTree = "<group>"; };
@@ -256,6 +259,7 @@
 			files = (
 				27CDD3832A1BAEAC003E3D00 /* Flow in Frameworks */,
 				27DFFCF92A2B35B3005661BD /* DiscourseKit in Frameworks */,
+				27C00A302A2CC10F00CA9ACD /* HtmlText in Frameworks */,
 				273AFC022A1A954900DD08F5 /* AcknowKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -266,6 +270,7 @@
 			files = (
 				27CDD3AE2A1BB662003E3D00 /* AcknowKit in Frameworks */,
 				27DFFCFB2A2B35BA005661BD /* DiscourseKit in Frameworks */,
+				27C00A2E2A2CC10C00CA9ACD /* HtmlText in Frameworks */,
 				27CDD3AC2A1BB65F003E3D00 /* Flow in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -276,8 +281,8 @@
 			files = (
 				273AFBDE2A1A8CF100DD08F5 /* AcknowKit in Frameworks */,
 				27DFFCF72A2B35AB005661BD /* DiscourseKit in Frameworks */,
+				27C00A2C2A2CC10700CA9ACD /* HtmlText in Frameworks */,
 				273AFBC62A1A3DFE00DD08F5 /* Flow in Frameworks */,
-				27DFFCD62A2A6D3E005661BD /* HtmlText in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,6 +348,14 @@
 				273AFBF02A1A94E100DD08F5 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		273C10F12A2CBFDC001537E2 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				27C00A2A2A2CC0FE00CA9ACD /* HtmlText */,
+			);
+			name = Packages;
 			sourceTree = "<group>";
 		};
 		2747FD2F2A18BDD0003CB67B /* Frameworks */ = {
@@ -564,6 +577,7 @@
 		27EEA07D29EFCD1B00ADA5BE = {
 			isa = PBXGroup;
 			children = (
+				273C10F12A2CBFDC001537E2 /* Packages */,
 				278E53E22A18E83000DCD159 /* Forumate */,
 				2726053D2A1A005C0018B908 /* ForumateTests */,
 				273AFBE82A1A94E100DD08F5 /* ForumateWatch Watch App */,
@@ -622,6 +636,7 @@
 				273AFC012A1A954900DD08F5 /* AcknowKit */,
 				27CDD3822A1BAEAC003E3D00 /* Flow */,
 				27DFFCF82A2B35B3005661BD /* DiscourseKit */,
+				27C00A2F2A2CC10F00CA9ACD /* HtmlText */,
 			);
 			productName = "ForumateWatch Watch App";
 			productReference = 273AFBE72A1A94E100DD08F5 /* Forumate.app */;
@@ -644,6 +659,7 @@
 				27CDD3AB2A1BB65F003E3D00 /* Flow */,
 				27CDD3AD2A1BB662003E3D00 /* AcknowKit */,
 				27DFFCFA2A2B35BA005661BD /* DiscourseKit */,
+				27C00A2D2A2CC10C00CA9ACD /* HtmlText */,
 			);
 			productName = ForumateTVApp;
 			productReference = 27CDD3882A1BB06D003E3D00 /* ForumateTV.app */;
@@ -667,8 +683,8 @@
 			packageProductDependencies = (
 				273AFBC52A1A3DFE00DD08F5 /* Flow */,
 				273AFBDD2A1A8CF100DD08F5 /* AcknowKit */,
-				27DFFCD52A2A6D3E005661BD /* HtmlText */,
 				27DFFCF62A2B35AB005661BD /* DiscourseKit */,
+				27C00A2B2A2CC10700CA9ACD /* HtmlText */,
 			);
 			productName = Forumate;
 			productReference = 27EEA08629EFCD1B00ADA5BE /* Forumate.app */;
@@ -712,7 +728,6 @@
 			packageReferences = (
 				273AFBC42A1A3DFD00DD08F5 /* XCRemoteSwiftPackageReference "SwiftUI-Flow" */,
 				273AFBDC2A1A8CF100DD08F5 /* XCRemoteSwiftPackageReference "AcknowKit" */,
-				27DFFCD42A2A6D3E005661BD /* XCRemoteSwiftPackageReference "HtmlText" */,
 				27DFFCEB2A2B1EFF005661BD /* XCRemoteSwiftPackageReference "LookinServer" */,
 				27DFFCF32A2B3574005661BD /* XCRemoteSwiftPackageReference "DiscourseKit" */,
 			);
@@ -1366,14 +1381,6 @@
 				minimumVersion = 0.0.3;
 			};
 		};
-		27DFFCD42A2A6D3E005661BD /* XCRemoteSwiftPackageReference "HtmlText" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Jnis/HtmlText.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
-			};
-		};
 		27DFFCEB2A2B1EFF005661BD /* XCRemoteSwiftPackageReference "LookinServer" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/QMUI/LookinServer/";
@@ -1408,6 +1415,18 @@
 			package = 273AFBDC2A1A8CF100DD08F5 /* XCRemoteSwiftPackageReference "AcknowKit" */;
 			productName = AcknowKit;
 		};
+		27C00A2B2A2CC10700CA9ACD /* HtmlText */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = HtmlText;
+		};
+		27C00A2D2A2CC10C00CA9ACD /* HtmlText */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = HtmlText;
+		};
+		27C00A2F2A2CC10F00CA9ACD /* HtmlText */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = HtmlText;
+		};
 		27CDD3822A1BAEAC003E3D00 /* Flow */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 273AFBC42A1A3DFD00DD08F5 /* XCRemoteSwiftPackageReference "SwiftUI-Flow" */;
@@ -1422,11 +1441,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 273AFBDC2A1A8CF100DD08F5 /* XCRemoteSwiftPackageReference "AcknowKit" */;
 			productName = AcknowKit;
-		};
-		27DFFCD52A2A6D3E005661BD /* HtmlText */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 27DFFCD42A2A6D3E005661BD /* XCRemoteSwiftPackageReference "HtmlText" */;
-			productName = HtmlText;
 		};
 		27DFFCF62A2B35AB005661BD /* DiscourseKit */ = {
 			isa = XCSwiftPackageProductDependency;
