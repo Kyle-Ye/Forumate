@@ -49,11 +49,8 @@ struct PostView: View {
     
     #if os(iOS) || os(macOS)
     private var tapMethod: HtmlText.HttpLinkTap {
-        let style = UserDefaults.standard
-            .string(forKey: SettingKeys.openLinkStyle)
-            .flatMap { OpenLinkStyle(rawValue: $0) }
-            ?? .unspecified
-        switch style {
+        let type = OpenLinkTypeSetting.value
+        switch type {
         case .modal: return .openSFSafariModal
         case .safari: return .openSafariApp
         }

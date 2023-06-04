@@ -7,18 +7,13 @@
 
 import SwiftUI
 
-enum OpenLinkStyle: String, Hashable, CaseIterable {
-    case modal = "In-App Safari"
-    case safari = "Safari App"
-    
-    static var unspecified: OpenLinkStyle { modal }
-}
-
 struct GeneralSection: View {
-    @AppStorage(SettingKeys.defaultViewByType) var defaultViewByType: CommunityDetailState.ViewByType = .categories
+    @AppStorage(DefaultViewByTypeSetting.self) var defaultViewByType
+    @AppStorage(SplitViewStyleTypeSetting.self) var navigationSplitViewStyle
+    @AppStorage(PickerStyleTypeSetting.self) var pickerStyle
 
     #if !os(watchOS)
-    @AppStorage(SettingKeys.openLinkStyle) var openLinkStyle: OpenLinkStyle = .unspecified
+    @AppStorage(OpenLinkTypeSetting.self) var openLinkType
     #endif
 
     var body: some View {
@@ -29,18 +24,41 @@ struct GeneralSection: View {
                         Text(type.rawValue.capitalized).tag(type)
                     }
                 }
-                #if !os(watchOS)
-                Picker("Open Link In", selection: $openLinkStyle) {
-                    ForEach(OpenLinkStyle.allCases, id: \.rawValue) { style in
-                        Text(style.rawValue).tag(style)
+            } header: {
+                Text("Community Setting")
+            }
+            Section {
+                Picker("Navigation Split View Style", selection: $navigationSplitViewStyle) {
+                    ForEach(SplitViewStyleType.allCases, id: \.rawValue) { type in
+                        Text(type.rawValue).tag(type)
                     }
                 }
-                #endif
+                Picker("Picker Style", selection: $pickerStyle) {
+                    ForEach(PickerStyleType.allCases, id: \.rawValue) { type in
+                        Text(type.rawValue).tag(type)
+                    }
+                }
+            } header: {
+                Text("System UI Style")
+            } footer: {
+                VStack(alignment: .leading) {
+                    Text("Navigation Split View Style is used in Topic tab")
+                    Text("Picker Style is used in Settings tab")
+                }
+            }
+            #if !os(watchOS)
+            Section {
+                Picker("Open Link In", selection: $openLinkType) {
+                    ForEach(OpenLinkType.allCases, id: \.rawValue) { type in
+                        Text(type.rawValue).tag(type)
+                    }
+                }
             } header: {
                 Text("Other")
             }
+            #endif
         }
-        .pickerStyle(.navigationLink)
+        .pickerStyleType(PickerStyleTypeSetting.value)
     }
 }
 
