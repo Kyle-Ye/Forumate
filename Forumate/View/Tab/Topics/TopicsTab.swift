@@ -32,7 +32,7 @@ struct TopicsTab: View {
                 PlaceholderView(text: "No Topic Selected")
             }
         }
-        .navigationSplitViewStyle(.prominentDetail)
+        .navigationSplitViewStyleType(SplitViewStyleTypeSetting.value)
         .environmentObject(tabState)
     }
 }

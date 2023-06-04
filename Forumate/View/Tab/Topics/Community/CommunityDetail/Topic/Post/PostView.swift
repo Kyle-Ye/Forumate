@@ -6,24 +6,7 @@
 //
 
 import DiscourseKit
-
-#if os(iOS) || os(macOS)
 import HtmlText
-#else
-struct HTMLText: View {
-    let html: String
-    
-    var body: some View {
-        if let nsAttributedString = try? NSAttributedString(data: Data(html.utf8), options: [.documentType: NSAttributedString.DocumentType.html], documentAttributes: nil),
-           let attributedString = try? AttributedString(nsAttributedString, including: \.uiKit) {
-            Text(attributedString)
-        } else {
-            // fallback...
-            Text(html)
-        }
-    }
-}
-#endif
 import SwiftUI
 
 struct PostView: View {
@@ -66,20 +49,18 @@ struct PostView: View {
     
     #if os(iOS) || os(macOS)
     private var tapMethod: HtmlText.HttpLinkTap {
-        let style = UserDefaults.standard
-            .string(forKey: SettingKeys.openLinkStyle)
-            .flatMap { OpenLinkStyle(rawValue: $0) }
-            ?? .unspecified
-        switch style {
+        let type = OpenLinkTypeSetting.value
+        switch type {
         case .modal: return .openSFSafariModal
         case .safari: return .openSafariApp
         }
     }
     #endif
-    
+
     var bodyArea: some View {
         #if os(iOS) || os(macOS)
         // TODO: Dynamic font change
+        // FIXME: Link AccentColor will not change for dark/light toggle
         HtmlText(
             body: post.cooked,
             css: .init(fontFaces: [], css: #"""
@@ -88,11 +69,11 @@ struct PostView: View {
                 color-scheme: light dark; /* enable light and dark mode compatibility */
                 supported-color-schemes: light dark; /* enable light and dark mode */
             }
-            """#),
+            """# + CSSConstructor().list(padding: .zero).paragraph(padding: .zero).link(color: UIColor(named: "AccentColor")!, underlined: false).css.css),
             linkTap: HtmlText.defaultLinkTapHandler(httpLinkTap: tapMethod)
         )
         #else
-        HTMLText(html: post.cooked)
+        HtmlText(rawHtml: post.cooked)
         #endif
     }
     

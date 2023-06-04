@@ -44,11 +44,8 @@ struct ContentView: View {
         }
         #if os(iOS) || os(macOS)
         .environment(\.openURL, OpenURLAction { url in
-            let style = UserDefaults.standard
-                .string(forKey: SettingKeys.openLinkStyle)
-                .flatMap { OpenLinkStyle(rawValue: $0) }
-                ?? .unspecified
-            switch style {
+            let type = OpenLinkTypeSetting.value
+            switch type {
             case .modal:
                 let safari = SFSafariViewController(url: url)
                 let vc = UIApplication.topModalViewController
