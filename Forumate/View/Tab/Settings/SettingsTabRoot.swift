@@ -44,13 +44,16 @@ struct SettingsTabRoot: View {
                 }
                 #endif
             }
-            
             Section {
+                navigationItem(text: "Support") {
+                    SettingIcon(icon: "megaphone.fill", style: .blue)
+                } destination: {
+                    SupportSection()
+                }
                 navigationItem(text: "Privacy Policy") {
                     SettingIcon(icon: "lock.fill", style: .purple)
                 } destination: {
-                    Text("We do not collect any infomation from you and your device".uppercased())
-                        .font(.system(.largeTitle, design: .monospaced, weight: .bold))
+                    PrivacyPolicySection()
                 }
                 navigationItem(text: "Acknowledgement") {
                     SettingIcon(icon: "heart.fill", style: .pink)
