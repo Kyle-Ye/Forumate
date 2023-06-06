@@ -10,6 +10,7 @@ A native client to access Discourse server for Apple Platforms.
 - [ ] macOS 13+
 
 > tvOS target is buildable, but due to [#17](https://github.com/Kyle-Ye/Forumate/issues/17). I can't upload a tvOS binary to App Store.
+> 
 > macOS is buildable, but is not optimized for. It's better to build under Catalyst.
 
 ## Screenshots
