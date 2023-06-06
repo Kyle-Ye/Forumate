@@ -17,14 +17,7 @@ struct PlaceholderView: View {
     }
     
     var body: some View {
-        VStack {
-            Image(systemName: image)
-            Text(text)
-                .padding()
-        }
-        .font(.title)
-        .foregroundColor(.gray)
-        .multilineTextAlignment(.center)
+        ContentUnavailableView(text, systemImage: image)
     }
 }
 
