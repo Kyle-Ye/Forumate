@@ -10,8 +10,10 @@ import SwiftUI
 struct StarterIntro: View {
     @Environment(\.dismiss) private var dismiss
     @Environment(\.supportsMultipleWindows) private var supportsMultipleWindows
+    #if os(iOS)
     @Environment(\.verticalSizeClass) private var verticalSizeClass
-
+    #endif
+    
     var body: some View {
         VStack {
             ScrollView {

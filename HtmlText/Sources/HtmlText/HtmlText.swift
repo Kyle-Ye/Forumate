@@ -34,7 +34,7 @@ public struct HtmlText: View {
     
     public var body: some View {
         if let nsAttributedString = try? NSAttributedString(data: Data(html.utf8), options: [.documentType: NSAttributedString.DocumentType.html], documentAttributes: nil),
-           let attributedString = try? AttributedString(nsAttributedString, including: \.uiKit) {
+           let attributedString = try? AttributedString(nsAttributedString, including: \.swiftUI) {
             Text(attributedString)
         } else {
             // fallback...
