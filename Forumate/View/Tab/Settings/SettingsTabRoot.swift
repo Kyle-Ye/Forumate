@@ -10,7 +10,7 @@ import SwiftUI
 struct SettingsTabRoot: View {
     @EnvironmentObject private var appState: AppState
     @EnvironmentObject private var tabState: SettingsTabState
-    @State private var showStarterInfo = false
+    @State private var showStarterIntro = false
 
     func navigationItem(text: String, icon: () -> some View, destination: () -> some View) -> some View {
         NavigationLink {
@@ -70,15 +70,17 @@ struct SettingsTabRoot: View {
         .toolbar {
             ToolbarItem(placement: .primaryAction) {
                 Button {
-                    showStarterInfo = true
+                    showStarterIntro = true
                 } label: {
                     Label("Starter Intro", systemImage: "info.circle")
                         .symbolRenderingMode(.hierarchical)
                 }
-                .sheet(isPresented: $showStarterInfo) {
-                    StarterIntro()
-                }
             }
+        }
+        .sheet(isPresented: $showStarterIntro) {
+            appState.updateStarterIntro()
+        } content: {
+            StarterIntro()
         }
         .navigationTitle("Settings")
     }
