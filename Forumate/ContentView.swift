@@ -14,7 +14,7 @@ import SafariServices
 struct ContentView: View {
     @EnvironmentObject private var appState: AppState
     
-    @State private var showStartedIntro = false
+    @State private var showStarterIntro = false
     
     var body: some View {
         TabView {
@@ -43,14 +43,16 @@ struct ContentView: View {
                 }
         }
         .onAppear {
+            if appState.shouldShowStarterIntro {
+                showStarterIntro = true
+            }
             if appState.isFirstLaunch {
-                if !appState.hasShowedStarterIntro {
-                    showStartedIntro = true
-                }
                 appState.didFirstLaunch()
             }
         }
-        .sheet(isPresented: $showStartedIntro) {
+        .sheet(isPresented: $showStarterIntro) {
+            appState.updateStarterIntro()
+        } content: {
             StarterIntro()
         }
         #if os(iOS)

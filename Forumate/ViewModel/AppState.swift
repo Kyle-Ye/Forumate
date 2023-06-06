@@ -14,19 +14,22 @@ class AppState: ObservableObject {
     @AppStorage("is_first_launch") private var _isFirstLaunch = true
     var isFirstLaunch: Bool { _isFirstLaunch }
     
-    @AppStorage("has_showed_starter_intro") private var _hasShowedStarterIntro = false
-    var hasShowedStarterIntro: Bool { _hasShowedStarterIntro }
+    @AppStorage("starter_intro_version") private var starterIntroVersion = 0
+    var shouldShowStarterIntro: Bool { starterIntroVersion < AppInfo.starterIntroVersion }
     
     // TODO: Migrate to use CoreData or others to add iCloud sync Support
     @AppStorage("communities") private var _communities: [Community] = []
     var communities: [Community] { _communities }
     
     func didFirstLaunch() {
-        _isFirstLaunch = true
-        _hasShowedStarterIntro = true
+        _isFirstLaunch = false
         if _communities.isEmpty {
             _communities = [.swift]            
         }
+    }
+    
+    func updateStarterIntro() {
+        starterIntroVersion = AppInfo.starterIntroVersion
     }
     
     func addCommunity(_ community: Community) {

@@ -27,6 +27,8 @@ enum AppInfo {
         Bundle.main.object(forInfoDictionaryKey: "CFBundleVersion") as? String ?? ""
     }
 
+    static var starterIntroVersion: Int { 1 }
+    
     static var OSVersion: String {
         #if (os(iOS) && !targetEnvironment(macCatalyst)) || os(tvOS)
         UIDevice.current.systemName + " " + UIDevice.current.systemVersion
