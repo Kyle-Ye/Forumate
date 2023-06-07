@@ -9,9 +9,12 @@ import SwiftUI
 
 struct PrivacyPolicySection: View {
     var body: some View {
-        Text("We do not collect any infomation from you and your device".uppercased())
-            .font(.system(.largeTitle, design: .monospaced, weight: .bold))
-            .padding()
+        ScrollView {
+            Text("We do not collect any infomation from you and your device".uppercased())
+                .font(.system(.largeTitle, design: .monospaced, weight: .bold))
+                .padding()
+        }
+        .scrollBounceBehavior(.basedOnSize)
     }
 }
 
