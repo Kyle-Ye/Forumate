@@ -1,6 +1,14 @@
 ## Forumate
 
+[![Swift 5.8](https://img.shields.io/badge/Swift-5.8-ED523F.svg?style=flat)](https://swift.org/)
+[![SwiftUI](https://img.shields.io/badge/SwiftUI-✓-orange)](https://developer.apple.com/xcode/swiftui/)
+
+[![@Kyle-Ye](https://img.shields.io/badge/contact-%40Kyle--Ye-yellow.svg?style=flat)](https://twitter.com/KyleSwifter)
+[![@ForumateApp](https://img.shields.io/badge/contact-%40ForumateApp-yellow.svg?style=flat)](https://twitter.com/ForumateApp)
+
 A native client to access Discourse server for Apple Platforms.
+
+![Menu Helper](Forumate/Other/Assets.xcassets/AppIcon.appiconset/icon_256x256@2x.png)
 
 - [x] iOS 16+
 - [x] iPadOS 16+
@@ -8,10 +16,25 @@ A native client to access Discourse server for Apple Platforms.
 - [x] tvOS 16+
 - [x] macOS(Catalyst) 13+
 - [ ] macOS 13+
+- [ ] visionOS 1
 
 > tvOS target is buildable, but due to [#17](https://github.com/Kyle-Ye/Forumate/issues/17). I can't upload a tvOS binary to App Store.
-> 
+>
 > macOS is buildable, but is not optimized for. It's better to build under Catalyst.
+>
+> I have plan to adapt for visionOS. Waiting for the SDK to be available. 
+
+## Download
+
+### Mac App Store Release
+
+Waiting to be released
+
+### Join Beta on TestFlight
+
+[Join beta on TestFlight](https://testflight.apple.com/join/4kpEtmsk)
+
+> Mac App Store℠ and TestFlight® are trademarks of Apple Inc., registered in the U.S. and other countries.
 
 ## Screenshots
 
