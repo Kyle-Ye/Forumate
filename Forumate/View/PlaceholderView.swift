@@ -8,10 +8,10 @@
 import SwiftUI
 
 struct PlaceholderView: View {
-    let text: String
+    let text: LocalizedStringKey
     let image: String
     
-    init(text: String, image: String = "doc.text.image") {
+    init(text: LocalizedStringKey, image: String = "doc.text.image") {
         self.text = text
         self.image = image
     }

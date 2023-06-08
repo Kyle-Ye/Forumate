@@ -10,6 +10,12 @@
 		270097CC2A19D66E00CA01B5 /* SettingsTabRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270097CB2A19D66E00CA01B5 /* SettingsTabRoot.swift */; };
 		270097CF2A19D68700CA01B5 /* SettingsTabState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270097CE2A19D68700CA01B5 /* SettingsTabState.swift */; };
 		270097D12A19D7E300CA01B5 /* StarterIntro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270097D02A19D7E300CA01B5 /* StarterIntro.swift */; };
+		271808C62A32496D008B1970 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 271808C52A32496D008B1970 /* Localizable.xcstrings */; };
+		271808C72A32496D008B1970 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 271808C52A32496D008B1970 /* Localizable.xcstrings */; };
+		271808C82A32496D008B1970 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 271808C52A32496D008B1970 /* Localizable.xcstrings */; };
+		271808CA2A324995008B1970 /* InfoPlist.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 271808C92A324995008B1970 /* InfoPlist.xcstrings */; };
+		271808CB2A324995008B1970 /* InfoPlist.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 271808C92A324995008B1970 /* InfoPlist.xcstrings */; };
+		271808CC2A324995008B1970 /* InfoPlist.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 271808C92A324995008B1970 /* InfoPlist.xcstrings */; };
 		272193A12A19CCFA00C221BC /* JSONRawRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272193A02A19CCFA00C221BC /* JSONRawRepresentable.swift */; };
 		2726053F2A1A005C0018B908 /* ForumateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2726053E2A1A005C0018B908 /* ForumateTests.swift */; };
 		272605802A1A12450018B908 /* Category+Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2726057F2A1A12450018B908 /* Category+Preview.swift */; };
@@ -214,6 +220,8 @@
 		270097CB2A19D66E00CA01B5 /* SettingsTabRoot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTabRoot.swift; sourceTree = "<group>"; };
 		270097CE2A19D68700CA01B5 /* SettingsTabState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTabState.swift; sourceTree = "<group>"; };
 		270097D02A19D7E300CA01B5 /* StarterIntro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarterIntro.swift; sourceTree = "<group>"; };
+		271808C52A32496D008B1970 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		271808C92A324995008B1970 /* InfoPlist.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = InfoPlist.xcstrings; sourceTree = "<group>"; };
 		272193A02A19CCFA00C221BC /* JSONRawRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONRawRepresentable.swift; sourceTree = "<group>"; };
 		2726053C2A1A005C0018B908 /* ForumateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ForumateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2726053E2A1A005C0018B908 /* ForumateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForumateTests.swift; sourceTree = "<group>"; };
@@ -568,6 +576,8 @@
 				278E53E62A18E83000DCD159 /* Assets.xcassets */,
 				278E54002A18E83000DCD159 /* Info.plist */,
 				278E54012A18E83000DCD159 /* Forumate.entitlements */,
+				271808C52A32496D008B1970 /* Localizable.xcstrings */,
+				271808C92A324995008B1970 /* InfoPlist.xcstrings */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -802,6 +812,8 @@
 			files = (
 				273AFC252A1A997B00DD08F5 /* Assets.xcassets in Resources */,
 				273AFBF12A1A94E100DD08F5 /* Preview Assets.xcassets in Resources */,
+				271808CB2A324995008B1970 /* InfoPlist.xcstrings in Resources */,
+				271808C72A32496D008B1970 /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -811,6 +823,8 @@
 			files = (
 				27CDD3962A1BB573003E3D00 /* Assets.xcassets in Resources */,
 				27CDD3922A1BB06E003E3D00 /* Preview Assets.xcassets in Resources */,
+				271808CC2A324995008B1970 /* InfoPlist.xcstrings in Resources */,
+				271808C82A32496D008B1970 /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -820,6 +834,8 @@
 			files = (
 				278E54052A18E83000DCD159 /* Preview Assets.xcassets in Resources */,
 				278E54042A18E83000DCD159 /* Assets.xcassets in Resources */,
+				271808CA2A324995008B1970 /* InfoPlist.xcstrings in Resources */,
+				271808C62A32496D008B1970 /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
