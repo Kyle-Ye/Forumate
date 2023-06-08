@@ -31,7 +31,7 @@ struct NewCommunity: View {
                         prompt: Text("Example: forums.example.com")
                     )
                 } header: {
-                    Text("Add New Community")
+                    Text("Add Community")
                 } footer: {
                     Text("Forumate only supports communities built using the Discourse platform and running HTTPS. Please consult the support page for help regarding supported communities.")
                 }

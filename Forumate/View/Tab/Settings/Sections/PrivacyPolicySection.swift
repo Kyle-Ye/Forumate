@@ -10,7 +10,8 @@ import SwiftUI
 struct PrivacyPolicySection: View {
     var body: some View {
         ScrollView {
-            Text("We do not collect any infomation from you and your device".uppercased())
+            Text("We do not collect any infomation from you and your device")
+                .textCase(.uppercase)
                 .font(.system(.largeTitle, design: .monospaced, weight: .bold))
                 .padding()
         }
