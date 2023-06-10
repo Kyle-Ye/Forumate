@@ -11,22 +11,10 @@ struct CommunityList: View {
     @EnvironmentObject var appState: AppState
     @EnvironmentObject var tabState: TopicsTabState
     var body: some View {
-        #if os(watchOS)
-        List {
-            content
-        }
-        .navigationDestination(for: Community.self) { community in
-            CommunityDetail(community: community)
-                .onAppear {
-                    tabState.selectedCommunity = community
-                }
-        }
-        #else
         List(selection: $tabState.selectedCommunity) {
             content
             RecommendCommunityList()
         }
-        #endif
     }
         
     var content: some View {

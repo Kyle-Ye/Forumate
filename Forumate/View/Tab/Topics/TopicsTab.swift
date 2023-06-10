@@ -11,11 +11,11 @@ struct TopicsTab: View {
     @StateObject var tabState = TopicsTabState()
     
     var body: some View {
-        #if os(iOS) || os(macOS) || os(tvOS)
         NavigationSplitView(columnVisibility: $tabState.columnVisibility) {
             TopicsTabRoot()
                 .environmentObject(tabState)
         } content: {
+            // TODO: NavigationStack and check selected category
             if let community = tabState.selectedCommunity {
                 CommunityDetail(community: community)
                     .id(community.id)
@@ -35,12 +35,6 @@ struct TopicsTab: View {
         }
         .navigationSplitViewStyleType(SplitViewStyleTypeSetting.value)
         .environmentObject(tabState)
-        #else
-        NavigationStack {
-            TopicsTabRoot()
-        }
-        .environmentObject(tabState)
-        #endif
     }
 }
 
