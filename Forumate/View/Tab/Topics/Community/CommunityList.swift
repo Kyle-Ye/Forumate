@@ -24,6 +24,7 @@ struct CommunityList: View {
         #else
         List(selection: $tabState.selectedCommunity) {
             content
+            RecommendCommunityList()
         }
         #endif
     }
@@ -34,10 +35,24 @@ struct CommunityList: View {
                 NavigationLink(value: community) {
                     CommunityLabel(community: community)
                 }
+                .swipeActions(edge: .trailing) {
+                    Button(role: .destructive) {
+                        appState.removeCommunity(community)
+                    } label: {
+                        Label("Delete", systemImage: "trash")
+                    }
+                }
             }
+            .onDelete(perform: deleteCommunities(at:))
         } header: {
             Text("My Communities")
         }
+    }
+    
+    private func deleteCommunities(at indexSet: IndexSet) {
+        indexSet
+            .map { appState.communities[$0] }
+            .forEach { appState.removeCommunity($0) }
     }
 }
 
