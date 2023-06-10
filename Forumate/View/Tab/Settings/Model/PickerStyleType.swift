@@ -15,6 +15,7 @@ enum PickerStyleType: String, Hashable, CaseIterable {
     #endif
     #if os(iOS) || os(macOS)
     case menu = "Menu"
+    case palette = "Palette"
     #endif
 }
 
@@ -37,6 +38,9 @@ extension View {
         #endif
         #if os(iOS) || os(macOS)
         case .menu: pickerStyle(.menu)
+        #endif
+        #if os(iOS) || os(macOS)
+        case .palette: pickerStyle(.palette)
         #endif
         }
     }
