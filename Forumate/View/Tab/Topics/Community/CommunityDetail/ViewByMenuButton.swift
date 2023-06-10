@@ -11,7 +11,7 @@ struct ViewByMenuButton: View {
     @EnvironmentObject private var state: CommunityDetailState
 
     var body: some View {
-        #if os(iOS) || os(macOS)
+        #if os(iOS) || os(macOS) || os(tvOS)
         Menu {
             Picker(selection: $state.viewByType) {
                 ForEach(CommunityDetailState.ViewByType.allCases, id: \.rawValue) { type in
@@ -34,7 +34,6 @@ struct ViewByMenuButton: View {
                 Text("View By Type")
             } icon: {
                 Image(systemName: "line.3.horizontal.decrease.circle.fill")
-                    .symbolRenderingMode(.hierarchical)
             }
         }
         .pickerStyle(.navigationLink)
@@ -42,9 +41,8 @@ struct ViewByMenuButton: View {
     }
 }
 
-struct ViewByMenuButton_Previews: PreviewProvider {
-    static var previews: some View {
-        ViewByMenuButton()
-            .environmentObject(CommunityDetailState(community: .swift))
-    }
+#Preview {
+    ViewByMenuButton()
+        .buttonStyle(.borderedProminent)
+        .environmentObject(CommunityDetailState(community: .swift))
 }
