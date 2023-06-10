@@ -38,65 +38,47 @@ struct NewCommunity: View {
             }
             .submitLabel(.send)
             .onSubmit { tryAddCommunity() }
-            #if !os(watchOS)
-                .toolbar {
-                    #if os(iOS)
-                    let cancelPlacement: ToolbarItemPlacement = .navigationBarLeading
-                    let conformPlacement: ToolbarItemPlacement = .navigationBarTrailing
-                    #else
-                    let cancelPlacement: ToolbarItemPlacement = .cancellationAction
-                    let conformPlacement: ToolbarItemPlacement = .confirmationAction
-                    #endif
-                    ToolbarItem(placement: cancelPlacement) {
-                        Button("Cancel") { dismiss() }
-                            .buttonStyle(.bordered)
+            .toolbar {
+                ToolbarItem(placement: .cancellationAction) {
+                    Button("Cancel") { dismiss() }
+                        .buttonStyle(.bordered)
+                }
+                ToolbarItem(placement: .confirmationAction) {
+                    Group {
+                        if loading {
+                            ProgressView()
+                        } else {
+                            Button("Add") { tryAddCommunity() }
+                                .buttonStyle(.bordered)
+                                .disabled(url == nil)
+                        }
                     }
-                    ToolbarItem(placement: conformPlacement) {
-                        Group {
-                            if loading {
-                                ProgressView()
-                            } else {
-                                Button("Add") { tryAddCommunity() }
-                                    .buttonStyle(.bordered)
-                                    .disabled(url == nil)
-                            }
+                    .alert("Could not add community", isPresented: $loadingError) {
+                        Button(role: .cancel) {
+                            NewCommunity.logger.info("Failed to add community for \(urlInput)")
+                        } label: {
+                            Text("OK")
                         }
-                        .alert("Could not add community", isPresented: $loadingError) {
-                            Button(role: .cancel) {
-                                NewCommunity.logger.info("Failed to add community for \(urlInput)")
-                            } label: {
-                                Text("OK")
-                            }
-                        } message: {
-                            Text("The community provided does not like a Discourse community.")
-                        }
+                    } message: {
+                        Text("The community provided does not like a Discourse community.")
                     }
                 }
-            #endif
+            }
         }
     }
     
-    @MainActor
     private func tryAddCommunity() {
         guard let url else { return }
-        loading = true
-        Task.detached {
-            let client = Client(baseURL: url)
+        Task {
+            loading = true
             do {
-                let info = try await client.fetchSiteBasicInfo()
-                let community = Community(host: url, title: info.title, icon: info.appleTouchIconURL)
-                await MainActor.run {
-                    appState.addCommunity(community)
-                    dismiss()
-                }
+                let community = try await CommunityManager.shared.createCommunity(url)
+                appState.addCommunity(community)
+                dismiss()
             } catch {
-                await MainActor.run {
-                    loadingError = true
-                }
+                loadingError = true
             }
-            await MainActor.run {
-                loading = false
-            }
+            loading = false
         }
     }
 }
