@@ -67,12 +67,10 @@ struct GeneralSection: View {
 
 struct GeneralSection_Previews: PreviewProvider {
     static var previews: some View {
-        NavigationStack {
-            GeneralSection()
-                .navigationTitle("General")
-            #if os(iOS) || os(watchOS)
-                .navigationBarTitleDisplayMode(.inline)
-            #endif
-        }
+        GeneralSection()
+            .navigationTitle("General")
+        #if os(iOS) || os(watchOS)
+            .navigationBarTitleDisplayMode(.inline)
+        #endif
     }
 }

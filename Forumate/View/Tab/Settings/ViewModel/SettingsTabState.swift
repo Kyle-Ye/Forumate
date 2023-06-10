@@ -6,5 +6,10 @@
 //
 
 import Foundation
+import Observation
+import SwiftUI
 
-class SettingsTabState: ObservableObject {}
+@Observable
+class SettingsTabState {
+    var destination: SettingsTabDestination? = nil
+}

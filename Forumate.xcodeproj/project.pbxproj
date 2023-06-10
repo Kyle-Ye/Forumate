@@ -103,6 +103,9 @@
 		2779C0752A3484DC00CE4DF1 /* RecommendCommunityLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2779C0742A3484DC00CE4DF1 /* RecommendCommunityLabel.swift */; };
 		2779C0762A3484DC00CE4DF1 /* RecommendCommunityLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2779C0742A3484DC00CE4DF1 /* RecommendCommunityLabel.swift */; };
 		2779C0772A3484DC00CE4DF1 /* RecommendCommunityLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2779C0742A3484DC00CE4DF1 /* RecommendCommunityLabel.swift */; };
+		2779C07F2A34AA6A00CE4DF1 /* SettingsTabDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2779C07E2A34AA6A00CE4DF1 /* SettingsTabDestination.swift */; };
+		2779C0802A34AA6A00CE4DF1 /* SettingsTabDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2779C07E2A34AA6A00CE4DF1 /* SettingsTabDestination.swift */; };
+		2779C0812A34AA6A00CE4DF1 /* SettingsTabDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2779C07E2A34AA6A00CE4DF1 /* SettingsTabDestination.swift */; };
 		277C15BE2A18EF00007940C7 /* CategoryLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277C15BD2A18EF00007940C7 /* CategoryLabel.swift */; };
 		277C15C12A18EF6B007940C7 /* CategoryDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277C15C02A18EF6B007940C7 /* CategoryDetail.swift */; };
 		277C15C42A18F033007940C7 /* HexToColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277C15C32A18F033007940C7 /* HexToColor.swift */; };
@@ -262,6 +265,7 @@
 		2779C0632A3468DC00CE4DF1 /* Community+Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Community+Preview.swift"; sourceTree = "<group>"; };
 		2779C0672A346B3D00CE4DF1 /* RecommendCommunityList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendCommunityList.swift; sourceTree = "<group>"; };
 		2779C0742A3484DC00CE4DF1 /* RecommendCommunityLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendCommunityLabel.swift; sourceTree = "<group>"; };
+		2779C07E2A34AA6A00CE4DF1 /* SettingsTabDestination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTabDestination.swift; sourceTree = "<group>"; };
 		277C15BD2A18EF00007940C7 /* CategoryLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryLabel.swift; sourceTree = "<group>"; };
 		277C15C02A18EF6B007940C7 /* CategoryDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryDetail.swift; sourceTree = "<group>"; };
 		277C15C32A18F033007940C7 /* HexToColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexToColor.swift; sourceTree = "<group>"; };
@@ -650,6 +654,7 @@
 			isa = PBXGroup;
 			children = (
 				27DFFCE72A2B13EB005661BD /* Settings.swift */,
+				2779C07E2A34AA6A00CE4DF1 /* SettingsTabDestination.swift */,
 				27C00A312A2CC4F400CA9ACD /* OpenLinkType.swift */,
 				27C00A352A2CC51B00CA9ACD /* SplitViewStyleType.swift */,
 				27C00A392A2CC6BF00CA9ACD /* PickerStyleType.swift */,
@@ -909,6 +914,7 @@
 				273AFC0F2A1A964500DD08F5 /* AcknowSection.swift in Sources */,
 				273AFC0A2A1A963A00DD08F5 /* StarterIntro.swift in Sources */,
 				27C00A372A2CC51B00CA9ACD /* SplitViewStyleType.swift in Sources */,
+				2779C0802A34AA6A00CE4DF1 /* SettingsTabDestination.swift in Sources */,
 				273AFC192A1A967D00DD08F5 /* CommunityLabel.swift in Sources */,
 				273AFC172A1A967D00DD08F5 /* CategoryLabel.swift in Sources */,
 				2779C0692A346B3D00CE4DF1 /* RecommendCommunityList.swift in Sources */,
@@ -970,6 +976,7 @@
 				27CDD3992A1BB5EE003E3D00 /* Topic+Preview.swift in Sources */,
 				27CDD3A82A1BB62C003E3D00 /* SettingsTabState.swift in Sources */,
 				27C00A382A2CC51B00CA9ACD /* SplitViewStyleType.swift in Sources */,
+				2779C0812A34AA6A00CE4DF1 /* SettingsTabDestination.swift in Sources */,
 				27CDD3BD2A1BB755003E3D00 /* CategoryText.swift in Sources */,
 				27CDD3BE2A1BB755003E3D00 /* CategoryLabel.swift in Sources */,
 				2779C06A2A346B3D00CE4DF1 /* RecommendCommunityList.swift in Sources */,
@@ -1031,6 +1038,7 @@
 				27C00A362A2CC51B00CA9ACD /* SplitViewStyleType.swift in Sources */,
 				277546D82A19DE3F000FDAA0 /* AppInfo.swift in Sources */,
 				273AFBE22A1A928C00DD08F5 /* TopicDetail.swift in Sources */,
+				2779C07F2A34AA6A00CE4DF1 /* SettingsTabDestination.swift in Sources */,
 				27DFFCE82A2B13EB005661BD /* Settings.swift in Sources */,
 				273AFBCF2A1A73F600DD08F5 /* ViewByMenuButton.swift in Sources */,
 				2779C0682A346B3D00CE4DF1 /* RecommendCommunityList.swift in Sources */,
