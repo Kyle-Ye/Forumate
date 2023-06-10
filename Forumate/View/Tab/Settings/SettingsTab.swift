@@ -8,25 +8,38 @@
 import SwiftUI
 
 struct SettingsTab: View {
-    @StateObject var tabState = SettingsTabState()
+    @State private var tabState = SettingsTabState()
     
     var body: some View {
         NavigationSplitView(columnVisibility: .constant(.all)) {
-            SettingsTabRoot()
-        } content: {
-            EmptyView()
+            SettingsTabRoot(tabState: tabState)
         } detail: {
-            EmptyView()
+            NavigationStack {
+                if let destination = tabState.destination {
+                    Group {
+                        switch destination.id {
+                        case .general: GeneralSection()
+                        case .notification: Text("Unimplemented")
+                        case .support: SupportSection()
+                        case .privacy: PrivacyPolicySection()
+                        case .acknowledgement: AcknowSection()
+                        }
+                    }
+                    .navigationTitle(destination.title)
+                    #if os(iOS) || os(watchOS)
+                        .navigationBarTitleDisplayMode(.inline)
+                    #endif
+                }
+            }
         }
         .navigationSplitViewStyleType(SplitViewStyleTypeSetting.value)
-        .environmentObject(tabState)
+        .environment(tabState)
     }
 }
 
 struct SettingsTab_Previews: PreviewProvider {
     static var previews: some View {
         SettingsTab()
-//            .previewInterfaceOrientation(.landscapeLeft)
             .environmentObject(AppState())
     }
 }

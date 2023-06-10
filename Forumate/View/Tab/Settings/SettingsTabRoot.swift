@@ -5,21 +5,19 @@
 //  Created by Kyle on 2023/5/21.
 //
 
+import Observation
 import SwiftUI
 
 struct SettingsTabRoot: View {
     @EnvironmentObject private var appState: AppState
-    @EnvironmentObject private var tabState: SettingsTabState
+//    @Environment(SettingsTabState.self) private var tabState
+    
+    @Bindable var tabState: SettingsTabState
+    
     @State private var showStarterIntro = false
 
-    func navigationItem(text: LocalizedStringKey, icon: () -> some View, destination: () -> some View) -> some View {
-        NavigationLink {
-            destination()
-                .navigationTitle(text)
-                #if os(iOS) || os(watchOS)
-                .navigationBarTitleDisplayMode(.inline)
-                #endif
-        } label: {
+    func navigationItem(destination: SettingsTabDestination.ID, text: LocalizedStringKey, icon: () -> some View) -> some View {
+        NavigationLink(value: SettingsTabDestination(title: text, id: destination)) {
             Label {
                 Text(text)
             } icon: {
@@ -27,38 +25,28 @@ struct SettingsTabRoot: View {
             }
         }
     }
-    
+
     var body: some View {
-        List {
+        List(selection: $tabState.destination) {
             Section {
-                navigationItem(text: "General") {
+                navigationItem(destination: .general, text: "General") {
                     SettingIcon(icon: "gear", style: .gray)
-                } destination: {
-                    GeneralSection()
                 }
                 #if DEBUG
-                navigationItem(text: "Notifications") {
+                navigationItem(destination: .notification, text: "Notifications") {
                     SettingIcon(icon: "bell.badge.fill", style: .red)
-                } destination: {
-                    Text("Unimplemented")
                 }
                 #endif
             }
             Section {
-                navigationItem(text: "Support") {
+                navigationItem(destination: .support, text: "Support") {
                     SettingIcon(icon: "megaphone.fill", style: .blue)
-                } destination: {
-                    SupportSection()
                 }
-                navigationItem(text: "Privacy Policy") {
+                navigationItem(destination: .privacy, text: "Privacy Policy") {
                     SettingIcon(icon: "lock.fill", style: .purple)
-                } destination: {
-                    PrivacyPolicySection()
                 }
-                navigationItem(text: "Acknowledgement") {
+                navigationItem(destination: .acknowledgement, text: "Acknowledgement") {
                     SettingIcon(icon: "heart.fill", style: .pink)
-                } destination: {
-                    AcknowSection()
                 }
             } footer: {
                 Text("\(AppInfo.name) v\(AppInfo.version) Build \(AppInfo.buildNumber) · \(AppInfo.OSVersion)")
@@ -86,12 +74,11 @@ struct SettingsTabRoot: View {
     }
 }
 
-struct SettingsTabRoot_Previews: PreviewProvider {
+ struct SettingsTabRoot_Previews: PreviewProvider {
     static var previews: some View {
         NavigationStack {
-            SettingsTabRoot()
+            SettingsTabRoot(tabState: SettingsTabState())
         }
         .environmentObject(AppState())
-        .environmentObject(SettingsTabState())
     }
-}
+ }
