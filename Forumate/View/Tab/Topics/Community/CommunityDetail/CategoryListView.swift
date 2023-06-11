@@ -17,7 +17,7 @@ struct CategoryListView: View {
             if let categories = state.categories {
                 ForEach(categories, id: \.id) { category in
                     Button {
-                        tabState.navigationPath.append(category)
+                        tabState.selectedCategories.append(category)
                     } label: {
                         CategoryLabel(category: category)
                     }

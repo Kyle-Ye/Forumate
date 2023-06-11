@@ -30,7 +30,7 @@ struct CategoryLabel: View {
                     ForEach(category.subcategoryIDs, id: \.self) { id in
                         if let subcategory = appState.fetchCategory(communityID: state.community.id, categoryID: id) {
                             Button {
-                                tabState.navigationPath.append(category)
+                                tabState.selectedCategories.append(subcategory)
                             } label: {
                                 CategoryText(category: subcategory)
                                     .lineLimit(1)

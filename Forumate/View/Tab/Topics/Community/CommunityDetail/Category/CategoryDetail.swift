@@ -28,11 +28,11 @@ struct CategoryDetail: View {
         if category.hasChildren {
             ForEach(category.subcategoryIDs, id: \.self) { id in
                 if let subcategory = appState.fetchCategory(communityID: state.community.id, categoryID: id) {
-                    NavigationLink(value: subcategory) {
-                        CategoryText(category: subcategory)
-                            .lineLimit(1)
-                            .foregroundColor(.primary)
-                            .bold()
+                    Button {
+                        // FIXME: Xcode 15 beta 1: selectedCategories count: 1->2->0
+                        tabState.selectedCategories.append(subcategory)
+                    } label: {
+                        CategoryLabel(category: subcategory)
                     }
                 }
             }

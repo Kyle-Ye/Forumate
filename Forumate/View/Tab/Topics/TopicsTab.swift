@@ -15,7 +15,7 @@ struct TopicsTab: View {
             TopicsTabRoot()
                 .environmentObject(tabState)
         } content: {
-            NavigationStack(path: $tabState.navigationPath) {
+            NavigationStack(path: $tabState.selectedCategories) {
                 if let community = tabState.selectedCommunity {
                     CommunityDetail(community: community)
                         .navigationDestination(for: Category.self) { category in

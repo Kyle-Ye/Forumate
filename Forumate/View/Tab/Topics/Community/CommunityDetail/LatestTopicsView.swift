@@ -16,18 +16,12 @@ struct LatestTopicsView: View {
         Section {
             if let topics = state.latestestTopics {
                 ForEach(topics, id: \.id) { topic in
-                    #if os(watchOS)
-                    NavigationLink(value: topic) {
-                        TopicLabel(topic: topic, showCategory: true)
-                    }
-                    #else
                     Button {
                         tabState.selectedTopic = topic
-                        tabState.columnVisibility = .detailOnly
+                        tabState.columnVisibility = .doubleColumn
                     } label: {
                         TopicLabel(topic: topic, showCategory: true)
                     }
-                    #endif
                 }
             } else {
                 ProgressView()
