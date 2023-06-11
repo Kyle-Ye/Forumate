@@ -18,25 +18,22 @@ struct CommunityDetail: View {
     @StateObject private var state: CommunityDetailState
         
     var body: some View {
-        NavigationStack(path: $state.selectedCategories) {
-            List(selection: $tabState.selectedTopic) {
-                switch state.viewByType {
-                case .categories:
-                    CategoryListView()
-                    LatestTopicsView()
-                case .latest:
-                    LatestTopicsView()
-                default:
-                    Section {
-                        Text("Unimplemented")
-                    } header: {
-                        CommunitySectionHeader(text: state.viewByType.rawValue.uppercased())
-                    }
+        List(selection: $tabState.selectedTopic) {
+            switch state.viewByType {
+            case .categories:
+                CategoryListView()
+                LatestTopicsView()
+            case .latest:
+                LatestTopicsView()
+            default:
+                Section {
+                    Text("Unimplemented")
+                } header: {
+                    CommunitySectionHeader(text: state.viewByType.rawValue.uppercased())
                 }
             }
-            .listStyle(.plain)
         }
-        
+        .listStyle(.plain)
         .toolbar {
             ViewByMenuButton()
         }

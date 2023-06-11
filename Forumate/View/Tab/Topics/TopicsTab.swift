@@ -15,13 +15,18 @@ struct TopicsTab: View {
             TopicsTabRoot()
                 .environmentObject(tabState)
         } content: {
-            // TODO: NavigationStack and check selected category
-            if let community = tabState.selectedCommunity {
-                CommunityDetail(community: community)
-                    .id(community.id)
-            } else {
-                PlaceholderView(text: "No Community Selected",
-                                image: "rectangle.3.group.bubble.left")
+            NavigationStack(path: $tabState.navigationPath) {
+                if let community = tabState.selectedCommunity {
+                    CommunityDetail(community: community)
+                        .navigationDestination(for: Category.self) { category in
+                            CategoryDetail(category: category)
+                                .environmentObject(CommunityDetailState(community: community))
+                        }
+                        .id(community.id)
+                } else {
+                    PlaceholderView(text: "No Community Selected",
+                                    image: "rectangle.3.group.bubble.left")
+                }
             }
         } detail: {
             if let community = tabState.selectedCommunity,

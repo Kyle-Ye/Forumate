@@ -39,6 +39,17 @@ class CommunityDetailState: ObservableObject {
         }
     }
     
+    func updateCategoryDetail() async throws {
+//        let listing = try await client.fetchCategoryDetail(category)
+//        listing.
+//        await MainActor.run {
+//            self.latestestTopics = latest.topicList.topics
+//            self.users.formUnion(latest.users)
+//        }
+        
+        // TODO: show subcategoy and topics
+    }
+    
     func fetchTopicDetail(id: Int) async throws -> Topic {
         try await client.fetchTopicDetail(id: id)
     }
@@ -128,9 +139,7 @@ class CommunityDetailState: ObservableObject {
         static var unspecified: CommunityDetailState.ViewByType { categories }
     }
     
-    @AppStorage var viewByType: ViewByType
-    
-    @Published var selectedCategories: [Category] = []
+    @AppStorage var viewByType: ViewByType    
 }
 
 enum DefaultViewByTypeSetting: Setting {

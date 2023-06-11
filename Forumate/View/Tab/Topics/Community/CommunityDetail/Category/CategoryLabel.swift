@@ -10,6 +10,7 @@ import SwiftUI
 
 struct CategoryLabel: View {
     @EnvironmentObject private var appState: AppState
+    @EnvironmentObject private var tabState: TopicsTabState
     @EnvironmentObject private var state: CommunityDetailState
     let category: Category
     
@@ -29,7 +30,7 @@ struct CategoryLabel: View {
                     ForEach(category.subcategoryIDs, id: \.self) { id in
                         if let subcategory = appState.fetchCategory(communityID: state.community.id, categoryID: id) {
                             Button {
-                                state.selectedCategories.append(subcategory)
+                                tabState.navigationPath.append(category)
                             } label: {
                                 CategoryText(category: subcategory)
                                     .lineLimit(1)
