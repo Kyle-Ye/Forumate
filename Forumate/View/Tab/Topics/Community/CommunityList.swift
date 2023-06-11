@@ -23,6 +23,7 @@ struct CommunityList: View {
                 NavigationLink(value: community) {
                     CommunityLabel(community: community)
                 }
+                #if !os(tvOS)
                 .swipeActions(edge: .trailing) {
                     Button(role: .destructive) {
                         appState.removeCommunity(community)
@@ -30,6 +31,7 @@ struct CommunityList: View {
                         Label("Delete", systemImage: "trash")
                     }
                 }
+                #endif
             }
             .onDelete(perform: deleteCommunities(at:))
         } header: {
