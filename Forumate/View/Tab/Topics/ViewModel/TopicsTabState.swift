@@ -8,10 +8,11 @@
 import DiscourseKit
 import Foundation
 import SwiftUI
+import Combine
 
 class TopicsTabState: ObservableObject {
     @Published var selectedCommunity: Community?
-    @Published var navigationPath: NavigationPath = .init()
+    @Published var selectedCategories: [Category] = []
     @Published var selectedTopic: Topic?
     @Published var columnVisibility: NavigationSplitViewVisibility = .automatic
 }

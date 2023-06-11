@@ -18,7 +18,7 @@ struct CommunityDetail: View {
     @StateObject private var state: CommunityDetailState
         
     var body: some View {
-        List(selection: $tabState.selectedTopic) {
+        List {
             switch state.viewByType {
             case .categories:
                 CategoryListView()
