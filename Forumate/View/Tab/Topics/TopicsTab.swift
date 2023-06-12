@@ -11,7 +11,8 @@ struct TopicsTab: View {
     @StateObject var tabState = TopicsTabState()
     
     var body: some View {
-        NavigationSplitView(columnVisibility: $tabState.columnVisibility) {
+        NavigationSplitView(columnVisibility: $tabState.columnVisibility,
+                            preferredCompactColumn: $tabState.column) {
             TopicsTabRoot()
                 .environmentObject(tabState)
         } content: {
