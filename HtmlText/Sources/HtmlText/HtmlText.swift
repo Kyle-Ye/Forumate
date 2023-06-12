@@ -32,13 +32,18 @@ public struct HtmlText: View {
         self.html = rawHtml
     }
     
+    @State private var nsAttributedString: NSAttributedString?
+    
     public var body: some View {
-        if let nsAttributedString = try? NSAttributedString(data: Data(html.utf8), options: [.documentType: NSAttributedString.DocumentType.html], documentAttributes: nil),
+        if let nsAttributedString,
            let attributedString = try? AttributedString(nsAttributedString, including: \.swiftUI) {
             Text(attributedString)
         } else {
             // fallback...
             Text(html)
+                .task {
+                    nsAttributedString = try? NSAttributedString(data: Data(html.utf8), options: [.documentType: NSAttributedString.DocumentType.html], documentAttributes: nil)
+                }
         }
     }
     #endif
