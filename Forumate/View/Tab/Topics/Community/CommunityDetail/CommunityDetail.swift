@@ -22,9 +22,9 @@ struct CommunityDetail: View {
             switch state.viewByType {
             case .categories:
                 CategoryListView()
-                LatestTopicsView()
+                LatestTopicsView(showCategory: false)
             case .latest:
-                LatestTopicsView()
+                LatestTopicsView(showCategory: true)
             default:
                 Section {
                     Text("Unimplemented")

@@ -11,6 +11,7 @@ import SwiftUI
 struct LatestTopicsView: View {
     @EnvironmentObject private var tabState: TopicsTabState
     @EnvironmentObject private var state: CommunityDetailState
+    var showCategory = false
     
     var body: some View {
         Section {
@@ -19,8 +20,9 @@ struct LatestTopicsView: View {
                     Button {
                         tabState.selectedTopic = topic
                         tabState.columnVisibility = .doubleColumn
+                        tabState.column = .detail
                     } label: {
-                        TopicLabel(topic: topic, showCategory: true)
+                        TopicLabel(topic: topic, showCategory: showCategory)
                     }
                 }
             } else {

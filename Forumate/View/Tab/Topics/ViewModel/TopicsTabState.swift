@@ -15,4 +15,5 @@ class TopicsTabState: ObservableObject {
     @Published var selectedCategories: [Category] = []
     @Published var selectedTopic: Topic?
     @Published var columnVisibility: NavigationSplitViewVisibility = .automatic
+    @Published var column: NavigationSplitViewColumn = .sidebar
 }
