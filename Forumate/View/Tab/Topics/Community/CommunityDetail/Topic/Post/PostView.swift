@@ -21,28 +21,22 @@ struct PostView: View {
             extensionArea
         }
     }
-    
-    @State private var size: CGSize = .zero
-    
+
     var authorArea: some View {
         HStack {
-            AsyncImage(url: state.avatarURL(for: post)) { image in
-                image.resizable()
-            } placeholder: {
-                Color.gray
-            }
-            .frame(width: size.height, height: size.height)
-            .clipShape(Circle())
-                
-            VStack(alignment: .leading) {
-                Text(post.username) + Text(" ") + Text(post.name).foregroundColor(.secondary)
-                Text("\(post.createdAt, style: .relative) ago").foregroundColor(.secondary)
-            }
-            .lineLimit(1)
-            .readSize { size in
-                DispatchQueue.main.async {
-                    self.size = size
+            EqualHeightHStackLayout {
+                AsyncImage(url: state.avatarURL(for: post)) { image in
+                    image.resizable()
+                } placeholder: {
+                    Color.gray
                 }
+                .clipShape(Circle())
+                    
+                VStack(alignment: .leading) {
+                    Text(post.username) + Text(" ") + Text(post.name).foregroundColor(.secondary)
+                    Text("\(post.createdAt, style: .relative) ago").foregroundColor(.secondary)
+                }
+                .lineLimit(1)
             }
         }
     }
