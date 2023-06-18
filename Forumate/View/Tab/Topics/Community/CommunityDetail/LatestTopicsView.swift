@@ -11,23 +11,19 @@ import SwiftUI
 struct LatestTopicsView: View {
     @EnvironmentObject private var tabState: TopicsTabState
     @EnvironmentObject private var state: CommunityDetailState
+    var showCategory = false
     
     var body: some View {
         Section {
             if let topics = state.latestestTopics {
                 ForEach(topics, id: \.id) { topic in
-                    #if os(watchOS)
-                    NavigationLink(value: topic) {
-                        TopicLabel(topic: topic, showCategory: true)
-                    }
-                    #else
                     Button {
                         tabState.selectedTopic = topic
-                        tabState.columnVisibility = .detailOnly
+                        tabState.columnVisibility = .doubleColumn
+                        tabState.column = .detail
                     } label: {
-                        TopicLabel(topic: topic, showCategory: true)
+                        TopicLabel(topic: topic, showCategory: showCategory)
                     }
-                    #endif
                 }
             } else {
                 ProgressView()

@@ -9,6 +9,7 @@ import SwiftUI
 
 struct CategoryListView: View {
     @EnvironmentObject private var appState: AppState
+    @EnvironmentObject private var tabState: TopicsTabState
     @EnvironmentObject private var state: CommunityDetailState
     
     var body: some View {
@@ -16,7 +17,7 @@ struct CategoryListView: View {
             if let categories = state.categories {
                 ForEach(categories, id: \.id) { category in
                     Button {
-                        state.selectedCategories.append(category)
+                        tabState.selectedCategories.append(category)
                     } label: {
                         CategoryLabel(category: category)
                     }

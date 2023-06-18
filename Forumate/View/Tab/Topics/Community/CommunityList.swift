@@ -11,22 +11,10 @@ struct CommunityList: View {
     @EnvironmentObject var appState: AppState
     @EnvironmentObject var tabState: TopicsTabState
     var body: some View {
-        #if os(watchOS)
-        List {
-            content
-        }
-        .navigationDestination(for: Community.self) { community in
-            CommunityDetail(community: community)
-                .onAppear {
-                    tabState.selectedCommunity = community
-                }
-        }
-        #else
         List(selection: $tabState.selectedCommunity) {
             content
             RecommendCommunityList()
         }
-        #endif
     }
         
     var content: some View {
@@ -35,6 +23,7 @@ struct CommunityList: View {
                 NavigationLink(value: community) {
                     CommunityLabel(community: community)
                 }
+                #if !os(tvOS)
                 .swipeActions(edge: .trailing) {
                     Button(role: .destructive) {
                         appState.removeCommunity(community)
@@ -42,6 +31,7 @@ struct CommunityList: View {
                         Label("Delete", systemImage: "trash")
                     }
                 }
+                #endif
             }
             .onDelete(perform: deleteCommunities(at:))
         } header: {
