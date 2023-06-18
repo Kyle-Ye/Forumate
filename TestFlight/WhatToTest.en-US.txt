@@ -1,0 +1,4 @@
+- Fix AG crash on watchOS
+- Add localization support for Chinese
+- Add initial subcategory support
+- Add Recommend Community section
