@@ -12,7 +12,7 @@ struct SettingsTabRoot: View {
     @EnvironmentObject private var tabState: SettingsTabState
     @State private var showStarterIntro = false
 
-    func navigationItem(text: String, icon: () -> some View, destination: () -> some View) -> some View {
+    func navigationItem(text: LocalizedStringKey, icon: () -> some View, destination: () -> some View) -> some View {
         NavigationLink {
             destination()
                 .navigationTitle(text)

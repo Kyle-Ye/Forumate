@@ -25,7 +25,7 @@ struct CommunitySectionHeader_Previews: PreviewProvider {
         NavigationStack {
             List {
                 Section {
-                    Text("Hello")
+                    Text(verbatim: "Hello")
                 } header: {
                     CommunitySectionHeader(text: "Categories")
                 }

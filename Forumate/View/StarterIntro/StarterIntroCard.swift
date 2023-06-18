@@ -10,6 +10,6 @@ import SwiftUI
 
 struct StarterIntroCard<S: ShapeStyle> {
     let image: String
-    let text: String
+    let text: LocalizedStringKey
     let style: S
 }
