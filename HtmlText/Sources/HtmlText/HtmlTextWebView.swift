@@ -5,12 +5,42 @@
 //  Created by Kyle on 2023/6/4.
 //
 
-#if os(iOS) || os(macOS)
+#if os(iOS) || os(macOS) || os(watchOS)
 import os.log
 import SwiftUI
 import WebKit
 
 #if os(iOS)
+struct HtmlTextWebView: UIViewRepresentable {
+    @Binding var dynamicHeight: CGFloat
+    let html: String
+    let linkTap: ((URL) -> Void)?
+    
+    func makeUIView(context: Context) -> WKWebView {
+        let webView = WKWebView()
+        webView.scrollView.bounces = false
+        webView.navigationDelegate = context.coordinator
+        webView.scrollView.isScrollEnabled = true
+        webView.isOpaque = false
+        webView.backgroundColor = UIColor.clear
+        webView.scrollView.backgroundColor = UIColor.clear
+        DispatchQueue.main.async {
+            webView.loadHTMLString(html, baseURL: Bundle.main.bundleURL)
+        }
+        return webView
+    }
+    
+    func updateUIView(_: WKWebView, context _: Context) {}
+    
+    func makeCoordinator() -> Coordinator {
+        Coordinator(self)
+    }
+    
+    static func dismantleUIView(_ uiView: WKWebView, coordinator _: Coordinator) {
+        uiView.navigationDelegate = nil
+    }
+}
+#elseif os(watchOS)
 struct HtmlTextWebView: UIViewRepresentable {
     @Binding var dynamicHeight: CGFloat
     let html: String
