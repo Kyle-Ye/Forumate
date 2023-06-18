@@ -136,6 +136,9 @@
 		27C00A3A2A2CC6BF00CA9ACD /* PickerStyleType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C00A392A2CC6BF00CA9ACD /* PickerStyleType.swift */; };
 		27C00A3B2A2CC6BF00CA9ACD /* PickerStyleType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C00A392A2CC6BF00CA9ACD /* PickerStyleType.swift */; };
 		27C00A3C2A2CC6BF00CA9ACD /* PickerStyleType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C00A392A2CC6BF00CA9ACD /* PickerStyleType.swift */; };
+		27C8789B2A3F497000AECD06 /* EqualHeightHStackLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C8789A2A3F497000AECD06 /* EqualHeightHStackLayout.swift */; };
+		27C8789C2A3F497000AECD06 /* EqualHeightHStackLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C8789A2A3F497000AECD06 /* EqualHeightHStackLayout.swift */; };
+		27C8789D2A3F497000AECD06 /* EqualHeightHStackLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C8789A2A3F497000AECD06 /* EqualHeightHStackLayout.swift */; };
 		27CDD3832A1BAEAC003E3D00 /* Flow in Frameworks */ = {isa = PBXBuildFile; productRef = 27CDD3822A1BAEAC003E3D00 /* Flow */; };
 		27CDD3922A1BB06E003E3D00 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27CDD3912A1BB06E003E3D00 /* Preview Assets.xcassets */; };
 		27CDD3962A1BB573003E3D00 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 278E53E62A18E83000DCD159 /* Assets.xcassets */; };
@@ -290,6 +293,7 @@
 		27C00A352A2CC51B00CA9ACD /* SplitViewStyleType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitViewStyleType.swift; sourceTree = "<group>"; };
 		27C00A392A2CC6BF00CA9ACD /* PickerStyleType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerStyleType.swift; sourceTree = "<group>"; };
 		27C878982A3F45F800AECD06 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		27C8789A2A3F497000AECD06 /* EqualHeightHStackLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EqualHeightHStackLayout.swift; sourceTree = "<group>"; };
 		27CDD3882A1BB06D003E3D00 /* ForumateTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ForumateTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27CDD3912A1BB06E003E3D00 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		27CDD3C32A1BCC01003E3D00 /* TagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagView.swift; sourceTree = "<group>"; };
@@ -461,6 +465,7 @@
 		277C15C22A18F021007940C7 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				27C8789A2A3F497000AECD06 /* EqualHeightHStackLayout.swift */,
 				272193A02A19CCFA00C221BC /* JSONRawRepresentable.swift */,
 				277C15C32A18F033007940C7 /* HexToColor.swift */,
 				277546E02A19EF0F000FDAA0 /* String+HTMLLink.swift */,
@@ -929,6 +934,7 @@
 				273AFC052A1A960900DD08F5 /* Topic+Preview.swift in Sources */,
 				273AFC062A1A961B00DD08F5 /* String+HTMLLink.swift in Sources */,
 				273AFC0C2A1A964200DD08F5 /* SettingsTab.swift in Sources */,
+				27C8789C2A3F497000AECD06 /* EqualHeightHStackLayout.swift in Sources */,
 				27DFFCF12A2B2FD3005661BD /* TopicDetailWindowModel.swift in Sources */,
 				273AFC222A1A968100DD08F5 /* TopicsTabRoot.swift in Sources */,
 				273AFC182A1A967D00DD08F5 /* TopicDetail.swift in Sources */,
@@ -990,6 +996,7 @@
 				27CDD3A52A1BB626003E3D00 /* SettingsTab.swift in Sources */,
 				27CDD39E2A1BB5F7003E3D00 /* AppState.swift in Sources */,
 				27CDD39B2A1BB5F4003E3D00 /* JSONRawRepresentable.swift in Sources */,
+				27C8789D2A3F497000AECD06 /* EqualHeightHStackLayout.swift in Sources */,
 				27DFFCF22A2B2FD3005661BD /* TopicDetailWindowModel.swift in Sources */,
 				27CDD39A2A1BB5EE003E3D00 /* Category+Preview.swift in Sources */,
 				27CDD3B42A1BB726003E3D00 /* CommunityLabel.swift in Sources */,
@@ -1051,6 +1058,7 @@
 				27CDD3C42A1BCC01003E3D00 /* TagView.swift in Sources */,
 				278E54022A18E83000DCD159 /* AppState.swift in Sources */,
 				278E54102A18E83000DCD159 /* NewCommunity.swift in Sources */,
+				27C8789B2A3F497000AECD06 /* EqualHeightHStackLayout.swift in Sources */,
 				270097CF2A19D68700CA01B5 /* SettingsTabState.swift in Sources */,
 				273AFBD32A1A7AE400DD08F5 /* SettingIcon.swift in Sources */,
 				278E54092A18E83000DCD159 /* TopicsTabState.swift in Sources */,

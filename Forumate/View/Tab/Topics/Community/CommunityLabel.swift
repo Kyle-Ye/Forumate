@@ -10,10 +10,8 @@ import SwiftUI
 struct CommunityLabel: View {
     let community: Community
     
-    @State private var size: CGSize = .zero
-    
     var body: some View {
-        HStack {
+        EqualHeightHStackLayout {
             AsyncImage(url: community.icon) { image in
                 image
                     .resizable()
@@ -23,22 +21,16 @@ struct CommunityLabel: View {
                     .resizable()
                     .aspectRatio(contentMode: .fit)
             }
-            .frame(width: size.height, height: size.height)
             VStack(alignment: .leading) {
                 Text(community.title)
                     .font(.system(.body, design: .rounded))
-//                HStack {
-//                    Text("14 New 167 Unread")
-//                }
-//                .font(.footnote)
-//                .foregroundColor(.secondary)
+                //                HStack {
+                //                    Text("14 New 167 Unread")
+                //                }
+                //                .font(.footnote)
+                //                .foregroundColor(.secondary)
             }
             .lineLimit(1)
-            .readSize { size in
-                DispatchQueue.main.async {
-                    self.size = size
-                }
-            }
         }
     }
 }
