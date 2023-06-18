@@ -24,7 +24,7 @@ class AppState: ObservableObject {
     func didFirstLaunch() {
         _isFirstLaunch = false
         if _communities.isEmpty {
-            _communities = [.swift]            
+            _communities = [.swift]
         }
     }
     
@@ -34,6 +34,10 @@ class AppState: ObservableObject {
     
     func addCommunity(_ community: Community) {
         _communities.append(community)
+    }
+    
+    func removeCommunity(_ community: Community) {
+        _communities.removeAll { $0.id == community.id }
     }
     
     // MARK: Cache

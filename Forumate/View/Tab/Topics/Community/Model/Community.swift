@@ -1,5 +1,5 @@
 //
-//  swift
+//  Community
 //  Forumate
 //
 //  Created by Kyle on 2023/4/19.
@@ -28,7 +28,6 @@ struct Community: Codable {
         case icon
     }
     
-    // The default encoder and decoder will use rawValue if it is RawRepresentable
     init(from decoder: Decoder) throws {
         let container: KeyedDecodingContainer = try decoder.container(keyedBy: CodingKeys.self)
         self.id = try container.decode(UUID.self, forKey: CodingKeys.id)
@@ -50,12 +49,14 @@ extension Community: Identifiable {}
 
 extension Community: Hashable {}
 
-extension Community {
-    static var swift = Community(
-        host: URL(string: "https://forums.swift.org")!,
-        title: "Swift Forums",
-        icon: URL(string: "https://global.discourse-cdn.com/swift/optimized/1X/0a90dde98a223f5841eeca49d89dc9f57592e8d6_2_180x180.png")!
-    )
-}
-
 extension Community: JSONRawRepresentable {}
+
+extension [Community] {
+    static var recommended: [(name: String, url: URL)] {
+        [
+            ("Swift Forums", URL(string: "https://forums.swift.org")!),
+            ("Discourse Meta", URL(string: "https://meta.discourse.org")!),
+            ("OpenAI Developer Community", URL(string: "https://community.openai.com")!),
+        ]
+    }
+}
