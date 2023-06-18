@@ -1,12 +1,12 @@
 {
   "images" : [
     {
-      "filename" : "Front@1x.png",
+      "filename" : "AppIcon-tvOS-front-1@1x.png",
       "idiom" : "tv",
       "scale" : "1x"
     },
     {
-      "filename" : "Front@2x.png",
+      "filename" : "AppIcon-tvOS-front-1@2x.png",
       "idiom" : "tv",
       "scale" : "2x"
     }
