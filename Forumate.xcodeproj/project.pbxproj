@@ -298,6 +298,7 @@
 		27C00A392A2CC6BF00CA9ACD /* PickerStyleType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerStyleType.swift; sourceTree = "<group>"; };
 		27C878982A3F45F800AECD06 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		27C8789A2A3F497000AECD06 /* EqualHeightHStackLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EqualHeightHStackLayout.swift; sourceTree = "<group>"; };
+		27C8789F2A3F6EC000AECD06 /* WhatToTest.en-US.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "WhatToTest.en-US.txt"; sourceTree = "<group>"; };
 		27CDD3882A1BB06D003E3D00 /* ForumateTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ForumateTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27CDD3912A1BB06E003E3D00 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		27CDD3C32A1BCC01003E3D00 /* TagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagView.swift; sourceTree = "<group>"; };
@@ -640,6 +641,14 @@
 			path = Community;
 			sourceTree = "<group>";
 		};
+		27C8789E2A3F6E7E00AECD06 /* TestFlight */ = {
+			isa = PBXGroup;
+			children = (
+				27C8789F2A3F6EC000AECD06 /* WhatToTest.en-US.txt */,
+			);
+			path = TestFlight;
+			sourceTree = "<group>";
+		};
 		27CDD3892A1BB06D003E3D00 /* ForumateTVApp */ = {
 			isa = PBXGroup;
 			children = (
@@ -679,6 +688,7 @@
 		27EEA07D29EFCD1B00ADA5BE = {
 			isa = PBXGroup;
 			children = (
+				27C8789E2A3F6E7E00AECD06 /* TestFlight */,
 				27C878982A3F45F800AECD06 /* README.md */,
 				273C10F12A2CBFDC001537E2 /* Packages */,
 				278E53E22A18E83000DCD159 /* Forumate */,
