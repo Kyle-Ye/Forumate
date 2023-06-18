@@ -26,6 +26,9 @@ A native client to access Discourse server for Apple Platforms.
 
 ## Download
 
+- v0.1~v0.3 needs iOS 16-alignment OS version
+- v0.4 needs iOS 17 beta 1-alignment OS version
+
 ### Mac App Store Release
 
 Waiting to be released
