@@ -8,7 +8,7 @@
 
 A native client to access Discourse server for Apple Platforms.
 
-![Menu Helper](Forumate/Other/Assets.xcassets/AppIcon.appiconset/AppIcon-macOS-512.png)
+![Forumate](Forumate/Other/Assets.xcassets/AppIcon.appiconset/AppIcon-macOS-512.png)
 
 - [x] iOS 16+
 - [x] iPadOS 16+
