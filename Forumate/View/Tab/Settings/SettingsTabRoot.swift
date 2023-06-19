@@ -10,10 +10,8 @@ import SwiftUI
 
 struct SettingsTabRoot: View {
     @EnvironmentObject private var appState: AppState
-//    @Environment(SettingsTabState.self) private var tabState
-    
-    @Bindable var tabState: SettingsTabState
-    
+    @Environment(SettingsTabState.self) private var tabState
+        
     @State private var showStarterIntro = false
 
     func navigationItem(destination: SettingsTabDestination.ID, text: LocalizedStringKey, icon: () -> some View) -> some View {
@@ -27,6 +25,7 @@ struct SettingsTabRoot: View {
     }
 
     var body: some View {
+        @Bindable var tabState = tabState
         List(selection: $tabState.destination) {
             Section {
                 navigationItem(destination: .general, text: "General") {
@@ -77,8 +76,9 @@ struct SettingsTabRoot: View {
  struct SettingsTabRoot_Previews: PreviewProvider {
     static var previews: some View {
         NavigationStack {
-            SettingsTabRoot(tabState: SettingsTabState())
+            SettingsTabRoot()
         }
+        .environment(SettingsTabState())
         .environmentObject(AppState())
     }
  }
