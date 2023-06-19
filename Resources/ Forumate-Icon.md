@@ -1,0 +1,1 @@
+[Figma resource link](https://www.figma.com/file/N86W0x2Fj21ZTAllyitJf7).
