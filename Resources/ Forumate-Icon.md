@@ -1,1 +1,1 @@
-[Figma resource link](https://www.figma.com/file/N86W0x2Fj21ZTAllyitJf7/Forumate-AppIcon?type=design&node-id=0%3A1&mode=design&t=EMwZvH5zdDSu7y1s-1).
+[Figma resource link](https://www.figma.com/file/N86W0x2Fj21ZTAllyitJf7).
