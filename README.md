@@ -26,8 +26,9 @@ A native client to access Discourse server for Apple Platforms.
 
 ## Download
 
-- v0.1~v0.3 needs iOS 16-alignment OS version
-- v0.4 needs iOS 17 beta 1-alignment OS version
+- v0.1~v0.3 supports iOS 16.0+ and alike OS version
+- v0.4 supports iOS 17 beta 1 and alike OS version
+- v0.4.1 supports iOS 17 beta 2 and alike OS version
 
 ### Mac App Store Release
 
@@ -36,6 +37,10 @@ Waiting to be released
 ### Join Beta on TestFlight
 
 [Join beta on TestFlight](https://testflight.apple.com/join/4kpEtmsk)
+
+### Github Release
+
+For macOS users, you can download the Notarized macOS Catalyst binary on https://github.com/Kyle-Ye/Forumate/releases/
 
 > Mac App Store℠ and TestFlight® are trademarks of Apple Inc., registered in the U.S. and other countries.
 
