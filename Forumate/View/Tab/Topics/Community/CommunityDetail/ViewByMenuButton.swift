@@ -41,8 +41,9 @@ struct ViewByMenuButton: View {
     }
 }
 
-#Preview {
-    ViewByMenuButton()
-        .buttonStyle(.borderedProminent)
-        .environmentObject(CommunityDetailState(community: .swift))
-}
+// Compiler error for Community swift undefined in Xcdoe 15 beta 2
+//#Preview {
+//    ViewByMenuButton()
+//        .buttonStyle(.borderedProminent)
+//        .environmentObject(CommunityDetailState(community: .swift))
+//}
