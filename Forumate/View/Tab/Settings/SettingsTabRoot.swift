@@ -28,6 +28,11 @@ struct SettingsTabRoot: View {
         @Bindable var tabState = tabState
         List(selection: $tabState.destination) {
             Section {
+                navigationItem(destination: .subscription, text: "Forumate+") {
+                    SettingIcon(icon: "star.circle.fill", style: .yellow)
+                }
+            }
+            Section {
                 navigationItem(destination: .general, text: "General") {
                     SettingIcon(icon: "gear", style: .gray)
                 }
