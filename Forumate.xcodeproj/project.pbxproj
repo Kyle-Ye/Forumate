@@ -51,7 +51,6 @@
 		273AFC032A1A95FD00DD08F5 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E53E42A18E83000DCD159 /* AppState.swift */; };
 		273AFC042A1A960600DD08F5 /* Category+Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2726057F2A1A12450018B908 /* Category+Preview.swift */; };
 		273AFC052A1A960900DD08F5 /* Topic+Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273AFBDA2A1A870F00DD08F5 /* Topic+Preview.swift */; };
-		273AFC062A1A961B00DD08F5 /* String+HTMLLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277546E02A19EF0F000FDAA0 /* String+HTMLLink.swift */; };
 		273AFC072A1A961F00DD08F5 /* HexToColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277C15C32A18F033007940C7 /* HexToColor.swift */; };
 		273AFC082A1A962200DD08F5 /* JSONRawRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272193A02A19CCFA00C221BC /* JSONRawRepresentable.swift */; };
 		273AFC092A1A963800DD08F5 /* PlaceholderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E53EA2A18E83000DCD159 /* PlaceholderView.swift */; };
@@ -90,7 +89,6 @@
 		276F9F482A2A606600020B1B /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276F9F462A2A606600020B1B /* PostView.swift */; };
 		276F9F492A2A606600020B1B /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276F9F462A2A606600020B1B /* PostView.swift */; };
 		277546D82A19DE3F000FDAA0 /* AppInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277546D72A19DE3F000FDAA0 /* AppInfo.swift */; };
-		277546E12A19EF0F000FDAA0 /* String+HTMLLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277546E02A19EF0F000FDAA0 /* String+HTMLLink.swift */; };
 		2779C0602A3464F200CE4DF1 /* CommunityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2779C05F2A3464F200CE4DF1 /* CommunityManager.swift */; };
 		2779C0612A3464F200CE4DF1 /* CommunityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2779C05F2A3464F200CE4DF1 /* CommunityManager.swift */; };
 		2779C0622A3464F200CE4DF1 /* CommunityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2779C05F2A3464F200CE4DF1 /* CommunityManager.swift */; };
@@ -151,7 +149,6 @@
 		27CDD39A2A1BB5EE003E3D00 /* Category+Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2726057F2A1A12450018B908 /* Category+Preview.swift */; };
 		27CDD39B2A1BB5F4003E3D00 /* JSONRawRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272193A02A19CCFA00C221BC /* JSONRawRepresentable.swift */; };
 		27CDD39C2A1BB5F4003E3D00 /* HexToColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277C15C32A18F033007940C7 /* HexToColor.swift */; };
-		27CDD39D2A1BB5F4003E3D00 /* String+HTMLLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277546E02A19EF0F000FDAA0 /* String+HTMLLink.swift */; };
 		27CDD39E2A1BB5F7003E3D00 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E53E42A18E83000DCD159 /* AppState.swift */; };
 		27CDD39F2A1BB5FE003E3D00 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E53FF2A18E83000DCD159 /* ContentView.swift */; };
 		27CDD3A02A1BB608003E3D00 /* PlaceholderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E53EA2A18E83000DCD159 /* PlaceholderView.swift */; };
@@ -263,7 +260,6 @@
 		276F9F412A2A348100020B1B /* PreviewChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewChecker.swift; sourceTree = "<group>"; };
 		276F9F462A2A606600020B1B /* PostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
 		277546D72A19DE3F000FDAA0 /* AppInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInfo.swift; sourceTree = "<group>"; };
-		277546E02A19EF0F000FDAA0 /* String+HTMLLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+HTMLLink.swift"; sourceTree = "<group>"; };
 		2779C05F2A3464F200CE4DF1 /* CommunityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityManager.swift; sourceTree = "<group>"; };
 		2779C0632A3468DC00CE4DF1 /* Community+Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Community+Preview.swift"; sourceTree = "<group>"; };
 		2779C0672A346B3D00CE4DF1 /* RecommendCommunityList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendCommunityList.swift; sourceTree = "<group>"; };
@@ -473,7 +469,6 @@
 				27C8789A2A3F497000AECD06 /* EqualHeightHStackLayout.swift */,
 				272193A02A19CCFA00C221BC /* JSONRawRepresentable.swift */,
 				277C15C32A18F033007940C7 /* HexToColor.swift */,
-				277546E02A19EF0F000FDAA0 /* String+HTMLLink.swift */,
 				276F9F412A2A348100020B1B /* PreviewChecker.swift */,
 				27DFFCDE2A2AF64A005661BD /* ColorToImageText.swift */,
 				27DFFCE22A2B0509005661BD /* View+Size.swift */,
@@ -948,7 +943,6 @@
 				275E04102A2CE75900A91F5B /* ViewByMenuButton.swift in Sources */,
 				273AFC1D2A1A967D00DD08F5 /* TopicLabel.swift in Sources */,
 				273AFC052A1A960900DD08F5 /* Topic+Preview.swift in Sources */,
-				273AFC062A1A961B00DD08F5 /* String+HTMLLink.swift in Sources */,
 				273AFC0C2A1A964200DD08F5 /* SettingsTab.swift in Sources */,
 				27C8789C2A3F497000AECD06 /* EqualHeightHStackLayout.swift in Sources */,
 				27DFFCF12A2B2FD3005661BD /* TopicDetailWindowModel.swift in Sources */,
@@ -1000,7 +994,6 @@
 				2779C06A2A346B3D00CE4DF1 /* RecommendCommunityList.swift in Sources */,
 				2779C0662A3468DC00CE4DF1 /* Community+Preview.swift in Sources */,
 				27DFFCE12A2AF64A005661BD /* ColorToImageText.swift in Sources */,
-				27CDD39D2A1BB5F4003E3D00 /* String+HTMLLink.swift in Sources */,
 				27CDD3B32A1BB726003E3D00 /* NewCommunity.swift in Sources */,
 				27CDD3B22A1BB723003E3D00 /* TopicsTab.swift in Sources */,
 				27C00A3C2A2CC6BF00CA9ACD /* PickerStyleType.swift in Sources */,
@@ -1045,7 +1038,6 @@
 				2733B4D42A2F929300BCF528 /* StarterIntroCard.swift in Sources */,
 				2779C0602A3464F200CE4DF1 /* CommunityManager.swift in Sources */,
 				27DFFCDF2A2AF64A005661BD /* ColorToImageText.swift in Sources */,
-				277546E12A19EF0F000FDAA0 /* String+HTMLLink.swift in Sources */,
 				278E540E2A18E83000DCD159 /* CommunityLabel.swift in Sources */,
 				27DFFCE32A2B0509005661BD /* View+Size.swift in Sources */,
 				278E54072A18E83000DCD159 /* SettingsTab.swift in Sources */,

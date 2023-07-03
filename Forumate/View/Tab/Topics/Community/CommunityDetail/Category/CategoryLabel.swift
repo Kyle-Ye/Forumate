@@ -7,6 +7,7 @@
 
 import Flow
 import SwiftUI
+import HtmlText
 
 struct CategoryLabel: View {
     @EnvironmentObject private var appState: AppState
@@ -21,7 +22,7 @@ struct CategoryLabel: View {
                 .foregroundColor(.primary)
                 .bold()
             if let description = category.description {
-                Text(LocalizedStringKey(description.replacingHTMLLink()))
+                AttributedText(rawHtml: description)
                     .foregroundColor(.secondary)
             }
             #if os(iOS) || os(macOS)
