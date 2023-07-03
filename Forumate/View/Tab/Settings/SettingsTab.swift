@@ -12,7 +12,7 @@ struct SettingsTab: View {
     
     var body: some View {
         NavigationSplitView(columnVisibility: .constant(.all)) {
-            SettingsTabRoot(tabState: tabState)
+            SettingsTabRoot()
         } detail: {
             NavigationStack {
                 if let destination = tabState.destination {

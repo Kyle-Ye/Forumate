@@ -10,13 +10,13 @@ A native client to access Discourse server for Apple Platforms.
 
 ![Forumate](Forumate/Other/Assets.xcassets/AppIcon.appiconset/AppIcon-macOS-512.png)
 
-- [x] iOS 16+
-- [x] iPadOS 16+
-- [x] watchOS 9+
-- [x] tvOS 16+
+- [x] iOS 17+
+- [x] iPadOS 17+
+- [x] watchOS 10+
+- [x] tvOS 17+
 - [x] macOS(Catalyst) 13+
 - [ ] macOS 13+
-- [ ] visionOS 1
+- [x] visionOS 1+
 
 > tvOS target is buildable, but due to [#17](https://github.com/Kyle-Ye/Forumate/issues/17). I can't upload a tvOS binary to App Store.
 >
@@ -26,9 +26,9 @@ A native client to access Discourse server for Apple Platforms.
 
 ## Download
 
-- v0.1~v0.3 supports iOS 16.0+ and alike OS version
-- v0.4 supports iOS 17 beta 1 and alike OS version
-- v0.4.1 supports iOS 17 beta 2 and alike OS version
+- v0.1~v0.3 supports iOS 16+, watchOS 9+ and macOS 13+
+- v0.4.0 supports iOS 17 beta 1, watchOS 9 beta 1 and macOS 14 beta 1
+- v0.4.1 supports iOS 17 beta 2, watchOS 9 beta 2 and macOS 14 beta 2
 
 ### Mac App Store Release
 
