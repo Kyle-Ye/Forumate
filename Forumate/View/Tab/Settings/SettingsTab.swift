@@ -18,6 +18,7 @@ struct SettingsTab: View {
                 if let destination = tabState.destination {
                     Group {
                         switch destination.id {
+                        case .subscription: SubscriptionSection()
                         case .general: GeneralSection()
                         case .notification: Text("Unimplemented")
                         case .support: SupportSection()
