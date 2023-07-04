@@ -30,6 +30,9 @@ struct SettingsTab: View {
                     #if os(iOS) || os(watchOS)
                         .navigationBarTitleDisplayMode(.inline)
                     #endif
+                } else {
+                    PlaceholderView(text: "No Setting Selected",
+                                    image: "gearshape")
                 }
             }
         }

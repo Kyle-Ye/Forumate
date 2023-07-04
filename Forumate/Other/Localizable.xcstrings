@@ -378,6 +378,16 @@
         }
       }
     },
+    "No Setting Selected" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "无选择的设置项"
+          }
+        }
+      }
+    },
     "No Topic Selected" : {
       "localizations" : {
         "zh-Hans" : {
