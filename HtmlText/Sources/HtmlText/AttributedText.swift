@@ -30,13 +30,13 @@ public struct AttributedText: View {
     
     // FIXME: "’" will get a strange effect, we replace it with "'" as a workaround
     private var fixedString: String {
-        html.replacing(#/‘/#) { _ in "'" }
+        html.replacing(#/’/#) { _ in "'" }
     }
 }
 
 #Preview {
     VStack {
         AttributedText(rawHtml: "Topics <br>related</br> to the <a href=\"https://github.com/apple/swift-evolution/blob/main/process.md\">Swift Evolution Process</a>.")
-        AttributedText(rawHtml: "Questions, feedback, and best practices around building with OpenAI‘s API. Please read the <a href=\"https://platform.openai.com/overview\">API docs</a> before posting.")
+        AttributedText(rawHtml: "Questions, feedback, and best practices around building with OpenAI’s API. Please read the <a href=\"https://platform.openai.com/overview\">API docs</a> before posting.")
     }
 }
