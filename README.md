@@ -1,6 +1,6 @@
 ## Forumate
 
-[![Swift 5.8](https://img.shields.io/badge/Swift-5.8-ED523F.svg?style=flat)](https://swift.org/)
+[![Swift 5.9](https://img.shields.io/badge/Swift-5.9-ED523F.svg?style=flat)](https://swift.org/)
 [![SwiftUI](https://img.shields.io/badge/SwiftUI-✓-orange)](https://developer.apple.com/xcode/swiftui/)
 
 [![@Kyle-Ye](https://img.shields.io/badge/contact-%40Kyle--Ye-yellow.svg?style=flat)](https://twitter.com/KyleSwifter)
@@ -14,21 +14,22 @@ A native client to access Discourse server for Apple Platforms.
 - [x] iPadOS 17+
 - [x] watchOS 10+
 - [x] tvOS 17+
-- [x] macOS(Catalyst) 13+
-- [ ] macOS 13+
+- [x] macOS(Catalyst) 14+
+- [ ] macOS 14+
 - [x] visionOS 1+
 
 > tvOS target is buildable, but due to [#17](https://github.com/Kyle-Ye/Forumate/issues/17). I can't upload a tvOS binary to App Store.
 >
 > macOS is buildable, but is not optimized for. It's better to build under Catalyst.
 >
-> I have plan to adapt for visionOS. Waiting for the SDK to be available. 
+> visionOS is buidable, but is not optimized for. Hope I can get a real device to test for it.
 
 ## Download
 
 - v0.1~v0.3 supports iOS 16+, watchOS 9+ and macOS 13+
-- v0.4.0 supports iOS 17 beta 1, watchOS 9 beta 1 and macOS 14 beta 1
-- v0.4.1 supports iOS 17 beta 2, watchOS 9 beta 2 and macOS 14 beta 2
+- v0.4.0 supports iOS 17 beta 1, watchOS 10 beta 1 and macOS 14 beta 1
+- v0.4.1 supports iOS 17 beta 2-3, watchOS 10 beta 2-3 and macOS 14 beta 2-3
+- v0.5.0 supports iOS 17 beta 4, watchOS 10 beta 4 and macOS 14 beta 4
 
 ### Mac App Store Release
 
