@@ -11,13 +11,12 @@ import SwiftData
 
 @Model
 final class Community {
-    @Attribute(.unique) let id: UUID
-    let host: URL
-    let title: String
-    let icon: URL
+    private(set) var id = UUID()
+    private(set) var host: URL!
+    private(set) var title = ""
+    private(set) var icon: URL?
     
-    init(host: URL, title: String, icon: URL) {
-        self.id = UUID()
+    init(host: URL, title: String = "", icon: URL? = nil) {
         self.host = host
         self.title = title
         self.icon = icon
