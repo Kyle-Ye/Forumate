@@ -5,13 +5,14 @@
 //  Created by Kyle on 2023/6/10.
 //
 
+import SwiftData
 import SwiftUI
 
 struct RecommendCommunityLabel: View {
     let name: String
     let url: URL
     
-    @EnvironmentObject var appState: AppState
+    @Environment(\.modelContext) private var context
     @State private var loading = false
     @State private var loadingError = false
     
@@ -25,7 +26,7 @@ struct RecommendCommunityLabel: View {
                     loading = true
                     do {
                         let community = try await CommunityManager.shared.createCommunity(url)
-                        appState.addCommunity(community)
+                        context.insert(community)
                     } catch {
                         loadingError = true
                     }
@@ -49,6 +50,6 @@ struct RecommendCommunityLabel_Previews: PreviewProvider {
         List {
             RecommendCommunityLabel(name: "Swift Forums", url: URL(string: "https://forums.swift.org")!)
         }
-        .environmentObject(AppState())
+        .modelContainer(previewContainer)
     }
 }

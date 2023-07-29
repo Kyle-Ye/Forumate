@@ -5,11 +5,17 @@
 //  Created by Kyle on 2023/4/19.
 //
 
+import SwiftData
 import SwiftUI
 
 struct CommunityList: View {
     @EnvironmentObject var appState: AppState
     @EnvironmentObject var tabState: TopicsTabState
+    
+    // Query Community and add init data
+    @Environment(\.modelContext) var modelContext
+    @Query var communities: [Community]
+    
     var body: some View {
         List(selection: $tabState.selectedCommunity) {
             content
@@ -19,14 +25,14 @@ struct CommunityList: View {
         
     var content: some View {
         Section {
-            ForEach(appState.communities) { community in
+            ForEach(communities) { community in
                 NavigationLink(value: community) {
                     CommunityLabel(community: community)
                 }
                 #if !os(tvOS)
                 .swipeActions(edge: .trailing) {
                     Button(role: .destructive) {
-                        appState.removeCommunity(community)
+                        modelContext.delete(community)
                     } label: {
                         Label("Delete", systemImage: "trash")
                     }
@@ -41,8 +47,8 @@ struct CommunityList: View {
     
     private func deleteCommunities(at indexSet: IndexSet) {
         indexSet
-            .map { appState.communities[$0] }
-            .forEach { appState.removeCommunity($0) }
+            .map { communities[$0] }
+            .forEach { modelContext.delete($0) }
     }
 }
 

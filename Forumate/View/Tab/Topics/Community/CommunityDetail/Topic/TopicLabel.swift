@@ -8,6 +8,7 @@
 import DiscourseKit
 import Flow
 import SwiftUI
+import SwiftData
 
 struct TopicLabel: View {
     @EnvironmentObject private var appState: AppState
@@ -38,7 +39,8 @@ struct TopicLabel: View {
         .contextMenu {
             if supportsMultipleWindows {
                 Button {
-                    openWindow(value: TopicDetailWindowModel(topic: topic, community: state.community))
+                    let model = state.community as (any PersistentModel) // FIXME: Workaround for Xcode 15 beta 5
+                    openWindow(value: TopicDetailWindowModel(topic: topic, communityID: model.objectID))
                 } label: {
                     Label("Open In New Window", systemImage: "macwindow.badge.plus")
                 }
