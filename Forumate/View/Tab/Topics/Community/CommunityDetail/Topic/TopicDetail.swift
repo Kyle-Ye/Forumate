@@ -55,7 +55,7 @@ struct TopicDetail: View {
                     #endif
                     ToolbarItem(placement: placement) {
                         Button {
-                            openWindow(value: TopicDetailWindowModel(topic: topic, community: state.community))
+                            openWindow(value: TopicDetailWindowModel(topic: topic, communityID: state.community.objectID))
                         } label: {
                             Label("Open In New Window", systemImage: "macwindow.badge.plus")
                         }

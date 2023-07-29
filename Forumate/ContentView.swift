@@ -41,7 +41,7 @@ struct ContentView: View {
                 showStarterIntro = true
             }
             if appState.isFirstLaunch {
-                appState.didFirstLaunch()
+                try? appState.didFirstLaunch()
             }
         }
         .sheet(isPresented: $showStarterIntro) {

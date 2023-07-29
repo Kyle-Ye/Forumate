@@ -388,6 +388,16 @@
         }
       }
     },
+    "No Topic Detail" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "无话题详情"
+          }
+        }
+      }
+    },
     "No Topic Selected" : {
       "localizations" : {
         "zh-Hans" : {
