@@ -198,6 +198,9 @@
 		27D2190E2A75759C00501849 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D2190D2A75759C00501849 /* Account.swift */; };
 		27D2190F2A75759C00501849 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D2190D2A75759C00501849 /* Account.swift */; };
 		27D219102A75759C00501849 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D2190D2A75759C00501849 /* Account.swift */; };
+		27D219122A75954900501849 /* IconSelectorSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D219112A75954900501849 /* IconSelectorSection.swift */; };
+		27D219132A75954900501849 /* IconSelectorSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D219112A75954900501849 /* IconSelectorSection.swift */; };
+		27D219142A75954900501849 /* IconSelectorSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D219112A75954900501849 /* IconSelectorSection.swift */; };
 		27DFFCDF2A2AF64A005661BD /* ColorToImageText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DFFCDE2A2AF64A005661BD /* ColorToImageText.swift */; };
 		27DFFCE02A2AF64A005661BD /* ColorToImageText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DFFCDE2A2AF64A005661BD /* ColorToImageText.swift */; };
 		27DFFCE12A2AF64A005661BD /* ColorToImageText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DFFCDE2A2AF64A005661BD /* ColorToImageText.swift */; };
@@ -319,6 +322,7 @@
 		27CDD3C32A1BCC01003E3D00 /* TagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagView.swift; sourceTree = "<group>"; };
 		27D219032A756E7900501849 /* Logger+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Logger+Extension.swift"; sourceTree = "<group>"; };
 		27D2190D2A75759C00501849 /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		27D219112A75954900501849 /* IconSelectorSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconSelectorSection.swift; sourceTree = "<group>"; };
 		27DFFCDE2A2AF64A005661BD /* ColorToImageText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorToImageText.swift; sourceTree = "<group>"; };
 		27DFFCE22A2B0509005661BD /* View+Size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Size.swift"; sourceTree = "<group>"; };
 		27DFFCE72A2B13EB005661BD /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
@@ -415,6 +419,7 @@
 				2735D6072A2F852D000D5966 /* PrivacyPolicySection.swift */,
 				273AFBDF2A1A8D1800DD08F5 /* AcknowSection.swift */,
 				274C4C9D2A3F81D10018BFA4 /* SubscriptionSection.swift */,
+				27D219112A75954900501849 /* IconSelectorSection.swift */,
 			);
 			path = Sections;
 			sourceTree = "<group>";
@@ -988,6 +993,7 @@
 				274F63A22A4202AE00238B30 /* AppIcon.swift in Sources */,
 				273AFC1D2A1A967D00DD08F5 /* TopicLabel.swift in Sources */,
 				273AFC052A1A960900DD08F5 /* Topic+Preview.swift in Sources */,
+				27D219132A75954900501849 /* IconSelectorSection.swift in Sources */,
 				273AFC0C2A1A964200DD08F5 /* SettingsTab.swift in Sources */,
 				27C8789C2A3F497000AECD06 /* EqualHeightHStackLayout.swift in Sources */,
 				274C4C9F2A3F81D10018BFA4 /* SubscriptionSection.swift in Sources */,
@@ -1055,6 +1061,7 @@
 				27CDD3BF2A1BB758003E3D00 /* TopicDetail.swift in Sources */,
 				27CDD3A52A1BB626003E3D00 /* SettingsTab.swift in Sources */,
 				27CDD39E2A1BB5F7003E3D00 /* AppState.swift in Sources */,
+				27D219142A75954900501849 /* IconSelectorSection.swift in Sources */,
 				27CDD39B2A1BB5F4003E3D00 /* JSONRawRepresentable.swift in Sources */,
 				27C8789D2A3F497000AECD06 /* EqualHeightHStackLayout.swift in Sources */,
 				274C4CA02A3F81D10018BFA4 /* SubscriptionSection.swift in Sources */,
@@ -1122,6 +1129,7 @@
 				272193A12A19CCFA00C221BC /* JSONRawRepresentable.swift in Sources */,
 				27CDD3C42A1BCC01003E3D00 /* TagView.swift in Sources */,
 				278E54022A18E83000DCD159 /* AppState.swift in Sources */,
+				27D219122A75954900501849 /* IconSelectorSection.swift in Sources */,
 				278E54102A18E83000DCD159 /* NewCommunity.swift in Sources */,
 				27C8789B2A3F497000AECD06 /* EqualHeightHStackLayout.swift in Sources */,
 				274C4C9E2A3F81D10018BFA4 /* SubscriptionSection.swift in Sources */,
@@ -1458,6 +1466,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_ALTERNATE_APPICON_NAMES = AppIconAlternate1;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Forumate/Other/Forumate.entitlements;
@@ -1504,6 +1513,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_ALTERNATE_APPICON_NAMES = AppIconAlternate1;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Forumate/Other/Forumate.entitlements;

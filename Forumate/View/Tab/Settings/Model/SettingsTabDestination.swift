@@ -11,6 +11,9 @@ import SwiftUI
 struct SettingsTabDestination: Hashable {
     enum ID {
         case subscription
+        #if os(iOS) || os(tvOS)
+        case iconSelector
+        #endif
         case general
         case notification
         case support
