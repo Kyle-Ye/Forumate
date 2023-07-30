@@ -2,7 +2,7 @@
 
 ### Icon 1:
 
-![Forumate Icon 1](icon_1_512x512.png)
+![Forumate Icon 1](../Forumate/Other/Assets.xcassets/AppIconAlternate1.appiconset/icon_512x512.png)
 
 version: 0.1.0 - 0.4.0
 

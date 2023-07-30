@@ -14,7 +14,7 @@ struct SettingsTabRoot: View {
         
     @State private var showStarterIntro = false
 
-    func navigationItem(destination: SettingsTabDestination.ID, text: LocalizedStringKey, icon: () -> some View) -> some View {
+    func navigationItem(destination: SettingsTabDestination.ID, text: LocalizedStringKey, @ViewBuilder icon: () -> some View) -> some View {
         NavigationLink(value: SettingsTabDestination(title: text, id: destination)) {
             Label {
                 Text(text)
@@ -27,13 +27,22 @@ struct SettingsTabRoot: View {
     var body: some View {
         @Bindable var tabState = tabState
         List(selection: $tabState.destination) {
-            #if DEBUG
             Section {
+                #if DEBUG
                 navigationItem(destination: .subscription, text: "Forumate+") {
                     SettingIcon(icon: "star.circle.fill", style: .yellow)
                 }
+                #endif
+                #if os(iOS) || os(tvOS)
+                navigationItem(destination: .iconSelector, text: "App Icon") {
+                    let icon = UIApplication.shared.alternateIconName ?? "AppIcon"
+                    Image(uiImage: .init(named: icon)!)
+                        .resizable()
+                        .frame(width: 25, height: 25)
+                        .cornerRadius(5)
+                }
+                #endif
             }
-            #endif
             Section {
                 navigationItem(destination: .general, text: "General") {
                     SettingIcon(icon: "gear", style: .gray)
@@ -80,7 +89,7 @@ struct SettingsTabRoot: View {
     }
 }
 
- struct SettingsTabRoot_Previews: PreviewProvider {
+struct SettingsTabRoot_Previews: PreviewProvider {
     static var previews: some View {
         NavigationStack {
             SettingsTabRoot()
@@ -88,4 +97,4 @@ struct SettingsTabRoot: View {
         .environment(SettingsTabState())
         .environmentObject(AppState())
     }
- }
+}
