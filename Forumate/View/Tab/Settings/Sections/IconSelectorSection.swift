@@ -29,7 +29,7 @@ struct IconSelectorSection: View {
                         }
                     }
                 } label: {
-                    Image(uiImage: UIImage(named: icon.iconName) ?? UIImage())
+                    Image(uiImage: UIImage(named: icon.appIconName) ?? UIImage())
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                         .frame(minHeight: 125, maxHeight: 1024)
@@ -81,10 +81,6 @@ extension IconSelectorSection {
 }
 
 #Preview {
-    VStack {
-        Text("1")
-//        IconSelectorSection()
-        Image(uiImage: UIImage(named: "icon1") ?? .add)
-    }
+    IconSelectorSection()
 }
 #endif

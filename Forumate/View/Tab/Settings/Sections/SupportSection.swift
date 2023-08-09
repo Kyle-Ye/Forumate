@@ -11,19 +11,29 @@ struct SupportSection: View {
     var body: some View {
         List {
             Section {
-                Link("Bug report via Github", destination: URL(string: "https://github.com/Kyle-Ye/Forumate/issues")!)
-                Link("Feature request via Github", destination: URL(string: "https://github.com/Kyle-Ye/Forumate/issues")!)
-                Link("Discuss at our Discord Server", destination: URL(string: "https://discord.gg/ZHq5PzbGmE")!)
+                Link(destination: URL(string: "https://github.com/Kyle-Ye/Forumate/issues")!) {
+                    Label("Bug report via Github", systemImage: "link")
+                }
+                Link(destination: URL(string: "https://github.com/Kyle-Ye/Forumate/issues")!) {
+                    Label("Feature request via Github", systemImage: "link")
+                }
+                Link(destination: URL(string: "https://discord.gg/ZHq5PzbGmE")!) {
+                    Label("Discuss at our Discord Server", systemImage: "link")
+                }
             } header: {
                 Text("Bug report and feature suggest")
             }
             Section {
-                Link("Forumate source code at Github", destination: URL(string: "https://github.com/Kyle-Ye/Forumate")!)
+                Link(destination: URL(string: "https://github.com/Kyle-Ye/Forumate")!) {
+                    Label("Forumate source code at Github", systemImage: "link")
+                }                
             } header: {
                 Text("Browser Code")
             }
             Section {
-                Link("Follow me on Twitter", destination: URL(string: "https://twitter.com/ForumateApp")!)
+                Link(destination: URL(string: "https://twitter.com/ForumateApp")!) {
+                    Label("Follow me on Twitter", systemImage: "link")
+                }
             } header: {
                 Text("Other")
             }
