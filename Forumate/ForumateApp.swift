@@ -30,7 +30,7 @@ struct ForumateApp: App {
         #if os(iOS) || os(macOS)
         WindowGroup("Topic Detail", id: "topic", for: TopicDetailWindowModel.self) { $detailModel in
             if let detailModel,
-               let community = container.mainContext.object(with: detailModel.communityID) as? Community {
+               let community = container.mainContext.model(for: detailModel.communityID) as? Community {
                 TopicDetail(topic: detailModel.topic)
                     .environmentObject(appState)
                     .environmentObject(CommunityDetailState(community: community))

@@ -1,4 +1,4 @@
-What's new in v0.5.0-beta
+What's new in v0.5.1-beta
 1. Migrate Community model to SwiftData(iCloud based database) and support iCloud sync now.
 You can now setup your favorite your communities and then they will automatically sync to your other Apple device.
 2. Update AppIcon and you can change the old icon back in the Setting sections.

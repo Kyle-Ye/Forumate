@@ -40,7 +40,7 @@ struct TopicLabel: View {
             if supportsMultipleWindows {
                 Button {
                     let model = state.community as (any PersistentModel) // FIXME: Workaround for Xcode 15 beta 5
-                    openWindow(value: TopicDetailWindowModel(topic: topic, communityID: model.objectID))
+                    openWindow(value: TopicDetailWindowModel(topic: topic, communityID: model.persistentModelID))
                 } label: {
                     Label("Open In New Window", systemImage: "macwindow.badge.plus")
                 }
