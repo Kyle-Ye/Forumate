@@ -34,14 +34,12 @@ struct SettingsTabRoot: View {
                 }
                 #endif
                 #if os(iOS) || os(tvOS)
-                if !ProcessInfo.processInfo.isiOSAppOnMac {
-                    navigationItem(destination: .iconSelector, text: "App Icon") {
-                        let icon = UIApplication.shared.alternateIconName ?? "AppIcon"
-                        Image(uiImage: .init(named: icon)!)
-                            .resizable()
-                            .frame(width: 25, height: 25)
-                            .cornerRadius(5)
-                    }
+                navigationItem(destination: .iconSelector, text: "App Icon") {
+                    let icon = UIApplication.shared.alternateIconName ?? "AppIcon"
+                    Image(uiImage: .init(named: icon)!)
+                        .resizable()
+                        .frame(width: 25, height: 25)
+                        .cornerRadius(5)
                 }
                 #endif
             }

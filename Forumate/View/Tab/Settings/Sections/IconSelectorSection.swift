@@ -29,7 +29,7 @@ struct IconSelectorSection: View {
                         }
                     }
                 } label: {
-                    Image(uiImage: UIImage(named: icon.appIconName) ?? UIImage())
+                    Image(uiImage: UIImage(named: icon.iconName) ?? UIImage())
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                         .frame(minHeight: 125, maxHeight: 1024)
