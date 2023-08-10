@@ -10,6 +10,8 @@ A native client to access Discourse server for Apple Platforms.
 
 ![Forumate](Forumate/Other/Assets.xcassets/AppIcon.appiconset/AppIcon-macOS-512.png)
 
+### Platform Compatibility
+
 - [x] iOS 17+
 - [x] iPadOS 17+
 - [x] watchOS 10+
@@ -24,12 +26,15 @@ A native client to access Discourse server for Apple Platforms.
 >
 > visionOS is buidable, but is not optimized for. Hope I can get a real device to test for it.
 
-## Download
+### Version Compatibility
 
 - v0.1~v0.3 supports iOS 16+, watchOS 9+ and macOS 13+
-- v0.4.0 supports iOS 17 beta 1, watchOS 10 beta 1 and macOS 14 beta 1
-- v0.4.1 supports iOS 17 beta 2-3, watchOS 10 beta 2-3 and macOS 14 beta 2-3
-- v0.5.0 supports iOS 17 beta 4, watchOS 10 beta 4 and macOS 14 beta 4
+- v0.4.0-beta only supports iOS & iPadOS 17 beta 1, watchOS 10 beta 1 and macOS 14 beta 1
+- v0.4.1-beta only supports iOS & iPadOS 17 beta 2-3, watchOS 10 beta 2-3 and macOS 14 beta 2-3
+- v0.5.0-beta only supports iOS & iPadOS 17 17 beta 4, watchOS 10 beta 4 and macOS 14 beta 4
+- v0.5.1-beta only supports iOS & iPadOS 17 17 beta 5, watchOS 10 beta 5 and macOS 14 beta 5
+
+## Download
 
 ### Mac App Store Release
 

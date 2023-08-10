@@ -46,7 +46,7 @@ struct TopicDetail: View {
                 }
             }
         #if os(iOS) || os(macOS)
-            .toolbar {
+            .toolbar(content: {
                 if supportsMultipleWindows {
                     #if os(iOS)
                     let placement: ToolbarItemPlacement = .navigationBarLeading
@@ -55,13 +55,13 @@ struct TopicDetail: View {
                     #endif
                     ToolbarItem(placement: placement) {
                         Button {
-                            openWindow(value: TopicDetailWindowModel(topic: topic, communityID: state.community.objectID))
+                            openWindow(value: TopicDetailWindowModel(topic: topic, communityID: state.community.persistentModelID))
                         } label: {
                             Label("Open In New Window", systemImage: "macwindow.badge.plus")
                         }
                     }
                 }
-            }
+            })
         #endif
     }
     
