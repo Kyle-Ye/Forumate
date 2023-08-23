@@ -44,7 +44,7 @@
 		273AFBE02A1A8D1800DD08F5 /* AcknowSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273AFBDF2A1A8D1800DD08F5 /* AcknowSection.swift */; };
 		273AFBE22A1A928C00DD08F5 /* TopicDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273AFBE12A1A928C00DD08F5 /* TopicDetail.swift */; };
 		273AFBF12A1A94E100DD08F5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 273AFBF02A1A94E100DD08F5 /* Preview Assets.xcassets */; };
-		273AFBF42A1A94E100DD08F5 /* Forumate.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 273AFBE72A1A94E100DD08F5 /* Forumate.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		273AFBF42A1A94E100DD08F5 /* Forumate.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 273AFBE72A1A94E100DD08F5 /* Forumate.app */; platformFilter = ios; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		273AFBF92A1A951200DD08F5 /* AppInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277546D72A19DE3F000FDAA0 /* AppInfo.swift */; };
 		273AFBFA2A1A951C00DD08F5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E53FF2A18E83000DCD159 /* ContentView.swift */; };
 		273AFC022A1A954900DD08F5 /* AcknowKit in Frameworks */ = {isa = PBXBuildFile; productRef = 273AFC012A1A954900DD08F5 /* AcknowKit */; };
@@ -1165,6 +1165,7 @@
 		};
 		273AFBF32A1A94E100DD08F5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
+			platformFilter = ios;
 			target = 273AFBE62A1A94E100DD08F5 /* Forumate Watch App */;
 			targetProxy = 273AFBF22A1A94E100DD08F5 /* PBXContainerItemProxy */;
 		};
