@@ -5,15 +5,14 @@
 //  Created by Kyle on 2023/6/10.
 //
 
-import SwiftData
 import SwiftUI
 
 struct RecommendCommunityList: View {
-    @Query var communities: [Community]
-    
+    @EnvironmentObject var appState: AppState
+
     var showedCommunities: [(name: String, url: URL)] {
         [Community].recommended.filter { _, url in
-            communities.allSatisfy { community in
+            appState.communities.allSatisfy { community in
                 community.host != url
             }
         }
@@ -37,6 +36,6 @@ struct RecommendCommunityList_Previews: PreviewProvider {
                 RecommendCommunityList()
             }
         }
-        .modelContainer(previewContainer)
+        .environmentObject(AppState())
     }
 }

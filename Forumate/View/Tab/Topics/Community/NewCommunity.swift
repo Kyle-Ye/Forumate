@@ -17,8 +17,6 @@ struct NewCommunity: View {
     @State private var loading = false
     @State private var loadingError = false
 
-    @Environment(\.modelContext) private var context
-    
     private static let logger = Logger(subsystem: Bundle.main.bundleIdentifier ?? "", category: "NewCommunity")
     
     private var url: URL? { URL(string: urlInput) }
@@ -75,7 +73,7 @@ struct NewCommunity: View {
             loading = true
             do {
                 let community = try await CommunityManager.shared.createCommunity(url)
-                context.insert(community)
+                appState.addCommunity(community)
                 dismiss()
             } catch {
                 loadingError = true

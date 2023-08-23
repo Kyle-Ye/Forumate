@@ -8,7 +8,6 @@
 import DiscourseKit
 import Foundation
 import SwiftUI
-import SwiftData
 
 @MainActor
 class AppState: ObservableObject {
@@ -18,19 +17,27 @@ class AppState: ObservableObject {
     @AppStorage("starter_intro_version") private var starterIntroVersion = 0
     var shouldShowStarterIntro: Bool { starterIntroVersion < AppInfo.starterIntroVersion }
     
-    @Environment(\.modelContext) private var context
+    // TODO: Migrate to use CoreData or others to add iCloud sync Support
+    @AppStorage("communities") private var _communities: [Community] = []
+    var communities: [Community] { _communities }
     
-    func didFirstLaunch() throws {
+    func didFirstLaunch() {
         _isFirstLaunch = false
-        let descriptor: FetchDescriptor<Community> = FetchDescriptor()
-        let count = try context.fetchCount(descriptor)
-        if count == 0 {
-            context.insert(Community.swift)
+        if _communities.isEmpty {
+            _communities = [.swift]
         }
     }
     
     func updateStarterIntro() {
         starterIntroVersion = AppInfo.starterIntroVersion
+    }
+    
+    func addCommunity(_ community: Community) {
+        _communities.append(community)
+    }
+    
+    func removeCommunity(_ community: Community) {
+        _communities.removeAll { $0.id == community.id }
     }
     
     // MARK: Cache

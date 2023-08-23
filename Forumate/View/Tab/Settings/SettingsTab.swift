@@ -13,7 +13,7 @@ struct SettingsTab: View {
     var body: some View {
         NavigationSplitView(columnVisibility: .constant(.all)) {
             SettingsTabRoot()
-                .toolbar(removing: .sidebarToggle)
+//                .toolbar(removing: .sidebarToggle)
         } detail: {
             NavigationStack {
                 if let destination = tabState.destination {
