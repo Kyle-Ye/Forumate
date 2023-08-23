@@ -6,7 +6,7 @@
 //
 
 import Foundation
-#if os(iOS) || os(tvOS)
+#if os(iOS) || os(tvOS) || os(visionOS)
 import UIKit
 #elseif os(watchOS)
 import WatchKit
@@ -30,7 +30,7 @@ enum AppInfo {
     static var starterIntroVersion: Int { 1 }
     
     static var OSVersion: String {
-        #if (os(iOS) && !targetEnvironment(macCatalyst)) || os(tvOS)
+        #if (os(iOS) && !targetEnvironment(macCatalyst)) || os(tvOS) || os(visionOS)
         UIDevice.current.systemName + " " + UIDevice.current.systemVersion
         #elseif os(watchOS)
         WKInterfaceDevice.current().systemName + " " + WKInterfaceDevice.current().systemVersion
