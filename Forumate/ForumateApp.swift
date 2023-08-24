@@ -13,7 +13,7 @@ import SwiftUI
 struct ForumateApp: App {
     private let container: ModelContainer = {
         do {
-            return try ModelContainer(for: [Community.self, Account.self])
+            return try ModelContainer(for: Community.self, Account.self)
         } catch {
             fatalError("Failed to create app container")
         }
