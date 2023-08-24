@@ -17,16 +17,9 @@ class AppState: ObservableObject {
     
     @AppStorage("starter_intro_version") private var starterIntroVersion = 0
     var shouldShowStarterIntro: Bool { starterIntroVersion < AppInfo.starterIntroVersion }
-    
-    @Environment(\.modelContext) private var context
-    
+        
     func didFirstLaunch() throws {
         _isFirstLaunch = false
-        let descriptor: FetchDescriptor<Community> = FetchDescriptor()
-        let count = try context.fetchCount(descriptor)
-        if count == 0 {
-            context.insert(Community.swift)
-        }
     }
     
     func updateStarterIntro() {

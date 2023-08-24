@@ -12,7 +12,7 @@ import SwiftData
 let previewContainer: ModelContainer = {
     do {
         let container = try ModelContainer(
-            for: Community.self, ModelConfiguration(inMemory: true)
+            for: Community.self, configurations: ModelConfiguration(isStoredInMemoryOnly: true)
         )
         container.mainContext.insert(Community.swift)
         return container
