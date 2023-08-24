@@ -20,7 +20,7 @@ struct SettingsTab: View {
                     Group {
                         switch destination.id {
                         case .subscription: SubscriptionSection()
-                        #if os(iOS) || os(tvOS)
+                        #if os(iOS) || os(visionOS) || os(tvOS)
                         case .iconSelector: IconSelectorSection()
                         #endif
                         case .general: GeneralSection()
@@ -31,7 +31,7 @@ struct SettingsTab: View {
                         }
                     }
                     .navigationTitle(destination.title)
-                    #if os(iOS) || os(watchOS)
+                    #if os(iOS) || os(visionOS) || os(watchOS)
                         .navigationBarTitleDisplayMode(.inline)
                     #endif
                 } else {

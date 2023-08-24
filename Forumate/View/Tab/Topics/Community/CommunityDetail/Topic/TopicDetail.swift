@@ -14,7 +14,7 @@ struct TopicDetail: View {
     @EnvironmentObject private var state: CommunityDetailState
     
     @Environment(\.supportsMultipleWindows) private var supportsMultipleWindows
-    #if os(iOS) || os(macOS)
+    #if os(iOS) || os(visionOS) || os(macOS)
     @Environment(\.openWindow) private var openWindow
     #endif
     @State var topic: Topic
@@ -34,7 +34,7 @@ struct TopicDetail: View {
             .padding(.horizontal)
         }
         .navigationTitle("\(topic.replyCount) Replies")
-        #if os(iOS) || os(watchOS)
+        #if os(iOS) || os(visionOS) || os(watchOS)
             .navigationBarTitleDisplayMode(.inline)
         #endif
             .task {
@@ -45,10 +45,10 @@ struct TopicDetail: View {
                     }
                 }
             }
-        #if os(iOS) || os(macOS)
+        #if os(iOS) || os(visionOS) || os(macOS)
             .toolbar(content: {
                 if supportsMultipleWindows {
-                    #if os(iOS)
+                    #if os(iOS) || os(visionOS)
                     let placement: ToolbarItemPlacement = .navigationBarLeading
                     #else
                     let placement: ToolbarItemPlacement = .primaryAction

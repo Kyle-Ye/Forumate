@@ -49,7 +49,7 @@ struct ContentView: View {
         } content: {
             StarterIntro()
         }
-        #if os(iOS)
+        #if os(iOS) || os(visionOS)
         .environment(\.openURL, OpenURLAction { url in
             let type = OpenLinkTypeSetting.value
             switch type {

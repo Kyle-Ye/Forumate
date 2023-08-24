@@ -217,13 +217,6 @@
 			remoteGlobalIDString = 27EEA08529EFCD1B00ADA5BE;
 			remoteInfo = Forumate;
 		};
-		273AFBF22A1A94E100DD08F5 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 27EEA07E29EFCD1B00ADA5BE /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 273AFBE62A1A94E100DD08F5;
-			remoteInfo = "ForumateWatch Watch App";
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -810,7 +803,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				273AFBF32A1A94E100DD08F5 /* PBXTargetDependency */,
 			);
 			name = Forumate;
 			packageProductDependencies = (
@@ -1130,12 +1122,6 @@
 			isa = PBXTargetDependency;
 			target = 27EEA08529EFCD1B00ADA5BE /* Forumate */;
 			targetProxy = 272605402A1A005C0018B908 /* PBXContainerItemProxy */;
-		};
-		273AFBF32A1A94E100DD08F5 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			platformFilter = ios;
-			target = 273AFBE62A1A94E100DD08F5 /* Forumate Watch App */;
-			targetProxy = 273AFBF22A1A94E100DD08F5 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

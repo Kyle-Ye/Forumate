@@ -16,7 +16,7 @@ struct TopicsTabRoot: View {
         CommunityList()
             .navigationTitle("Communities")
             .toolbar {
-                #if os(iOS)
+                #if os(iOS) || os(visionOS)
                 ToolbarItem {
                     EditButton()
                 }

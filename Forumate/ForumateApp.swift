@@ -17,7 +17,7 @@ struct ForumateApp: App {
             ContentView()
                 .environmentObject(appState)
         }
-        #if os(iOS) || os(macOS)
+        #if os(iOS) || os(visionOS) || os(macOS)
         WindowGroup("Topic Detail", id: "topic", for: TopicDetailWindowModel.self) { $model in
             if let model {
                 TopicDetail(topic: model.topic)

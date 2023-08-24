@@ -67,7 +67,7 @@ struct SettingsTabRoot: View {
                 Text("\(AppInfo.name) v\(AppInfo.version) Build \(AppInfo.buildNumber) · \(AppInfo.OSVersion)")
             }
         }
-        #if os(iOS)
+        #if os(iOS) || os(visionOS)
         .listStyle(.insetGrouped)
         #endif
         .toolbar {

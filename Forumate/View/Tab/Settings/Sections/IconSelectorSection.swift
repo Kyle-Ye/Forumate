@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-#if os(iOS) || os(tvOS)
+#if os(iOS) || os(visionOS) || os(tvOS)
 struct IconSelectorSection: View {
     @State private var currentIcon = UIApplication.shared.alternateIconName ?? Icon.primary.appIconName
 
