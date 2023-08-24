@@ -28,11 +28,12 @@ A native client to access Discourse server for Apple Platforms.
 
 ### Version Compatibility
 
-- v0.1~v0.3 supports iOS 16+, watchOS 9+ and macOS 13+
-- v0.4.0-beta only supports iOS & iPadOS 17 beta 1, watchOS 10 beta 1 and macOS 14 beta 1
-- v0.4.1-beta only supports iOS & iPadOS 17 beta 2-3, watchOS 10 beta 2-3 and macOS 14 beta 2-3
-- v0.5.0-beta only supports iOS & iPadOS 17 17 beta 4, watchOS 10 beta 4 and macOS 14 beta 4
-- v0.5.1-beta only supports iOS & iPadOS 17 17 beta 5, watchOS 10 beta 5 and macOS 14 beta 5
+- v0.1~v0.3 supports iOS 16+, watchOS 9+ and macOS 13+ (Xcode 14.3.1)
+- v0.4.0-beta only supports iOS & iPadOS 17 Beta 1, watchOS 10 Beta 1 and macOS 14 Beta 1 (Xcode 15 beta 1)
+- v0.4.1-beta only supports iOS & iPadOS 17 Beta 2-3, watchOS 10 Beta 2-3 and macOS 14 Beta 2-3 (Xcode 15 beta 2)
+- v0.5.0-beta only supports iOS & iPadOS 17 Beta 4, watchOS 10 Beta 4 and macOS 14 Beta 4 (Xcode 15 beta 5)
+- v0.5.1-beta only supports iOS & iPadOS 17 Beta 5, watchOS 10 Beta 5 and macOS 14 Beta 5 (Xcode 15 beta 6)
+- v0.5.2-beta only supports iOS & iPadOS 17 Beta 6-7, watchOS 10 Beta 6-7 and macOS 14 Beta 6 (Xcode 15 beta 7)
 
 ## Download
 
