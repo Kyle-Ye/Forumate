@@ -6,7 +6,7 @@
 //
 
 import Foundation
-#if os(iOS) || os(tvOS) || os(visionOS)
+#if os(iOS) || os(visionOS) || os(tvOS) || os(visionOS)
 import UIKit
 #elseif os(watchOS)
 import WatchKit

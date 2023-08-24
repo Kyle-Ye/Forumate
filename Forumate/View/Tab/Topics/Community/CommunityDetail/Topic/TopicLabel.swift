@@ -24,7 +24,7 @@ struct TopicLabel: View {
     }
     
     @Environment(\.supportsMultipleWindows) private var supportsMultipleWindows
-    #if os(iOS) || os(macOS)
+    #if os(iOS) || os(visionOS) || os(macOS)
     @Environment(\.openWindow) private var openWindow
     #endif
     var body: some View {
@@ -35,7 +35,7 @@ struct TopicLabel: View {
             authorInfo
             extensionInfo
         }
-        #if os(iOS) || os(macOS)
+        #if os(iOS) || os(visionOS) || os(macOS)
         .contextMenu {
             if supportsMultipleWindows {
                 Button {

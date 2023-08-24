@@ -25,7 +25,7 @@ struct CategoryLabel: View {
                 AttributedText(rawHtml: description)
                     .foregroundColor(.secondary)
             }
-            #if os(iOS) || os(macOS)
+            #if os(iOS) || os(visionOS) || os(macOS)
             if category.hasChildren {
                 HFlow(rowSpacing: 5) {
                     ForEach(category.subcategoryIDs, id: \.self) { id in
