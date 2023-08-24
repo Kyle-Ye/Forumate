@@ -11,11 +11,10 @@ struct TopicsTab: View {
     @StateObject var tabState = TopicsTabState()
     
     var body: some View {
-        NavigationSplitView(columnVisibility: $tabState.columnVisibility,
-                            preferredCompactColumn: $tabState.column) {
+        NavigationSplitView(columnVisibility: $tabState.columnVisibility, preferredCompactColumn: $tabState.column) {
             TopicsTabRoot()
                 .environmentObject(tabState)
-        } content: {
+        } detail: {
             NavigationStack(path: $tabState.selectedCategories) {
                 if let community = tabState.selectedCommunity {
                     CommunityDetail(community: community)
@@ -28,15 +27,6 @@ struct TopicsTab: View {
                     PlaceholderView(text: "No Community Selected",
                                     image: "rectangle.3.group.bubble.left")
                 }
-            }
-        } detail: {
-            if let community = tabState.selectedCommunity,
-               let topic = tabState.selectedTopic {
-                TopicDetail(topic: topic)
-                    .environmentObject(CommunityDetailState(community: community))
-                    .id(topic.id)
-            } else {
-                PlaceholderView(text: "No Topic Selected")
             }
         }
         .navigationSplitViewStyleType(SplitViewStyleTypeSetting.value)
