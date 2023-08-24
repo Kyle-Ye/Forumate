@@ -47,7 +47,7 @@ struct TopicsTab: View {
 struct TopicsTab_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            #if os(iOS)
+            #if os(iOS) || os(visionOS)
             TopicsTab()
                 .previewDevice("iPhone 14")
                 .previewDisplayName("iPhone")

@@ -41,9 +41,9 @@ struct PostView: View {
         }
     }
     
-    #if os(iOS) || os(macOS)
+    #if os(iOS) || os(visionOS) || os(macOS)
     private var tapMethod: HtmlText.HttpLinkTap {
-        #if os(iOS)
+        #if os(iOS) || os(visionOS)
         let type = OpenLinkTypeSetting.value
         switch type {
         case .modal: return .openSFSafariModal
@@ -56,7 +56,7 @@ struct PostView: View {
     #endif
 
     var bodyArea: some View {
-        #if os(iOS) || os(macOS)
+        #if os(iOS) || os(visionOS) || os(macOS)
         // TODO: Dynamic font change
         // FIXME: Link AccentColor will not change for dark/light toggle
         HtmlText(

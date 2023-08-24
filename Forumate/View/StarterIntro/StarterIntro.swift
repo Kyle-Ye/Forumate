@@ -10,7 +10,7 @@ import SwiftUI
 struct StarterIntro: View {
     @Environment(\.dismiss) private var dismiss
     @Environment(\.supportsMultipleWindows) private var supportsMultipleWindows
-    #if os(iOS)
+    #if os(iOS) || os(visionOS)
     @Environment(\.verticalSizeClass) private var verticalSizeClass
     #endif
     
@@ -22,7 +22,7 @@ struct StarterIntro: View {
                         .font(.system(.title, design: .serif, weight: .bold))
                         .padding()
                         .background(.tint.opacity(0.3), in: RoundedRectangle(cornerRadius: 20))
-                    #if os(iOS)
+                    #if os(iOS) || os(visionOS)
                         .padding(.top, verticalSizeClass == .regular ? 100 : 0)
                     #endif
                     Text("Highlighted Features")

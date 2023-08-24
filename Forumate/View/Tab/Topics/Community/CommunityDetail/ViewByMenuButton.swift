@@ -11,7 +11,7 @@ struct ViewByMenuButton: View {
     @EnvironmentObject private var state: CommunityDetailState
 
     var body: some View {
-        #if os(iOS) || os(macOS) || os(tvOS)
+        #if os(iOS) || os(visionOS) || os(macOS) || os(tvOS)
         Menu {
             Picker(selection: $state.viewByType) {
                 ForEach(CommunityDetailState.ViewByType.allCases, id: \.rawValue) { type in

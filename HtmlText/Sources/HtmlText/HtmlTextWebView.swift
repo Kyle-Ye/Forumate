@@ -5,12 +5,12 @@
 //  Created by Kyle on 2023/6/4.
 //
 
-#if os(iOS) || os(macOS)
+#if os(iOS) || os(visionOS) || os(macOS)
 import os.log
 import SwiftUI
 import WebKit
 
-#if os(iOS)
+#if os(iOS) || os(visionOS)
 struct HtmlTextWebView: UIViewRepresentable {
     @Binding var dynamicHeight: CGFloat
     let html: String

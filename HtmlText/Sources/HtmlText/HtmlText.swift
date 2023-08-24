@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-#if os(iOS) || os(macOS)
+#if os(iOS) || os(visionOS) || os(macOS)
 public struct HtmlText: View {
     let html: String
     
