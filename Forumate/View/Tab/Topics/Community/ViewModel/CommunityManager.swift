@@ -9,21 +9,20 @@ import DiscourseKit
 import Foundation
 import os.log
 
-extension Logger {
-    fileprivate static let communityManager = Logger(subsystem: subsystem, category: "CommunityManager")
-}
-
 class CommunityManager {
     static let shared = CommunityManager()
     private init() {}
     
+    private static let logger = Logger(subsystem: Logger.subsystem, category: "CommunityManager")
+    
     func createCommunity(_ url: URL) async throws -> Community {
-        Logger.communityManager.trace("Create community begin: \(url)")
+        let logger = CommunityManager.logger
+        logger.trace("Create community begin: \(url)")
         let client = Client(baseURL: url)
-        Logger.communityManager.trace("Fetch site info begin")
+        logger.trace("Fetch site info begin")
         let info = try await client.fetchSiteBasicInfo()
-        Logger.communityManager.trace("Fetch site info success: \(info.title)")
-        Logger.communityManager.trace("Create community end: \(url)")
+        logger.trace("Fetch site info success: \(info.title)")
+        logger.trace("Create community end: \(url)")
         return Community(host: url, title: info.title, icon: info.appleTouchIconURL)
     }
 }

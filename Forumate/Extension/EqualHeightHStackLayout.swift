@@ -10,20 +10,20 @@ import SwiftUI
 
 /// Only support 2 elements
 struct EqualHeightHStackLayout: Layout {
-    private let logger = Logger(subsystem: "top.kyleye.forumate", category: "EqualHeightHStackLayout")
+    private static let logger = Logger(subsystem: Logger.subsystem, category: "EqualHeightHStackLayout")
     
     func placeSubviews(in bounds: CGRect, proposal: ProposedViewSize, subviews: Subviews, cache _: inout ()) {
-        logger.trace("placeSubviews start")
+        EqualHeightHStackLayout.logger.trace("placeSubviews start")
         precondition(subviews.count == 2)
-        logger.trace("proposal \(proposal.debugDescription)")
-        logger.trace("bounds \(bounds.debugDescription)")
+        EqualHeightHStackLayout.logger.trace("proposal \(proposal.debugDescription)")
+        EqualHeightHStackLayout.logger.trace("bounds \(bounds.debugDescription)")
         let size = subviews[1].sizeThatFits(proposal)
         let height = size.height
         let spacing = subviews[1].spacing.distance(to: subviews[0].spacing, along: .horizontal)
         let size0 = subviews[0].sizeThatFits(ProposedViewSize(width: height, height: height))
-        logger.trace("size \(bounds.debugDescription)")
-        logger.trace("spacing \(spacing.description)")
-        logger.trace("size0 \(size0.debugDescription)")
+        EqualHeightHStackLayout.logger.trace("size \(bounds.debugDescription)")
+        EqualHeightHStackLayout.logger.trace("spacing \(spacing.description)")
+        EqualHeightHStackLayout.logger.trace("size0 \(size0.debugDescription)")
         if let proposalWidth = proposal.width,
            proposalWidth - size0.width >= 0 {
             var point = bounds.origin
@@ -34,7 +34,7 @@ struct EqualHeightHStackLayout: Layout {
                     width: proposalWidth - size0.width - spacing,
                     height: height
                 ))
-                logger.trace("size1 \(size1.debugDescription)")
+                EqualHeightHStackLayout.logger.trace("size1 \(size1.debugDescription)")
                 subviews[1].place(at: point, proposal: ProposedViewSize(width: size1.width, height: size1.height))
             } else {
                 subviews[1].place(at: bounds.origin, proposal: .init(width: 0, height: 0))
@@ -43,11 +43,11 @@ struct EqualHeightHStackLayout: Layout {
             subviews[0].place(at: bounds.origin, proposal: .init(width: 0, height: 0))
             subviews[1].place(at: bounds.origin, proposal: proposal)
         }
-        logger.trace("placeSubviews end")
+        EqualHeightHStackLayout.logger.trace("placeSubviews end")
     }
 
     func sizeThatFits(proposal: ProposedViewSize, subviews: Subviews, cache _: inout ()) -> CGSize {
-        logger.trace("sizeThatFits start")
+        EqualHeightHStackLayout.logger.trace("sizeThatFits start")
         precondition(subviews.count == 2)
         let size = subviews[1].sizeThatFits(proposal)
         let height = size.height
@@ -62,7 +62,7 @@ struct EqualHeightHStackLayout: Layout {
                     width: proposalWidth - size0.width - spacing,
                     height: height
                 ))
-                logger.log("size1 \(size1.debugDescription)")
+                EqualHeightHStackLayout.logger.log("size1 \(size1.debugDescription)")
                 width = size0.width + spacing + size1.width
             } else {
                 width = size0.width
@@ -70,12 +70,12 @@ struct EqualHeightHStackLayout: Layout {
         } else {
             width = size.width
         }
-        logger.trace("size \(size.debugDescription)")
-        logger.trace("size0 \(size0.debugDescription)")
-        logger.trace("spacing \(spacing.description)")
-        logger.trace("proposal \(proposal.debugDescription)")
-        logger.trace("sizeThatFits \(CGSize(width: width, height: height).debugDescription)")
-        logger.trace("sizeThatFits end")
+        EqualHeightHStackLayout.logger.trace("size \(size.debugDescription)")
+        EqualHeightHStackLayout.logger.trace("size0 \(size0.debugDescription)")
+        EqualHeightHStackLayout.logger.trace("spacing \(spacing.description)")
+        EqualHeightHStackLayout.logger.trace("proposal \(proposal.debugDescription)")
+        EqualHeightHStackLayout.logger.trace("sizeThatFits \(CGSize(width: width, height: height).debugDescription)")
+        EqualHeightHStackLayout.logger.trace("sizeThatFits end")
         return CGSize(width: width, height: height)
     }
 }

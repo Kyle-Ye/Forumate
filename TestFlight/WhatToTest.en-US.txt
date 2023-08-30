@@ -1,3 +1,4 @@
 What's new in v0.6.0-beta
 
 - Add initial support for visionOS
+- Add macOS app icon update support
