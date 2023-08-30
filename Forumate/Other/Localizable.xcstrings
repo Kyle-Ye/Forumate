@@ -8,10 +8,24 @@
 
     },
     "%@" : {
-
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@"
+          }
+        }
+      }
     },
     "%@ " : {
-
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@"
+          }
+        }
+      }
     },
     "%@ ago" : {
       "localizations" : {
@@ -96,7 +110,14 @@
       }
     },
     "App Icon" : {
-
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "App 图标"
+          }
+        }
+      }
     },
     "Browser Code" : {
       "localizations" : {
@@ -118,12 +139,12 @@
         }
       }
     },
-    "Bug report via Github" : {
+    "Bug report via GitHub" : {
       "localizations" : {
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "通过 Github 进行问题反馈"
+            "value" : "通过 GitHub 进行问题反馈"
           }
         }
       }
@@ -238,12 +259,12 @@
         }
       }
     },
-    "Feature request via Github" : {
+    "Feature request via GitHub" : {
       "localizations" : {
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "通过 Github 提出功能建议"
+            "value" : "通过 GitHub 提出功能建议"
           }
         }
       }
@@ -263,23 +284,30 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Forumate 仅支持使用 Discourse 平台构建并运行HTTPS的社区。请参阅对应社区的支持页面来获取帮助。"
+            "value" : "Forumate 仅支持使用 Discourse 平台构建并运行 HTTPS 的社区。请参阅对应社区的支持页面来获取帮助。"
           }
         }
       }
     },
-    "Forumate source code at Github" : {
+    "Forumate source code at GitHub" : {
       "localizations" : {
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "在Github上的 Forumate 源代码"
+            "value" : "在GitHub上的 Forumate 源代码"
           }
         }
       }
     },
     "Forumate+" : {
-
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Forumate+"
+          }
+        }
+      }
     },
     "General" : {
       "localizations" : {

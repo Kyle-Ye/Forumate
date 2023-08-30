@@ -10,7 +10,7 @@ import SwiftUI
 
 struct SettingsTabRoot: View {
     @EnvironmentObject private var appState: AppState
-    @Environment(SettingsTabState.self) private var tabState
+    @EnvironmentObject private var tabState: SettingsTabState
         
     @State private var showStarterIntro = false
 
@@ -25,7 +25,6 @@ struct SettingsTabRoot: View {
     }
 
     var body: some View {
-        @Bindable var tabState = tabState
         List(selection: $tabState.destination) {
             Section {
                 #if DEBUG
@@ -33,18 +32,11 @@ struct SettingsTabRoot: View {
                     SettingIcon(icon: "star.circle.fill", style: .yellow)
                 }
                 #endif
-                #if os(iOS)
+                #if os(iOS) || os(visionOS) || os(tvOS)
                 navigationItem(destination: .iconSelector, text: "App Icon") {
-                    let icon = UIApplication.shared.alternateIconName ?? "AppIcon"
-                    Image(uiImage: .init(named: icon)!)
-                        .resizable()
-                        .frame(width: 25, height: 25)
-                        .cornerRadius(5)
-                }
-                #elseif os(tvOS)
-                navigationItem(destination: .iconSelector, text: "App Icon") {
-                    let icon = UIApplication.shared.alternateIconName ?? "App Icon"
-                    Image(uiImage: .init(named: icon)!)
+                    let appIconName = UIApplication.shared.alternateIconName ?? IconSelectorSection.Icon.primary.appIconName
+                    let icon = IconSelectorSection.Icon(string: appIconName)
+                    Image(uiImage: .init(named: icon.iconName)!)
                         .resizable()
                         .scaledToFit()
                         .frame(height: 25)
@@ -103,7 +95,7 @@ struct SettingsTabRoot_Previews: PreviewProvider {
         NavigationStack {
             SettingsTabRoot()
         }
-        .environment(SettingsTabState())
+        .environmentObject(SettingsTabState())
         .environmentObject(AppState())
     }
 }
