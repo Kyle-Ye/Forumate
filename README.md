@@ -15,25 +15,25 @@ A native client to access Discourse server for Apple Platforms.
 - [x] iOS 17+
 - [x] iPadOS 17+
 - [x] watchOS 10+
-- [x] tvOS 17+
+- [ ] tvOS 17+
 - [x] macOS(Catalyst) 14+
-- [ ] macOS 14+
 - [x] visionOS 1+
 
-> tvOS target is buildable, but due to [#17](https://github.com/Kyle-Ye/Forumate/issues/17). I can't upload a tvOS binary to App Store.
->
-> macOS is buildable, but is not optimized for. It's better to build under Catalyst.
->
-> visionOS is buidable, but is not optimized for. I’ve got a ticket for Apple Vision Pro Lab. So visionOS support will also be added later.
+> tvOS target is buildable but is not released
+>  
+> See more info [#17](https://github.com/Kyle-Ye/Forumate/issues/17).
 
 ### Version Compatibility
 
-- v0.1~v0.3 supports iOS 16+, watchOS 9+ and macOS 13+ (Xcode 14.3.1)
-- v0.4.0-beta only supports iOS & iPadOS 17 Beta 1, watchOS 10 Beta 1 and macOS 14 Beta 1 (Xcode 15 beta 1)
-- v0.4.1-beta only supports iOS & iPadOS 17 Beta 2-3, watchOS 10 Beta 2-3 and macOS 14 Beta 2-3 (Xcode 15 beta 2)
-- v0.5.0-beta only supports iOS & iPadOS 17 Beta 4, watchOS 10 Beta 4 and macOS 14 Beta 4 (Xcode 15 beta 5)
-- v0.5.1-beta only supports iOS & iPadOS 17 Beta 5, watchOS 10 Beta 5 and macOS 14 Beta 5 (Xcode 15 beta 6)
-- v0.5.2-beta only supports iOS & iPadOS 17 Beta 6-7, watchOS 10 Beta 6-7 and macOS 14 Beta 6 (Xcode 15 beta 7)
+|  Forumate  |   Xcode   | iOS & iPadOS |   watchOS   | macOS(Catalyst) | visionOS |
+| :--------: | :-------: | :----------: | :---------: | :-------------: | :------: |
+|  0.1~0.3   |  14.3.1   |     16+      |     9+      |       13+       |    ❌     |
+| 0.4.0-beta | 15 Beta 1 |  17 Beta 1   |  10 Beta 1  |    14 Beta 1    |    ❌     |
+| 0.4.1-beta | 15 Beta 2 | 17 Beta 2～3 | 10 Beta 2~3 |   14 Beta 2~3   |    ❌     |
+| 0.5.0-beta | 15 Beta 5 |  17 Beta 4   |  10 Beta 4  |    14 Beta 4    |    ❌     |
+| 0.5.1-beta | 15 Beta 6 |  17 Beta 5   |  10 Beta 5  |    14 Beta 5    |    ❌     |
+| 0.5.2-beta | 15 Beta 7 | 17 Beta 6～7 | 10 Beta 6~7 |    14 Beta 6    |    ❌     |
+| 0.6.0-beta | 15 Beta 8 |  17 Beta 8   |  10 Beta 8  |    14 Beta 6    | 1 Beta 3 |
 
 ## Download
 
