@@ -10,12 +10,6 @@
             "state" : "new",
             "value" : "Forumate"
           }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Forumate"
-          }
         }
       }
     }
