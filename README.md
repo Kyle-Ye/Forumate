@@ -45,7 +45,7 @@ Waiting to be released
 
 [Join beta on TestFlight](https://testflight.apple.com/join/4kpEtmsk)
 
-### Github Release
+### GitHub Release
 
 For macOS users, you can download the Notarized macOS Catalyst binary on https://github.com/Kyle-Ye/Forumate/releases/
 

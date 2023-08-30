@@ -9,7 +9,6 @@ import Foundation
 import Observation
 import SwiftUI
 
-@Observable
-class SettingsTabState {
-    var destination: SettingsTabDestination? = nil
+class SettingsTabState: ObservableObject {
+    @Published var destination: SettingsTabDestination? = nil
 }

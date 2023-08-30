@@ -12,10 +12,10 @@ struct SupportSection: View {
         List {
             Section {
                 Link(destination: URL(string: "https://github.com/Kyle-Ye/Forumate/issues")!) {
-                    Label("Bug report via Github", systemImage: "link")
+                    Label("Bug report via GitHub", systemImage: "link")
                 }
                 Link(destination: URL(string: "https://github.com/Kyle-Ye/Forumate/issues")!) {
-                    Label("Feature request via Github", systemImage: "link")
+                    Label("Feature request via GitHub", systemImage: "link")
                 }
                 Link(destination: URL(string: "https://discord.gg/ZHq5PzbGmE")!) {
                     Label("Discuss at our Discord Server", systemImage: "link")
@@ -25,7 +25,7 @@ struct SupportSection: View {
             }
             Section {
                 Link(destination: URL(string: "https://github.com/Kyle-Ye/Forumate")!) {
-                    Label("Forumate source code at Github", systemImage: "link")
+                    Label("Forumate source code at GitHub", systemImage: "link")
                 }                
             } header: {
                 Text("Browser Code")

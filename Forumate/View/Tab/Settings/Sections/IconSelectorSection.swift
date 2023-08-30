@@ -15,16 +15,33 @@ struct IconSelectorSection: View {
     
     private let columns = [GridItem(.adaptive(minimum: 125, maximum: 1024))]
 
+    @State private var showAlert = false
+    @State private var setAlternateIconError: IconError?
+    
+    private struct IconError: LocalizedError {
+        private let error: Error
+        
+        init(_ error: Error) {
+            self.error = error
+        }
+        
+        var errorDescription: String? {
+            error.localizedDescription
+        }
+    }
+    
     var body: some View {
         LazyVGrid(columns: columns, spacing: 6) {
             ForEach(icons, id: \.self) { icon in
                 Button {
                     currentIcon = icon.appIconName
-                    if icon.rawValue == Icon.primary.rawValue {
-                        UIApplication.shared.setAlternateIconName(nil)
-                    } else {
-                        UIApplication.shared.setAlternateIconName(icon.appIconName) { error in
-                            guard let error else { return }
+                    Task {
+                        do {
+                            let name = icon.rawValue == Icon.primary.rawValue ? nil : icon.appIconName
+                            try await UIApplication.shared.setAlternateIconName(name)
+                        } catch {
+                            setAlternateIconError = IconError(error)
+                            showAlert = true
                             assertionFailure("\(error.localizedDescription) - Icon name: \(icon)")
                         }
                     }
@@ -42,6 +59,9 @@ struct IconSelectorSection: View {
                                     .tint(.green)
                             }
                         }
+                }
+                .alert(isPresented: $showAlert, error: setAlternateIconError) {
+                    Button("OK") {}
                 }
             }
         }
@@ -68,7 +88,11 @@ extension IconSelectorSection {
         var appIconName: String {
             switch self {
             case .primary:
+                #if os(tvOS)
+                return "App Icon"
+                #else
                 return "AppIcon"
+                #endif
             default:
                 return "AppIconAlternate\(rawValue)"
             }
