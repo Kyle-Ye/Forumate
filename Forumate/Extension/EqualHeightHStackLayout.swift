@@ -104,7 +104,9 @@ struct EqualHeightHStackLayout_Preview: View {
             }
             .border(.red, width: 1)
             .frame(width: width)
+            #if !os(tvOS)
             Slider(value: $width, in: 0.0 ... 400.0, step: 1.0)
+            #endif
             Text(width.description)
         }
     }
