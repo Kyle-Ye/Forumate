@@ -33,7 +33,7 @@ A native client to access Discourse server for Apple Platforms.
 | 0.5.0-beta | 15 Beta 5 |  17 Beta 4   |  10 Beta 4  |    14 Beta 4    |    ❌     |
 | 0.5.1-beta | 15 Beta 6 |  17 Beta 5   |  10 Beta 5  |    14 Beta 5    |    ❌     |
 | 0.5.2-beta | 15 Beta 7 | 17 Beta 6～7 | 10 Beta 6~7 |    14 Beta 6    |    ❌     |
-| 0.6.0-beta | 15 Beta 8 |  17 Beta 8   |  10 Beta 8  |    14 Beta 6    | 1 Beta 3 |
+| 0.6.0-beta | 15 Beta 8 |  17 Beta 8   |  10 Beta 8  |    14 Beta 7   | 1 Beta 3 |
 
 ## Download
 
