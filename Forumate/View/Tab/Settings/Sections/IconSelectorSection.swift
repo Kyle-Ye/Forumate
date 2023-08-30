@@ -5,63 +5,104 @@
 //  Created by Kyle on 2023/7/30.
 //
 
+#if os(iOS) || os(visionOS) || os(tvOS) || os(macOS)
+import os.log
 import SwiftUI
 
-#if os(iOS) || os(visionOS) || os(tvOS)
 struct IconSelectorSection: View {
     @State private var currentIcon = UIApplication.shared.alternateIconName ?? Icon.primary.appIconName
 
     private let icons = [Icon.primary, Icon.alt1]
-    
+
     private let columns = [GridItem(.adaptive(minimum: 125, maximum: 1024))]
 
+    #if os(macOS) || (os(iOS) && targetEnvironment(macCatalyst))
+    @State private var showAlert = false
+    @State private var message: LocalizedStringKey = ""
+    #else
     @State private var showAlert = false
     @State private var setAlternateIconError: IconError?
-    
     private struct IconError: LocalizedError {
         private let error: Error
-        
+
         init(_ error: Error) {
             self.error = error
         }
-        
+
         var errorDescription: String? {
             error.localizedDescription
         }
     }
-    
+    #endif
+
+    private static let logger = Logger(subsystem: Logger.subsystem, category: "IconSelectorSection")
+
     var body: some View {
-        LazyVGrid(columns: columns, spacing: 6) {
-            ForEach(icons, id: \.self) { icon in
-                Button {
-                    currentIcon = icon.appIconName
-                    Task {
-                        do {
-                            let name = icon.rawValue == Icon.primary.rawValue ? nil : icon.appIconName
-                            try await UIApplication.shared.setAlternateIconName(name)
-                        } catch {
-                            setAlternateIconError = IconError(error)
+        VStack {
+            #if os(macOS) || (os(iOS) && targetEnvironment(macCatalyst))
+            Text("Update App Icon in App is not supported on macOS. You can click to save the icon and manully update it via Finder.")
+            #endif
+            LazyVGrid(columns: columns, spacing: 6) {
+                ForEach(icons, id: \.self) { icon in
+                    Button {
+                        #if os(macOS) || (os(iOS) && targetEnvironment(macCatalyst))
+                        let fileManager = FileManager.default
+                        if let data = UIImage(named: icon.iconName)?.pngData(),
+                           let downloadsDirectory = fileManager.urls(for: .downloadsDirectory, in: .userDomainMask).first {
+                            var destinationURL = downloadsDirectory.appendingPathComponent(icon.iconName).appendingPathExtension("png")
+                            if fileManager.fileExists(atPath: destinationURL.path) {
+                                destinationURL = downloadsDirectory.appendingPathComponent(icon.iconName + "_" + UUID().uuidString).appendingPathExtension("png")
+                            }
+                            if fileManager.createFile(atPath: destinationURL.path(), contents: data) {
+                                message = "Successfully saved the icon to the Downloads folder."
+                                IconSelectorSection.logger.info("Successfully saved the icon to the Downloads folder.")
+                            } else {
+                                message = "Error saving icon to Downloads folder."
+                                IconSelectorSection.logger.error("Error saving icon to Downloads folder.")
+                            }
                             showAlert = true
-                            assertionFailure("\(error.localizedDescription) - Icon name: \(icon)")
                         }
-                    }
-                } label: {
-                    Image(uiImage: UIImage(named: icon.iconName) ?? UIImage())
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(minHeight: 125, maxHeight: 1024)
-                        .cornerRadius(6)
-                        .shadow(radius: 3)
-                        .overlay(alignment: .bottomTrailing) {
-                            if icon.appIconName == currentIcon {
-                                Image(systemName: "checkmark.seal.fill")
-                                    .padding(4)
-                                    .tint(.green)
+                        #else
+                        Task {
+                            do {
+                                let name = icon.rawValue == Icon.primary.rawValue ? nil : icon.appIconName
+                                try await UIApplication.shared.setAlternateIconName(name)
+                                currentIcon = icon.appIconName
+                            } catch {
+                                setAlternateIconError = IconError(error)
+                                showAlert = true
+                                IconSelectorSection.logger.error("\(error.localizedDescription, privacy: .public) - Icon name: \(icon.iconName, privacy: .public)")
                             }
                         }
-                }
-                .alert(isPresented: $showAlert, error: setAlternateIconError) {
-                    Button("OK") {}
+                        #endif
+                    } label: {
+                        Image(uiImage: UIImage(named: icon.iconName) ?? UIImage())
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                        #if (os(macOS) || (os(iOS) && targetEnvironment(macCatalyst)))
+                            .frame(minHeight: 125, maxHeight: 1024)
+                        #else
+                            .frame(minHeight: 125, maxHeight: 1024)
+                            .cornerRadius(6)
+                            .shadow(radius: 3)
+                            .overlay(alignment: .bottomTrailing) {
+                                if icon.appIconName == currentIcon {
+                                    Image(systemName: "checkmark.seal.fill")
+                                        .padding(4)
+                                        .tint(.green)
+                                }
+                            }
+                        #endif
+                    }
+                    #if (os(macOS) || (os(iOS) && targetEnvironment(macCatalyst)))
+                    .alert(message, isPresented: $showAlert) {
+                        Button("OK") {}
+                    }
+                    #else
+                    .alert(isPresented: $showAlert, error: setAlternateIconError) {
+                        Button("OK") {}
+                    }
+                    #endif
                 }
             }
         }

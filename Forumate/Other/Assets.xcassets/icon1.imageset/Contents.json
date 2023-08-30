@@ -5,6 +5,19 @@
       "idiom" : "universal"
     },
     {
+      "filename" : "iOS 1.png",
+      "idiom" : "ipad"
+    },
+    {
+      "filename" : "icon_256x256@2x 1.png",
+      "idiom" : "ipad",
+      "subtype" : "mac-catalyst"
+    },
+    {
+      "filename" : "icon_256x256@2x.png",
+      "idiom" : "mac"
+    },
+    {
       "filename" : "tvOS.png",
       "idiom" : "tv"
     }

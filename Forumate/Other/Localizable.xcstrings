@@ -114,7 +114,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "App 图标"
+            "value" : "应用图标"
           }
         }
       }
@@ -245,6 +245,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "在 Discord 服务器上加入讨论"
+          }
+        }
+      }
+    },
+    "Error saving icon to Downloads folder." : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "将图标保存到下载文件夹时出错。"
           }
         }
       }
@@ -559,6 +569,16 @@
         }
       }
     },
+    "Successfully saved the icon to the Downloads folder." : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "成功将图标保存到下载文件夹。"
+          }
+        }
+      }
+    },
     "Support" : {
       "localizations" : {
         "zh-Hans" : {
@@ -625,6 +645,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "未实现"
+          }
+        }
+      }
+    },
+    "Update App Icon in App is not supported on macOS. You can click to save the icon and manully update it via Finder." : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "macOS 不支持在应用中更新图标。您可以单击以保存图标，并通过Finder进行手动更新。"
           }
         }
       }

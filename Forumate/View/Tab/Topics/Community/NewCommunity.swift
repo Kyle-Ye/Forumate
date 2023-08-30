@@ -19,7 +19,7 @@ struct NewCommunity: View {
 
     @Environment(\.modelContext) private var context
     
-    private static let logger = Logger(subsystem: Bundle.main.bundleIdentifier ?? "", category: "NewCommunity")
+    private static let logger = Logger(subsystem: Logger.subsystem, category: "NewCommunity")
     
     private var url: URL? { URL(string: urlInput) }
     
