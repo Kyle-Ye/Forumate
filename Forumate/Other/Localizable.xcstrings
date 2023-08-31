@@ -519,6 +519,26 @@
         }
       }
     },
+    "Pin" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "置顶"
+          }
+        }
+      }
+    },
+    "Pinned Communities" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "置顶论坛"
+          }
+        }
+      }
+    },
     "Privacy Policy" : {
       "localizations" : {
         "zh-Hans" : {
@@ -645,6 +665,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "未实现"
+          }
+        }
+      }
+    },
+    "Unpin" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "取消置顶"
           }
         }
       }
