@@ -47,73 +47,101 @@ struct IconSelectorSection: View {
             #endif
             LazyVGrid(columns: columns, spacing: 6) {
                 ForEach(icons, id: \.self) { icon in
-                    Button {
-                        #if canImport(AppKit)
-                        let fileManager = FileManager.default
-                        #if os(macOS)
-                        let data = NSImage(named: icon.iconName)?.tiffRepresentation
-                        let extensionName = "tiff"
-                        #else
-                        let data = UIImage(named: icon.iconName)?.pngData()
-                        let extensionName = "png"
-                        #endif
-                        if let data,
-                           let downloadsDirectory = fileManager.urls(for: .downloadsDirectory, in: .userDomainMask).first {
-                            var destinationURL = downloadsDirectory.appendingPathComponent(icon.iconName).appendingPathExtension(extensionName)
-                            if fileManager.fileExists(atPath: destinationURL.path) {
-                                destinationURL = downloadsDirectory.appendingPathComponent(icon.iconName + "_" + UUID().uuidString).appendingPathExtension(extensionName)
-                            }
-                            if fileManager.createFile(atPath: destinationURL.path(), contents: data) {
-                                message = "Successfully saved the icon to the Downloads folder."
-                                IconSelectorSection.logger.info("Successfully saved the icon to the Downloads folder.")
-                            } else {
-                                message = "Error saving icon to Downloads folder."
-                                IconSelectorSection.logger.error("Error saving icon to Downloads folder.")
-                            }
-                            showAlert = true
-                        }
-                        #else
-                        Task {
-                            do {
-                                let name = icon.rawValue == Icon.primary.rawValue ? nil : icon.appIconName
-                                try await UIApplication.shared.setAlternateIconName(name)
-                                currentIcon = icon.appIconName
-                            } catch {
-                                setAlternateIconError = IconError(error)
-                                showAlert = true
-                                IconSelectorSection.logger.error("\(error.localizedDescription, privacy: .public) - Icon name: \(icon.iconName, privacy: .public)")
-                            }
-                        }
-                        #endif
-                    } label: {
-                        Image(platformNamed: icon.iconName)
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .frame(minHeight: 125, maxHeight: 1024)
-                        #if !canImport(AppKit)
-                            .cornerRadius(6)
-                            .shadow(radius: 3)
-                            .overlay(alignment: .bottomTrailing) {
-                                if icon.appIconName == currentIcon {
-                                    Image(systemName: "checkmark.seal.fill")
-                                        .padding(4)
-                                        .tint(.green)
-                                }
-                            }
-                        #endif
-                    }
-                    #if canImport(AppKit)
-                    .alert(message, isPresented: $showAlert) {
-                        Button("OK") {}
-                    }
-                    #else
-                    .alert(isPresented: $showAlert, error: setAlternateIconError) {
-                            Button("OK") {}
-                        }
-                    #endif
+                    item(for: icon)
                 }
             }
         }
+    }
+
+    @ViewBuilder
+    private func item(for icon: Icon) -> some View {
+        let action = {
+            #if canImport(AppKit)
+            let fileManager = FileManager.default
+            #if os(macOS)
+            let data = NSImage(named: icon.iconName)?.tiffRepresentation
+            let extensionName = "tiff"
+            #else
+            let data = UIImage(named: icon.iconName)?.pngData()
+            let extensionName = "png"
+            #endif
+            if let data,
+               let downloadsDirectory = fileManager.urls(for: .downloadsDirectory, in: .userDomainMask).first {
+                var destinationURL = downloadsDirectory.appendingPathComponent(icon.iconName).appendingPathExtension(extensionName)
+                if fileManager.fileExists(atPath: destinationURL.path) {
+                    destinationURL = downloadsDirectory.appendingPathComponent(icon.iconName + "_" + UUID().uuidString).appendingPathExtension(extensionName)
+                }
+                if fileManager.createFile(atPath: destinationURL.path(), contents: data) {
+                    message = "Successfully saved the icon to the Downloads folder."
+                    IconSelectorSection.logger.info("Successfully saved the icon to the Downloads folder.")
+                } else {
+                    message = "Error saving icon to Downloads folder."
+                    IconSelectorSection.logger.error("Error saving icon to Downloads folder.")
+                }
+                showAlert = true
+            }
+            #else
+            Task {
+                do {
+                    let name = icon.rawValue == Icon.primary.rawValue ? nil : icon.appIconName
+                    try await UIApplication.shared.setAlternateIconName(name)
+                    currentIcon = icon.appIconName
+                } catch {
+                    setAlternateIconError = IconError(error)
+                    showAlert = true
+                    IconSelectorSection.logger.error("\(error.localizedDescription, privacy: .public) - Icon name: \(icon.iconName, privacy: .public)")
+                }
+            }
+            #endif
+        }
+        let label = {
+            Image(platformNamed: icon.iconName)
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(minHeight: 125, maxHeight: 1024)
+            #if !canImport(AppKit)
+                .cornerRadius(6)
+                .shadow(radius: 3)
+                .overlay(alignment: .bottomTrailing) {
+                    if icon.appIconName == currentIcon {
+                        Image(systemName: "checkmark.seal.fill")
+                            .padding(4)
+                            .tint(.green)
+                    }
+                }
+            #endif
+        }
+
+        Group {
+            #if canImport(UIKit)
+            if UIDevice.current.userInterfaceIdiom == .mac {
+                label().onTapGesture {
+                    action()
+                }
+            } else {
+                Button {
+                    action()
+                } label: {
+                    label()
+                }
+            }
+            #else
+            Button {
+                action()
+            } label: {
+                label()
+            }
+            #endif
+        }
+        #if canImport(AppKit)
+        .alert(message, isPresented: $showAlert) {
+            Button("OK") {}
+        }
+        #else
+        .alert(isPresented: $showAlert, error: setAlternateIconError) {
+                Button("OK") {}
+            }
+        #endif
     }
 }
 
