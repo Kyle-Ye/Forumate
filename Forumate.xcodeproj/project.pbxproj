@@ -88,8 +88,6 @@
 		2779C0612A3464F200CE4DF1 /* CommunityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2779C05F2A3464F200CE4DF1 /* CommunityManager.swift */; };
 		2779C0642A3468DC00CE4DF1 /* Community+Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2779C0632A3468DC00CE4DF1 /* Community+Preview.swift */; };
 		2779C0652A3468DC00CE4DF1 /* Community+Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2779C0632A3468DC00CE4DF1 /* Community+Preview.swift */; };
-		2779C0682A346B3D00CE4DF1 /* RecommendCommunityList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2779C0672A346B3D00CE4DF1 /* RecommendCommunityList.swift */; };
-		2779C0692A346B3D00CE4DF1 /* RecommendCommunityList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2779C0672A346B3D00CE4DF1 /* RecommendCommunityList.swift */; };
 		2779C0752A3484DC00CE4DF1 /* RecommendCommunityLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2779C0742A3484DC00CE4DF1 /* RecommendCommunityLabel.swift */; };
 		2779C0762A3484DC00CE4DF1 /* RecommendCommunityLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2779C0742A3484DC00CE4DF1 /* RecommendCommunityLabel.swift */; };
 		2779C07A2A34977B00CE4DF1 /* PreviewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2779C0792A34977B00CE4DF1 /* PreviewContainer.swift */; };
@@ -214,7 +212,6 @@
 		277546D72A19DE3F000FDAA0 /* AppInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInfo.swift; sourceTree = "<group>"; };
 		2779C05F2A3464F200CE4DF1 /* CommunityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityManager.swift; sourceTree = "<group>"; };
 		2779C0632A3468DC00CE4DF1 /* Community+Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Community+Preview.swift"; sourceTree = "<group>"; };
-		2779C0672A346B3D00CE4DF1 /* RecommendCommunityList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendCommunityList.swift; sourceTree = "<group>"; };
 		2779C0742A3484DC00CE4DF1 /* RecommendCommunityLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendCommunityLabel.swift; sourceTree = "<group>"; };
 		2779C0792A34977B00CE4DF1 /* PreviewContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewContainer.swift; sourceTree = "<group>"; };
 		2779C07E2A34AA6A00CE4DF1 /* SettingsTabDestination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTabDestination.swift; sourceTree = "<group>"; };
@@ -408,15 +405,6 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		2779C0782A3485C500CE4DF1 /* RecommendCommunity */ = {
-			isa = PBXGroup;
-			children = (
-				2779C0672A346B3D00CE4DF1 /* RecommendCommunityList.swift */,
-				2779C0742A3484DC00CE4DF1 /* RecommendCommunityLabel.swift */,
-			);
-			path = RecommendCommunity;
-			sourceTree = "<group>";
-		};
 		277C15C22A18F021007940C7 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -584,7 +572,7 @@
 			isa = PBXGroup;
 			children = (
 				278E53F42A18E83000DCD159 /* CommunityList.swift */,
-				2779C0782A3485C500CE4DF1 /* RecommendCommunity */,
+				2779C0742A3484DC00CE4DF1 /* RecommendCommunityLabel.swift */,
 				278E53FD2A18E83000DCD159 /* NewCommunity.swift */,
 				278E53FA2A18E83000DCD159 /* CommunityLabel.swift */,
 				278E53F52A18E83000DCD159 /* CommunityDetail */,
@@ -840,7 +828,6 @@
 				2779C0802A34AA6A00CE4DF1 /* SettingsTabDestination.swift in Sources */,
 				273AFC192A1A967D00DD08F5 /* CommunityLabel.swift in Sources */,
 				273AFC172A1A967D00DD08F5 /* CategoryLabel.swift in Sources */,
-				2779C0692A346B3D00CE4DF1 /* RecommendCommunityList.swift in Sources */,
 				2779C0652A3468DC00CE4DF1 /* Community+Preview.swift in Sources */,
 				27DFFCE02A2AF64A005661BD /* ColorToImageText.swift in Sources */,
 				273AFBF92A1A951200DD08F5 /* AppInfo.swift in Sources */,
@@ -907,7 +894,6 @@
 				2779C07F2A34AA6A00CE4DF1 /* SettingsTabDestination.swift in Sources */,
 				27DFFCE82A2B13EB005661BD /* Settings.swift in Sources */,
 				273AFBCF2A1A73F600DD08F5 /* ViewByMenuButton.swift in Sources */,
-				2779C0682A346B3D00CE4DF1 /* RecommendCommunityList.swift in Sources */,
 				2779C0642A3468DC00CE4DF1 /* Community+Preview.swift in Sources */,
 				270097D12A19D7E300CA01B5 /* StarterIntro.swift in Sources */,
 				27DFFCF02A2B2FD3005661BD /* TopicDetailWindowModel.swift in Sources */,

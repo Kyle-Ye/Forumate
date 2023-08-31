@@ -33,7 +33,7 @@ extension [Community] {
         [
             ("Swift Forums", URL(string: "https://forums.swift.org")!),
             ("Discourse Meta", URL(string: "https://meta.discourse.org")!),
-            ("OpenAI Developer Community", URL(string: "https://community.openai.com")!),
+            ("OpenAI Developer Forum", URL(string: "https://community.openai.com")!),
         ]
     }
 }

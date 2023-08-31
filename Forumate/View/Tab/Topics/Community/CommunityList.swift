@@ -19,15 +19,35 @@ struct CommunityList: View {
     private var communities: [Community]
 
     private var hasPinnedCommunity: Bool {
-        communities.contains(where: { $0.pin && (searchText.isEmpty || $0.title.localizedCaseInsensitiveContains(searchText)) })
+        communities.contains { $0.pin && (searchText.isEmpty || $0.title.localizedCaseInsensitiveContains(searchText)) }
     }
 
     private var pinnedCommunities: [Community] {
         communities.filter { $0.pin && (searchText.isEmpty || $0.title.localizedCaseInsensitiveContains(searchText)) }
     }
 
+    private var hasUnpinnedCommunity: Bool {
+        communities.contains { !$0.pin && (searchText.isEmpty || $0.title.localizedCaseInsensitiveContains(searchText)) }
+    }
+
     private var unpinnedCommunities: [Community] {
         communities.filter { !$0.pin && (searchText.isEmpty || $0.title.localizedCaseInsensitiveContains(searchText)) }
+    }
+
+    private var hasRecommendCommunity: Bool {
+        [Community].recommended.contains { name, url in
+            communities.allSatisfy { community in
+                community.host != url
+            } && (searchText.isEmpty || name.localizedCaseInsensitiveContains(searchText))
+        }
+    }
+
+    private var recommendCommunities: [(name: String, url: URL)] {
+        [Community].recommended.filter { name, url in
+            communities.allSatisfy { community in
+                community.host != url
+            } && (searchText.isEmpty || name.localizedCaseInsensitiveContains(searchText))
+        }
     }
 
     @State private var searchText = ""
@@ -39,8 +59,12 @@ struct CommunityList: View {
             if hasPinnedCommunity {
                 pinnedCommunityList
             }
-            unpinnedCommunityList
-            RecommendCommunityList()
+            if hasUnpinnedCommunity {
+                unpinnedCommunityList
+            }
+            if hasRecommendCommunity {
+                recommendCommunityList
+            }
         }
         #if os(watchOS)
         .searchable(text: $searchText)
@@ -73,6 +97,16 @@ struct CommunityList: View {
             .onMove(perform: moveUnpinnedCommunities(from:to:))
         } header: {
             Text("My Communities")
+        }
+    }
+
+    var recommendCommunityList: some View {
+        Section {
+            ForEach(recommendCommunities, id: \.name) { name, url in
+                RecommendCommunityLabel(name: name, url: url)
+            }
+        } header: {
+            Text("Recommended Communities")
         }
     }
 
