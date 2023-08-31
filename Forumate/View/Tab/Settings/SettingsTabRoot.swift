@@ -32,11 +32,15 @@ struct SettingsTabRoot: View {
                     SettingIcon(icon: "star.circle.fill", style: .yellow)
                 }
                 #endif
-                #if os(iOS) || os(visionOS) || os(tvOS)
+                #if os(iOS) || os(visionOS) || os(tvOS) || os(macOS)
                 navigationItem(destination: .iconSelector, text: "App Icon") {
+                    #if os(macOS)
+                    let appIconName = IconSelectorSection.Icon.primary.appIconName
+                    #else
                     let appIconName = UIApplication.shared.alternateIconName ?? IconSelectorSection.Icon.primary.appIconName
+                    #endif
                     let icon = IconSelectorSection.Icon(string: appIconName)
-                    Image(uiImage: .init(named: icon.iconName)!)
+                    Image(platformNamed: icon.iconName)
                         .resizable()
                         .scaledToFit()
                         .frame(height: 25)

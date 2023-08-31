@@ -20,7 +20,7 @@ struct SettingsTab: View {
                     Group {
                         switch destination.id {
                         case .subscription: SubscriptionSection()
-                        #if os(iOS) || os(visionOS) || os(tvOS)
+                        #if os(iOS) || os(visionOS) || os(tvOS) || os(macOS)
                         case .iconSelector: IconSelectorSection()
                         #endif
                         case .general: GeneralSection()

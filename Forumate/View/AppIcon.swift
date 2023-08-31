@@ -9,7 +9,7 @@ import SwiftUI
 
 struct AppIcon: View {
     var body: some View {
-        Image(uiImage: UIImage(named: "AppIcon")!)
+        Image(platformNamed: "AppIcon")
             .resizable()
             .aspectRatio(contentMode: .fit)
     }

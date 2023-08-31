@@ -74,6 +74,8 @@
 		273AFC222A1A968100DD08F5 /* TopicsTabRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E53F92A18E83000DCD159 /* TopicsTabRoot.swift */; };
 		273AFC232A1A968100DD08F5 /* TopicsTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E53FE2A18E83000DCD159 /* TopicsTab.swift */; };
 		273AFC242A1A97CC00DD08F5 /* InboxTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E53EF2A18E83000DCD159 /* InboxTab.swift */; };
+		2741893A2AA1172900B5EC61 /* Image+Platform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274189392AA1172900B5EC61 /* Image+Platform.swift */; };
+		2741893B2AA1196400B5EC61 /* Image+Platform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274189392AA1172900B5EC61 /* Image+Platform.swift */; };
 		274C4C9E2A3F81D10018BFA4 /* SubscriptionSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274C4C9D2A3F81D10018BFA4 /* SubscriptionSection.swift */; };
 		274C4C9F2A3F81D10018BFA4 /* SubscriptionSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274C4C9D2A3F81D10018BFA4 /* SubscriptionSection.swift */; };
 		274F63A12A4202AE00238B30 /* AppIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274F63A02A4202AE00238B30 /* AppIcon.swift */; };
@@ -204,6 +206,7 @@
 		273AFBE12A1A928C00DD08F5 /* TopicDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicDetail.swift; sourceTree = "<group>"; };
 		273AFBE72A1A94E100DD08F5 /* ForumateWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ForumateWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		273AFBF02A1A94E100DD08F5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		274189392AA1172900B5EC61 /* Image+Platform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+Platform.swift"; sourceTree = "<group>"; };
 		274C4C9D2A3F81D10018BFA4 /* SubscriptionSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionSection.swift; sourceTree = "<group>"; };
 		274C4CA12A3F84F10018BFA4 /* Forumate.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = Forumate.storekit; sourceTree = "<group>"; };
 		274F63A02A4202AE00238B30 /* AppIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIcon.swift; sourceTree = "<group>"; };
@@ -415,6 +418,7 @@
 				27DFFCDE2A2AF64A005661BD /* ColorToImageText.swift */,
 				27DFFCE22A2B0509005661BD /* View+Size.swift */,
 				27D219032A756E7900501849 /* Logger+Extension.swift */,
+				274189392AA1172900B5EC61 /* Image+Platform.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -849,6 +853,7 @@
 				27DFFCF12A2B2FD3005661BD /* TopicDetailWindowModel.swift in Sources */,
 				273AFC222A1A968100DD08F5 /* TopicsTabRoot.swift in Sources */,
 				273AFC182A1A967D00DD08F5 /* TopicDetail.swift in Sources */,
+				2741893B2AA1196400B5EC61 /* Image+Platform.swift in Sources */,
 				273AFC212A1A967D00DD08F5 /* CategoryText.swift in Sources */,
 				273AFC1C2A1A967D00DD08F5 /* CommunityList.swift in Sources */,
 				273AFC132A1A967300DD08F5 /* Community.swift in Sources */,
@@ -916,6 +921,7 @@
 				270097CF2A19D68700CA01B5 /* SettingsTabState.swift in Sources */,
 				273AFBD32A1A7AE400DD08F5 /* SettingIcon.swift in Sources */,
 				278E54092A18E83000DCD159 /* TopicsTabState.swift in Sources */,
+				2741893A2AA1172900B5EC61 /* Image+Platform.swift in Sources */,
 				278E540C2A18E83000DCD159 /* CommunityDetail.swift in Sources */,
 				277C15C12A18EF6B007940C7 /* CategoryDetail.swift in Sources */,
 				278E540B2A18E83000DCD159 /* CommunityDetailState.swift in Sources */,
@@ -1125,6 +1131,7 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TVOS_DEPLOYMENT_TARGET = 17.0;
 				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+				XROS_DEPLOYMENT_TARGET = 1.0;
 			};
 			name = Debug;
 		};
@@ -1184,6 +1191,7 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				TVOS_DEPLOYMENT_TARGET = 17.0;
 				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+				XROS_DEPLOYMENT_TARGET = 1.0;
 			};
 			name = Release;
 		};
@@ -1222,12 +1230,12 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 0.6.0;
 				PRODUCT_BUNDLE_IDENTIFIER = top.kyleye.Forumate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "appletvos appletvsimulator iphoneos iphonesimulator xros xrsimulator";
+				SUPPORTED_PLATFORMS = "appletvos appletvsimulator iphoneos iphonesimulator macosx xros xrsimulator";
 				SUPPORTS_MACCATALYST = YES;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
@@ -1272,12 +1280,12 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 0.6.0;
 				PRODUCT_BUNDLE_IDENTIFIER = top.kyleye.Forumate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "appletvos appletvsimulator iphoneos iphonesimulator xros xrsimulator";
+				SUPPORTED_PLATFORMS = "appletvos appletvsimulator iphoneos iphonesimulator macosx xros xrsimulator";
 				SUPPORTS_MACCATALYST = YES;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
