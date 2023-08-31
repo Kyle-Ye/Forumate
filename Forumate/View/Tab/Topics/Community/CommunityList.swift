@@ -9,55 +9,124 @@ import SwiftData
 import SwiftUI
 
 struct CommunityList: View {
-    @EnvironmentObject var appState: AppState
-    @EnvironmentObject var tabState: TopicsTabState
-    
-    // Query Community and add init data
-    @Environment(\.modelContext) var modelContext
-    @Query var communities: [Community]
-    
+    @EnvironmentObject private var appState: AppState
+    @EnvironmentObject private var tabState: TopicsTabState
+    @Environment(\.modelContext) private var modelContext
+    @Query(
+        sort: [SortDescriptor<Community>(\.sortIndex)],
+        animation: .spring
+    )
+    private var communities: [Community]
+
+    private var hasPinnedCommunity: Bool {
+        communities.contains(where: { $0.pin && (searchText.isEmpty || $0.title.localizedCaseInsensitiveContains(searchText)) })
+    }
+
+    private var pinnedCommunities: [Community] {
+        communities.filter { $0.pin && (searchText.isEmpty || $0.title.localizedCaseInsensitiveContains(searchText)) }
+    }
+
+    private var unpinnedCommunities: [Community] {
+        communities.filter { !$0.pin && (searchText.isEmpty || $0.title.localizedCaseInsensitiveContains(searchText)) }
+    }
+
+    @State private var searchText = ""
+    #if !os(watchOS)
+    @State private var isSearching = false
+    #endif
     var body: some View {
         List(selection: $tabState.selectedCommunity) {
-            content
+            if hasPinnedCommunity {
+                pinnedCommunityList
+            }
+            unpinnedCommunityList
             RecommendCommunityList()
         }
+        #if os(watchOS)
+        .searchable(text: $searchText)
+        #else
+        .searchable(text: $searchText, isPresented: $isSearching)
+        .onChange(of: searchText) { _, newValue in
+            isSearching = !newValue.isEmpty
+        }
+        #endif
     }
-        
-    var content: some View {
+
+    var pinnedCommunityList: some View {
         Section {
-            ForEach(communities) { community in
-                NavigationLink(value: community) {
-                    CommunityLabel(community: community)
-                }
-                #if !os(tvOS)
-                .swipeActions(edge: .trailing) {
-                    Button(role: .destructive) {
-                        modelContext.delete(community)
-                    } label: {
-                        Label("Delete", systemImage: "trash")
-                    }
-                }
-                #endif
+            ForEach(pinnedCommunities) { community in
+                CommunityItem(community: community)
             }
             .onDelete(perform: deleteCommunities(at:))
+            .onMove(perform: movePinnedCommunities(from:to:))
+        } header: {
+            Text("Pinned Communities")
+        }
+    }
+
+    var unpinnedCommunityList: some View {
+        Section {
+            ForEach(unpinnedCommunities) { community in
+                CommunityItem(community: community)
+            }
+            .onDelete(perform: deleteCommunities(at:))
+            .onMove(perform: moveUnpinnedCommunities(from:to:))
         } header: {
             Text("My Communities")
         }
     }
-    
-    private func deleteCommunities(at indexSet: IndexSet) {
-        indexSet
-            .map { communities[$0] }
-            .forEach { modelContext.delete($0) }
+
+    private struct CommunityItem: View {
+        @Environment(\.modelContext) private var modelContext
+
+        var community: Community
+        var body: some View {
+            NavigationLink(value: community) {
+                CommunityLabel(community: community)
+            }
+            #if !os(tvOS)
+            .swipeActions(edge: .trailing) {
+                Button(role: .destructive) {
+                    modelContext.delete(community)
+                } label: {
+                    Label("Delete", systemImage: "trash")
+                }
+            }
+            .swipeActions(edge: .leading) {
+                Button {
+                    community.pin.toggle()
+                } label: {
+                    Label(
+                        community.pin ? "Unpin" : "Pin",
+                        systemImage: community.pin ? "pin.slash.fill" : "pin.fill"
+                    ).tint(.orange)
+                }
+            }
+            #endif
+        }
+    }
+
+    private func deleteCommunities(at _: IndexSet) {}
+
+    private func movePinnedCommunities(from indices: IndexSet, to newOffset: Int) {
+        var communities = pinnedCommunities
+        communities.move(fromOffsets: indices, toOffset: newOffset)
+        communities.enumerated().forEach { $0.element.sortIndex = $0.offset }
+    }
+
+    private func moveUnpinnedCommunities(from indices: IndexSet, to newOffset: Int) {
+        var communities = unpinnedCommunities
+        communities.move(fromOffsets: indices, toOffset: newOffset)
+        communities.enumerated().forEach { $0.element.sortIndex = $0.offset }
     }
 }
 
-struct CommunityList_Previews: PreviewProvider {
-    static var previews: some View {
-        NavigationStack {
-            CommunityList()
-        }
-        .environmentObject(AppState())
-        .environmentObject(TopicsTabState())
+#Preview {
+    NavigationStack {
+        CommunityList()
+            .navigationTitle("Forumate")
     }
+    .environmentObject(AppState())
+    .environmentObject(TopicsTabState())
+    .modelContainer(previewContainer)
 }

@@ -16,6 +16,12 @@ final class Community {
     private(set) var title = ""
     private(set) var icon: URL?
     
+    /// Pinned by user
+    var pin = false
+    
+    /// Sort Index
+    var sortIndex = 0
+    
     init(host: URL, title: String = "", icon: URL? = nil) {
         self.host = host
         self.title = title
