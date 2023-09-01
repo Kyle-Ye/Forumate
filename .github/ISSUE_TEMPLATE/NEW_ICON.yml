@@ -1,0 +1,39 @@
+name: Contribute new App Icon
+description: Informatino about the app icon you suggest
+labels: [Contribution]
+body
+- type: markdown
+  attributes:
+    value: |
+      Thank you for your interest on Forumate!
+      
+      Before you submit your issue, please complete each text area below with the relevant details, and complete the steps in the checklist.
+
+      You will get a code to activate Pro feature of Forumate if your contribution is accepted.
+- type: input
+  attributes:
+    label: Link
+    description: |
+      Link to the public Figma or Sketch design file of the app icon.
+
+      You can use the existing resource in Forumate-Icon.md as template.
+
+      Your design file must include ALL Supported platforms of the active deployment branch.
+    placeholder: "'https://example.com' for example"
+  validations:
+    required: true
+- type: textarea
+  attributes:
+    label: Description
+    description: |
+      A short description of the app icon.
+  validations:
+    required: true
+- type: checkboxes
+  attributes:
+    label: Checklist
+    options:
+    - label: This issue hasn't been addressed in an [existing GitHub issue](https://github.com/Kyle-Ye/Forumate/issues).
+      required: true
+    - label: You have confirmed that you have all copyrights of the posted design files and agree to grant all reasonable use within this App.
+      required: true

@@ -44,6 +44,9 @@ struct IconSelectorSection: View {
         VStack {
             #if canImport(AppKit)
             Text("Update App Icon in App is not supported on macOS. You can click to save the icon and manully update it via Finder.")
+            Link(destination: URL(string: "https://support.apple.com/guide/mac-help/change-icons-for-files-or-folders-on-mac-mchlp2313/mac")!) {
+                Text("See Apple's macOS manual for more information.")
+            }
             #endif
             LazyVGrid(columns: columns, spacing: 6) {
                 ForEach(icons, id: \.self) { icon in

@@ -53,22 +53,6 @@
         }
       }
     },
-    "%@ v%@ Build %@ · %@" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "%1$@ v%2$@ Build %3$@ · %4$@"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%1$@ 版本%2$@ Build %3$@ · %4$@"
-          }
-        }
-      }
-    },
     "%lld Replies" : {
       "localizations" : {
         "zh-Hans" : {
@@ -119,32 +103,32 @@
         }
       }
     },
-    "Browser Code" : {
+    "Browse Forumate's source code" : {
       "localizations" : {
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "查看源代码"
+            "value" : "查看 Forumate 源代码"
           }
         }
       }
     },
-    "Bug report and feature suggest" : {
+    "Bug Report" : {
       "localizations" : {
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "问题反馈和功能建议"
+            "value" : "错误报告"
           }
         }
       }
     },
-    "Bug report via GitHub" : {
+    "Bug Report and Feature Suggestion" : {
       "localizations" : {
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "通过 GitHub 进行问题反馈"
+            "value" : "错误报告和功能建议"
           }
         }
       }
@@ -209,6 +193,26 @@
         }
       }
     },
+    "Contribute new App Icon" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "贡献新的应用图标"
+          }
+        }
+      }
+    },
+    "Contribute to Forumate project" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "为 Forumate 项目做出贡献"
+          }
+        }
+      }
+    },
     "Could not add community" : {
       "localizations" : {
         "zh-Hans" : {
@@ -239,12 +243,22 @@
         }
       }
     },
-    "Discuss at our Discord Server" : {
+    "Discuss at Discourse Forum topic" : {
       "localizations" : {
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "在 Discord 服务器上加入讨论"
+            "value" : "在 Discourse 论坛的主题下讨论"
+          }
+        }
+      }
+    },
+    "Discuss at Forumate Discord Server" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "加入 Forumate 的 Discord 服务器进行讨论"
           }
         }
       }
@@ -269,12 +283,12 @@
         }
       }
     },
-    "Feature request via GitHub" : {
+    "Feature Suggestion" : {
       "localizations" : {
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "通过 GitHub 提出功能建议"
+            "value" : "功能建议"
           }
         }
       }
@@ -295,16 +309,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Forumate 仅支持使用 Discourse 平台构建并运行 HTTPS 的社区。请参阅对应社区的支持页面来获取帮助。"
-          }
-        }
-      }
-    },
-    "Forumate source code at GitHub" : {
-      "localizations" : {
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "在GitHub上的 Forumate 源代码"
           }
         }
       }
@@ -559,6 +563,16 @@
         }
       }
     },
+    "See Apple's macOS manual for more information." : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "更多信息请参阅苹果的 macOS 手册。"
+          }
+        }
+      }
+    },
     "Settings" : {
       "localizations" : {
         "zh-Hans" : {
@@ -579,6 +593,16 @@
         }
       }
     },
+    "Source Code" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "源代码"
+          }
+        }
+      }
+    },
     "Starter Intro" : {
       "localizations" : {
         "zh-Hans" : {
@@ -595,6 +619,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "成功将图标保存到下载文件夹。"
+          }
+        }
+      }
+    },
+    "Suggest new Recommend Forum item" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "建议新的推荐论坛项目"
           }
         }
       }

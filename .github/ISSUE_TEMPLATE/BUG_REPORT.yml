@@ -1,0 +1,58 @@
+name: Bug Report
+description: Something isn't working as expected
+labels: [Bug]
+body:
+- type: markdown
+  attributes:
+    value: |
+      Thank you for your interest on Forumate!
+      
+      Before you submit your issue, please complete each text area below with the relevant details for your bug, and complete the steps in the checklist
+- type: textarea
+  attributes:
+    label: Description
+    description: |
+      A short description of the incorrect behavior. 
+
+      If you think this issue has been recently introduced and did not occur in an earlier version, please note that. If possible, include the last version that the behavior was correct in addition to your current version.
+  validations:
+    required: true
+- type: checkboxes
+  attributes:
+    label: Checklist
+    options:
+    - label: If possible, I've reproduced the issue using the latest version on App Store or TestFlight.
+      required: false
+    - label: This issue hasn't been addressed in an [existing GitHub issue](https://github.com/Kyle-Ye/Forumate/issues).
+      required: true
+- type: textarea
+  attributes:
+    label: Expected Behavior
+    description: Describe what you expected to happen.
+  validations:
+    required: false
+- type: textarea
+  attributes:
+    label: Actual behavior
+    description: Describe or copy/paste the behavior you observe.
+  validations:
+    required: false
+- type: textarea
+  attributes:
+    label: Steps To Reproduce
+    description: |
+      Explanation of how to reproduce the incorrect behavior. 
+      This may include a screen recording and some text description to demonstrate your input operation.
+    placeholder: |
+      1. In my iPhone 13 or iPad mini 8, I open Forumate and enter Swift Forum.
+
+      2. With this input...
+      
+      3. See error...
+  validations:
+    required: false
+- type: input
+  attributes:
+    label: Forumate Version Information
+    description: The Forumate App version and OS version used to reproduce this issue. You can copy it from the bottom of Setting Tab.
+    placeholder: "'Forumate Version 0.5.2 build 76 · macOS 14.0.0' for example, or a commit hash"

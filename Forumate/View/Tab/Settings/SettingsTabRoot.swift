@@ -11,7 +11,6 @@ import SwiftUI
 struct SettingsTabRoot: View {
     @EnvironmentObject private var appState: AppState
     @EnvironmentObject private var tabState: SettingsTabState
-        
     @State private var showStarterIntro = false
 
     func navigationItem(destination: SettingsTabDestination.ID, text: LocalizedStringKey, @ViewBuilder icon: () -> some View) -> some View {
@@ -69,7 +68,21 @@ struct SettingsTabRoot: View {
                     SettingIcon(icon: "heart.fill", style: .pink)
                 }
             } footer: {
-                Text("\(AppInfo.name) v\(AppInfo.version) Build \(AppInfo.buildNumber) · \(AppInfo.OSVersion)")
+                Text(verbatim: """
+                \(AppInfo.name) v\(AppInfo.version) Build \(AppInfo.buildNumber)
+                \(AppInfo.OSVersion)
+                """)
+                .multilineTextAlignment(.leading)
+                #if !os(watchOS)
+                    .onTapGesture(count: 2) {
+                        let content = "\(AppInfo.name) v\(AppInfo.version) Build \(AppInfo.buildNumber) · \(AppInfo.OSVersion)"
+                        #if os(macOS)
+                        NSPasteboard.general.setString(content, forType: .string)
+                        #else
+                        UIPasteboard.general.string = content
+                        #endif
+                    }
+                #endif
             }
         }
         #if os(iOS) || os(visionOS)
