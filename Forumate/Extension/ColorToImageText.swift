@@ -17,9 +17,6 @@ extension String {
     }
 }
 
-
-struct ColorToImageText_Previews: PreviewProvider {
-    static var previews: some View {
-        "AAA".colorToImageText(image: "square.fill") + Text(verbatim: "Hello")
-    }
+#Preview {
+    "AAA".colorToImageText(image: "square.fill") + Text(verbatim: "Hello")
 }
