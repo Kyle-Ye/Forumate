@@ -1,5 +1,5 @@
-name: Feature Request
-description: A suggestion for a new feature
+name: Feature Suggestion
+description: A suggestion for some new feature
 labels: [Feat]
 body:
 - type: markdown
