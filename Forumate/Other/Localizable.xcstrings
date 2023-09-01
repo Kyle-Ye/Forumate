@@ -2,10 +2,24 @@
   "sourceLanguage" : "en",
   "strings" : {
     "" : {
-
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ""
+          }
+        }
+      }
     },
     " " : {
-
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ""
+          }
+        }
+      }
     },
     "%@" : {
       "localizations" : {
@@ -243,22 +257,12 @@
         }
       }
     },
-    "Discuss at Discourse Forum topic" : {
+    "Discuss at Discourse Forum Topic" : {
       "localizations" : {
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "在 Discourse 论坛的主题下讨论"
-          }
-        }
-      }
-    },
-    "Discuss at Forumate Discord Server" : {
-      "localizations" : {
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "加入 Forumate 的 Discord 服务器进行讨论"
           }
         }
       }
@@ -349,6 +353,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "消息"
+          }
+        }
+      }
+    },
+    "Join Forumate Discord Server" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "加入 Forumate 的 Discord 社区"
           }
         }
       }

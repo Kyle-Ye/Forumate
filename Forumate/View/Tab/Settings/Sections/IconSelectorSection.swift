@@ -84,7 +84,7 @@ struct IconSelectorSection: View {
                 showAlert = true
             }
             #else
-            Task {
+            _ = Task {
                 do {
                     let name = icon.rawValue == Icon.primary.rawValue ? nil : icon.appIconName
                     try await UIApplication.shared.setAlternateIconName(name)
