@@ -12,6 +12,10 @@
 		270097D12A19D7E300CA01B5 /* StarterIntro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270097D02A19D7E300CA01B5 /* StarterIntro.swift */; };
 		270808F92A9F98F70089E5DC /* ForumateWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 273AFBE72A1A94E100DD08F5 /* ForumateWatch.app */; platformFilter = ios; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		270808FC2A9FA3D50089E5DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 278E53E62A18E83000DCD159 /* Assets.xcassets */; };
+		270CD67B2AA22945004DBD1D /* SimpleToast in Frameworks */ = {isa = PBXBuildFile; platformFilters = (ios, maccatalyst, macos, xros, ); productRef = 270CD67A2AA22945004DBD1D /* SimpleToast */; };
+		270CD67D2AA2294C004DBD1D /* SimpleToast in Frameworks */ = {isa = PBXBuildFile; productRef = 270CD67C2AA2294C004DBD1D /* SimpleToast */; };
+		270CD67F2AA22DA0004DBD1D /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270CD67E2AA22DA0004DBD1D /* Toast.swift */; };
+		270CD6802AA22DA7004DBD1D /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270CD67E2AA22DA0004DBD1D /* Toast.swift */; };
 		271808C62A32496D008B1970 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 271808C52A32496D008B1970 /* Localizable.xcstrings */; };
 		271808C72A32496D008B1970 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 271808C52A32496D008B1970 /* Localizable.xcstrings */; };
 		271808CA2A324995008B1970 /* InfoPlist.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 271808C92A324995008B1970 /* InfoPlist.xcstrings */; };
@@ -184,6 +188,7 @@
 		270097CB2A19D66E00CA01B5 /* SettingsTabRoot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTabRoot.swift; sourceTree = "<group>"; };
 		270097CE2A19D68700CA01B5 /* SettingsTabState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTabState.swift; sourceTree = "<group>"; };
 		270097D02A19D7E300CA01B5 /* StarterIntro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarterIntro.swift; sourceTree = "<group>"; };
+		270CD67E2AA22DA0004DBD1D /* Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
 		271808C52A32496D008B1970 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		271808C92A324995008B1970 /* InfoPlist.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = InfoPlist.xcstrings; sourceTree = "<group>"; };
 		272193A02A19CCFA00C221BC /* JSONRawRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONRawRepresentable.swift; sourceTree = "<group>"; };
@@ -275,6 +280,7 @@
 				27DFFCF92A2B35B3005661BD /* DiscourseKit in Frameworks */,
 				27C00A302A2CC10F00CA9ACD /* HtmlText in Frameworks */,
 				273AFC022A1A954900DD08F5 /* AcknowKit in Frameworks */,
+				270CD67D2AA2294C004DBD1D /* SimpleToast in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,6 +292,7 @@
 				27DFFCF72A2B35AB005661BD /* DiscourseKit in Frameworks */,
 				27C00A2C2A2CC10700CA9ACD /* HtmlText in Frameworks */,
 				273AFBC62A1A3DFE00DD08F5 /* Flow in Frameworks */,
+				270CD67B2AA22945004DBD1D /* SimpleToast in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,6 +426,7 @@
 				27DFFCE22A2B0509005661BD /* View+Size.swift */,
 				27D219032A756E7900501849 /* Logger+Extension.swift */,
 				274189392AA1172900B5EC61 /* Image+Platform.swift */,
+				270CD67E2AA22DA0004DBD1D /* Toast.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -685,6 +693,7 @@
 				27CDD3822A1BAEAC003E3D00 /* Flow */,
 				27DFFCF82A2B35B3005661BD /* DiscourseKit */,
 				27C00A2F2A2CC10F00CA9ACD /* HtmlText */,
+				270CD67C2AA2294C004DBD1D /* SimpleToast */,
 			);
 			productName = "ForumateWatch Watch App";
 			productReference = 273AFBE72A1A94E100DD08F5 /* ForumateWatch.app */;
@@ -710,6 +719,7 @@
 				273AFBDD2A1A8CF100DD08F5 /* AcknowKit */,
 				27DFFCF62A2B35AB005661BD /* DiscourseKit */,
 				27C00A2B2A2CC10700CA9ACD /* HtmlText */,
+				270CD67A2AA22945004DBD1D /* SimpleToast */,
 			);
 			productName = Forumate;
 			productReference = 27EEA08629EFCD1B00ADA5BE /* Forumate.app */;
@@ -752,6 +762,7 @@
 				273AFBDC2A1A8CF100DD08F5 /* XCRemoteSwiftPackageReference "AcknowKit" */,
 				27DFFCEB2A2B1EFF005661BD /* XCRemoteSwiftPackageReference "LookinServer" */,
 				27DFFCF32A2B3574005661BD /* XCRemoteSwiftPackageReference "DiscourseKit" */,
+				270CD6792AA228D5004DBD1D /* XCRemoteSwiftPackageReference "SimpleToast" */,
 			);
 			productRefGroup = 27EEA08729EFCD1B00ADA5BE /* Products */;
 			projectDirPath = "";
@@ -820,6 +831,7 @@
 				273AFC242A1A97CC00DD08F5 /* InboxTab.swift in Sources */,
 				273AFC072A1A961F00DD08F5 /* HexToColor.swift in Sources */,
 				273AFBFA2A1A951C00DD08F5 /* ContentView.swift in Sources */,
+				270CD6802AA22DA7004DBD1D /* Toast.swift in Sources */,
 				273AFC1F2A1A967D00DD08F5 /* CommunityDetail.swift in Sources */,
 				276F9F432A2A348100020B1B /* PreviewChecker.swift in Sources */,
 				273AFC102A1A964700DD08F5 /* SettingsTabState.swift in Sources */,
@@ -888,6 +900,7 @@
 				278E540E2A18E83000DCD159 /* CommunityLabel.swift in Sources */,
 				27DFFCE32A2B0509005661BD /* View+Size.swift in Sources */,
 				278E54072A18E83000DCD159 /* SettingsTab.swift in Sources */,
+				270CD67F2AA22DA0004DBD1D /* Toast.swift in Sources */,
 				278E54032A18E83000DCD159 /* ForumateApp.swift in Sources */,
 				27C00A3A2A2CC6BF00CA9ACD /* PickerStyleType.swift in Sources */,
 				2735D6062A2F850B000D5966 /* SupportSection.swift in Sources */,
@@ -1337,6 +1350,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		270CD6792AA228D5004DBD1D /* XCRemoteSwiftPackageReference "SimpleToast" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sanzaru/SimpleToast.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.7.2;
+			};
+		};
 		273AFBC42A1A3DFD00DD08F5 /* XCRemoteSwiftPackageReference "SwiftUI-Flow" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/tevelee/SwiftUI-Flow.git";
@@ -1372,6 +1393,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		270CD67A2AA22945004DBD1D /* SimpleToast */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 270CD6792AA228D5004DBD1D /* XCRemoteSwiftPackageReference "SimpleToast" */;
+			productName = SimpleToast;
+		};
+		270CD67C2AA2294C004DBD1D /* SimpleToast */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 270CD6792AA228D5004DBD1D /* XCRemoteSwiftPackageReference "SimpleToast" */;
+			productName = SimpleToast;
+		};
 		273AFBC52A1A3DFE00DD08F5 /* Flow */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 273AFBC42A1A3DFD00DD08F5 /* XCRemoteSwiftPackageReference "SwiftUI-Flow" */;

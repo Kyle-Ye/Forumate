@@ -66,7 +66,7 @@ struct CommunityList: View {
                 recommendCommunityList
             }
         }
-        #if os(watchOS)
+        #if os(watchOS) || os(tvOS)
         .searchable(text: $searchText)
         #else
         .searchable(text: $searchText, isPresented: $isSearching)

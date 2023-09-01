@@ -227,6 +227,16 @@
         }
       }
     },
+    "Copied into clipboard" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "已复制到剪贴板"
+          }
+        }
+      }
+    },
     "Could not add community" : {
       "localizations" : {
         "zh-Hans" : {
