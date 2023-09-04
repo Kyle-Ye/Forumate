@@ -63,7 +63,8 @@ struct ThemeSection: View {
         
         var body: some View {
             VStack {
-                Color.secondary
+                Rectangle()
+                    .foregroundStyle(.thickMaterial)
                     .aspectRatio(9 / 16, contentMode: .fill)
                     .clipShape(RoundedRectangle(cornerRadius: 10))
                     .overlay(alignment: .bottom) {
@@ -90,7 +91,15 @@ struct ThemeSection: View {
 }
 
 #Preview {
-    ThemeSection()
-        .environment(ThemeManager())
+    struct Preview: View {
+        @State var themeManager = ThemeManager()
+        var body: some View {
+            ThemeSection()
+                .environment(themeManager)
+                .preferredColorScheme(themeManager.colorScheme)
+                .tint(themeManager.accentColor)
+        }
+    }
+    return Preview()
 }
 #endif
