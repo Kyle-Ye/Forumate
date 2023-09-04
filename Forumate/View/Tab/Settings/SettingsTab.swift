@@ -22,6 +22,8 @@ struct SettingsTab: View {
                         case .subscription: SubscriptionSection()
                         #if os(iOS) || os(visionOS) || os(tvOS) || os(macOS)
                         case .iconSelector: IconSelectorSection()
+                        #endif
+                        #if os(iOS) || os(visionOS) || os(macOS)
                         case .theme: ThemeSection()
                         #endif
                         case .general: GeneralSection()

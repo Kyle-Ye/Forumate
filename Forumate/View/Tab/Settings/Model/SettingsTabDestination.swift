@@ -13,6 +13,8 @@ struct SettingsTabDestination: Hashable {
         case subscription
         #if os(iOS) || os(visionOS) || os(tvOS) || os(macOS)
         case iconSelector
+        #endif
+        #if os(iOS) || os(visionOS) || os(macOS)
         case theme
         #endif
         case general

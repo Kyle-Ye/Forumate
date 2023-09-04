@@ -48,6 +48,8 @@ struct SettingsTabRoot: View {
                         .frame(height: 25)
                         .cornerRadius(5)
                 }
+                #endif
+                #if os(iOS) || os(visionOS) || os(macOS)
                 navigationItem(destination: .theme, text: "Theme") {
                     SettingIcon(icon: "globe", style: .blue)
                 }
