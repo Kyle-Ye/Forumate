@@ -11,10 +11,10 @@ import SwiftUI
 struct SettingsTabDestination: Hashable {
     enum ID {
         case subscription
-        #if os(iOS) || os(visionOS) || os(tvOS) || os(macOS)
+        #if os(iOS) || os(tvOS) || os(macOS)
         case iconSelector
         #endif
-        #if os(iOS) || os(visionOS) || os(macOS)
+        #if os(iOS) || os(macOS)
         case theme
         #endif
         case general

@@ -34,7 +34,7 @@ struct SettingsTabRoot: View {
                     SettingIcon(icon: "star.circle.fill", style: .yellow)
                 }
                 #endif
-                #if os(iOS) || os(visionOS) || os(tvOS) || os(macOS)
+                #if os(iOS) || os(tvOS) || os(macOS)
                 navigationItem(destination: .iconSelector, text: "App Icon") {
                     #if os(macOS)
                     let appIconName = IconSelectorSection.Icon.primary.appIconName
@@ -49,7 +49,7 @@ struct SettingsTabRoot: View {
                         .cornerRadius(5)
                 }
                 #endif
-                #if os(iOS) || os(visionOS) || os(macOS)
+                #if os(iOS) || os(macOS)
                 navigationItem(destination: .theme, text: "Theme") {
                     SettingIcon(icon: "globe", style: .blue)
                 }

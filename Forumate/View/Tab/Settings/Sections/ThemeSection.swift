@@ -5,7 +5,7 @@
 //  Created by Kyle on 2023/9/3.
 //
 
-#if os(iOS) || os(visionOS) || os(macOS)
+#if os(iOS) || os(macOS)
 import SwiftUI
 
 struct ThemeSection: View {

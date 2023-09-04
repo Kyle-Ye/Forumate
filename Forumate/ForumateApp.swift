@@ -21,7 +21,7 @@ struct ForumateApp: App {
     
     @StateObject private var appState = AppState()
     
-    #if os(iOS) || os(visionOS) || os(macOS)
+    #if os(iOS) || os(macOS)
     @State private var themeManager = ThemeManager()
     #endif
 
@@ -29,25 +29,27 @@ struct ForumateApp: App {
         WindowGroup {
             ContentView()
                 .environmentObject(appState)
-            #if os(iOS) || os(visionOS) || os(macOS)
+            #if os(iOS) || os(macOS)
                 .preferredColorScheme(themeManager.colorScheme)
                 .tint(themeManager.accentColor)
             #endif
         }
         .modelContainer(container)
-        #if os(iOS) || os(visionOS) || os(macOS)
+        #if os(iOS) || os(macOS)
             .environment(themeManager)
         #endif
         #if os(iOS) || os(visionOS) || os(macOS)
         WindowGroup("Topic Detail", id: "topic", for: TopicDetailWindowModel.self) { $detailModel in
             DetailWindowView(detailModel: detailModel)
-            #if os(iOS) || os(visionOS) || os(macOS)
+            #if os(iOS) || os(macOS)
                 .preferredColorScheme(themeManager.colorScheme)
                 .tint(themeManager.accentColor)
             #endif
         }
         .modelContainer(container)
-        .environment(themeManager)
+        #if os(iOS) || os(macOS)
+            .environment(themeManager)
+        #endif
         #endif
     }
 }
