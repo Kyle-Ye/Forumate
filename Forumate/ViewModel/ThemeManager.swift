@@ -170,6 +170,23 @@ class ThemeManager {
     }
     
     var accentColor: Color? {
+        #if os(macOS)
+        let color = NSColor(name: nil) { [weak self] appearance in
+            guard let self,
+                  let name = appearance.bestMatch(from: [.aqua, .darkAqua])
+            else { return .accent }
+            let color: NSColor
+            if name == .aqua {
+                color = NSColor(hex: lightColorString) ?? .accent
+            } else if name == .darkAqua {
+                color = NSColor(hex: darkColorString) ?? .accent
+            } else {
+                color = .accent
+            }
+            return color
+        }
+        return Color(nsColor: color)
+        #else
         let color = UIColor { [weak self] trait in
             guard let self else { return .clear }
             let color: UIColor
@@ -183,6 +200,7 @@ class ThemeManager {
             return color
         }
         return Color(uiColor: color)
+        #endif
     }
     
     // FIXME: Check Forumate+ status

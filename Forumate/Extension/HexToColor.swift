@@ -7,6 +7,17 @@
 
 import SwiftUI
 
+#if os(macOS)
+extension NSColor {
+    convenience init?(hex string: String, opacity: Double = 1.0) {
+        if let color = Color(hex: string, opacity: opacity) {
+            self.init(color)
+        } else {
+            return nil
+        }
+    }
+}
+#else
 extension UIColor {
     convenience init?(hex string: String, opacity: Double = 1.0) {
         if let color = Color(hex: string, opacity: opacity) {
@@ -16,6 +27,7 @@ extension UIColor {
         }
     }
 }
+#endif
 
 extension Color {
     init?(hex string: String, opacity: Double = 1.0) {
