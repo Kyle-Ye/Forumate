@@ -17,6 +17,7 @@ struct AcknowSection: View {
         .swift_http,
         .swift_log,
         .HtmlText,
+        .SimpleToast,
     ])
     
     var body: some View {
@@ -422,5 +423,12 @@ extension AcknowLibrary.Item {
         author: "Jnis",
         license: .mit,
         repository: URL(string: "https://github.com/Jnis/HtmlText")
+    )
+    
+    static let SimpleToast: AcknowLibrary.Item = .init(
+        title: "SimpleToast",
+        author: "Martin Albrecht",
+        license: .apache,
+        repository: URL(string: "https://github.com/sanzaru/SimpleToast.git")
     )
 }
