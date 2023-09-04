@@ -20,8 +20,11 @@ struct SettingsTab: View {
                     Group {
                         switch destination.id {
                         case .subscription: SubscriptionSection()
-                        #if os(iOS) || os(visionOS) || os(tvOS) || os(macOS)
+                        #if os(iOS) || os(tvOS) || os(macOS)
                         case .iconSelector: IconSelectorSection()
+                        #endif
+                        #if os(iOS) || os(macOS)
+                        case .theme: ThemeSection()
                         #endif
                         case .general: GeneralSection()
                         case .notification: Text("Unimplemented")

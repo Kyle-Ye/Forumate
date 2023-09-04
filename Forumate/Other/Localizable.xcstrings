@@ -117,6 +117,16 @@
         }
       }
     },
+    "Appearance" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "外观"
+          }
+        }
+      }
+    },
     "Browse Forumate's source code" : {
       "localizations" : {
         "zh-Hans" : {
@@ -247,6 +257,16 @@
         }
       }
     },
+    "Dark" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "深色"
+          }
+        }
+      }
+    },
     "Default View By Type" : {
       "localizations" : {
         "zh-Hans" : {
@@ -317,6 +337,16 @@
         }
       }
     },
+    "Follow System" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "跟随系统"
+          }
+        }
+      }
+    },
     "Forumate only supports communities built using the Discourse platform and running HTTPS. Please consult the support page for help regarding supported communities." : {
       "localizations" : {
         "zh-Hans" : {
@@ -357,6 +387,16 @@
         }
       }
     },
+    "If you spot some theme color is not refreshed, you may consider relauching the app." : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "如果您发现部分主题色未更新，可以考虑重新启动App。"
+          }
+        }
+      }
+    },
     "Inbox" : {
       "localizations" : {
         "zh-Hans" : {
@@ -373,6 +413,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "加入 Forumate 的 Discord 社区"
+          }
+        }
+      }
+    },
+    "Light" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "浅色"
           }
         }
       }
@@ -683,6 +733,26 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "提供的社区似乎不是一个 Discourse 服务器。"
+          }
+        }
+      }
+    },
+    "Theme" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "主题"
+          }
+        }
+      }
+    },
+    "Theme Color Customization" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "定制主题色"
           }
         }
       }

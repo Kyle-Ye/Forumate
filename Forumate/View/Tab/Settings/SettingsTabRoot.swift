@@ -6,7 +6,6 @@
 //
 
 import Observation
-import SimpleToast
 import SwiftUI
 
 struct SettingsTabRoot: View {
@@ -34,7 +33,7 @@ struct SettingsTabRoot: View {
                     SettingIcon(icon: "star.circle.fill", style: .yellow)
                 }
                 #endif
-                #if os(iOS) || os(visionOS) || os(tvOS) || os(macOS)
+                #if os(iOS) || os(tvOS) || os(macOS)
                 navigationItem(destination: .iconSelector, text: "App Icon") {
                     #if os(macOS)
                     let appIconName = IconSelectorSection.Icon.primary.appIconName
@@ -47,6 +46,11 @@ struct SettingsTabRoot: View {
                         .scaledToFit()
                         .frame(height: 25)
                         .cornerRadius(5)
+                }
+                #endif
+                #if os(iOS) || os(macOS)
+                navigationItem(destination: .theme, text: "Theme") {
+                    SettingIcon(icon: "globe", style: .blue)
                 }
                 #endif
             }
@@ -77,15 +81,15 @@ struct SettingsTabRoot: View {
                 """)
                 .multilineTextAlignment(.leading)
                 #if os(iOS) || os(visionOS) || os(macOS)
-                .onTapGesture(count: 2) {
-                    showPasteToast.toggle()
-                    let content = "\(AppInfo.name) v\(AppInfo.version) Build \(AppInfo.buildNumber) · \(AppInfo.OSVersion)"
-                    #if os(macOS)
-                    NSPasteboard.general.setString(content, forType: .string)
-                    #else
-                    UIPasteboard.general.string = content
-                    #endif
-                }
+                    .onTapGesture(count: 2) {
+                        showPasteToast.toggle()
+                        let content = "\(AppInfo.name) v\(AppInfo.version) Build \(AppInfo.buildNumber) · \(AppInfo.OSVersion)"
+                        #if os(macOS)
+                        NSPasteboard.general.setString(content, forType: .string)
+                        #else
+                        UIPasteboard.general.string = content
+                        #endif
+                    }
                 #endif
             }
         }
@@ -109,11 +113,11 @@ struct SettingsTabRoot: View {
         }
         .navigationTitle("Settings")
         #if os(iOS) || os(visionOS) || os(macOS)
-        .toast(isPresented: $showPasteToast) {
-            Label("Copied into clipboard", systemImage: "doc.on.clipboard")
-                .foregroundStyle(.white)
-                .tint(.accent.opacity(0.8))
-        }
+            .toast(isPresented: $showPasteToast) {
+                Label("Copied into clipboard", systemImage: "doc.on.clipboard")
+                    .foregroundStyle(.white)
+                    .tint(Color.accentColor.opacity(0.8))
+            }
         #endif
     }
 }

@@ -5,7 +5,7 @@
 //  Created by Kyle on 2023/7/30.
 //
 
-#if os(iOS) || os(visionOS) || os(tvOS) || os(macOS)
+#if os(iOS) || os(tvOS) || os(macOS)
 import os.log
 import SwiftUI
 
