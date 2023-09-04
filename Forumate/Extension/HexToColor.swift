@@ -7,6 +7,16 @@
 
 import SwiftUI
 
+extension UIColor {
+    convenience init?(hex string: String, opacity: Double = 1.0) {
+        if let color = Color(hex: string, opacity: opacity) {
+            self.init(color)
+        } else {
+            return nil
+        }
+    }
+}
+
 extension Color {
     init?(hex string: String, opacity: Double = 1.0) {
         // Remove the prefix

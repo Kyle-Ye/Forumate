@@ -48,6 +48,9 @@ struct SettingsTabRoot: View {
                         .frame(height: 25)
                         .cornerRadius(5)
                 }
+                navigationItem(destination: .theme, text: "Theme") {
+                    SettingIcon(icon: "globe", style: .blue)
+                }
                 #endif
             }
             Section {
@@ -77,15 +80,15 @@ struct SettingsTabRoot: View {
                 """)
                 .multilineTextAlignment(.leading)
                 #if os(iOS) || os(visionOS) || os(macOS)
-                .onTapGesture(count: 2) {
-                    showPasteToast.toggle()
-                    let content = "\(AppInfo.name) v\(AppInfo.version) Build \(AppInfo.buildNumber) · \(AppInfo.OSVersion)"
-                    #if os(macOS)
-                    NSPasteboard.general.setString(content, forType: .string)
-                    #else
-                    UIPasteboard.general.string = content
-                    #endif
-                }
+                    .onTapGesture(count: 2) {
+                        showPasteToast.toggle()
+                        let content = "\(AppInfo.name) v\(AppInfo.version) Build \(AppInfo.buildNumber) · \(AppInfo.OSVersion)"
+                        #if os(macOS)
+                        NSPasteboard.general.setString(content, forType: .string)
+                        #else
+                        UIPasteboard.general.string = content
+                        #endif
+                    }
                 #endif
             }
         }
@@ -109,11 +112,11 @@ struct SettingsTabRoot: View {
         }
         .navigationTitle("Settings")
         #if os(iOS) || os(visionOS) || os(macOS)
-        .toast(isPresented: $showPasteToast) {
-            Label("Copied into clipboard", systemImage: "doc.on.clipboard")
-                .foregroundStyle(.white)
-                .tint(.accent.opacity(0.8))
-        }
+            .toast(isPresented: $showPasteToast) {
+                Label("Copied into clipboard", systemImage: "doc.on.clipboard")
+                    .foregroundStyle(.white)
+                    .tint(Color.accentColor.opacity(0.8))
+            }
         #endif
     }
 }

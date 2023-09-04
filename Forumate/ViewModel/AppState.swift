@@ -26,6 +26,11 @@ class AppState: ObservableObject {
         starterIntroVersion = AppInfo.starterIntroVersion
     }
     
+    // MARK: - Color customazation
+    
+    // TODO: Managed by Hex value of Observable
+    
+    
     // MARK: Cache
     
     private var memoryCache: [UUID: Cache] = [:]

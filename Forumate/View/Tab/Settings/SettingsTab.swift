@@ -22,6 +22,7 @@ struct SettingsTab: View {
                         case .subscription: SubscriptionSection()
                         #if os(iOS) || os(visionOS) || os(tvOS) || os(macOS)
                         case .iconSelector: IconSelectorSection()
+                        case .theme: ThemeSection()
                         #endif
                         case .general: GeneralSection()
                         case .notification: Text("Unimplemented")
