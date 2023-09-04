@@ -6,7 +6,6 @@
 //
 
 import Observation
-import SimpleToast
 import SwiftUI
 
 struct SettingsTabRoot: View {
