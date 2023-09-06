@@ -124,7 +124,7 @@ struct CommunityList: View {
                     modelContext.delete(community)
                 } label: {
                     Label("Delete", systemImage: "trash")
-                }
+                }.tint(.red)
             }
             .swipeActions(edge: .leading) {
                 Button {
@@ -133,8 +133,8 @@ struct CommunityList: View {
                     Label(
                         community.pin ? "Unpin" : "Pin",
                         systemImage: community.pin ? "pin.slash.fill" : "pin.fill"
-                    ).tint(.orange)
-                }
+                    )
+                }.tint(.orange)
             }
             #endif
         }
