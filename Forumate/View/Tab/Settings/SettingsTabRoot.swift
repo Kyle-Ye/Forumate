@@ -28,11 +28,9 @@ struct SettingsTabRoot: View {
     var body: some View {
         List(selection: $tabState.destination) {
             Section {
-                #if DEBUG
-                navigationItem(destination: .subscription, text: "Forumate+") {
+                navigationItem(destination: .forumatePlus, text: "Forumate+") {
                     SettingIcon(icon: "star.circle.fill", style: .yellow)
                 }
-                #endif
                 #if os(iOS) || os(tvOS) || os(macOS)
                 navigationItem(destination: .iconSelector, text: "App Icon") {
                     #if os(macOS)

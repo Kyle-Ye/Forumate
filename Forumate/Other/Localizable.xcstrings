@@ -21,6 +21,9 @@
         }
       }
     },
+    "* Only avaiable on supported platforms" : {
+
+    },
     "%@" : {
       "localizations" : {
         "zh-Hans" : {
@@ -77,6 +80,9 @@
         }
       }
     },
+    "1" : {
+
+    },
     "Acknowledgement" : {
       "localizations" : {
         "zh-Hans" : {
@@ -116,6 +122,9 @@
           }
         }
       }
+    },
+    "App Icon Replacement" : {
+
     },
     "Appearance" : {
       "localizations" : {
@@ -287,6 +296,9 @@
         }
       }
     },
+    "Development Support Subscription" : {
+
+    },
     "Discuss at Discourse Forum Topic" : {
       "localizations" : {
         "zh-Hans" : {
@@ -316,6 +328,9 @@
           }
         }
       }
+    },
+    "Exclusive features" : {
+
     },
     "Feature Suggestion" : {
       "localizations" : {
@@ -357,6 +372,9 @@
         }
       }
     },
+    "Forumate's most feature is free and its source code is avaiable on GitHub." : {
+
+    },
     "Forumate+" : {
       "localizations" : {
         "zh-Hans" : {
@@ -376,6 +394,9 @@
           }
         }
       }
+    },
+    "Hello, World!" : {
+
     },
     "Highlighted Features" : {
       "localizations" : {
@@ -416,6 +437,9 @@
           }
         }
       }
+    },
+    "Lifetime Plan" : {
+
     },
     "Light" : {
       "localizations" : {
@@ -687,6 +711,9 @@
         }
       }
     },
+    "Subscription Plan" : {
+
+    },
     "Successfully saved the icon to the Downloads folder." : {
       "localizations" : {
         "zh-Hans" : {
@@ -846,6 +873,21 @@
           }
         }
       }
+    },
+    "You can support this project by becoming a Forumate+ Member via **Subscription Plan** or **Lifetime Plan**" : {
+
+    },
+    "You do not have any active Forumate+ subscription" : {
+
+    },
+    "You have a lifetime Forumate+ membership." : {
+
+    },
+    "You have an active Forumate+ subscription. Thank you for your support." : {
+
+    },
+    "Your Forumate+ subscription is expired" : {
+
     }
   },
   "version" : "1.0"
