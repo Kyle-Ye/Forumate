@@ -16,8 +16,11 @@ struct ThemeSection: View {
         List {
             Section {
                 HStack {
+                    Spacer()
                     AppearanceItem(isDark: false)
+                    Spacer()
                     AppearanceItem(isDark: true)
+                    Spacer()
                 }
                 Toggle(isOn: $themeManager.automatic) {
                     Text("Follow System")
@@ -53,31 +56,27 @@ struct ThemeSection: View {
         @Environment(ThemeManager.self) var themeManager
         var isDark: Bool
         
-        var iconName: String {
-            if (isDark && themeManager.dark) || (!isDark && themeManager.light) {
-                return "checkmark.circle.fill"
-            } else {
-                return "circle"
-            }
-        }
-        
         var body: some View {
             VStack {
                 Rectangle()
                     .foregroundStyle(.thickMaterial)
-                    .aspectRatio(9 / 16, contentMode: .fill)
+                    .aspectRatio(UIScreen.main.bounds.width / UIScreen.main.bounds.height, contentMode: .fit)
+                    .frame(height: 200)
                     .clipShape(RoundedRectangle(cornerRadius: 10))
                     .overlay(alignment: .bottom) {
                         HStack {
-                            Circle()
-                            Circle()
-                            Circle()
+                            Circle().frame(maxHeight: 50)
+                            Circle().frame(maxHeight: 50)
+                            Circle().frame(maxHeight: 50)
                         }
-                        .padding()
+                        .padding(.horizontal)
                         .foregroundStyle(isDark ? themeManager.darkColor : themeManager.lightColor)
                     }
                     .environment(\.colorScheme, isDark ? .dark : .light)
-                Label(isDark ? "Dark" : "Light", systemImage: iconName)
+                Label(isDark ? "Dark" : "Light", systemImage: "checkmark")
+                    .symbolVariant(.circle)
+                    .symbolVariant((isDark && themeManager.dark) || (!isDark && themeManager.light) ? .fill : .none)
+                
             }
             .onTapGesture {
                 if isDark {
