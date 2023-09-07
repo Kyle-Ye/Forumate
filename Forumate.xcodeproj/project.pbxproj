@@ -154,6 +154,7 @@
 		27DFFCF12A2B2FD3005661BD /* TopicDetailWindowModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DFFCEF2A2B2FD3005661BD /* TopicDetailWindowModel.swift */; };
 		27DFFCF72A2B35AB005661BD /* DiscourseKit in Frameworks */ = {isa = PBXBuildFile; productRef = 27DFFCF62A2B35AB005661BD /* DiscourseKit */; };
 		27DFFCF92A2B35B3005661BD /* DiscourseKit in Frameworks */ = {isa = PBXBuildFile; productRef = 27DFFCF82A2B35B3005661BD /* DiscourseKit */; };
+		27EE5B992AA86A39002058D7 /* ContributorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27EE5B982AA86A39002058D7 /* ContributorView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -266,6 +267,7 @@
 		27DFFCE22A2B0509005661BD /* View+Size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Size.swift"; sourceTree = "<group>"; };
 		27DFFCE72A2B13EB005661BD /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		27DFFCEF2A2B2FD3005661BD /* TopicDetailWindowModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicDetailWindowModel.swift; sourceTree = "<group>"; };
+		27EE5B982AA86A39002058D7 /* ContributorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributorView.swift; sourceTree = "<group>"; };
 		27EEA08629EFCD1B00ADA5BE /* Forumate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Forumate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -351,6 +353,7 @@
 				274C4C9D2A3F81D10018BFA4 /* SubscriptionSection.swift */,
 				27D219112A75954900501849 /* IconSelectorSection.swift */,
 				27024A9A2AA45EE9005650B4 /* ThemeSection.swift */,
+				27EE5B982AA86A39002058D7 /* ContributorView.swift */,
 			);
 			path = Sections;
 			sourceTree = "<group>";
@@ -957,6 +960,7 @@
 				273AFBD62A1A801500DD08F5 /* GeneralSection.swift in Sources */,
 				278E54082A18E83000DCD159 /* InboxTab.swift in Sources */,
 				278E54062A18E83000DCD159 /* PlaceholderView.swift in Sources */,
+				27EE5B992AA86A39002058D7 /* ContributorView.swift in Sources */,
 				273AFBCB2A1A642900DD08F5 /* CategoryListView.swift in Sources */,
 				276F9F472A2A606600020B1B /* PostView.swift in Sources */,
 				27D219042A756E7900501849 /* Logger+Extension.swift in Sources */,

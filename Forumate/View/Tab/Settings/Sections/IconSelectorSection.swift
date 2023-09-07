@@ -98,21 +98,24 @@ struct IconSelectorSection: View {
             #endif
         }
         let label = {
-            Image(platformNamed: icon.iconName)
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(minHeight: 125, maxHeight: 1024)
-            #if !canImport(AppKit)
-                .cornerRadius(6)
-                .shadow(radius: 3)
-                .overlay(alignment: .bottomTrailing) {
-                    if icon.appIconName == currentIcon {
-                        Image(systemName: "checkmark.seal.fill")
-                            .padding(4)
-                            .tint(.green)
+            VStack {
+                Image(platformNamed: icon.iconName)
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(minHeight: 125, maxHeight: 1024)
+                #if !canImport(AppKit)
+                    .cornerRadius(6)
+                    .shadow(radius: 3)
+                    .overlay(alignment: .bottomTrailing) {
+                        if icon.appIconName == currentIcon {
+                            Image(systemName: "checkmark.seal.fill")
+                                .padding(4)
+                                .tint(.green)
+                        }
                     }
-                }
-            #endif
+                #endif
+                ContributorView(info: icon.author)
+            }
         }
 
         Group {
@@ -180,6 +183,13 @@ extension IconSelectorSection {
 
         var iconName: String {
             "icon\(rawValue)"
+        }
+        
+        var author: ContributorInfo {
+            switch self {
+            case .primary: .frad
+            case .alt1: .kyle
+            }
         }
     }
 }
