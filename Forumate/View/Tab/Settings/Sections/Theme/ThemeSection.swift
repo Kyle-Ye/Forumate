@@ -70,20 +70,33 @@ struct ThemeSection: View {
         @Environment(ThemeManager.self) var themeManager
         var isDark: Bool
         
+        var ratio: Double {
+            #if os(macOS)
+            if let screen = NSScreen.main {
+                screen.frame.width / screen.frame.height
+            } else {
+                16 / 9
+            }
+            #else
+            UIScreen.main.bounds.width / UIScreen.main.bounds.height
+            #endif
+        }
+                
         var body: some View {
             VStack {
                 Rectangle()
                     .foregroundStyle(.thickMaterial)
-                    .aspectRatio(UIScreen.main.bounds.width / UIScreen.main.bounds.height, contentMode: .fit)
+                    .aspectRatio(ratio, contentMode: .fit)
                     .frame(height: 200)
                     .clipShape(RoundedRectangle(cornerRadius: 10))
                     .overlay(alignment: .bottom) {
                         HStack {
-                            Circle().frame(maxHeight: 50)
-                            Circle().frame(maxHeight: 50)
-                            Circle().frame(maxHeight: 50)
+                            Circle().frame(maxHeight: 25)
+                            Circle().frame(maxHeight: 25)
+                            Circle().frame(maxHeight: 25)
                         }
                         .padding(.horizontal)
+                        .padding(.bottom, 10)
                         .foregroundStyle(isDark ? themeManager.darkColor : themeManager.lightColor)
                     }
                     .environment(\.colorScheme, isDark ? .dark : .light)

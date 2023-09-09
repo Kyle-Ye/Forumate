@@ -67,7 +67,6 @@ struct ForumatePlusSection: View {
             }
         }
         .navigationTitle("Forumate+")
-        .subscriptionStoreButtonLabel(.displayName)
     }
 }
 

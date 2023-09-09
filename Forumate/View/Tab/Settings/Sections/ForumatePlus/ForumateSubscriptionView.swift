@@ -8,7 +8,7 @@
 import StoreKit
 import SwiftUI
 
-struct ForumateSubscriptionView: View {    
+struct ForumateSubscriptionView: View {
     var body: some View {
         SubscriptionStoreView(groupID: PlusManager.groupID, visibleRelationships: .all) {
             Image(.graph)
@@ -23,13 +23,15 @@ struct ForumateSubscriptionView: View {
         }
         .backgroundStyle(.clear)
         #if os(iOS) || os(visionOS) || os(macOS)
-        .subscriptionStoreButtonLabel(.multiline)
-        .storeButton(.visible, for: .redeemCode)
+            .subscriptionStoreButtonLabel(.multiline)
         #endif
         #if os(iOS) || os(visionOS) || os(watchOS) || os(macOS)
         .subscriptionStorePickerItemBackground(.ultraThinMaterial)
         #endif
-        .storeButton(.visible, for: .restorePurchases)        
+        .storeButton(.visible, for: .restorePurchases)
+        #if os(iOS) || os(visionOS)
+            .storeButton(.visible, for: .redeemCode)
+        #endif
     }
 }
 
