@@ -39,11 +39,13 @@ struct IconSelectorSection: View {
     #endif
 
     private static let logger = Logger(subsystem: Logger.subsystem, category: "IconSelectorSection")
+    @Environment(PlusManager.self) private var plusManager
+    @State private var presentSubscription = false
 
     var body: some View {
         VStack {
             #if canImport(AppKit)
-            Text("Update App Icon in App is not supported on macOS. You can click to save the icon and manully update it via Finder.")
+            Text("Update App Icon is not supported on macOS. But you can click to save the icon and manully update it via Finder.")
             Link(destination: URL(string: "https://support.apple.com/guide/mac-help/change-icons-for-files-or-folders-on-mac-mchlp2313/mac")!) {
                 Text("See Apple's macOS manual for more information.")
             }
@@ -84,10 +86,14 @@ struct IconSelectorSection: View {
                 showAlert = true
             }
             #else
-            _ = Task {
+            _ = Task { @MainActor in
                 do {
                     let name = icon.rawValue == Icon.primary.rawValue ? nil : icon.appIconName
-                    try await UIApplication.shared.setAlternateIconName(name)
+                    if plusManager.plusEntitlement {
+                        try await UIApplication.shared.setAlternateIconName(name)
+                    } else {
+                        throw IconError(PlusError.plusOnlyFeature)
+                    }
                     currentIcon = icon.appIconName
                 } catch {
                     setAlternateIconError = IconError(error)
@@ -146,8 +152,15 @@ struct IconSelectorSection: View {
         #else
         .alert(isPresented: $showAlert, error: setAlternateIconError) {
                 Button("OK") {}
+                Button("Learn more about Forumate+") {
+                    presentSubscription.toggle()
+                }
+                .tint(Color.accentColor)
             }
         #endif
+            .sheet(isPresented: $presentSubscription) {
+                ForumatePlusSectionSheet()
+            }
     }
 }
 

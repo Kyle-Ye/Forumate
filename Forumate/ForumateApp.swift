@@ -24,32 +24,32 @@ struct ForumateApp: App {
     #if os(iOS) || os(macOS)
     @State private var themeManager = ThemeManager()
     #endif
+    
+    @State private var plusManager = PlusManager()
 
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .environmentObject(appState)
-            #if os(iOS) || os(macOS)
-                .preferredColorScheme(themeManager.colorScheme)
-                .tint(themeManager.accentColor)
-            #endif
+                .modifier(AppViewModifier())
         }
-        .modelContainer(container)
+        .environmentObject(appState)
         #if os(iOS) || os(macOS)
             .environment(themeManager)
         #endif
+            .environment(plusManager)
+            .modelContainer(container)
+
         #if os(iOS) || os(visionOS) || os(macOS)
         WindowGroup("Topic Detail", id: "topic", for: TopicDetailWindowModel.self) { $detailModel in
             DetailWindowView(detailModel: detailModel)
-            #if os(iOS) || os(macOS)
-                .preferredColorScheme(themeManager.colorScheme)
-                .tint(themeManager.accentColor)
-            #endif
+                .modifier(AppViewModifier())
         }
-        .modelContainer(container)
+        .environmentObject(appState)
         #if os(iOS) || os(macOS)
             .environment(themeManager)
         #endif
+            .environment(plusManager)
+            .modelContainer(container)
         #endif
     }
 }
@@ -65,7 +65,6 @@ struct DetailWindowView: View {
         if let detailModel,
            let community = context.model(for: detailModel.communityID) as? Community {
             TopicDetail(topic: detailModel.topic)
-                .environmentObject(appState)
                 .environmentObject(CommunityDetailState(community: community))
         } else {
             PlaceholderView(text: "No Topic Detail")

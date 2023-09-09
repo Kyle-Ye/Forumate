@@ -19,7 +19,7 @@ struct SettingsTab: View {
                 if let destination = tabState.destination {
                     Group {
                         switch destination.id {
-                        case .subscription: SubscriptionSection()
+                        case .forumatePlus: ForumatePlusSection()
                         #if os(iOS) || os(tvOS) || os(macOS)
                         case .iconSelector: IconSelectorSection()
                         #endif

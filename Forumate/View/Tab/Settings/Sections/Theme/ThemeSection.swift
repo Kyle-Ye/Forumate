@@ -9,15 +9,20 @@
 import SwiftUI
 
 struct ThemeSection: View {
-    @Environment(ThemeManager.self) var themeManager
-    
+    @Environment(ThemeManager.self) private var themeManager
+    @Environment(PlusManager.self) private var plusManager
+    @State private var presentSubscription = false
+
     var body: some View {
         @Bindable var themeManager = themeManager
         List {
             Section {
                 HStack {
+                    Spacer()
                     AppearanceItem(isDark: false)
+                    Spacer()
                     AppearanceItem(isDark: true)
+                    Spacer()
                 }
                 Toggle(isOn: $themeManager.automatic) {
                     Text("Follow System")
@@ -26,11 +31,23 @@ struct ThemeSection: View {
                 Text("Appearance")
             }
             Section {
-                Toggle(isOn: $themeManager.enableCustomColor) {
-                    if themeManager.isPlusUser {
-                        Text(verbatim: "👑 Forumate+").textCase(nil)
-                    } else {
-                        Text(verbatim: "🔒 Forumate+").textCase(nil)
+                if plusManager.plusEntitlement {
+                    Toggle(isOn: $themeManager.enableCustomColor) {
+                        Text(verbatim: "👑 Forumate+")
+                    }
+                } else {
+                    Toggle(isOn: $themeManager.enableCustomColor) {
+                        Text(verbatim: "🔒 Forumate+")
+                    }
+                    .disabled(true)
+                    .onAppear {
+                        themeManager.enableCustomColor = false
+                    }
+                    .onTapGesture {
+                        presentSubscription.toggle()
+                    }
+                    .sheet(isPresented: $presentSubscription) {
+                        ForumatePlusSectionSheet()
                     }
                 }
                 ColorPicker("Light", selection: $themeManager.lightColor, supportsOpacity: true)
@@ -53,31 +70,39 @@ struct ThemeSection: View {
         @Environment(ThemeManager.self) var themeManager
         var isDark: Bool
         
-        var iconName: String {
-            if (isDark && themeManager.dark) || (!isDark && themeManager.light) {
-                return "checkmark.circle.fill"
+        var ratio: Double {
+            #if os(macOS)
+            if let screen = NSScreen.main {
+                screen.frame.width / screen.frame.height
             } else {
-                return "circle"
+                16 / 9
             }
+            #else
+            UIScreen.main.bounds.width / UIScreen.main.bounds.height
+            #endif
         }
-        
+                
         var body: some View {
             VStack {
                 Rectangle()
                     .foregroundStyle(.thickMaterial)
-                    .aspectRatio(9 / 16, contentMode: .fill)
+                    .aspectRatio(ratio, contentMode: .fit)
+                    .frame(height: 200)
                     .clipShape(RoundedRectangle(cornerRadius: 10))
                     .overlay(alignment: .bottom) {
                         HStack {
-                            Circle()
-                            Circle()
-                            Circle()
+                            Circle().frame(maxHeight: 25)
+                            Circle().frame(maxHeight: 25)
+                            Circle().frame(maxHeight: 25)
                         }
-                        .padding()
+                        .padding(.horizontal)
+                        .padding(.bottom, 10)
                         .foregroundStyle(isDark ? themeManager.darkColor : themeManager.lightColor)
                     }
                     .environment(\.colorScheme, isDark ? .dark : .light)
-                Label(isDark ? "Dark" : "Light", systemImage: iconName)
+                Label(isDark ? "Dark" : "Light", systemImage: "checkmark")
+                    .symbolVariant(.circle)
+                    .symbolVariant((isDark && themeManager.dark) || (!isDark && themeManager.light) ? .fill : .none)
             }
             .onTapGesture {
                 if isDark {
