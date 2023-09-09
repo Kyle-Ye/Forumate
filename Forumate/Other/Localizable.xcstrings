@@ -197,6 +197,16 @@
         }
       }
     },
+    "Close" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "关闭"
+          }
+        }
+      }
+    },
     "Communities" : {
       "localizations" : {
         "zh-Hans" : {
@@ -907,12 +917,12 @@
         }
       }
     },
-    "Update App Icon in App is not supported on macOS. You can click to save the icon and manully update it via Finder." : {
+    "Update App Icon is not supported on macOS. But you can click to save the icon and manully update it via Finder." : {
       "localizations" : {
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "macOS 不支持在应用中更新图标。您可以单击以保存图标，并通过Finder进行手动更新。"
+            "value" : "macOS 不支持更新图标。但您可以单击以保存图标，并通过Finder进行手动更新。"
           }
         }
       }
@@ -972,7 +982,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "您拥有永久 Forumate+ 会员资格。"
+            "value" : "您拥有永久 Forumate+ 会员身份。"
           }
         }
       }
@@ -983,6 +993,17 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "您有一个活跃的 Forumate+ 订阅。感谢您的支持。"
+          }
+        }
+      }
+    },
+    "You need an active Forumate+ membership to unlock this feature." : {
+      "comment" : "Plus only feature Description",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "您需要一个活跃的 Forumate+ 会员身份才能解锁此功能。"
           }
         }
       }

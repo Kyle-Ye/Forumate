@@ -45,7 +45,7 @@ struct IconSelectorSection: View {
     var body: some View {
         VStack {
             #if canImport(AppKit)
-            Text("Update App Icon in App is not supported on macOS. You can click to save the icon and manully update it via Finder.")
+            Text("Update App Icon is not supported on macOS. But you can click to save the icon and manully update it via Finder.")
             Link(destination: URL(string: "https://support.apple.com/guide/mac-help/change-icons-for-files-or-folders-on-mac-mchlp2313/mac")!) {
                 Text("See Apple's macOS manual for more information.")
             }
@@ -159,9 +159,7 @@ struct IconSelectorSection: View {
             }
         #endif
             .sheet(isPresented: $presentSubscription) {
-                NavigationStack {
-                    ForumatePlusSection()
-                }
+                ForumatePlusSectionSheet()
             }
     }
 }

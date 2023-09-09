@@ -16,7 +16,7 @@ struct ForumatePlusSection: View {
         List {
             Section {
                 if plusManager.plusEntitlement {
-                    Text(verbatim: "✅")                    
+                    Text(verbatim: "✅")
                 }
                 if plusManager.lifeTimeEntitlement {
                     Label("You have a lifetime Forumate+ membership.", systemImage: "crown.fill")
@@ -33,7 +33,7 @@ struct ForumatePlusSection: View {
             }
             Section {
                 Text("App Icon Replacement") + Text(verbatim: " *")
-                Text("Theme Color Customization")
+                Text("Theme Color Customization") + Text(verbatim: " *")
             } header: {
                 Text("Exclusive features")
             } footer: {
@@ -44,14 +44,10 @@ struct ForumatePlusSection: View {
                 Text("You can support this project by becoming a Forumate+ Member via **Subscription Plan** or **Lifetime Plan**")
             }
             Section {
-                Button {
-                    presentSubscription.toggle()
+                NavigationLink {
+                    ForumateSubscriptionView()
                 } label: {
                     Text("Development Support Subscription")
-                }
-                .buttonStyle(.borderedProminent)
-                .sheet(isPresented: $presentSubscription) {
-                    ForumateSubscriptionView()
                 }
             } header: {
                 Text("Subscription Plan")
@@ -72,6 +68,32 @@ struct ForumatePlusSection: View {
         }
         .navigationTitle("Forumate+")
         .subscriptionStoreButtonLabel(.displayName)
+    }
+}
+
+struct ForumatePlusSectionSheet: View {
+    @Environment(\.dismiss) var dismiss
+    @Environment(PlusManager.self) private var plusManager
+
+    var body: some View {
+        NavigationStack {
+            ForumatePlusSection()
+            #if canImport(AppKit)
+                .toolbar {
+                    Button {
+                        dismiss()
+                    } label: {
+                        Label("Close", systemImage: "xmark.circle.fill")
+                    }
+                }
+            #endif
+        }
+        .onInAppPurchaseCompletion { product, result in
+            if case let .success(.success(transaction)) = result {
+                try? await plusManager.process(transaction)
+                dismiss()
+            }
+        }
     }
 }
 

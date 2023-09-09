@@ -10,7 +10,7 @@ import SwiftUI
 
 struct ForumateSubscriptionView: View {    
     var body: some View {
-        SubscriptionStoreView(groupID: "21353237", visibleRelationships: .all) {
+        SubscriptionStoreView(groupID: PlusManager.groupID, visibleRelationships: .all) {
             Image(.graph)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
@@ -29,7 +29,7 @@ struct ForumateSubscriptionView: View {
         #if os(iOS) || os(visionOS) || os(watchOS) || os(macOS)
         .subscriptionStorePickerItemBackground(.ultraThinMaterial)
         #endif
-        .storeButton(.visible, for: .restorePurchases)
+        .storeButton(.visible, for: .restorePurchases)        
     }
 }
 

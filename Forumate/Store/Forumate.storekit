@@ -24,7 +24,7 @@
     "_applicationInternalID" : "6449866904",
     "_developerTeamID" : "VB7MJ8R223",
     "_failTransactionsEnabled" : false,
-    "_lastSynchronizedDate" : 715843163.74829805,
+    "_lastSynchronizedDate" : 715940801.67057896,
     "_locale" : "en_US",
     "_storefront" : "USA",
     "_storeKitErrors" : [
@@ -58,7 +58,10 @@
         "name" : "App Store Sync"
       },
       {
-        "current" : null,
+        "current" : {
+          "index" : 2,
+          "type" : "generic"
+        },
         "enabled" : false,
         "name" : "Subscription Status"
       },
@@ -76,7 +79,10 @@
         "name" : "Manage Subscriptions Sheet"
       },
       {
-        "current" : null,
+        "current" : {
+          "index" : 0,
+          "type" : "refund request"
+        },
         "enabled" : false,
         "name" : "Refund Request Sheet"
       },
@@ -107,7 +113,7 @@
           "groupNumber" : 1,
           "internalID" : "6450400527",
           "introductoryOffer" : {
-            "internalID" : "7D821319",
+            "internalID" : "4FA5ADE5",
             "numberOfPeriods" : 1,
             "paymentMode" : "free",
             "subscriptionPeriod" : "P1W"
@@ -137,7 +143,7 @@
           "groupNumber" : 2,
           "internalID" : "6464517034",
           "introductoryOffer" : {
-            "internalID" : "D391ADD2",
+            "internalID" : "C234686E",
             "numberOfPeriods" : 1,
             "paymentMode" : "free",
             "subscriptionPeriod" : "P1M"

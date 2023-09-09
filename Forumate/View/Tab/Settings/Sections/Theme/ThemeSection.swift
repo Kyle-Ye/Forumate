@@ -40,13 +40,14 @@ struct ThemeSection: View {
                         Text(verbatim: "🔒 Forumate+")
                     }
                     .disabled(true)
+                    .onAppear {
+                        themeManager.enableCustomColor = false
+                    }
                     .onTapGesture {
                         presentSubscription.toggle()
                     }
                     .sheet(isPresented: $presentSubscription) {
-                        NavigationStack {
-                            ForumatePlusSection()
-                        }
+                        ForumatePlusSectionSheet()
                     }
                 }
                 ColorPicker("Light", selection: $themeManager.lightColor, supportsOpacity: true)
