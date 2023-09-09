@@ -9,8 +9,10 @@
 import SwiftUI
 
 struct ThemeSection: View {
-    @Environment(ThemeManager.self) var themeManager
-    
+    @Environment(ThemeManager.self) private var themeManager
+    @Environment(PlusManager.self) private var plusManager
+    @State private var presentSubscription = false
+
     var body: some View {
         @Bindable var themeManager = themeManager
         List {
@@ -29,11 +31,22 @@ struct ThemeSection: View {
                 Text("Appearance")
             }
             Section {
-                Toggle(isOn: $themeManager.enableCustomColor) {
-                    if themeManager.isPlusUser {
-                        Text(verbatim: "👑 Forumate+").textCase(nil)
-                    } else {
-                        Text(verbatim: "🔒 Forumate+").textCase(nil)
+                if plusManager.plusEntitlement {
+                    Toggle(isOn: $themeManager.enableCustomColor) {
+                        Text(verbatim: "👑 Forumate+")
+                    }
+                } else {
+                    Toggle(isOn: $themeManager.enableCustomColor) {
+                        Text(verbatim: "🔒 Forumate+")
+                    }
+                    .disabled(true)
+                    .onTapGesture {
+                        presentSubscription.toggle()
+                    }
+                    .sheet(isPresented: $presentSubscription) {
+                        NavigationStack {
+                            ForumatePlusSection()
+                        }
                     }
                 }
                 ColorPicker("Light", selection: $themeManager.lightColor, supportsOpacity: true)
@@ -76,7 +89,6 @@ struct ThemeSection: View {
                 Label(isDark ? "Dark" : "Light", systemImage: "checkmark")
                     .symbolVariant(.circle)
                     .symbolVariant((isDark && themeManager.dark) || (!isDark && themeManager.light) ? .fill : .none)
-                
             }
             .onTapGesture {
                 if isDark {

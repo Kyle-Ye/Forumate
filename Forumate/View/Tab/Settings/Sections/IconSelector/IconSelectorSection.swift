@@ -39,6 +39,8 @@ struct IconSelectorSection: View {
     #endif
 
     private static let logger = Logger(subsystem: Logger.subsystem, category: "IconSelectorSection")
+    @Environment(PlusManager.self) private var plusManager
+    @State private var presentSubscription = false
 
     var body: some View {
         VStack {
@@ -84,10 +86,14 @@ struct IconSelectorSection: View {
                 showAlert = true
             }
             #else
-            _ = Task {
+            _ = Task { @MainActor in
                 do {
                     let name = icon.rawValue == Icon.primary.rawValue ? nil : icon.appIconName
-                    try await UIApplication.shared.setAlternateIconName(name)
+                    if plusManager.plusEntitlement {
+                        try await UIApplication.shared.setAlternateIconName(name)
+                    } else {
+                        throw IconError(PlusError.plusOnlyFeature)
+                    }
                     currentIcon = icon.appIconName
                 } catch {
                     setAlternateIconError = IconError(error)
@@ -146,8 +152,17 @@ struct IconSelectorSection: View {
         #else
         .alert(isPresented: $showAlert, error: setAlternateIconError) {
                 Button("OK") {}
+                Button("Learn more about Forumate+") {
+                    presentSubscription.toggle()
+                }
+                .tint(Color.accentColor)
             }
         #endif
+            .sheet(isPresented: $presentSubscription) {
+                NavigationStack {
+                    ForumatePlusSection()
+                }
+            }
     }
 }
 

@@ -202,8 +202,5 @@ class ThemeManager {
         return Color(uiColor: color)
         #endif
     }
-    
-    // FIXME: Check Forumate+ status
-    var isPlusUser: Bool { true }
 }
 #endif

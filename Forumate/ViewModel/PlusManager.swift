@@ -18,11 +18,20 @@ class PlusManager {
         case expired
     }
     
-    var presentSubscription = false
-    var subscriptionStatus:SubscriptionStatus = .notActive
+    var subscriptionStatus: SubscriptionStatus = .notActive
     var lifeTimeEntitlement = false
     
     var plusEntitlement: Bool {
         subscriptionStatus == .active || lifeTimeEntitlement
+    }
+}
+
+enum PlusError: LocalizedError {
+    case plusOnlyFeature
+    
+    var errorDescription: String? {
+        switch self {
+        case .plusOnlyFeature: "You need a valid Forumte+ membership to unlock this feature."
+        }
     }
 }

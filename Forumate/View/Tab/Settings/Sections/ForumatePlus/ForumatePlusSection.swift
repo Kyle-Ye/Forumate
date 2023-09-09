@@ -10,8 +10,9 @@ import SwiftUI
 
 struct ForumatePlusSection: View {
     @Environment(PlusManager.self) private var plusManager
+    @State private var presentSubscription = false
+
     var body: some View {
-        @Bindable var plusManager = plusManager
         List {
             Section {
                 if plusManager.plusEntitlement {
@@ -31,12 +32,12 @@ struct ForumatePlusSection: View {
                 }
             }
             Section {
-                Text("App Icon Replacement") + Text(verbatim: "*")
+                Text("App Icon Replacement") + Text(verbatim: " *")
                 Text("Theme Color Customization")
             } header: {
                 Text("Exclusive features")
             } footer: {
-                Text("* Only avaiable on supported platforms")
+                Text(verbatim: "* ") + Text("Only avaiable on supported platforms")
             }
             Section {
                 Text("Forumate's most feature is free and its source code is avaiable on GitHub.")
@@ -44,12 +45,12 @@ struct ForumatePlusSection: View {
             }
             Section {
                 Button {
-                    plusManager.presentSubscription.toggle()
+                    presentSubscription.toggle()
                 } label: {
                     Text("Development Support Subscription")
                 }
                 .buttonStyle(.borderedProminent)
-                .sheet(isPresented: $plusManager.presentSubscription) {
+                .sheet(isPresented: $presentSubscription) {
                     ForumateSubscriptionView()
                 }
             } header: {

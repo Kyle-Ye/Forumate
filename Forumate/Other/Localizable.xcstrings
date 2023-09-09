@@ -21,9 +21,6 @@
         }
       }
     },
-    "* Only avaiable on supported platforms" : {
-
-    },
     "%@" : {
       "localizations" : {
         "zh-Hans" : {
@@ -81,7 +78,14 @@
       }
     },
     "1" : {
-
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ""
+          }
+        }
+      }
     },
     "Acknowledgement" : {
       "localizations" : {
@@ -124,7 +128,14 @@
       }
     },
     "App Icon Replacement" : {
-
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "应用图标更换"
+          }
+        }
+      }
     },
     "Appearance" : {
       "localizations" : {
@@ -297,7 +308,14 @@
       }
     },
     "Development Support Subscription" : {
-
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "开发支持套餐"
+          }
+        }
+      }
     },
     "Discuss at Discourse Forum Topic" : {
       "localizations" : {
@@ -330,7 +348,14 @@
       }
     },
     "Exclusive features" : {
-
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "专属功能"
+          }
+        }
+      }
     },
     "Feature Suggestion" : {
       "localizations" : {
@@ -373,7 +398,14 @@
       }
     },
     "Forumate's most feature is free and its source code is avaiable on GitHub." : {
-
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Forumate 的大部分功能是免费的，其源代码可在 GitHub 上查看。"
+          }
+        }
+      }
     },
     "Forumate+" : {
       "localizations" : {
@@ -396,7 +428,14 @@
       }
     },
     "Hello, World!" : {
-
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ""
+          }
+        }
+      }
     },
     "Highlighted Features" : {
       "localizations" : {
@@ -438,8 +477,25 @@
         }
       }
     },
+    "Learn more about Forumate+" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "了解更多关于 Forumate+ 的信息"
+          }
+        }
+      }
+    },
     "Lifetime Plan" : {
-
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "永久套餐"
+          }
+        }
+      }
     },
     "Light" : {
       "localizations" : {
@@ -567,6 +623,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "好的"
+          }
+        }
+      }
+    },
+    "Only avaiable on supported platforms" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "仅在受支持的平台上可用"
           }
         }
       }
@@ -712,7 +778,14 @@
       }
     },
     "Subscription Plan" : {
-
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "订阅套餐"
+          }
+        }
+      }
     },
     "Successfully saved the icon to the Downloads folder." : {
       "localizations" : {
@@ -875,19 +948,54 @@
       }
     },
     "You can support this project by becoming a Forumate+ Member via **Subscription Plan** or **Lifetime Plan**" : {
-
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "您可以通过**订阅套餐**或**永久套餐**成为 Forumate+ 会员来支持这个项目"
+          }
+        }
+      }
     },
     "You do not have any active Forumate+ subscription" : {
-
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "您没有任何活跃的 Forumate+ 订阅"
+          }
+        }
+      }
     },
     "You have a lifetime Forumate+ membership." : {
-
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "您拥有永久 Forumate+ 会员资格。"
+          }
+        }
+      }
     },
     "You have an active Forumate+ subscription. Thank you for your support." : {
-
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "您有一个活跃的 Forumate+ 订阅。感谢您的支持。"
+          }
+        }
+      }
     },
     "Your Forumate+ subscription is expired" : {
-
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "您的 Forumate+ 订阅已过期"
+          }
+        }
+      }
     }
   },
   "version" : "1.0"
