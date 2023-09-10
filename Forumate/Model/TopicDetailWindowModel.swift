@@ -10,6 +10,7 @@ import Foundation
 import SwiftData
 
 struct TopicDetailWindowModel: Codable, Hashable {
+    // FIXME: use topic id instead
     let topic: Topic
     let communityID: PersistentIdentifier
 }

@@ -62,16 +62,12 @@ struct TopicLabel: View {
             Divider()
             Button {
                 // TODO: Mark as read feature unimplemented
-                unimplementedToast.toggle()
+                state.unimplementedToast.toggle()
             } label: {
                 Label("Mark As Read", systemImage: "doc.text.image")
             }
-            .toast(isPresented: $unimplementedToast) {
-                Label("Unimplemented Feature", systemImage: "paperplane")
-                    .foregroundStyle(.white)
-                    .tint(Color.accentColor.opacity(0.8))
-            }
         } preview: {
+            // FIXME: The size for the preview is not correct.
             TopicDetail(topic: topic)
                 .frame(maxHeight: 800)
                 .environmentObject(appState)

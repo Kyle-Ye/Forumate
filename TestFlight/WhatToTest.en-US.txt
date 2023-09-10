@@ -1,1 +1,5 @@
 What's new in v0.7.0-beta
+
+- Updated layout for topic detail view
+- New toolbar item for topic detail view
+- Recommend Community System update

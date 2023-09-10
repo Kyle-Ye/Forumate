@@ -56,6 +56,7 @@ struct ForumateApp: App {
         #endif
 
         #if os(iOS) || os(visionOS) || os(macOS)
+        // FIXME: This will lead to a crash for themeManager currently. 
         WindowGroup("Topic Detail", id: "topic", for: TopicDetailWindowModel.self) { $detailModel in
             DetailWindowView(detailModel: detailModel)
                 .modifier(AppViewModifier())
