@@ -27,7 +27,7 @@ struct SettingsTab: View {
                         case .theme: ThemeSection()
                         #endif
                         case .general: GeneralSection()
-                        case .notification: Text("Unimplemented")
+                        case .notification: Text("Unimplemented Feature")
                         case .support: SupportSection()
                         case .privacy: PrivacyPolicySection()
                         case .acknowledgement: AcknowSection()

@@ -27,7 +27,7 @@ struct CommunityDetail: View {
                 LatestTopicsView(showCategory: true)
             default:
                 Section {
-                    Text("Unimplemented")
+                    Text("Unimplemented Feature")
                 } header: {
                     CommunitySectionHeader(text: state.viewByType.rawValue.uppercased())
                 }

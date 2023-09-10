@@ -86,8 +86,7 @@ struct PostView: View {
 
     var bodyArea: some View {
         #if os(iOS) || os(visionOS) || os(macOS)
-        // TODO: Dynamic font change
-        // FIXME: Link AccentColor will not change for dark/light toggle
+        // TODO: Add forum specific css injection
         HtmlText(
             body: post.cooked,
             css: .init(

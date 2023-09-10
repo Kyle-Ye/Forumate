@@ -17,7 +17,13 @@ struct TopicDetail: View {
     #if os(iOS) || os(visionOS) || os(macOS)
     @Environment(\.openWindow) private var openWindow
     #endif
+    @Environment(\.openURL) var openURL
     @State var topic: Topic
+    
+    private var topicURL: URL {
+        state.community.host.appending(components: "t", topic.id.description)
+    }
+    
     var body: some View {
         ScrollView {
             LazyVStack(alignment: .leading) {
@@ -45,24 +51,41 @@ struct TopicDetail: View {
                     }
                 }
             }
-        #if os(iOS) || os(visionOS) || os(macOS)
-            .toolbar(content: {
-                if supportsMultipleWindows {
-                    #if os(iOS) || os(visionOS)
-                    let placement: ToolbarItemPlacement = .navigationBarLeading
-                    #else
-                    let placement: ToolbarItemPlacement = .primaryAction
-                    #endif
-                    ToolbarItem(placement: placement) {
+            .toolbar {
+                #if os(iOS) || os(visionOS) || os(watchOS) || os(tvOS)
+                let placement: ToolbarItemPlacement = .topBarLeading
+                #elseif os(macOS)
+                let placement: ToolbarItemPlacement = .primaryAction
+                #endif
+                ToolbarItemGroup(placement: placement) {
+                    #if os(iOS) || os(visionOS) || os(macOS)
+                    if supportsMultipleWindows {
                         Button {
                             openWindow(value: TopicDetailWindowModel(topic: topic, communityID: state.community.persistentModelID))
                         } label: {
                             Label("Open In New Window", systemImage: "macwindow.badge.plus")
                         }
                     }
+                    #endif
+                    Button {
+                        openURL(topicURL)
+                    } label: {
+                        Label("Open Topic's Link", systemImage: "link")
+                    }
                 }
-            })
-        #endif
+            }
+            .toolbar {
+                // TODO: Add custom toolbar on iPadOS
+                // Add users to display their favorite item. eg. Notification level, like, bookmark, reply and share.
+                #if os(iOS) || os(visionOS) || os(watchOS) || os(tvOS)
+                let placement: ToolbarItemPlacement = .topBarTrailing
+                #elseif os(macOS)
+                let placement: ToolbarItemPlacement = .secondaryAction
+                #endif
+                ToolbarItem(placement: placement) {
+                    ShareLink(item: topicURL)
+                }
+            }
     }
     
     @ViewBuilder
