@@ -20,7 +20,7 @@ struct AcknowSection: View {
             .SDWebImageSwiftUI,
             .SDWebImageSVGCoder,
         ],
-        header: "Forumate Library"
+        header: "Open Source Library used by Forumate"
     )
     
     @State private var discourseKitLibrary = AcknowLibrary(
@@ -29,7 +29,7 @@ struct AcknowSection: View {
             .swift_http,
             .swift_log,
         ],
-        header: "DiscourseKit Library"
+        header: "Open Source Library used by DiscourseKit"
     )
     
     var body: some View {
