@@ -757,6 +757,16 @@
         }
       }
     },
+    "Show Recommend Communities" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "展示推荐论坛"
+          }
+        }
+      }
+    },
     "Show Starter Intro" : {
       "localizations" : {
         "zh-Hans" : {

@@ -35,20 +35,23 @@ struct CommunityList: View {
     }
 
     private var hasRecommendCommunity: Bool {
-        [Community].recommended.contains { name, url in
+        [RecommendCommunity].recommended.contains { recommendCommunity in
             communities.allSatisfy { community in
-                community.host != url
-            } && (searchText.isEmpty || name.localizedCaseInsensitiveContains(searchText))
+                community.host != recommendCommunity.host
+            } && (searchText.isEmpty || recommendCommunity.title.localizedCaseInsensitiveContains(searchText))
         }
     }
 
-    private var recommendCommunities: [(name: String, url: URL)] {
-        [Community].recommended.filter { name, url in
+    private var recommendCommunities: [RecommendCommunity] {
+        [RecommendCommunity].recommended.filter { recommendCommunity in
             communities.allSatisfy { community in
-                community.host != url
-            } && (searchText.isEmpty || name.localizedCaseInsensitiveContains(searchText))
+                community.host != recommendCommunity.host
+            } && (searchText.isEmpty || recommendCommunity.title.localizedCaseInsensitiveContains(searchText))
         }
     }
+    
+    @AppStorage(ShowRecommendCommunity.self)
+    private var showRecommendCommunity
 
     @State private var searchText = ""
     #if !os(watchOS)
@@ -62,7 +65,7 @@ struct CommunityList: View {
             if hasUnpinnedCommunity {
                 unpinnedCommunityList
             }
-            if hasRecommendCommunity {
+            if showRecommendCommunity, hasRecommendCommunity {
                 recommendCommunityList
             }
         }
@@ -102,8 +105,8 @@ struct CommunityList: View {
 
     var recommendCommunityList: some View {
         Section {
-            ForEach(recommendCommunities, id: \.name) { name, url in
-                RecommendCommunityLabel(name: name, url: url)
+            ForEach(recommendCommunities) { recommendCommunity in
+                RecommendCommunityLabel(recommendCommunity: recommendCommunity)
             }
         } header: {
             Text("Recommended Communities")

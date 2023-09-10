@@ -55,8 +55,6 @@ struct SupportSection: View {
     }
 }
 
-struct SupportSection_Previews: PreviewProvider {
-    static var previews: some View {
-        SupportSection()
-    }
+#Preview {
+    SupportSection()
 }

@@ -19,8 +19,6 @@ struct PrivacyPolicySection: View {
     }
 }
 
-struct PrivacyPolicySection_Previews: PreviewProvider {
-    static var previews: some View {
-        PrivacyPolicySection()
-    }
+#Preview {
+    PrivacyPolicySection()
 }

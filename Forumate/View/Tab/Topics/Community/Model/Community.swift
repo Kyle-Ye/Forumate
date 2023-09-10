@@ -28,12 +28,3 @@ final class Community {
         self.icon = icon
     }
 }
-extension [Community] {
-    static var recommended: [(name: String, url: URL)] {
-        [
-            ("Swift Forums", URL(string: "https://forums.swift.org")!),
-            ("Discourse Meta", URL(string: "https://meta.discourse.org")!),
-            ("OpenAI Developer Forum", URL(string: "https://community.openai.com")!),
-        ]
-    }
-}
