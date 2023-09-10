@@ -9,7 +9,7 @@ import DiscourseKit
 import Foundation
 import os.log
 
-class CommunityManager {
+final class CommunityManager {
     static let shared = CommunityManager()
     private init() {}
     

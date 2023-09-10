@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct SettingsTab: View {
-    @StateObject private var tabState = SettingsTabState()
+    @State private var tabState = SettingsTabState()
     
     var body: some View {
         NavigationSplitView(columnVisibility: .constant(.all)) {
@@ -44,13 +44,11 @@ struct SettingsTab: View {
             }
         }
         .navigationSplitViewStyleType(SplitViewStyleTypeSetting.value)
-        .environmentObject(tabState)
+        .environment(tabState)
     }
 }
 
-struct SettingsTab_Previews: PreviewProvider {
-    static var previews: some View {
-        SettingsTab()
-            .environmentObject(AppState())
-    }
+#Preview {
+    SettingsTab()
+        .environmentObject(AppState())
 }

@@ -71,7 +71,7 @@ struct ForumatePlusSection: View {
 }
 
 struct ForumatePlusSectionSheet: View {
-    @Environment(\.dismiss) var dismiss
+    @Environment(\.dismiss) private var dismiss
     @Environment(PlusManager.self) private var plusManager
 
     var body: some View {
@@ -87,7 +87,7 @@ struct ForumatePlusSectionSheet: View {
                 }
             #endif
         }
-        .onInAppPurchaseCompletion { product, result in
+        .onInAppPurchaseCompletion { _, result in
             if case let .success(.success(transaction)) = result {
                 try? await plusManager.process(transaction)
                 dismiss()

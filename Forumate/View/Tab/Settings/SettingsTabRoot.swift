@@ -10,7 +10,7 @@ import SwiftUI
 
 struct SettingsTabRoot: View {
     @EnvironmentObject private var appState: AppState
-    @EnvironmentObject private var tabState: SettingsTabState
+    @Environment(SettingsTabState.self) private var tabState
     @State private var showStarterIntro = false
     #if os(iOS) || os(visionOS) || os(macOS)
     @State private var showPasteToast = false
@@ -26,6 +26,7 @@ struct SettingsTabRoot: View {
     }
 
     var body: some View {
+        @Bindable var tabState = tabState
         List(selection: $tabState.destination) {
             Section {
                 navigationItem(destination: .forumatePlus, text: "Forumate+") {
@@ -120,12 +121,10 @@ struct SettingsTabRoot: View {
     }
 }
 
-struct SettingsTabRoot_Previews: PreviewProvider {
-    static var previews: some View {
-        NavigationStack {
-            SettingsTabRoot()
-        }
-        .environmentObject(SettingsTabState())
-        .environmentObject(AppState())
+#Preview {
+    NavigationStack {
+        SettingsTabRoot()
     }
+    .environment(SettingsTabState())
+    .environmentObject(AppState())
 }

@@ -22,8 +22,6 @@ struct SettingIcon<S: ShapeStyle>: View {
     }
 }
 
-struct SettingIcon_Previews: PreviewProvider {
-    static var previews: some View {
-        SettingIcon(icon: "gear", style: .gray)
-    }
+#Preview {
+    SettingIcon(icon: "gear", style: .gray)
 }

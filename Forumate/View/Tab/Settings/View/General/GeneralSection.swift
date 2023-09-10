@@ -8,13 +8,22 @@
 import SwiftUI
 
 struct GeneralSection: View {
-    @AppStorage(DefaultViewByTypeSetting.self) var defaultViewByType
-    @AppStorage(SplitViewStyleTypeSetting.self) var navigationSplitViewStyle
-    @AppStorage(PickerStyleTypeSetting.self) var pickerStyle
+    @AppStorage(DefaultViewByTypeSetting.self)
+    private var defaultViewByType
+    
+    @AppStorage(SplitViewStyleTypeSetting.self)
+    private var navigationSplitViewStyle
+    
+    @AppStorage(PickerStyleTypeSetting.self)
+    private var pickerStyle
 
     #if os(iOS) || os(visionOS)
-    @AppStorage(OpenLinkTypeSetting.self) var openLinkType
+    @AppStorage(OpenLinkTypeSetting.self)
+    private var openLinkType
     #endif
+    
+    @AppStorage(ShowRecommendCommunity.self)
+    private var showRecommendCommunity
 
     var body: some View {
         List {
@@ -53,6 +62,9 @@ struct GeneralSection: View {
                         Text(type.rawValue).tag(type)
                     }
                 }
+                Toggle(isOn: $showRecommendCommunity) {
+                    Text("Show Recommend Communities")
+                }
             } header: {
                 Text("Other")
             }
@@ -65,8 +77,8 @@ struct GeneralSection: View {
     }
 }
 
-struct GeneralSection_Previews: PreviewProvider {
-    static var previews: some View {
+#Preview {
+    NavigationStack {
         GeneralSection()
             .navigationTitle("General")
         #if os(iOS) || os(visionOS) || os(watchOS)
