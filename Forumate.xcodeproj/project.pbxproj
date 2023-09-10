@@ -14,7 +14,7 @@
 		27024A9C2AA45EE9005650B4 /* ThemeSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27024A9A2AA45EE9005650B4 /* ThemeSection.swift */; };
 		270808F92A9F98F70089E5DC /* ForumateWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 273AFBE72A1A94E100DD08F5 /* ForumateWatch.app */; platformFilter = ios; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		270808FC2A9FA3D50089E5DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 278E53E62A18E83000DCD159 /* Assets.xcassets */; };
-		270CD67B2AA22945004DBD1D /* SimpleToast in Frameworks */ = {isa = PBXBuildFile; platformFilters = (ios, maccatalyst, macos, xros, ); productRef = 270CD67A2AA22945004DBD1D /* SimpleToast */; };
+		270CD67B2AA22945004DBD1D /* SimpleToast in Frameworks */ = {isa = PBXBuildFile; productRef = 270CD67A2AA22945004DBD1D /* SimpleToast */; };
 		270CD67D2AA2294C004DBD1D /* SimpleToast in Frameworks */ = {isa = PBXBuildFile; productRef = 270CD67C2AA2294C004DBD1D /* SimpleToast */; };
 		270CD67F2AA22DA0004DBD1D /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270CD67E2AA22DA0004DBD1D /* Toast.swift */; };
 		270CD6802AA22DA7004DBD1D /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270CD67E2AA22DA0004DBD1D /* Toast.swift */; };

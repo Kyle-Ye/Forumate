@@ -5,7 +5,6 @@
 //  Created by Kyle on 2023/9/1.
 //
 
-#if os(iOS) || os(visionOS) || os(watchOS) || os(macOS)
 import SimpleToast
 import SwiftUI
 
@@ -78,4 +77,3 @@ struct Demo: View {
 #Preview {
     Demo()
 }
-#endif
