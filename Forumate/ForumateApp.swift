@@ -41,11 +41,14 @@ struct ForumateApp: App {
                 .modifier(AppViewModifier())
         }
         .environmentObject(appState)
+        .environment(plusManager)
+        .modelContainer(container)
         #if os(iOS) || os(macOS)
             .environment(themeManager)
+            .commands {
+                ToolbarCommands()
+            }
         #endif
-            .environment(plusManager)
-            .modelContainer(container)
 
         #if os(iOS) || os(visionOS) || os(macOS)
         WindowGroup("Topic Detail", id: "topic", for: TopicDetailWindowModel.self) { $detailModel in
@@ -53,11 +56,14 @@ struct ForumateApp: App {
                 .modifier(AppViewModifier())
         }
         .environmentObject(appState)
+        .environment(plusManager)
+        .modelContainer(container)
         #if os(iOS) || os(macOS)
             .environment(themeManager)
+            .commands {
+                ToolbarCommands()
+            }
         #endif
-            .environment(plusManager)
-            .modelContainer(container)
         #endif
     }
 }

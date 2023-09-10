@@ -517,7 +517,7 @@
         }
       }
     },
-    "Mark as read" : {
+    "Mark As Read" : {
       "localizations" : {
         "zh-Hans" : {
           "stringUnit" : {
@@ -663,6 +663,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "链接打开方式"
+          }
+        }
+      }
+    },
+    "Open Topic's Link" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "打开话题链接"
           }
         }
       }
@@ -907,12 +917,12 @@
         }
       }
     },
-    "Unimplemented" : {
+    "Unimplemented Feature" : {
       "localizations" : {
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "未实现"
+            "value" : "未实现的功能"
           }
         }
       }

@@ -28,6 +28,15 @@
       }
     },
     {
+      "identity" : "loremswiftum",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/lukaskubanek/LoremSwiftum.git",
+      "state" : {
+        "branch" : "master",
+        "revision" : "8942e732e50458cde5dccf9996afa16f29372853"
+      }
+    },
+    {
       "identity" : "sdwebimage",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/SDWebImage/SDWebImage.git",

@@ -7,13 +7,16 @@
 
 import DiscourseKit
 import Flow
-import SwiftUI
 import SwiftData
+import SwiftUI
 
 struct TopicLabel: View {
     @EnvironmentObject private var appState: AppState
     @EnvironmentObject private var tabState: TopicsTabState
     @EnvironmentObject private var state: CommunityDetailState
+    #if os(iOS) || os(macOS)
+    @Environment(ThemeManager.self) private var themeManager
+    #endif
 
     let topic: Topic
     let showCategory: Bool
@@ -23,10 +26,16 @@ struct TopicLabel: View {
         self.showCategory = showCategory
     }
     
-    @Environment(\.supportsMultipleWindows) private var supportsMultipleWindows
     #if os(iOS) || os(visionOS) || os(macOS)
+    @Environment(\.supportsMultipleWindows) private var supportsMultipleWindows
     @Environment(\.openWindow) private var openWindow
+    @Environment(\.openURL) private var openURL
+    private var topicURL: URL {
+        state.community.host.appending(components: "t", topic.id.description)
+    }
     #endif
+
+    
     var body: some View {
         VStack(alignment: .leading, spacing: 4) {
             categoryInfo
@@ -44,10 +53,23 @@ struct TopicLabel: View {
                 } label: {
                     Label("Open In New Window", systemImage: "macwindow.badge.plus")
                 }
-                Divider()
             }
-            Button {} label: {
-                Label("Mark as read", systemImage: "doc.text.image")
+            Button {
+                openURL(topicURL)
+            } label: {
+                Label("Open Topic's Link", systemImage: "link")
+            }
+            Divider()
+            Button {
+                // TODO: Mark as read feature unimplemented
+                unimplementedToast.toggle()
+            } label: {
+                Label("Mark As Read", systemImage: "doc.text.image")
+            }
+            .toast(isPresented: $unimplementedToast) {
+                Label("Unimplemented Feature", systemImage: "paperplane")
+                    .foregroundStyle(.white)
+                    .tint(Color.accentColor.opacity(0.8))
             }
         } preview: {
             TopicDetail(topic: topic)
@@ -55,9 +77,14 @@ struct TopicLabel: View {
                 .environmentObject(appState)
                 .environmentObject(tabState)
                 .environmentObject(state)
+            #if os(iOS) || os(macOS)
+                .environment(themeManager)
+            #endif
         }
         #endif
     }
+    
+    @State private var unimplementedToast = false
     
     @ViewBuilder
     var categoryInfo: some View {

@@ -13,11 +13,16 @@ struct TopicDetail: View {
     @EnvironmentObject private var appState: AppState
     @EnvironmentObject private var state: CommunityDetailState
     
-    @Environment(\.supportsMultipleWindows) private var supportsMultipleWindows
     #if os(iOS) || os(visionOS) || os(macOS)
+    @Environment(\.supportsMultipleWindows) private var supportsMultipleWindows
     @Environment(\.openWindow) private var openWindow
+    @Environment(\.openURL) private var openURL
+    private var topicURL: URL {
+        state.community.host.appending(components: "t", topic.id.description)
+    }
     #endif
     @State var topic: Topic
+    
     var body: some View {
         ScrollView {
             LazyVStack(alignment: .leading) {
@@ -46,14 +51,9 @@ struct TopicDetail: View {
                 }
             }
         #if os(iOS) || os(visionOS) || os(macOS)
-            .toolbar(content: {
+            .toolbar(id: "topic") {
                 if supportsMultipleWindows {
-                    #if os(iOS) || os(visionOS)
-                    let placement: ToolbarItemPlacement = .navigationBarLeading
-                    #else
-                    let placement: ToolbarItemPlacement = .primaryAction
-                    #endif
-                    ToolbarItem(placement: placement) {
+                    ToolbarItem(id: "openWindow", placement: .secondaryAction) {
                         Button {
                             openWindow(value: TopicDetailWindowModel(topic: topic, communityID: state.community.persistentModelID))
                         } label: {
@@ -61,7 +61,23 @@ struct TopicDetail: View {
                         }
                     }
                 }
-            })
+                ToolbarItem(id: "openLink", placement: .secondaryAction) {
+                    Button {
+                        openURL(topicURL)
+                    } label: {
+                        Label("Open Topic's Link", systemImage: "link")
+                    }
+                }
+                // TODO: Add more items later eg. Notification level, like, book mark, flag, see likes and so on.
+            }
+            .toolbar {
+                ToolbarItem(placement: .primaryAction) {
+                    ShareLink(item: topicURL)
+                }
+            }
+        #if os(iOS)
+            .toolbarRole(.browser)
+        #endif
         #endif
     }
     
