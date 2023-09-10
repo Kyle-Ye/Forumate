@@ -34,6 +34,11 @@ struct ForumateApp: App {
     #endif
     
     @State private var plusManager = PlusManager()
+    
+    #if os(macOS)
+    @AppStorage(ShowMenuBarExtra.self)
+    private var showMenuBarExtra
+    #endif
 
     var body: some Scene {
         WindowGroup {
@@ -64,9 +69,41 @@ struct ForumateApp: App {
                 ToolbarCommands()
             }
         #endif
+        #if os(macOS)
+        MenuBarExtra("Forumate Helper", systemImage: "f.square.fill", isInserted: $showMenuBarExtra) {
+            ForumateHelpMenuBar()
+        }
+        #endif
         #endif
     }
 }
+
+#if os(macOS)
+import os.log
+struct ForumateHelpMenuBar: View {
+    private static let logger = Logger(subsystem: Logger.subsystem, category: "ForumateHelpMenuBar")
+    
+    @Environment(\.openWindow) private var openWindow
+    
+    var body: some View {
+        Button {
+            guard let string = NSPasteboard.general.string(forType: .URL),
+                  let url = URL(string: string) else {
+                Self.logger.info("No valid URL in Pasterboard")
+                return
+            }
+            // TODO: Unimplemented
+            // 1. Get the communityID by url.host
+            // 2. Get topic id info from url
+            // 3. Update TopicDetailWindowModel to accept topic id
+            // 4. Call openWindow with topic info and community info
+            Self.logger.info("\(url.absoluteString) is detected. But this feature is not implemented")
+        } label: {
+            Text("Try to open Pasteboard URL in Forumate")
+        }
+    }
+}
+#endif
 
 #if os(iOS) || os(visionOS) || os(macOS)
 struct DetailWindowView: View {

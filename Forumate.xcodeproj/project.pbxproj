@@ -175,6 +175,8 @@
 		27FDBEA32AADDC3500A3448C /* styleSheet.css in Resources */ = {isa = PBXBuildFile; fileRef = 27FDBE9D2AADDC3500A3448C /* styleSheet.css */; };
 		27FDBEA62AADE9B600A3448C /* LoremSwiftum in Frameworks */ = {isa = PBXBuildFile; productRef = 27FDBEA52AADE9B600A3448C /* LoremSwiftum */; };
 		27FDBEA82AADE9C400A3448C /* LoremSwiftum in Frameworks */ = {isa = PBXBuildFile; productRef = 27FDBEA72AADE9C400A3448C /* LoremSwiftum */; };
+		27FDBEAC2AAE247E00A3448C /* ShowMenuBarExtra.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FDBEAB2AAE247E00A3448C /* ShowMenuBarExtra.swift */; };
+		27FDBEAD2AAE248400A3448C /* ShowMenuBarExtra.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FDBEAB2AAE247E00A3448C /* ShowMenuBarExtra.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -296,6 +298,7 @@
 		27F4340B2AAC15840042F681 /* PlusManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlusManager.swift; sourceTree = "<group>"; };
 		27F4340E2AAC1A940042F681 /* AppViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewModifier.swift; sourceTree = "<group>"; };
 		27FDBE9D2AADDC3500A3448C /* styleSheet.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = styleSheet.css; sourceTree = "<group>"; };
+		27FDBEAB2AAE247E00A3448C /* ShowMenuBarExtra.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowMenuBarExtra.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -740,6 +743,7 @@
 				27C00A352A2CC51B00CA9ACD /* SplitViewStyleType.swift */,
 				27C00A392A2CC6BF00CA9ACD /* PickerStyleType.swift */,
 				278F75872AAD715B003D61ED /* ShowRecommendCommunity.swift */,
+				27FDBEAB2AAE247E00A3448C /* ShowMenuBarExtra.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1021,6 +1025,7 @@
 				273AFC112A1A964C00DD08F5 /* TopicsTabState.swift in Sources */,
 				273AFC092A1A963800DD08F5 /* PlaceholderView.swift in Sources */,
 				273AFC232A1A968100DD08F5 /* TopicsTab.swift in Sources */,
+				27FDBEAD2AAE248400A3448C /* ShowMenuBarExtra.swift in Sources */,
 				273AFC032A1A95FD00DD08F5 /* AppState.swift in Sources */,
 				273AFC202A1A967D00DD08F5 /* CategoryDetail.swift in Sources */,
 				273AFC1A2A1A967D00DD08F5 /* NewCommunity.swift in Sources */,
@@ -1085,6 +1090,7 @@
 				278E54102A18E83000DCD159 /* NewCommunity.swift in Sources */,
 				27C8789B2A3F497000AECD06 /* EqualHeightHStackLayout.swift in Sources */,
 				274C4C9E2A3F81D10018BFA4 /* ForumatePlusSection.swift in Sources */,
+				27FDBEAC2AAE247E00A3448C /* ShowMenuBarExtra.swift in Sources */,
 				270097CF2A19D68700CA01B5 /* SettingsTabState.swift in Sources */,
 				273AFBD32A1A7AE400DD08F5 /* SettingIcon.swift in Sources */,
 				27F4340A2AAC131E0042F681 /* ContributorView.swift in Sources */,
