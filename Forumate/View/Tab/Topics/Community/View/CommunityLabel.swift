@@ -25,7 +25,7 @@ struct CommunityLabel: View {
                 //                    Text("14 New 167 Unread")
                 //                }
                 //                .font(.footnote)
-                //                .foregroundColor(.secondary)
+                //                .foregroundStyle(.secondary)
             }
             .lineLimit(1)
         }

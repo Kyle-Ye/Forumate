@@ -10,7 +10,7 @@ import SwiftUI
 extension String {
     func colorToImageText(image: String) -> Text {
         if let color = Color(hex: self) {
-            return Text("\(Image(systemName: image)) ").foregroundColor(color)
+            return Text("\(Image(systemName: image))").foregroundStyle(color) + Text(" ")
         } else {
             return Text("")
         }

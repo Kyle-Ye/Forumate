@@ -10,13 +10,11 @@ import SwiftUI
 struct CommunitySectionHeader: View {
     let text: String
     var body: some View {
-        HStack {
-            Text(text)
-                .foregroundColor(.primary)
-                .bold()
-                .font(.headline)
-                .padding(.vertical)
-        }
+        Text(text)
+            .bold()
+            .font(.headline)
+            .padding(.vertical)
+            .foregroundStyle(.primary)
     }
 }
 

@@ -92,7 +92,7 @@ struct TopicLabel: View {
            let category = state.category(appState: appState, for: topic.categoryID) {
             CategoryText(category: category)
                 .lineLimit(1)
-                .foregroundColor(.secondary)
+                .foregroundStyle(.secondary)
                 .font(.caption)
         }
     }
@@ -135,7 +135,7 @@ struct TopicLabel: View {
                 Text("by")
                     .layoutPriority(-1)
                 Image(systemName: "circle.fill")
-                    .foregroundColor(.clear)
+                    .foregroundStyle(.clear)
                     .overlay {
                         AsyncImage(url: avatarURL) { image in
                             image.resizable()
@@ -147,7 +147,7 @@ struct TopicLabel: View {
                 Text(name)
             }
             .bold()
-            .foregroundColor(.secondary)
+            .foregroundStyle(.secondary)
             .font(.footnote)
             .lineLimit(1)
         }
@@ -161,11 +161,11 @@ struct TopicLabel: View {
             }
             HStack(spacing: 2) {
                 Image(systemName: "calendar.badge.clock")
-                Text("\(topic.lastPostedAt, style: .relative) ago · \(topic.lastPosterUsername)")
+                Text("\(topic.lastPostedAt.formattedText) · \(topic.lastPosterUsername)")
             }
         }
         .font(.caption)
-        .foregroundColor(.secondary)
+        .foregroundStyle(.secondary)
         .lineLimit(1)
         .padding(.top, 4)
     }

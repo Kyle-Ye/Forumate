@@ -177,6 +177,10 @@
 		27FDBEA82AADE9C400A3448C /* LoremSwiftum in Frameworks */ = {isa = PBXBuildFile; productRef = 27FDBEA72AADE9C400A3448C /* LoremSwiftum */; };
 		27FDBEAC2AAE247E00A3448C /* ShowMenuBarExtra.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FDBEAB2AAE247E00A3448C /* ShowMenuBarExtra.swift */; };
 		27FDBEAD2AAE248400A3448C /* ShowMenuBarExtra.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FDBEAB2AAE247E00A3448C /* ShowMenuBarExtra.swift */; };
+		27FDBEB02AAE382D00A3448C /* PostActionCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FDBEAF2AAE382D00A3448C /* PostActionCodeView.swift */; };
+		27FDBEB12AAE382D00A3448C /* PostActionCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FDBEAF2AAE382D00A3448C /* PostActionCodeView.swift */; };
+		27FDBEB32AAE3B2100A3448C /* Text+Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FDBEB22AAE3B2100A3448C /* Text+Date.swift */; };
+		27FDBEB42AAE3B2100A3448C /* Text+Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FDBEB22AAE3B2100A3448C /* Text+Date.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -299,6 +303,8 @@
 		27F4340E2AAC1A940042F681 /* AppViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewModifier.swift; sourceTree = "<group>"; };
 		27FDBE9D2AADDC3500A3448C /* styleSheet.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = styleSheet.css; sourceTree = "<group>"; };
 		27FDBEAB2AAE247E00A3448C /* ShowMenuBarExtra.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowMenuBarExtra.swift; sourceTree = "<group>"; };
+		27FDBEAF2AAE382D00A3448C /* PostActionCodeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostActionCodeView.swift; sourceTree = "<group>"; };
+		27FDBEB22AAE3B2100A3448C /* Text+Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Text+Date.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -458,6 +464,7 @@
 		276F9F452A2A604D00020B1B /* Post */ = {
 			isa = PBXGroup;
 			children = (
+				27FDBEAF2AAE382D00A3448C /* PostActionCodeView.swift */,
 				276F9F462A2A606600020B1B /* PostView.swift */,
 			);
 			path = Post;
@@ -533,6 +540,7 @@
 		277C15C22A18F021007940C7 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				27FDBEB22AAE3B2100A3448C /* Text+Date.swift */,
 				27C8789A2A3F497000AECD06 /* EqualHeightHStackLayout.swift */,
 				272193A02A19CCFA00C221BC /* JSONRawRepresentable.swift */,
 				277C15C32A18F033007940C7 /* HexToColor.swift */,
@@ -965,6 +973,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27FDBEB12AAE382D00A3448C /* PostActionCodeView.swift in Sources */,
 				273AFC042A1A960600DD08F5 /* Category+Preview.swift in Sources */,
 				273AFC082A1A962200DD08F5 /* JSONRawRepresentable.swift in Sources */,
 				2733B4D12A2F918A00BCF528 /* StarterIntroCardView.swift in Sources */,
@@ -988,6 +997,7 @@
 				273AFC0F2A1A964500DD08F5 /* AcknowSection.swift in Sources */,
 				273AFC0A2A1A963A00DD08F5 /* StarterIntro.swift in Sources */,
 				27C00A372A2CC51B00CA9ACD /* SplitViewStyleType.swift in Sources */,
+				27FDBEB42AAE3B2100A3448C /* Text+Date.swift in Sources */,
 				2779C0802A34AA6A00CE4DF1 /* SettingsTabDestination.swift in Sources */,
 				273AFC192A1A967D00DD08F5 /* CommunityLabel.swift in Sources */,
 				273AFC172A1A967D00DD08F5 /* CategoryLabel.swift in Sources */,
@@ -1042,6 +1052,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27FDBEB02AAE382D00A3448C /* PostActionCodeView.swift in Sources */,
 				273AFBD92A1A86A000DD08F5 /* TopicLabel.swift in Sources */,
 				272605802A1A12450018B908 /* Category+Preview.swift in Sources */,
 				2733B4D02A2F918A00BCF528 /* StarterIntroCardView.swift in Sources */,
@@ -1085,6 +1096,7 @@
 				272193A12A19CCFA00C221BC /* JSONRawRepresentable.swift in Sources */,
 				27CDD3C42A1BCC01003E3D00 /* TagView.swift in Sources */,
 				275482A32AAD918D0050E65D /* AppDelegate.swift in Sources */,
+				27FDBEB32AAE3B2100A3448C /* Text+Date.swift in Sources */,
 				278E54022A18E83000DCD159 /* AppState.swift in Sources */,
 				27D219122A75954900501849 /* IconSelectorSection.swift in Sources */,
 				278E54102A18E83000DCD159 /* NewCommunity.swift in Sources */,
