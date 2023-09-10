@@ -19,11 +19,11 @@ struct CategoryLabel: View {
         VStack(alignment: .leading) {
             CategoryText(category: category)
                 .lineLimit(1)
-                .foregroundColor(.primary)
+                .foregroundStyle(.primary)
                 .bold()
             if let description = category.description {
                 AttributedText(rawHtml: description)
-                    .foregroundColor(.secondary)
+                    .foregroundStyle(.secondary)
             }
             #if os(iOS) || os(visionOS) || os(macOS)
             if category.hasChildren {
@@ -35,9 +35,9 @@ struct CategoryLabel: View {
                             } label: {
                                 CategoryText(category: subcategory)
                                     .lineLimit(1)
-                                    .foregroundColor(.secondary)
                                     .font(.caption)
                             }
+                            .foregroundStyle(.secondary)
                         }
                     }
                 }

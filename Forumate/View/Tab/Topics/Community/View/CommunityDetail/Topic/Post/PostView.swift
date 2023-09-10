@@ -62,8 +62,9 @@ struct PostView: View {
                 .clipShape(Circle())
                     
                 VStack(alignment: .leading) {
-                    Text(post.username) + Text(" ") + Text(post.name).foregroundColor(.secondary)
-                    Text("\(post.createdAt, style: .relative) ago").foregroundColor(.secondary)
+                    Text(post.username) + Text(" ") + Text(post.name).foregroundStyle(.secondary)
+                    post.createdAt.formattedText
+                        .foregroundStyle(.secondary)
                 }
                 .lineLimit(1)
             }
@@ -109,7 +110,7 @@ struct PostView: View {
                 Text(post.likeCount.description)
             }
         }
-        .foregroundColor(.secondary)
+        .foregroundStyle(.secondary)
         .disabled(!post.likeCanAct)
     }
 }

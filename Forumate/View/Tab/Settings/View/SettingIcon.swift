@@ -15,7 +15,7 @@ struct SettingIcon<S: ShapeStyle>: View {
         Image(systemName: icon)
             .resizable()
             .aspectRatio(contentMode: .fit)
-            .foregroundColor(.white)
+            .foregroundStyle(.white)
             .frame(width: 15, height: 15)
             .padding(5)
             .background(style, in: RoundedRectangle(cornerRadius: 5))

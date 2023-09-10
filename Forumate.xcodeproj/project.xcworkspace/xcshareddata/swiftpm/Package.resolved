@@ -14,8 +14,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/Kyle-Ye/DiscourseKit",
       "state" : {
-        "revision" : "e2a4ce0bb7faecb9e21fc9a6d08ca43da4a372b1",
-        "version" : "0.2.1"
+        "revision" : "0b2304728e4348fa76cecb0dfc903b6297bc0ad4",
+        "version" : "0.2.2"
       }
     },
     {

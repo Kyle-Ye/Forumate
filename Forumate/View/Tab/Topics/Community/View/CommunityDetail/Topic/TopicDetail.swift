@@ -32,7 +32,11 @@ struct TopicDetail: View {
                 if let postStream = topic.postStream {
                     ForEach(postStream.posts, id: \.id) { post in
                         Divider().padding(.vertical)
-                        PostView(post: post)
+                        if post.actionCode.isEmpty {
+                            PostView(post: post)
+                        } else {
+                            PostActionCodeView(post: post)
+                        }
                     }
                 }
             }
@@ -86,7 +90,7 @@ struct TopicDetail: View {
         if let category = state.category(appState: appState, for: topic.categoryID) {
             CategoryText(category: category)
                 .lineLimit(1)
-                .foregroundColor(.secondary)
+                .foregroundStyle(.secondary)
                 .padding(.bottom)
         }
     }
