@@ -11,6 +11,14 @@ import SwiftUI
 
 @main
 struct ForumateApp: App {
+    #if os(iOS) || os(visionOS) || os(tvOS)
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
+    #elseif os(watchOS)
+    @WKApplicationDelegateAdaptor(AppDelegate.self) var delegate
+    #elseif os(macOS)
+    @NSApplicationDelegateAdaptor(AppDelegate.self) var delegate
+    #endif
+
     private let container: ModelContainer = {
         do {
             return try ModelContainer(for: Community.self, Account.self)

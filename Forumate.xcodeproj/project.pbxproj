@@ -87,6 +87,10 @@
 		274C4C9F2A3F81D10018BFA4 /* ForumatePlusSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274C4C9D2A3F81D10018BFA4 /* ForumatePlusSection.swift */; };
 		275482992AAD77FB0050E65D /* RecommendCommunity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275482982AAD77FB0050E65D /* RecommendCommunity.swift */; };
 		2754829B2AAD78500050E65D /* RecommendCommunity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275482982AAD77FB0050E65D /* RecommendCommunity.swift */; };
+		2754829F2AAD8D980050E65D /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 2754829E2AAD8D980050E65D /* SDWebImageSwiftUI */; };
+		275482A12AAD8DA00050E65D /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 275482A02AAD8DA00050E65D /* SDWebImageSwiftUI */; };
+		275482A32AAD918D0050E65D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275482A22AAD918D0050E65D /* AppDelegate.swift */; };
+		275482A42AAD91940050E65D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275482A22AAD918D0050E65D /* AppDelegate.swift */; };
 		275E04102A2CE75900A91F5B /* ViewByMenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273AFBCE2A1A73F600DD08F5 /* ViewByMenuButton.swift */; };
 		276F9F422A2A348100020B1B /* PreviewChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276F9F412A2A348100020B1B /* PreviewChecker.swift */; };
 		276F9F432A2A348100020B1B /* PreviewChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276F9F412A2A348100020B1B /* PreviewChecker.swift */; };
@@ -130,6 +134,8 @@
 		278F75892AAD715B003D61ED /* ShowRecommendCommunity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278F75872AAD715B003D61ED /* ShowRecommendCommunity.swift */; };
 		278F758B2AAD7207003D61ED /* BoolSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278F758A2AAD7207003D61ED /* BoolSetting.swift */; };
 		278F758C2AAD7207003D61ED /* BoolSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278F758A2AAD7207003D61ED /* BoolSetting.swift */; };
+		27AFDC952AADB2380040C4F1 /* SDWebImageSVGCoder in Frameworks */ = {isa = PBXBuildFile; productRef = 27AFDC942AADB2380040C4F1 /* SDWebImageSVGCoder */; };
+		27AFDC972AADB23E0040C4F1 /* SDWebImageSVGCoder in Frameworks */ = {isa = PBXBuildFile; productRef = 27AFDC962AADB23E0040C4F1 /* SDWebImageSVGCoder */; };
 		27C00A2C2A2CC10700CA9ACD /* HtmlText in Frameworks */ = {isa = PBXBuildFile; productRef = 27C00A2B2A2CC10700CA9ACD /* HtmlText */; };
 		27C00A302A2CC10F00CA9ACD /* HtmlText in Frameworks */ = {isa = PBXBuildFile; productRef = 27C00A2F2A2CC10F00CA9ACD /* HtmlText */; };
 		27C00A322A2CC4F400CA9ACD /* OpenLinkType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C00A312A2CC4F400CA9ACD /* OpenLinkType.swift */; };
@@ -231,6 +237,7 @@
 		274C4C9D2A3F81D10018BFA4 /* ForumatePlusSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForumatePlusSection.swift; sourceTree = "<group>"; };
 		274C4CA12A3F84F10018BFA4 /* Forumate.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = Forumate.storekit; sourceTree = "<group>"; };
 		275482982AAD77FB0050E65D /* RecommendCommunity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendCommunity.swift; sourceTree = "<group>"; };
+		275482A22AAD918D0050E65D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		276F9F412A2A348100020B1B /* PreviewChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewChecker.swift; sourceTree = "<group>"; };
 		276F9F462A2A606600020B1B /* PostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
 		277546D72A19DE3F000FDAA0 /* AppInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInfo.swift; sourceTree = "<group>"; };
@@ -298,8 +305,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				275482A12AAD8DA00050E65D /* SDWebImageSwiftUI in Frameworks */,
 				27CDD3832A1BAEAC003E3D00 /* Flow in Frameworks */,
 				27DFFCF92A2B35B3005661BD /* DiscourseKit in Frameworks */,
+				27AFDC972AADB23E0040C4F1 /* SDWebImageSVGCoder in Frameworks */,
 				27C00A302A2CC10F00CA9ACD /* HtmlText in Frameworks */,
 				273AFC022A1A954900DD08F5 /* AcknowKit in Frameworks */,
 				270CD67D2AA2294C004DBD1D /* SimpleToast in Frameworks */,
@@ -310,8 +319,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2754829F2AAD8D980050E65D /* SDWebImageSwiftUI in Frameworks */,
 				273AFBDE2A1A8CF100DD08F5 /* AcknowKit in Frameworks */,
 				27DFFCF72A2B35AB005661BD /* DiscourseKit in Frameworks */,
+				27AFDC952AADB2380040C4F1 /* SDWebImageSVGCoder in Frameworks */,
 				27C00A2C2A2CC10700CA9ACD /* HtmlText in Frameworks */,
 				273AFBC62A1A3DFE00DD08F5 /* Flow in Frameworks */,
 				270CD67B2AA22945004DBD1D /* SimpleToast in Frameworks */,
@@ -539,6 +550,7 @@
 			isa = PBXGroup;
 			children = (
 				278E53E52A18E83000DCD159 /* ForumateApp.swift */,
+				275482A22AAD918D0050E65D /* AppDelegate.swift */,
 				27F4340E2AAC1A940042F681 /* AppViewModifier.swift */,
 				277546D72A19DE3F000FDAA0 /* AppInfo.swift */,
 				278E53FF2A18E83000DCD159 /* ContentView.swift */,
@@ -796,6 +808,8 @@
 				27DFFCF82A2B35B3005661BD /* DiscourseKit */,
 				27C00A2F2A2CC10F00CA9ACD /* HtmlText */,
 				270CD67C2AA2294C004DBD1D /* SimpleToast */,
+				275482A02AAD8DA00050E65D /* SDWebImageSwiftUI */,
+				27AFDC962AADB23E0040C4F1 /* SDWebImageSVGCoder */,
 			);
 			productName = "ForumateWatch Watch App";
 			productReference = 273AFBE72A1A94E100DD08F5 /* ForumateWatch.app */;
@@ -822,6 +836,8 @@
 				27DFFCF62A2B35AB005661BD /* DiscourseKit */,
 				27C00A2B2A2CC10700CA9ACD /* HtmlText */,
 				270CD67A2AA22945004DBD1D /* SimpleToast */,
+				2754829E2AAD8D980050E65D /* SDWebImageSwiftUI */,
+				27AFDC942AADB2380040C4F1 /* SDWebImageSVGCoder */,
 			);
 			productName = Forumate;
 			productReference = 27EEA08629EFCD1B00ADA5BE /* Forumate.app */;
@@ -865,6 +881,8 @@
 				27DFFCEB2A2B1EFF005661BD /* XCRemoteSwiftPackageReference "LookinServer" */,
 				27DFFCF32A2B3574005661BD /* XCRemoteSwiftPackageReference "DiscourseKit" */,
 				270CD6792AA228D5004DBD1D /* XCRemoteSwiftPackageReference "SimpleToast" */,
+				2754829D2AAD8D980050E65D /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+				27AFDC932AADB22A0040C4F1 /* XCRemoteSwiftPackageReference "SDWebImageSVGCoder" */,
 			);
 			productRefGroup = 27EEA08729EFCD1B00ADA5BE /* Products */;
 			projectDirPath = "";
@@ -967,6 +985,7 @@
 				27C8789C2A3F497000AECD06 /* EqualHeightHStackLayout.swift in Sources */,
 				274C4C9F2A3F81D10018BFA4 /* ForumatePlusSection.swift in Sources */,
 				27DFFCF12A2B2FD3005661BD /* TopicDetailWindowModel.swift in Sources */,
+				275482A42AAD91940050E65D /* AppDelegate.swift in Sources */,
 				273AFC222A1A968100DD08F5 /* TopicsTabRoot.swift in Sources */,
 				2754829B2AAD78500050E65D /* RecommendCommunity.swift in Sources */,
 				273AFC182A1A967D00DD08F5 /* TopicDetail.swift in Sources */,
@@ -1039,6 +1058,7 @@
 				278E540A2A18E83000DCD159 /* CommunityList.swift in Sources */,
 				272193A12A19CCFA00C221BC /* JSONRawRepresentable.swift in Sources */,
 				27CDD3C42A1BCC01003E3D00 /* TagView.swift in Sources */,
+				275482A32AAD918D0050E65D /* AppDelegate.swift in Sources */,
 				278E54022A18E83000DCD159 /* AppState.swift in Sources */,
 				27D219122A75954900501849 /* IconSelectorSection.swift in Sources */,
 				278E54102A18E83000DCD159 /* NewCommunity.swift in Sources */,
@@ -1490,6 +1510,22 @@
 				minimumVersion = 0.0.3;
 			};
 		};
+		2754829D2AAD8D980050E65D /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
+			requirement = {
+				kind = exactVersion;
+				version = "3.0.0-beta";
+			};
+		};
+		27AFDC932AADB22A0040C4F1 /* XCRemoteSwiftPackageReference "SDWebImageSVGCoder" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSVGCoder.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.7.0;
+			};
+		};
 		27DFFCEB2A2B1EFF005661BD /* XCRemoteSwiftPackageReference "LookinServer" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/QMUI/LookinServer/";
@@ -1533,6 +1569,26 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 273AFBDC2A1A8CF100DD08F5 /* XCRemoteSwiftPackageReference "AcknowKit" */;
 			productName = AcknowKit;
+		};
+		2754829E2AAD8D980050E65D /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2754829D2AAD8D980050E65D /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+		275482A02AAD8DA00050E65D /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2754829D2AAD8D980050E65D /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+		27AFDC942AADB2380040C4F1 /* SDWebImageSVGCoder */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 27AFDC932AADB22A0040C4F1 /* XCRemoteSwiftPackageReference "SDWebImageSVGCoder" */;
+			productName = SDWebImageSVGCoder;
+		};
+		27AFDC962AADB23E0040C4F1 /* SDWebImageSVGCoder */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 27AFDC932AADB22A0040C4F1 /* XCRemoteSwiftPackageReference "SDWebImageSVGCoder" */;
+			productName = SDWebImageSVGCoder;
 		};
 		27C00A2B2A2CC10700CA9ACD /* HtmlText */ = {
 			isa = XCSwiftPackageProductDependency;

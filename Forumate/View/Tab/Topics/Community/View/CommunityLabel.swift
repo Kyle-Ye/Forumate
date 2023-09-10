@@ -6,21 +6,18 @@
 //
 
 import SwiftUI
+import SDWebImageSwiftUI
 
 struct CommunityLabel: View {
     let community: Community
     
     var body: some View {
         EqualHeightHStackLayout {
-            AsyncImage(url: community.icon) { image in
-                image
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-            } placeholder: {
-                Image(systemName: "rectangle.3.group.bubble.left")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-            }
+            // Use WebImage for svg image support
+            WebImage(url: community.icon)
+                .placeholder(Image(systemName: "rectangle.3.group.bubble.left"))
+                .resizable()
+                .aspectRatio(/*1, */contentMode: .fit) // SDWebImageSwiftUI Bug
             VStack(alignment: .leading) {
                 Text(community.title)
                     .font(.system(.body, design: .rounded))
