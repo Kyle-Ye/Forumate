@@ -24,6 +24,11 @@ struct GeneralSection: View {
     
     @AppStorage(ShowRecommendCommunity.self)
     private var showRecommendCommunity
+    
+    #if os(macOS)
+    @AppStorage(ShowMenuBarExtra.self)
+    private var showMenuBarExtra
+    #endif
 
     var body: some View {
         List {
@@ -55,20 +60,25 @@ struct GeneralSection: View {
                     Text("Picker Style is used in Settings tab")
                 }
             }
-            #if os(iOS) || os(visionOS)
             Section {
+                #if os(iOS) || os(visionOS)
                 Picker("Open Link In", selection: $openLinkType) {
                     ForEach(OpenLinkType.allCases, id: \.rawValue) { type in
                         Text(type.rawValue).tag(type)
                     }
                 }
+                #endif
                 Toggle(isOn: $showRecommendCommunity) {
                     Text("Show Recommend Communities")
                 }
+                #if os(macOS)
+                Toggle(isOn: $showMenuBarExtra) {
+                    Text("Show ForumateHelper in Menu Bar")
+                }
+                #endif
             } header: {
                 Text("Other")
             }
-            #endif
         }
         .pickerStyleType(PickerStyleTypeSetting.value)
         #if os(iOS) || os(visionOS)

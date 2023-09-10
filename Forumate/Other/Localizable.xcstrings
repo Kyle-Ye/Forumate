@@ -397,6 +397,26 @@
         }
       }
     },
+    "Forumate" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Forumate"
+          }
+        }
+      }
+    },
+    "Forumate Helper" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Forumate 助手"
+          }
+        }
+      }
+    },
     "Forumate only supports communities built using the Discourse platform and running HTTPS. Please consult the support page for help regarding supported communities." : {
       "localizations" : {
         "zh-Hans" : {
@@ -767,6 +787,16 @@
         }
       }
     },
+    "Show ForumateHelper in Menu Bar" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在菜单栏中显示 Forumate 助手"
+          }
+        }
+      }
+    },
     "Show Recommend Communities" : {
       "localizations" : {
         "zh-Hans" : {
@@ -913,6 +943,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "话题"
+          }
+        }
+      }
+    },
+    "Try to open Pasteboard URL in Forumate" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "尝试在 Forumate 中打开剪贴板中的 URL"
           }
         }
       }
