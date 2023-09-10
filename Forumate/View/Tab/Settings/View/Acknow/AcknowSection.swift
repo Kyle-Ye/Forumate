@@ -16,6 +16,9 @@ struct AcknowSection: View {
             .Flow,
             .HtmlText,
             .SimpleToast,
+            .SDWebImage,
+            .SDWebImageSwiftUI,
+            .SDWebImageSVGCoder,
         ],
         header: "Forumate Library"
     )
@@ -442,5 +445,24 @@ extension AcknowLibrary.Item {
         author: "Martin Albrecht",
         license: .apache,
         repository: URL(string: "https://github.com/sanzaru/SimpleToast.git")
+    )
+    
+    static let SDWebImage: AcknowLibrary.Item = .init(
+        title: "SDWebImage",
+        author: "SDWebImage",
+        license: .mit,
+        repository: URL(string: "https://github.com/SDWebImage/SDWebImage.git")
+    )
+    static let SDWebImageSwiftUI: AcknowLibrary.Item = .init(
+        title: "SDWebImageSwiftUI",
+        author: "SDWebImage",
+        license: .mit,
+        repository: URL(string: "https://github.com/SDWebImage/SDWebImageSwiftUI.git")
+    )
+    static let SDWebImageSVGCoder: AcknowLibrary.Item = .init(
+        title: "SDWebImageSVGCoder",
+        author: "SDWebImage",
+        license: .mit,
+        repository: URL(string: "https://github.com/SDWebImage/SDWebImageSVGCoder.git")
     )
 }

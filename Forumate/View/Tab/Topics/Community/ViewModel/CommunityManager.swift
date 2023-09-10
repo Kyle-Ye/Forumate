@@ -20,9 +20,14 @@ final class CommunityManager {
         logger.trace("Create community begin: \(url)")
         let client = Client(baseURL: url)
         logger.trace("Fetch site info begin")
-        let info = try await client.fetchSiteBasicInfo()
-        logger.trace("Fetch site info success: \(info.title)")
-        logger.trace("Create community end: \(url)")
-        return Community(host: url, title: info.title, icon: info.appleTouchIconURL)
+        do {
+            let info = try await client.fetchSiteBasicInfo()
+            logger.trace("Fetch site info success: \(info.title)")
+            logger.trace("Create community end: \(url)")
+            return Community(host: url, title: info.title, icon: info.appleTouchIconURL)
+        } catch {
+            logger.error("\(error.localizedDescription)")
+            throw error
+        }
     }
 }

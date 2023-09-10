@@ -14,8 +14,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/Kyle-Ye/DiscourseKit",
       "state" : {
-        "revision" : "1fb281d1cd14ffb638994e480369bae6707203f0",
-        "version" : "0.2.0"
+        "revision" : "e2a4ce0bb7faecb9e21fc9a6d08ca43da4a372b1",
+        "version" : "0.2.1"
       }
     },
     {
@@ -23,8 +23,35 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/QMUI/LookinServer/",
       "state" : {
-        "revision" : "dfff53bcdbd89740e68c90736be9079344491784",
-        "version" : "1.1.7"
+        "revision" : "bc2eb9ae34c158ceb905e474d48d63997ac4b64a",
+        "version" : "1.1.8"
+      }
+    },
+    {
+      "identity" : "sdwebimage",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/SDWebImage/SDWebImage.git",
+      "state" : {
+        "revision" : "36e484b317522667a4b2de9b50daaa01dfa30809",
+        "version" : "5.18.0"
+      }
+    },
+    {
+      "identity" : "sdwebimagesvgcoder",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/SDWebImage/SDWebImageSVGCoder.git",
+      "state" : {
+        "revision" : "950167445ab703740569869c8b7510efc9d09a26",
+        "version" : "1.7.0"
+      }
+    },
+    {
+      "identity" : "sdwebimageswiftui",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/SDWebImage/SDWebImageSwiftUI.git",
+      "state" : {
+        "revision" : "1a17ef9dc07f6b1146f32de5b9f881ea9c10bb54",
+        "version" : "3.0.0-beta"
       }
     },
     {
