@@ -51,39 +51,33 @@ struct TopicDetail: View {
                 }
             }
         #if os(iOS) || os(visionOS) || os(macOS)
-            .toolbar {
-                #if os(iOS) || os(visionOS)
-                let placement: ToolbarItemPlacement = .topBarLeading
-                #elseif os(macOS)
-                let placement: ToolbarItemPlacement = .primaryAction
-                #endif
-                ToolbarItemGroup(placement: placement) {
-                    if supportsMultipleWindows {
+            .toolbar(id: "topic") {
+                if supportsMultipleWindows {
+                    ToolbarItem(id: "openWindow", placement: .secondaryAction) {
                         Button {
                             openWindow(value: TopicDetailWindowModel(topic: topic, communityID: state.community.persistentModelID))
                         } label: {
                             Label("Open In New Window", systemImage: "macwindow.badge.plus")
                         }
                     }
+                }
+                ToolbarItem(id: "openLink", placement: .secondaryAction) {
                     Button {
                         openURL(topicURL)
                     } label: {
                         Label("Open Topic's Link", systemImage: "link")
                     }
                 }
+                // TODO: Add more items later eg. Notification level, like, book mark, flag, see likes and so on.
             }
             .toolbar {
-                // TODO: Add custom toolbar on iPadOS
-                // Add users to display their favorite item. eg. Notification level, like, bookmark, reply and share.
-                #if os(iOS) || os(visionOS)
-                let placement: ToolbarItemPlacement = .topBarTrailing
-                #elseif os(macOS)
-                let placement: ToolbarItemPlacement = .secondaryAction
-                #endif
-                ToolbarItem(placement: placement) {
+                ToolbarItem(placement: .primaryAction) {
                     ShareLink(item: topicURL)
                 }
             }
+        #if os(iOS)
+            .toolbarRole(.browser)
+        #endif
         #endif
     }
     
