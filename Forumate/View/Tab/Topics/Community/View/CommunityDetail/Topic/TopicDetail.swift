@@ -13,16 +13,15 @@ struct TopicDetail: View {
     @EnvironmentObject private var appState: AppState
     @EnvironmentObject private var state: CommunityDetailState
     
-    @Environment(\.supportsMultipleWindows) private var supportsMultipleWindows
     #if os(iOS) || os(visionOS) || os(macOS)
+    @Environment(\.supportsMultipleWindows) private var supportsMultipleWindows
     @Environment(\.openWindow) private var openWindow
-    #endif
-    @Environment(\.openURL) var openURL
-    @State var topic: Topic
-    
+    @Environment(\.openURL) private var openURL
     private var topicURL: URL {
         state.community.host.appending(components: "t", topic.id.description)
     }
+    #endif
+    @State var topic: Topic
     
     var body: some View {
         ScrollView {
@@ -51,14 +50,14 @@ struct TopicDetail: View {
                     }
                 }
             }
+        #if os(iOS) || os(visionOS) || os(macOS)
             .toolbar {
-                #if os(iOS) || os(visionOS) || os(watchOS) || os(tvOS)
+                #if os(iOS) || os(visionOS)
                 let placement: ToolbarItemPlacement = .topBarLeading
                 #elseif os(macOS)
                 let placement: ToolbarItemPlacement = .primaryAction
                 #endif
                 ToolbarItemGroup(placement: placement) {
-                    #if os(iOS) || os(visionOS) || os(macOS)
                     if supportsMultipleWindows {
                         Button {
                             openWindow(value: TopicDetailWindowModel(topic: topic, communityID: state.community.persistentModelID))
@@ -66,7 +65,6 @@ struct TopicDetail: View {
                             Label("Open In New Window", systemImage: "macwindow.badge.plus")
                         }
                     }
-                    #endif
                     Button {
                         openURL(topicURL)
                     } label: {
@@ -77,7 +75,7 @@ struct TopicDetail: View {
             .toolbar {
                 // TODO: Add custom toolbar on iPadOS
                 // Add users to display their favorite item. eg. Notification level, like, bookmark, reply and share.
-                #if os(iOS) || os(visionOS) || os(watchOS) || os(tvOS)
+                #if os(iOS) || os(visionOS)
                 let placement: ToolbarItemPlacement = .topBarTrailing
                 #elseif os(macOS)
                 let placement: ToolbarItemPlacement = .secondaryAction
@@ -86,6 +84,7 @@ struct TopicDetail: View {
                     ShareLink(item: topicURL)
                 }
             }
+        #endif
     }
     
     @ViewBuilder

@@ -26,15 +26,15 @@ struct TopicLabel: View {
         self.showCategory = showCategory
     }
     
-    @Environment(\.supportsMultipleWindows) private var supportsMultipleWindows
     #if os(iOS) || os(visionOS) || os(macOS)
+    @Environment(\.supportsMultipleWindows) private var supportsMultipleWindows
     @Environment(\.openWindow) private var openWindow
-    #endif
-    @Environment(\.openURL) var openURL
-
+    @Environment(\.openURL) private var openURL
     private var topicURL: URL {
         state.community.host.appending(components: "t", topic.id.description)
     }
+    #endif
+
     
     var body: some View {
         VStack(alignment: .leading, spacing: 4) {
