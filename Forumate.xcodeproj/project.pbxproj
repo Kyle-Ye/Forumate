@@ -171,6 +171,10 @@
 		27F4340D2AAC15840042F681 /* PlusManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F4340B2AAC15840042F681 /* PlusManager.swift */; };
 		27F4340F2AAC1A940042F681 /* AppViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F4340E2AAC1A940042F681 /* AppViewModifier.swift */; };
 		27F434102AAC1A940042F681 /* AppViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F4340E2AAC1A940042F681 /* AppViewModifier.swift */; };
+		27FDBEA22AADDC3500A3448C /* styleSheet.css in Resources */ = {isa = PBXBuildFile; fileRef = 27FDBE9D2AADDC3500A3448C /* styleSheet.css */; };
+		27FDBEA32AADDC3500A3448C /* styleSheet.css in Resources */ = {isa = PBXBuildFile; fileRef = 27FDBE9D2AADDC3500A3448C /* styleSheet.css */; };
+		27FDBEA62AADE9B600A3448C /* LoremSwiftum in Frameworks */ = {isa = PBXBuildFile; productRef = 27FDBEA52AADE9B600A3448C /* LoremSwiftum */; };
+		27FDBEA82AADE9C400A3448C /* LoremSwiftum in Frameworks */ = {isa = PBXBuildFile; productRef = 27FDBEA72AADE9C400A3448C /* LoremSwiftum */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -291,6 +295,7 @@
 		27F434092AAC131E0042F681 /* ContributorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContributorView.swift; sourceTree = "<group>"; };
 		27F4340B2AAC15840042F681 /* PlusManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlusManager.swift; sourceTree = "<group>"; };
 		27F4340E2AAC1A940042F681 /* AppViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewModifier.swift; sourceTree = "<group>"; };
+		27FDBE9D2AADDC3500A3448C /* styleSheet.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = styleSheet.css; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -307,6 +312,7 @@
 			files = (
 				275482A12AAD8DA00050E65D /* SDWebImageSwiftUI in Frameworks */,
 				27CDD3832A1BAEAC003E3D00 /* Flow in Frameworks */,
+				27FDBEA82AADE9C400A3448C /* LoremSwiftum in Frameworks */,
 				27DFFCF92A2B35B3005661BD /* DiscourseKit in Frameworks */,
 				27AFDC972AADB23E0040C4F1 /* SDWebImageSVGCoder in Frameworks */,
 				27C00A302A2CC10F00CA9ACD /* HtmlText in Frameworks */,
@@ -321,6 +327,7 @@
 			files = (
 				2754829F2AAD8D980050E65D /* SDWebImageSwiftUI in Frameworks */,
 				273AFBDE2A1A8CF100DD08F5 /* AcknowKit in Frameworks */,
+				27FDBEA62AADE9B600A3448C /* LoremSwiftum in Frameworks */,
 				27DFFCF72A2B35AB005661BD /* DiscourseKit in Frameworks */,
 				27AFDC952AADB2380040C4F1 /* SDWebImageSVGCoder in Frameworks */,
 				27C00A2C2A2CC10700CA9ACD /* HtmlText in Frameworks */,
@@ -559,6 +566,7 @@
 				278E53E32A18E83000DCD159 /* ViewModel */,
 				277C15C22A18F021007940C7 /* Extension */,
 				274C4CA22A3F85350018BFA4 /* Store */,
+				27FDBE9A2AADDC3500A3448C /* Web */,
 				2726057E2A1A12360018B908 /* PreviewData */,
 				278E54142A18E85300DCD159 /* Other */,
 				278E53E72A18E83000DCD159 /* Preview Content */,
@@ -768,6 +776,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		27FDBE9A2AADDC3500A3448C /* Web */ = {
+			isa = PBXGroup;
+			children = (
+				27FDBE9D2AADDC3500A3448C /* styleSheet.css */,
+			);
+			path = Web;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -810,6 +826,7 @@
 				270CD67C2AA2294C004DBD1D /* SimpleToast */,
 				275482A02AAD8DA00050E65D /* SDWebImageSwiftUI */,
 				27AFDC962AADB23E0040C4F1 /* SDWebImageSVGCoder */,
+				27FDBEA72AADE9C400A3448C /* LoremSwiftum */,
 			);
 			productName = "ForumateWatch Watch App";
 			productReference = 273AFBE72A1A94E100DD08F5 /* ForumateWatch.app */;
@@ -838,6 +855,7 @@
 				270CD67A2AA22945004DBD1D /* SimpleToast */,
 				2754829E2AAD8D980050E65D /* SDWebImageSwiftUI */,
 				27AFDC942AADB2380040C4F1 /* SDWebImageSVGCoder */,
+				27FDBEA52AADE9B600A3448C /* LoremSwiftum */,
 			);
 			productName = Forumate;
 			productReference = 27EEA08629EFCD1B00ADA5BE /* Forumate.app */;
@@ -883,6 +901,7 @@
 				270CD6792AA228D5004DBD1D /* XCRemoteSwiftPackageReference "SimpleToast" */,
 				2754829D2AAD8D980050E65D /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
 				27AFDC932AADB22A0040C4F1 /* XCRemoteSwiftPackageReference "SDWebImageSVGCoder" */,
+				27FDBEA42AADE9B600A3448C /* XCRemoteSwiftPackageReference "LoremSwiftum" */,
 			);
 			productRefGroup = 27EEA08729EFCD1B00ADA5BE /* Products */;
 			projectDirPath = "";
@@ -911,6 +930,7 @@
 				271808CB2A324995008B1970 /* InfoPlist.xcstrings in Resources */,
 				270808FC2A9FA3D50089E5DC /* Assets.xcassets in Resources */,
 				271808C72A32496D008B1970 /* Localizable.xcstrings in Resources */,
+				27FDBEA32AADDC3500A3448C /* styleSheet.css in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -922,6 +942,7 @@
 				278E54042A18E83000DCD159 /* Assets.xcassets in Resources */,
 				271808CA2A324995008B1970 /* InfoPlist.xcstrings in Resources */,
 				271808C62A32496D008B1970 /* Localizable.xcstrings in Resources */,
+				27FDBEA22AADDC3500A3448C /* styleSheet.css in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1542,6 +1563,14 @@
 				minimumVersion = 0.2.0;
 			};
 		};
+		27FDBEA42AADE9B600A3448C /* XCRemoteSwiftPackageReference "LoremSwiftum" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/lukaskubanek/LoremSwiftum.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1612,6 +1641,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 27DFFCF32A2B3574005661BD /* XCRemoteSwiftPackageReference "DiscourseKit" */;
 			productName = DiscourseKit;
+		};
+		27FDBEA52AADE9B600A3448C /* LoremSwiftum */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 27FDBEA42AADE9B600A3448C /* XCRemoteSwiftPackageReference "LoremSwiftum" */;
+			productName = LoremSwiftum;
+		};
+		27FDBEA72AADE9C400A3448C /* LoremSwiftum */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 27FDBEA42AADE9B600A3448C /* XCRemoteSwiftPackageReference "LoremSwiftum" */;
+			productName = LoremSwiftum;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

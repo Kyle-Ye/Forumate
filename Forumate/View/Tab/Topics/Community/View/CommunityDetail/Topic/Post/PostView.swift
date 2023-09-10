@@ -11,14 +11,43 @@ import SwiftUI
 
 struct PostView: View {
     @EnvironmentObject private var state: CommunityDetailState
+    #if os(iOS) || os(macOS)
+    @Environment(ThemeManager.self) private var themeManager
+    private var extraColorCSS: String {
+        #"""
+        :root {
+            --link-color: #\#(themeManager.lightColor.toHex(alpha: true) ?? "");
+            --header-link-color: #\#(themeManager.lightColor.toHex(alpha: true) ?? "");
+        }
+        
+        @media(prefers-color-scheme: dark) {
+            :root {
+                --link-color: #\#(themeManager.darkColor.toHex(alpha: true) ?? "");
+                --header-link-color: #\#(themeManager.darkColor.toHex(alpha: true) ?? "");
+            }
+        }
+        """#
+    }
+    #else
+    private var extraColorCSS: String { "" }
+    #endif
+    private var padding: Double { 10 }
 
+    private var extraGeneralCSS: String {
+        #"""
+        :root {
+        --content-margin: \#(padding)px;
+        }
+        """#
+    }
+    
     let post: Post
     
     var body: some View {
         VStack(alignment: .leading) {
-            authorArea
+            authorArea.padding(.horizontal, padding)
             bodyArea
-            extensionArea
+            extensionArea.padding(.horizontal, padding)
         }
     }
 
@@ -61,13 +90,10 @@ struct PostView: View {
         // FIXME: Link AccentColor will not change for dark/light toggle
         HtmlText(
             body: post.cooked,
-            css: .init(fontFaces: [], css: #"""
-            :root {
-                font: -apple-system-body;
-                color-scheme: light dark; /* enable light and dark mode compatibility */
-                supported-color-schemes: light dark; /* enable light and dark mode */
-            }
-            """# + CSSConstructor().list(padding: .zero).paragraph(padding: .zero).link(color: UIColor(named: "AccentColor")!, underlined: false).css.css),
+            css: .init(
+                fontFaces: [],
+                css: PostView.defaultCSS + extraColorCSS + extraGeneralCSS
+            ),
             linkTap: HtmlText.defaultLinkTapHandler(httpLinkTap: tapMethod)
         )
         #else
@@ -89,8 +115,54 @@ struct PostView: View {
     }
 }
 
-// struct PostView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        PostView(post: )
-//    }
-// }
+extension PostView {
+    static let defaultCSS: String = {
+        guard let url = Bundle.main.url(forResource: "styleSheet", withExtension: "css")
+        else { return "" }
+        return (try? String(contentsOf: url)) ?? ""
+    }()
+}
+
+@_implementationOnly import LoremSwiftum
+
+#Preview("1") {
+    let data = #"""
+    {
+        "id": 1,
+        "name": "Test1",
+        "username": "Test2",
+        "avatar_template": "https://picsum.photos/200",
+        "created_at": "2023-08-21T15:35:28.305Z",
+        "cooked": "<aside class=\"quote no-group\" data-username=\"Demo\" data-post=\"4\" data-topic=\"67152\">\n<div class=\"title\">\n<div class=\"quote-controls\"></div>\n<img loading=\"lazy\" alt=\"\" width=\"24\" height=\"24\" src=\"https://sea2.discourse-cdn.com/swift/user_avatar/forums.swift.org/ensan-hcl/48/15186_2.png\" class=\"avatar\"> Demo:</div>\n<blockquote>\n<p>\#(Lorem.tweet) <code>CodeExample</code> <a href=\"https://example.com\">Example Link</a></p>\n</blockquote>\n</aside>\n<p>\#(Lorem.tweet).</p>",
+        "actions_summary": []
+    }
+    """#.data(using: .utf8)!
+    let post = try! JSONDecoder.discourse.decode(Post.self, from: data)
+    return PostView(post: post)
+        .environmentObject(CommunityDetailState(community: .swift))
+    #if os(iOS) || os(macOS)
+        .environment(ThemeManager())
+    #endif
+}
+
+#Preview("2") {
+    let data = #"""
+    {
+        "id": 1,
+        "name": "Test1",
+        "username": "Test2",
+        "avatar_template": "https://picsum.photos/200",
+        "created_at": "2023-08-21T15:35:28.305Z",
+        "cooked": "<aside class=\"quote no-group\" data-username=\"User\" data-post=\"6\" data-topic=\"67152\">\n<div class=\"title\">\n<div class=\"quote-controls\"></div>\n<img loading=\"lazy\" alt=\"\" width=\"24\" height=\"24\" src=\"https://sea2.discourse-cdn.com/swift/user_avatar/forums.swift.org/wadetregaskis/48/8494_2.png\" class=\"avatar\"> User:</div>\n<blockquote>\n<p>\#(Lorem.tweet)</p>\n</blockquote>\n</aside>\n<p>\#(Lorem.paragraph)</p>\n<pre><code class=\"lang-swift\">protocol S {\n  func decode(_ encoded: some Collection&lt;UInt8&gt;) -&gt; any Collection&lt;UInt8&gt;\n}\n</code></pre>\n<p>\#(Lorem.paragraph)</p>",
+        "actions_summary": []
+    }
+    """#.data(using: .utf8)!
+    let post = try! JSONDecoder.discourse.decode(Post.self, from: data)
+    return ScrollView {
+        PostView(post: post)
+    }
+    .environmentObject(CommunityDetailState(community: .swift))
+    #if os(iOS) || os(macOS)
+        .environment(ThemeManager())
+    #endif
+}
