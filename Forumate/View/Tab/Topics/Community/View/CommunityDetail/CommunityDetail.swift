@@ -39,6 +39,11 @@ struct CommunityDetail: View {
         }
         .navigationTitle(state.community.title)
         .environmentObject(state)
+        .toast(isPresented: $state.unimplementedToast) {
+            Label("Unimplemented Feature", systemImage: "paperplane")
+                .foregroundStyle(.white)
+                .tint(Color.accentColor.opacity(0.8))
+        }
     }
 }
 

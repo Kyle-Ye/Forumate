@@ -139,7 +139,9 @@ class CommunityDetailState: ObservableObject {
         static var unspecified: CommunityDetailState.ViewByType { categories }
     }
     
-    @AppStorage var viewByType: ViewByType    
+    @AppStorage var viewByType: ViewByType 
+    
+    @Published var unimplementedToast = false
 }
 
 enum DefaultViewByTypeSetting: Setting {
