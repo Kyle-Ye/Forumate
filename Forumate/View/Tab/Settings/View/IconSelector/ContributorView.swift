@@ -10,8 +10,13 @@ import SwiftUI
 struct ContributorView: View {
     var info: ContributorInfo
     
+    #if os(tvOS)
+    @ScaledMetric
+    private var size = 100
+    #else
     @ScaledMetric
     private var size = 20
+    #endif
     
     var body: some View {
         HStack {
@@ -22,9 +27,13 @@ struct ContributorView: View {
             }
             .frame(width: size, height: size)
             .clipShape(Circle())
+            #if os(tvOS)
+            Text(info.name)
+            #else
             Link(destination: info.site) {
                 Text(info.name)
             }
+            #endif
         }
         .font(.footnote)
     }

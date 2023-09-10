@@ -17,8 +17,11 @@ struct IconSelectorSection: View {
     #endif
     private let icons = [Icon.primary, Icon.alt1]
 
+    #if os(tvOS)
+    private let columns = [GridItem(.adaptive(minimum: 450, maximum: 500))]
+    #else
     private let columns = [GridItem(.adaptive(minimum: 125, maximum: 1024))]
-
+    #endif
     #if canImport(AppKit)
     @State private var showAlert = false
     @State private var message: LocalizedStringKey = ""
@@ -120,12 +123,13 @@ struct IconSelectorSection: View {
                         }
                     }
                 #endif
+                #if !os(tvOS)
                 ContributorView(info: icon.author)
+                #endif
             }
         }
-
         Group {
-            #if canImport(UIKit)
+            #if os(iOS)
             if UIDevice.current.userInterfaceIdiom == .mac {
                 label().onTapGesture {
                     action()
@@ -137,7 +141,16 @@ struct IconSelectorSection: View {
                     label()
                 }
             }
-            #else
+            #elseif os(tvOS)
+            VStack {
+                Button {
+                    action()
+                } label: {
+                    label()
+                }
+                ContributorView(info: icon.author)
+            }
+            #elseif os(macOS)
             Button {
                 action()
             } label: {
@@ -208,6 +221,8 @@ extension IconSelectorSection {
 }
 
 #Preview {
-    IconSelectorSection()
+    @State var plusManager = PlusManager()
+    return IconSelectorSection()
+        .environment(plusManager)
 }
 #endif
