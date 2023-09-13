@@ -12,6 +12,24 @@ struct ThemeSection: View {
     @Environment(ThemeManager.self) private var themeManager
     @Environment(PlusManager.self) private var plusManager
     @State private var presentSubscription = false
+    @Environment(\.colorScheme) private var colorScheme
+
+    private var followSystemBinding: Binding<Bool> {
+        Binding {
+            themeManager.automatic
+        } set: { newValue in
+            if newValue {
+                themeManager.appearanceState = .automatic
+            } else {
+                switch colorScheme {
+                case .light: themeManager.appearanceState = .light
+                case .dark: themeManager.appearanceState = .dark
+                @unknown default:
+                    themeManager.appearanceState = .light
+                }
+            }
+        }
+    }
 
     var body: some View {
         @Bindable var themeManager = themeManager
@@ -24,7 +42,7 @@ struct ThemeSection: View {
                     AppearanceItem(isDark: true)
                     Spacer()
                 }
-                Toggle(isOn: $themeManager.automatic) {
+                Toggle(isOn: followSystemBinding) {
                     Text("Follow System")
                 }
             } header: {
@@ -65,11 +83,12 @@ struct ThemeSection: View {
             }
         }
     }
-    
+
     private struct AppearanceItem: View {
-        @Environment(ThemeManager.self) var themeManager
         var isDark: Bool
-        
+        @Environment(ThemeManager.self) private var themeManager
+        @Environment(\.colorScheme) private var colorScheme
+
         var ratio: Double {
             #if os(macOS)
             if let screen = NSScreen.main {
@@ -81,7 +100,11 @@ struct ThemeSection: View {
             UIScreen.main.bounds.width / UIScreen.main.bounds.height
             #endif
         }
-                
+
+        var implicitMode: Bool {
+            themeManager.automatic && ((isDark && colorScheme == .dark) || (!isDark && colorScheme == .light))
+        }
+
         var body: some View {
             VStack {
                 Rectangle()
@@ -99,12 +122,34 @@ struct ThemeSection: View {
                         .padding(.bottom, 10)
                         .foregroundStyle(isDark ? themeManager.darkColor : themeManager.lightColor)
                     }
+                    .overlay {
+                        RoundedRectangle(cornerRadius: 10)
+                            .stroke(lineWidth: implicitMode ? 5 : 0)
+                            .foregroundStyle(.selection)
+                    }
                     .environment(\.colorScheme, isDark ? .dark : .light)
-                Label(isDark ? "Dark" : "Light", systemImage: "checkmark")
-                    .symbolVariant(.circle)
-                    .symbolVariant((isDark && themeManager.dark) || (!isDark && themeManager.light) ? .fill : .none)
+                Label {
+                    Text(isDark ? "Dark" : "Light")
+                } icon: {
+                    Image(systemName: "checkmark")
+                        .symbolVariant(.circle)
+                        .symbolVariant((isDark && themeManager.dark) || (!isDark && themeManager.light) ? .fill : .none)
+                        .foregroundStyle(
+                            themeManager.automatic
+                                ? .secondary
+                                : (isDark ? themeManager.darkColor : themeManager.lightColor)
+                        )
+                }
+                .foregroundStyle(
+                    themeManager.automatic
+                        ? .secondary
+                        : .primary
+                )
             }
             .onTapGesture {
+                if themeManager.automatic {
+                    return
+                }
                 if isDark {
                     themeManager.dark = true
                 } else {
@@ -116,15 +161,12 @@ struct ThemeSection: View {
 }
 
 #Preview {
-    struct Preview: View {
-        @State var themeManager = ThemeManager()
-        var body: some View {
-            ThemeSection()
-                .environment(themeManager)
-                .preferredColorScheme(themeManager.colorScheme)
-                .tint(themeManager.accentColor)
-        }
-    }
-    return Preview()
+    @State var themeManager = ThemeManager()
+    @State var plusManager = PlusManager()
+    return ThemeSection()
+        .preferredColorScheme(themeManager.colorScheme)
+        .tint(themeManager.accentColor)
+        .environment(themeManager)
+        .environment(plusManager)
 }
 #endif

@@ -29,16 +29,7 @@ class ThemeManager {
     }
     
     var automatic: Bool {
-        get {
-            appearanceState == .automatic
-        }
-        set {
-            if newValue {
-                appearanceState = .automatic
-            } else {
-                appearanceState = .light
-            }
-        }
+        appearanceState == .automatic
     }
     
     var light: Bool {
