@@ -44,32 +44,29 @@ struct ForumateApp: App {
         WindowGroup {
             ContentView()
                 .modifier(AppViewModifier())
+                .environmentObject(appState)
+                .environment(plusManager)
+                .modelContainer(container)
+            #if os(iOS) || os(macOS)
+                .environment(themeManager)
+            #endif
         }
-        .environmentObject(appState)
-        .environment(plusManager)
-        .modelContainer(container)
         #if os(iOS) || os(macOS)
-            .environment(themeManager)
-            .commands {
-                ToolbarCommands()
-            }
+        .commands {
+            ToolbarCommands()
+        }
         #endif
-
         #if os(iOS) || os(visionOS) || os(macOS)
-        // FIXME: This will lead to a crash for themeManager currently. 
         WindowGroup("Topic Detail", id: "topic", for: TopicDetailWindowModel.self) { $detailModel in
             DetailWindowView(detailModel: detailModel)
                 .modifier(AppViewModifier())
+                .environmentObject(appState)
+                .environment(plusManager)
+                .modelContainer(container)
+            #if os(iOS) || os(macOS)
+                .environment(themeManager)
+            #endif
         }
-        .environmentObject(appState)
-        .environment(plusManager)
-        .modelContainer(container)
-        #if os(iOS) || os(macOS)
-            .environment(themeManager)
-            .commands {
-                ToolbarCommands()
-            }
-        #endif
         #if os(macOS)
         MenuBarExtra("Forumate Helper", systemImage: "f.square.fill", isInserted: $showMenuBarExtra) {
             ForumateHelpMenuBar()
