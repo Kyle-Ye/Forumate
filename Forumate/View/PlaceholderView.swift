@@ -8,16 +8,23 @@
 import SwiftUI
 
 struct PlaceholderView: View {
-    let text: LocalizedStringKey
+    let text: String
     let image: String
     
-    init(text: LocalizedStringKey, image: String = "doc.text.image") {
+    init(text: String, image: String = "doc.text.image") {
         self.text = text
         self.image = image
     }
     
     var body: some View {
-        ContentUnavailableView(text, systemImage: image)
+        VStack {
+            Image(systemName: image)
+            Text(text)
+                .padding()
+        }
+        .font(.title)
+        .foregroundColor(.gray)
+        .multilineTextAlignment(.center)
     }
 }
 

@@ -8,7 +8,6 @@
 import SwiftUI
 
 extension View {
-    @available(*, deprecated, message: "Please use a custom Layout instead of this API")
     func readSize(onChange: @escaping (CGSize) -> Void) -> some View {
         background(
             GeometryReader { geometryProxy in

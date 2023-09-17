@@ -1,9 +1,0 @@
-blank_issues_enabled: false
-
-contact_links:
-  - name: Forum Topic on Discourse Forum
-    url: https://meta.discourse.org/t/forumate-native-discourse-client-for-ios
-    about: Ask and answer general questions about Forumate
-  - name: Join Forumate Discord Server
-    url: https://discord.gg/ZHq5PzbGmE
-    about: Discuss detail about Forumate

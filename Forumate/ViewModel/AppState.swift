@@ -8,7 +8,6 @@
 import DiscourseKit
 import Foundation
 import SwiftUI
-import SwiftData
 
 @MainActor
 class AppState: ObservableObject {
@@ -17,19 +16,25 @@ class AppState: ObservableObject {
     
     @AppStorage("starter_intro_version") private var starterIntroVersion = 0
     var shouldShowStarterIntro: Bool { starterIntroVersion < AppInfo.starterIntroVersion }
-        
-    func didFirstLaunch() throws {
+    
+    // TODO: Migrate to use CoreData or others to add iCloud sync Support
+    @AppStorage("communities") private var _communities: [Community] = []
+    var communities: [Community] { _communities }
+    
+    func didFirstLaunch() {
         _isFirstLaunch = false
+        if _communities.isEmpty {
+            _communities = [.swift]            
+        }
     }
     
     func updateStarterIntro() {
         starterIntroVersion = AppInfo.starterIntroVersion
     }
     
-    // MARK: - Color customazation
-    
-    // TODO: Managed by Hex value of Observable
-    
+    func addCommunity(_ community: Community) {
+        _communities.append(community)
+    }
     
     // MARK: Cache
     

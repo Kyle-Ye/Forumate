@@ -31,8 +31,8 @@ struct StarterIntroCardView<S: ShapeStyle>: View {
 struct StarterIntroCardView_Previews: PreviewProvider {
     static var previews: some View {
         VStack {
-            StarterIntroCardView(card: StarterIntroCard(image: "macwindow.badge.plus", text: "Multiple Window Support", style: .blue.opacity(0.3)))
-            StarterIntroCardView(card: StarterIntroCard(image: "macwindow.badge.plus", text: "Multiple Window Support", style: .yellow.opacity(0.3)))
+            StarterIntroCardView(card: StarterIntroCard(image: "macwindow.badge.plus", text: "Multiple Window support", style: .blue.opacity(0.3)))
+            StarterIntroCardView(card: StarterIntroCard(image: "macwindow.badge.plus", text: "Multiple Window support", style: .yellow.opacity(0.3)))
         }
     }
 }

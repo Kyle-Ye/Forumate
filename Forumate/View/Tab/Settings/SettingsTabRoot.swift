@@ -5,18 +5,21 @@
 //  Created by Kyle on 2023/5/21.
 //
 
-import Observation
 import SwiftUI
 
 struct SettingsTabRoot: View {
     @EnvironmentObject private var appState: AppState
     @EnvironmentObject private var tabState: SettingsTabState
     @State private var showStarterIntro = false
-    #if os(iOS) || os(visionOS) || os(macOS)
-    @State private var showPasteToast = false
-    #endif
-    func navigationItem(destination: SettingsTabDestination.ID, text: LocalizedStringKey, @ViewBuilder icon: () -> some View) -> some View {
-        NavigationLink(value: SettingsTabDestination(title: text, id: destination)) {
+
+    func navigationItem(text: String, icon: () -> some View, destination: () -> some View) -> some View {
+        NavigationLink {
+            destination()
+                .navigationTitle(text)
+                #if os(iOS) || os(watchOS)
+                .navigationBarTitleDisplayMode(.inline)
+                #endif
+        } label: {
             Label {
                 Text(text)
             } icon: {
@@ -24,74 +27,44 @@ struct SettingsTabRoot: View {
             }
         }
     }
-
+    
     var body: some View {
-        List(selection: $tabState.destination) {
+        List {
             Section {
-                navigationItem(destination: .forumatePlus, text: "Forumate+") {
-                    SettingIcon(icon: "star.circle.fill", style: .yellow)
-                }
-                #if os(iOS) || os(tvOS) || os(macOS)
-                navigationItem(destination: .iconSelector, text: "App Icon") {
-                    #if os(macOS)
-                    let appIconName = IconSelectorSection.Icon.primary.appIconName
-                    #else
-                    let appIconName = UIApplication.shared.alternateIconName ?? IconSelectorSection.Icon.primary.appIconName
-                    #endif
-                    let icon = IconSelectorSection.Icon(string: appIconName)
-                    Image(platformNamed: icon.iconName)
-                        .resizable()
-                        .scaledToFit()
-                        .frame(height: 25)
-                        .cornerRadius(5)
-                }
-                #endif
-                #if os(iOS) || os(macOS)
-                navigationItem(destination: .theme, text: "Theme") {
-                    SettingIcon(icon: "globe", style: .blue)
-                }
-                #endif
-            }
-            Section {
-                navigationItem(destination: .general, text: "General") {
+                navigationItem(text: "General") {
                     SettingIcon(icon: "gear", style: .gray)
+                } destination: {
+                    GeneralSection()
                 }
                 #if DEBUG
-                navigationItem(destination: .notification, text: "Notifications") {
+                navigationItem(text: "Notifications") {
                     SettingIcon(icon: "bell.badge.fill", style: .red)
+                } destination: {
+                    Text("Unimplemented")
                 }
                 #endif
             }
             Section {
-                navigationItem(destination: .support, text: "Support") {
+                navigationItem(text: "Support") {
                     SettingIcon(icon: "megaphone.fill", style: .blue)
+                } destination: {
+                    SupportSection()
                 }
-                navigationItem(destination: .privacy, text: "Privacy Policy") {
+                navigationItem(text: "Privacy Policy") {
                     SettingIcon(icon: "lock.fill", style: .purple)
+                } destination: {
+                    PrivacyPolicySection()
                 }
-                navigationItem(destination: .acknowledgement, text: "Acknowledgement") {
+                navigationItem(text: "Acknowledgement") {
                     SettingIcon(icon: "heart.fill", style: .pink)
+                } destination: {
+                    AcknowSection()
                 }
             } footer: {
-                Text(verbatim: """
-                \(AppInfo.name) v\(AppInfo.version)-beta Build \(AppInfo.buildNumber)
-                \(AppInfo.OSVersion)
-                """)
-                .multilineTextAlignment(.leading)
-                #if os(iOS) || os(visionOS) || os(macOS)
-                    .onTapGesture(count: 2) {
-                        showPasteToast.toggle()
-                        let content = "\(AppInfo.name) v\(AppInfo.version) Build \(AppInfo.buildNumber) · \(AppInfo.OSVersion)"
-                        #if os(macOS)
-                        NSPasteboard.general.setString(content, forType: .string)
-                        #else
-                        UIPasteboard.general.string = content
-                        #endif
-                    }
-                #endif
+                Text("\(AppInfo.name) v\(AppInfo.version) Build \(AppInfo.buildNumber) · \(AppInfo.OSVersion)")
             }
         }
-        #if os(iOS) || os(visionOS)
+        #if os(iOS)
         .listStyle(.insetGrouped)
         #endif
         .toolbar {
@@ -110,20 +83,15 @@ struct SettingsTabRoot: View {
             StarterIntro()
         }
         .navigationTitle("Settings")
-        #if os(iOS) || os(visionOS) || os(macOS)
-            .toast(isPresented: $showPasteToast) {
-                Label("Copied into clipboard", systemImage: "doc.on.clipboard")
-                    .foregroundStyle(.white)
-                    .tint(Color.accentColor.opacity(0.8))
-            }
-        #endif
     }
 }
 
-#Preview {
-    NavigationStack {
-        SettingsTabRoot()
+struct SettingsTabRoot_Previews: PreviewProvider {
+    static var previews: some View {
+        NavigationStack {
+            SettingsTabRoot()
+        }
+        .environmentObject(AppState())
+        .environmentObject(SettingsTabState())
     }
-    .environmentObject(SettingsTabState())
-    .environmentObject(AppState())
 }

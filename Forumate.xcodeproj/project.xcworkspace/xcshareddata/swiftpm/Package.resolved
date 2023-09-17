@@ -5,8 +5,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/Kyle-Ye/AcknowKit.git",
       "state" : {
-        "revision" : "f4b73e729fc51d53c2046ad89e3ac78560ea46f8",
-        "version" : "0.0.4"
+        "revision" : "c3a47ecb352b08009eb4756fe4a0ea95f3139019",
+        "version" : "0.0.3"
       }
     },
     {
@@ -14,8 +14,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/Kyle-Ye/DiscourseKit",
       "state" : {
-        "revision" : "0b2304728e4348fa76cecb0dfc903b6297bc0ad4",
-        "version" : "0.2.2"
+        "revision" : "1fb281d1cd14ffb638994e480369bae6707203f0",
+        "version" : "0.2.0"
       }
     },
     {
@@ -23,53 +23,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/QMUI/LookinServer/",
       "state" : {
-        "revision" : "bc2eb9ae34c158ceb905e474d48d63997ac4b64a",
-        "version" : "1.1.8"
-      }
-    },
-    {
-      "identity" : "loremswiftum",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/lukaskubanek/LoremSwiftum.git",
-      "state" : {
-        "branch" : "master",
-        "revision" : "8942e732e50458cde5dccf9996afa16f29372853"
-      }
-    },
-    {
-      "identity" : "sdwebimage",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/SDWebImage/SDWebImage.git",
-      "state" : {
-        "revision" : "36e484b317522667a4b2de9b50daaa01dfa30809",
-        "version" : "5.18.0"
-      }
-    },
-    {
-      "identity" : "sdwebimagesvgcoder",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/SDWebImage/SDWebImageSVGCoder.git",
-      "state" : {
-        "revision" : "950167445ab703740569869c8b7510efc9d09a26",
-        "version" : "1.7.0"
-      }
-    },
-    {
-      "identity" : "sdwebimageswiftui",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/SDWebImage/SDWebImageSwiftUI.git",
-      "state" : {
-        "revision" : "1a17ef9dc07f6b1146f32de5b9f881ea9c10bb54",
-        "version" : "3.0.0-beta"
-      }
-    },
-    {
-      "identity" : "simpletoast",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/sanzaru/SimpleToast.git",
-      "state" : {
-        "revision" : "6637b95dfc49d3d688ad2d7b6e0655c0f6862f83",
-        "version" : "0.8.0"
+        "revision" : "dfff53bcdbd89740e68c90736be9079344491784",
+        "version" : "1.1.7"
       }
     },
     {
@@ -77,8 +32,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/apple/swift-argument-parser",
       "state" : {
-        "revision" : "8f4d2753f0e4778c76d5f05ad16c74f707390531",
-        "version" : "1.2.3"
+        "revision" : "fee6933f37fde9a5e12a1e4aeaa93fe60116ff2a",
+        "version" : "1.2.2"
       }
     },
     {
@@ -86,8 +41,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/binarybirds/swift-http",
       "state" : {
-        "revision" : "8b573967d26ef5401af2507aa5546da5f36235cc",
-        "version" : "1.2.3"
+        "revision" : "8bcff49f845b0aa7b1fd6fabb666935d1ce678f7",
+        "version" : "1.2.2"
       }
     },
     {
@@ -95,8 +50,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/apple/swift-log",
       "state" : {
-        "revision" : "532d8b529501fb73a2455b179e0bbb6d49b652ed",
-        "version" : "1.5.3"
+        "revision" : "32e8d724467f8fe623624570367e3d50c5638e46",
+        "version" : "1.5.2"
       }
     },
     {

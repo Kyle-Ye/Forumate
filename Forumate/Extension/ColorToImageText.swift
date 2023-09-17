@@ -10,13 +10,16 @@ import SwiftUI
 extension String {
     func colorToImageText(image: String) -> Text {
         if let color = Color(hex: self) {
-            return Text("\(Image(systemName: image))").foregroundStyle(color) + Text(" ")
+            return Text("\(Image(systemName: image)) ").foregroundColor(color)
         } else {
             return Text("")
         }
     }
 }
 
-#Preview {
-    "AAA".colorToImageText(image: "square.fill") + Text(verbatim: "Hello")
+
+struct ColorToImageText_Previews: PreviewProvider {
+    static var previews: some View {
+        "AAA".colorToImageText(image: "square.fill") + Text("Hello")
+    }
 }

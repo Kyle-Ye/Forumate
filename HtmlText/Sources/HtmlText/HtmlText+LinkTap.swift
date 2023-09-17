@@ -11,7 +11,7 @@ import SafariServices
 extension HtmlText {
     public enum HttpLinkTap {
         case openSafariApp
-        #if os(iOS) || os(visionOS)
+        #if os(iOS)
         case openSFSafariModal
         #endif
     }
@@ -22,10 +22,10 @@ extension HtmlText {
             case .openSafariApp:
                 #if os(macOS)
                 NSWorkspace.shared.open(url)
-                #elseif os(iOS) || os(visionOS) || os(tvOS)
+                #elseif os(iOS) || os(tvOS)
                 UIApplication.shared.open(url, options: [:], completionHandler: nil)
                 #endif
-            #if os(iOS) || os(visionOS)
+            #if os(iOS)
             case .openSFSafariModal:
                 let safari = SFSafariViewController(url: url)
                 let vc = UIApplication.topModalViewController
