@@ -7,10 +7,10 @@
 
 import SwiftUI
 
+#if os(iOS) || os(visionOS) || os(macOS)
 public struct HtmlText: View {
     let html: String
     
-    #if os(iOS) || os(macOS)
     @State private var dynamicHeight: CGFloat = .zero
     let linkTap: ((URL) -> Void)?
     
@@ -27,24 +27,7 @@ public struct HtmlText: View {
         HtmlTextWebView(dynamicHeight: $dynamicHeight, html: html, linkTap: linkTap)
             .frame(height: dynamicHeight)
     }
-    #else
-    public init(rawHtml: String) {
-        self.html = rawHtml
-    }
-    
-    @State private var nsAttributedString: NSAttributedString?
-    
-    public var body: some View {
-        if let nsAttributedString,
-           let attributedString = try? AttributedString(nsAttributedString, including: \.swiftUI) {
-            Text(attributedString)
-        } else {
-            // fallback...
-            Text(html)
-                .task {
-                    nsAttributedString = try? NSAttributedString(data: Data(html.utf8), options: [.documentType: NSAttributedString.DocumentType.html], documentAttributes: nil)
-                }
-        }
-    }
-    #endif
 }
+#else
+public typealias HtmlText = AttributedText
+#endif

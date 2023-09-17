@@ -16,6 +16,11 @@ struct TopicsTabRoot: View {
         CommunityList()
             .navigationTitle("Communities")
             .toolbar {
+                #if os(iOS) || os(visionOS)
+                ToolbarItem {
+                    EditButton()
+                }
+                #endif
                 ToolbarItem(placement: .primaryAction) {
                     Button {
                         presentNewCommunityView = true
@@ -23,7 +28,6 @@ struct TopicsTabRoot: View {
                         Label("Add Community", systemImage: "plus.circle.fill")
                             .symbolRenderingMode(.hierarchical)
                     }
-                    
                 }
             }
             .sheet(isPresented: $presentNewCommunityView) {

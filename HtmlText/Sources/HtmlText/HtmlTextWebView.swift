@@ -5,12 +5,12 @@
 //  Created by Kyle on 2023/6/4.
 //
 
-#if os(iOS) || os(macOS)
+#if os(iOS) || os(visionOS) || os(macOS)
 import os.log
 import SwiftUI
 import WebKit
 
-#if os(iOS)
+#if os(iOS) || os(visionOS)
 struct HtmlTextWebView: UIViewRepresentable {
     @Binding var dynamicHeight: CGFloat
     let html: String
@@ -18,6 +18,9 @@ struct HtmlTextWebView: UIViewRepresentable {
     
     func makeUIView(context: Context) -> WKWebView {
         let webView = WKWebView()
+        #if DEBUG
+        webView.isInspectable = true
+        #endif
         webView.scrollView.bounces = false
         webView.navigationDelegate = context.coordinator
         webView.scrollView.isScrollEnabled = true
@@ -49,6 +52,9 @@ struct HtmlTextWebView: NSViewRepresentable {
     
     func makeNSView(context: Context) -> WKWebView {
         let webView = WKWebView()
+        #if DEBUG
+        webView.isInspectable = true
+        #endif
         webView.navigationDelegate = context.coordinator
         DispatchQueue.main.async {
             webView.loadHTMLString(html, baseURL: Bundle.main.bundleURL)
@@ -68,7 +74,6 @@ struct HtmlTextWebView: NSViewRepresentable {
 }
 
 #endif
-
 
 extension HtmlTextWebView {
     class Coordinator: NSObject, WKNavigationDelegate {
