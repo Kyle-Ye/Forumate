@@ -24,7 +24,7 @@ struct ViewByMenuButton: View {
             Image(systemName: "line.3.horizontal.decrease.circle.fill")
                 .symbolRenderingMode(.hierarchical)
         }
-        #else
+        #elseif os(watchOS)
         Picker(selection: $state.viewByType) {
             ForEach(CommunityDetailState.ViewByType.allCases, id: \.rawValue) { type in
                 Text(type.rawValue.capitalized).tag(type)
@@ -37,6 +37,8 @@ struct ViewByMenuButton: View {
             }
         }
         .pickerStyle(.navigationLink)
+        #else
+        EmptyView()
         #endif
     }
 }
