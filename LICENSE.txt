@@ -1,7 +1,15 @@
-The copyright of the binary files uploaded to the App Store belongs to Kyle-Ye.
+Copyright 2023, Kyle-Ye
+
+Kyle-Ye Apple Platform Project License:
+
+The copyright of the binary files uploaded to the App Store and any other binary-only distribution channel belong to Kyle-Ye.
 
 You are permitted to use this source code, with or without modification, in source or binary form, on your devices however you see fit. You are not permitted to redistribute binaries of this source code, with or without modification. In other words, you cannot put this application or any application derived from it, on the Apple App Store, Cydia, or any other binary-only distribution channel.
+
+If the application has not been updated on the App Store for more than 2 years. All source code of Forumate will be relicensed under the MIT automatically.
 
 上传到 App Store 的二进制文件的版权归 Kyle-Ye 所有。
 
 你可以任意修改、使用该源代码，也可以用于商业目的。但不能将此应用或者修改的应用的二进制文件上传到 App Store 或者通过其它分发渠道（包括但不限于网站、网盘、聊天软件）分享二进制文件。
+
+如果应用程序超过 2 年没有在 App Store 获得更新。Forumate 的所有源代码将自动在 MIT 协议下重新授权。

@@ -55,12 +55,16 @@ For macOS users, you can download the Notarized macOS Catalyst binary on https:/
 
 ![iOS](Resources/iOS.png)
 
+## The Project Inspiration
+
+In 2021, considering the unsatisfactory experience of Swift Forums on iPhone, I posted a  [topic](https://forums.swift.org/t/swift-forum-client/53484) asking for a Swift Forum's client recommendation.
+
+Someone recommended Fig to me. It was a great client and after I installed it I thought I shouldn't reinvent the wheel to build a same app and gave up the idea of making a new client.
+
+Unfortunately, Fig has not been updated for many years and even has been removed from the App Store. So I build Forumate from scratch in my spare time with SwiftUI and share the code under a custom license.
+
 ## License
 
-The copyright of the binary files uploaded to the App Store belongs to Kyle-Ye.
+Kyle-Ye Apple Platform Project License
 
-You are permitted to use this source code, with or without modification, in source or binary form, on your devices however you see fit. You are not permitted to redistribute binaries of this source code, with or without modification. In other words, you cannot put this application or any application derived from it, on the Apple App Store, Cydia, or any other binary-only distribution channel.
-
-上传到 App Store 的二进制文件的版权归 Kyle-Ye 所有。
-
-你可以任意修改、使用该源代码，也可以用于商业目的。但不能将此应用或者修改的应用的二进制文件上传到 App Store 或者通过其它分发渠道（包括但不限于网站、网盘、聊天软件）分享二进制文件。
+See License.txt for details.
