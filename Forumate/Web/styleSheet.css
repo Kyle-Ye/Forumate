@@ -1,0 +1,228 @@
+html {
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+	margin-left: var(--content-margin);
+	margin-right: var(--content-margin);
+    
+    background-color: var(--system-primary-background);
+    
+	font-family: -apple-system;
+    font: -apple-system-body;
+
+/*	word-wrap: break-word;*/
+/*	word-break: break-word;*/
+	-webkit-hyphens: auto;
+}
+
+h1 {
+    font: -apple-system-title1;
+    font-weight: bold;
+}
+
+h2 {
+    font: -apple-system-title2;
+    font-weight: bold;
+}
+
+h3 {
+    font: -apple-system-title3;
+    font-weight: bold;
+}
+
+h4 {
+    font: -apple-system-headline;
+}
+
+a {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+.feedlink {
+	font-weight: bold;
+}
+.headerTable {
+	width: 100%;
+	height: 68px;
+}
+
+:root {
+	color-scheme: light dark;
+    --system-primary-background: -apple-system-background;
+    --system-secondary-background: -apple-system-secondary-background;
+    --system-tertiary-background: -apple-system-tertiary-background;
+	--link-color: #0655BE;
+	--header-table-border-color: rgba(0, 0, 0, 0.1);
+	--header-color: rgba(0, 0, 0, 0.3);
+	--header-link-color: #086AEE;
+	--body-code-color: #666;
+	--feedlink-color: rgba(0, 0, 0, 0.6);
+    --quote-body-color: #232326;
+    --quote-block-color: var(--system-secondary-background);
+    --code-block-color: #666;
+}
+
+@media(prefers-color-scheme: dark) {
+	:root {
+		--link-color: #5E9EF4;
+		--header-table-border-color: rgba(255, 255, 255, 0.1);
+		--header-color: #d2d2d2;
+		--header-link-color: #2D80F1;
+		--body-code-color: #b2b2b2;
+        --quote-body-color: #ddd;
+        --code-block-color: #a9bcbc;
+	}
+}
+
+body a, body a:link, body a:visited {
+	color: var(--link-color);
+}
+body .headerTable {
+	border-bottom: 1px solid var(--header-table-border-color);
+}
+body .header {
+	color: var(--header-color);
+}
+body .header a:link, body .header a:visited {
+	color: var(--header-link-color);
+}
+
+body code, body pre {
+	color: var(--body-code-color);
+}
+
+.feedlink a:link, .feedlink a:visited {
+	color: var(--feed-link-color);
+}
+.avatar img {
+	border-radius: 4px;
+}
+.feedIcon {
+	border-radius: 4px;
+}
+.rightAlign {
+	text-align: right;
+}
+.leftAlign {
+	text-align: left;
+}
+
+body {
+    margin-top: 0px;
+}
+
+code, pre {
+	font-family: "SF Mono", Menlo, "Courier New", Courier, monospace;
+	font-size: 0.95em;
+    -webkit-hyphens: none;
+}
+
+aside {
+    position: relative;
+    background-color: var(--quote-block-color);
+    padding: 10px 16px 10px 16px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-left: 4px solid -apple-system-gray;
+    color: var(--quote-body-color);
+}
+
+aside img {
+    max-width: 100%;
+    height: auto !important;
+    margin: 0 auto;
+}
+
+aside.quote .title img {
+    -webkit-user-select: none;
+    vertical-align: middle;
+}
+
+blockquote {
+    display: block;
+    margin-block-start: 0.25em;
+    margin-block-end: 0.25em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    
+    position: relative;
+    background-color: var(--quote-block-color);
+    padding: 10px 16px 10px 16px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-left: 4px solid -apple-system-gray;
+    color: var(--quote-body-color);
+}
+
+blockquote p {
+    display: block;
+    margin-block-start: 0.25em;
+    margin-block-end: 0.25em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+pre code {
+    display: block;
+    background-color: var(--system-secondary-background);
+    padding: 15px 20px;
+    border-radius: 12px;
+    color: var(--code-block-color);
+    line-height: 1.4em;
+    font-size: 0.95em;
+    overflow-x: auto;
+    white-space: pre;
+    -webkit-overflow-scrolling: touch;
+}
+
+pre {
+	white-space: pre-wrap;
+}
+
+aside pre code {
+    background-color: var(--system-tertiary-background);
+}
+
+figure, video, iframe, div {
+	max-width: 100%;
+	height: auto !important;
+	margin: 0 auto;
+}
+
+img {
+    max-width: 100%;
+    max-height: 500px;
+    height: auto !important;
+}
+
+@media (max-width: 590px) {
+    img {
+        max-width: calc(100% + (var(--content-margin) * 2));
+        margin: 0 calc(var(--content-margin) * -1);
+    }
+}
+
+img.avatar {
+    border-radius: 50%;
+}
+
+sub, sup {
+    font: -apple-system-footnote;
+    position: relative;
+    vertical-align: baseline;
+}
+
+.lightbox .meta {
+    display: none !important;
+}
+
+img.emoji {
+    width: 1.2em;
+    height: 1.2em;
+    vertical-align: middle;
+    max-width: unset;
+    margin: unset;
+}

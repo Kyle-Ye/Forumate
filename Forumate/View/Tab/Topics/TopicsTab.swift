@@ -11,17 +11,23 @@ struct TopicsTab: View {
     @StateObject var tabState = TopicsTabState()
     
     var body: some View {
-        #if os(iOS) || os(macOS) || os(tvOS)
-        NavigationSplitView(columnVisibility: $tabState.columnVisibility) {
+        NavigationSplitView(columnVisibility: $tabState.columnVisibility,
+                            preferredCompactColumn: $tabState.column) {
             TopicsTabRoot()
                 .environmentObject(tabState)
         } content: {
-            if let community = tabState.selectedCommunity {
-                CommunityDetail(community: community)
-                    .id(community.id)
-            } else {
-                PlaceholderView(text: "No Community Selected",
-                                image: "rectangle.3.group.bubble.left")
+            NavigationStack(path: $tabState.selectedCategories) {
+                if let community = tabState.selectedCommunity {
+                    CommunityDetail(community: community)
+                        .navigationDestination(for: Category.self) { category in
+                            CategoryDetail(category: category)
+                                .environmentObject(CommunityDetailState(community: community))
+                        }
+                        .id(community.id)
+                } else {
+                    PlaceholderView(text: "No Community Selected",
+                                    image: "rectangle.3.group.bubble.left")
+                }
             }
         } detail: {
             if let community = tabState.selectedCommunity,
@@ -35,19 +41,13 @@ struct TopicsTab: View {
         }
         .navigationSplitViewStyleType(SplitViewStyleTypeSetting.value)
         .environmentObject(tabState)
-        #else
-        NavigationStack {
-            TopicsTabRoot()
-        }
-        .environmentObject(tabState)
-        #endif
     }
 }
 
 struct TopicsTab_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            #if os(iOS)
+            #if os(iOS) || os(visionOS)
             TopicsTab()
                 .previewDevice("iPhone 14")
                 .previewDisplayName("iPhone")

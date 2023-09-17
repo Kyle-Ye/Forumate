@@ -21,33 +21,27 @@ struct ContentView: View {
             TopicsTab()
                 .tabItem {
                     Label("Topics", systemImage: "doc.text.image")
-                    #if os(watchOS)
-                        .labelStyle(.titleOnly)
-                    #endif
                 }
             #if DEBUG
             InboxTab()
                 .tabItem {
                     Label("Inbox", systemImage: "tray")
-                    #if os(watchOS)
-                        .labelStyle(.titleOnly)
-                    #endif
                 }
             #endif
             SettingsTab()
                 .tabItem {
                     Label("Settings", systemImage: "gearshape")
-                    #if os(watchOS)
-                        .labelStyle(.titleOnly)
-                    #endif
                 }
         }
+        #if os(watchOS)
+        .tabViewStyle(.verticalPage(transitionStyle: .identity))
+        #endif
         .onAppear {
             if appState.shouldShowStarterIntro {
                 showStarterIntro = true
             }
             if appState.isFirstLaunch {
-                appState.didFirstLaunch()
+                try? appState.didFirstLaunch()
             }
         }
         .sheet(isPresented: $showStarterIntro) {
@@ -55,7 +49,7 @@ struct ContentView: View {
         } content: {
             StarterIntro()
         }
-        #if os(iOS)
+        #if os(iOS) || os(visionOS)
         .environment(\.openURL, OpenURLAction { url in
             let type = OpenLinkTypeSetting.value
             switch type {

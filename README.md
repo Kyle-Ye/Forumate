@@ -1,6 +1,6 @@
 ## Forumate
 
-[![Swift 5.8](https://img.shields.io/badge/Swift-5.8-ED523F.svg?style=flat)](https://swift.org/)
+[![Swift 5.9](https://img.shields.io/badge/Swift-5.9-ED523F.svg?style=flat)](https://swift.org/)
 [![SwiftUI](https://img.shields.io/badge/SwiftUI-✓-orange)](https://developer.apple.com/xcode/swiftui/)
 
 [![@Kyle-Ye](https://img.shields.io/badge/contact-%40Kyle--Ye-yellow.svg?style=flat)](https://twitter.com/KyleSwifter)
@@ -8,21 +8,32 @@
 
 A native client to access Discourse server for Apple Platforms.
 
-![Menu Helper](Forumate/Other/Assets.xcassets/AppIcon.appiconset/AppIcon-macOS-512.png)
+![Forumate](Forumate/Other/Assets.xcassets/AppIcon.appiconset/AppIcon-macOS-512.png)
 
-- [x] iOS 16+
-- [x] iPadOS 16+
-- [x] watchOS 9+
-- [x] tvOS 16+
-- [x] macOS(Catalyst) 13+
-- [ ] macOS 13+
-- [ ] visionOS 1
+### Platform Compatibility
 
-> tvOS target is buildable, but due to [#17](https://github.com/Kyle-Ye/Forumate/issues/17). I can't upload a tvOS binary to App Store.
->
-> macOS is buildable, but is not optimized for. It's better to build under Catalyst.
->
-> I have plan to adapt for visionOS. Waiting for the SDK to be available. 
+- [x] iOS 17+
+- [x] iPadOS 17+
+- [x] watchOS 10+
+- [ ] tvOS 17+
+- [x] macOS(Catalyst) 14+
+- [x] visionOS 1+
+
+> tvOS target is buildable but is not released
+>  
+> See more info [#17](https://github.com/Kyle-Ye/Forumate/issues/17).
+
+### Version Compatibility
+
+|  Forumate  |   Xcode   | iOS & iPadOS |   watchOS   | macOS(Catalyst) | visionOS |
+| :--------: | :-------: | :----------: | :---------: | :-------------: | :------: |
+|  0.1~0.3   |  14.3.1   |     16+      |     9+      |       13+       |    ❌     |
+| 0.4.0-beta | 15 Beta 1 |  17 Beta 1   |  10 Beta 1  |    14 Beta 1    |    ❌     |
+| 0.4.1-beta | 15 Beta 2 | 17 Beta 2～3 | 10 Beta 2~3 |   14 Beta 2~3   |    ❌     |
+| 0.5.0-beta | 15 Beta 5 |  17 Beta 4   |  10 Beta 4  |    14 Beta 4    |    ❌     |
+| 0.5.1-beta | 15 Beta 6 |  17 Beta 5   |  10 Beta 5  |    14 Beta 5    |    ❌     |
+| 0.5.2-beta | 15 Beta 7 | 17 Beta 6～7 | 10 Beta 6~7 |    14 Beta 6    |    ❌     |
+| 0.6.0-beta | 15 Beta 8 |  17 Beta 8   |  10 Beta 8  |    14 Beta 7   | 1 Beta 3 |
 
 ## Download
 
@@ -33,6 +44,10 @@ Waiting to be released
 ### Join Beta on TestFlight
 
 [Join beta on TestFlight](https://testflight.apple.com/join/4kpEtmsk)
+
+### GitHub Release
+
+For macOS users, you can download the Notarized macOS Catalyst binary on https://github.com/Kyle-Ye/Forumate/releases/
 
 > Mac App Store℠ and TestFlight® are trademarks of Apple Inc., registered in the U.S. and other countries.
 
