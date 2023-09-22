@@ -97,6 +97,9 @@
         }
       }
     },
+    "Add Account" : {
+
+    },
     "Add Community" : {
       "localizations" : {
         "zh-Hans" : {
@@ -176,6 +179,9 @@
           }
         }
       }
+    },
+    "By adding an account, you can reply and create topic directly on Forumate. And we can remember exactly what you've read." : {
+
     },
     "Cancel" : {
       "localizations" : {
@@ -537,6 +543,9 @@
         }
       }
     },
+    "Log In" : {
+
+    },
     "Mark As Read" : {
       "localizations" : {
         "zh-Hans" : {
@@ -856,6 +865,9 @@
           }
         }
       }
+    },
+    "Sign Up" : {
+
     },
     "Source Code" : {
       "localizations" : {

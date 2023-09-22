@@ -35,6 +35,7 @@ struct CommunityDetail: View {
         }
         .listStyle(.plain)
         .toolbar {
+            AccountMenuButton()
             ViewByMenuButton()
         }
         .navigationTitle(state.community.title)
