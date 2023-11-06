@@ -23,8 +23,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/QMUI/LookinServer/",
       "state" : {
-        "revision" : "bc2eb9ae34c158ceb905e474d48d63997ac4b64a",
-        "version" : "1.1.8"
+        "revision" : "943be9791316830f8cc550f5d7995d26a05aae1d",
+        "version" : "1.2.3"
       }
     },
     {
@@ -41,8 +41,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/SDWebImage/SDWebImage.git",
       "state" : {
-        "revision" : "36e484b317522667a4b2de9b50daaa01dfa30809",
-        "version" : "5.18.0"
+        "revision" : "fd1950de05a5ad77cb252fd88576c1e1809ee50d",
+        "version" : "5.18.4"
       }
     },
     {
@@ -68,8 +68,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/sanzaru/SimpleToast.git",
       "state" : {
-        "revision" : "6637b95dfc49d3d688ad2d7b6e0655c0f6862f83",
-        "version" : "0.8.0"
+        "revision" : "8dbc2e7c33cda25c0b2efafd59716cb9820c83eb",
+        "version" : "0.8.1"
       }
     },
     {
