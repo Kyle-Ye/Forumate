@@ -39,4 +39,28 @@ enum AppInfo {
         return "macOS \(version.majorVersion).\(version.minorVersion).\(version.patchVersion)"
         #endif
     }
+
+    static var currentAppName: String {
+        if let name = Bundle.main.localizedValue(for: "CFBundleDisplayName") {
+            return name
+        } else if let name = Bundle.main.localizedValue(for: "CFBundleName") {
+            return name
+        } else {
+            return ProcessInfo.processInfo.processName
+        }
+    }
+}
+
+extension Bundle {
+    func localizedValue(for key: String) -> String? {
+        if let localizedInfoDictionary,
+           let value = localizedInfoDictionary[key] as? String {
+            return value
+        } else if let infoDictionary,
+                  let value = infoDictionary[key] as? String {
+            return value
+        } else {
+            return nil
+        }
+    }
 }

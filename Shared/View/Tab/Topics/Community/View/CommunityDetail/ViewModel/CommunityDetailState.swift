@@ -142,6 +142,14 @@ class CommunityDetailState: ObservableObject {
     @AppStorage var viewByType: ViewByType 
     
     @Published var unimplementedToast = false
+
+    func checkUserAPISupport() async throws -> Bool {
+        try await client.fetchUserAPIKeyHead().authAPIVersion == 4
+    }
+
+    func generateUserAPIKey(from request: UserAPINewRequest) -> URL? {
+        client.generateUserAPIKey(from: request)
+    }
 }
 
 enum DefaultViewByTypeSetting: Setting {

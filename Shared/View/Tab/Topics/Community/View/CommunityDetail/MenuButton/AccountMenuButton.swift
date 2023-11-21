@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import DiscourseKit
 
 struct AccountMenuButton: View {
     @State private var presentAlert = false
@@ -17,7 +18,11 @@ struct AccountMenuButton: View {
     @Environment(\.openURL) private var openURL
     @EnvironmentObject private var state: CommunityDetailState
 
-    
+    @StateObject var viewModel = SignInViewModel()
+
+    @AppStorage("forumate_client_id")
+    private var clientID = UUID().uuidString
+
     var body: some View {
         #if os(iOS) || os(macOS) || os(tvOS)
         Button {
@@ -31,10 +36,33 @@ struct AccountMenuButton: View {
             isPresented: $presentAlert
         ) {
             Button("Log In") {
-                // TODO
-                openURL(state.community.host.appending(path: "login"))
+                Task {
+                    guard try await state.checkUserAPISupport() else {
+                        // Forum not support user API auth
+                        return
+                    }
+                    guard let publicKey = try? APIKeyManager.getPublicKeyString() else {
+                        return
+                    }
+                    let appName = AppInfo.currentAppName
+                    let deviceName = UIDevice.current.name
+                    let request = UserAPINewRequest(
+                        applicationName: "\(appName)-\(deviceName)",
+                        clientID: clientID,
+                        nonce: UUID().uuidString,
+                        scopes: [.notifications, .sessionInfo, .write],
+                        publicKey: publicKey,
+                        authRedirect: APIKeyManager.authRedirectURL
+                    )
+                    guard let requestURL = state.generateUserAPIKey(from: request) else {
+                        return
+                    }
+                    viewModel.signIn(request: requestURL)
+                }
+
             }
             Button("Sign Up") {
+                // Redirect to /signup web and give user UI hint to continue the login process
                 openURL(state.community.host.appending(path: "signup"))
             }
             Button("Cancel", role: .cancel) { 
