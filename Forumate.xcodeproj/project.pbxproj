@@ -13,7 +13,7 @@
 		27024A9B2AA45EE9005650B4 /* ThemeSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27024A9A2AA45EE9005650B4 /* ThemeSection.swift */; };
 		27024A9C2AA45EE9005650B4 /* ThemeSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27024A9A2AA45EE9005650B4 /* ThemeSection.swift */; };
 		270808F92A9F98F70089E5DC /* ForumateWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 273AFBE72A1A94E100DD08F5 /* ForumateWatch.app */; platformFilter = ios; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		270808FC2A9FA3D50089E5DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 278E53E62A18E83000DCD159 /* Assets.xcassets */; };
+		270808FC2A9FA3D50089E5DC /* Shared.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 278E53E62A18E83000DCD159 /* Shared.xcassets */; };
 		270CD67B2AA22945004DBD1D /* SimpleToast in Frameworks */ = {isa = PBXBuildFile; productRef = 270CD67A2AA22945004DBD1D /* SimpleToast */; };
 		270CD67D2AA2294C004DBD1D /* SimpleToast in Frameworks */ = {isa = PBXBuildFile; productRef = 270CD67C2AA2294C004DBD1D /* SimpleToast */; };
 		270CD67F2AA22DA0004DBD1D /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270CD67E2AA22DA0004DBD1D /* Toast.swift */; };
@@ -21,8 +21,125 @@
 		271808C62A32496D008B1970 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 271808C52A32496D008B1970 /* Localizable.xcstrings */; };
 		271808C72A32496D008B1970 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 271808C52A32496D008B1970 /* Localizable.xcstrings */; };
 		271808CA2A324995008B1970 /* InfoPlist.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 271808C92A324995008B1970 /* InfoPlist.xcstrings */; };
-		271808CB2A324995008B1970 /* InfoPlist.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 271808C92A324995008B1970 /* InfoPlist.xcstrings */; };
 		272193A12A19CCFA00C221BC /* JSONRawRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272193A02A19CCFA00C221BC /* JSONRawRepresentable.swift */; };
+		2722B92B2B0C7A5E00D24617 /* ForumateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2722B92A2B0C7A5E00D24617 /* ForumateApp.swift */; };
+		2722B92D2B0C7A5E00D24617 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2722B92C2B0C7A5E00D24617 /* ContentView.swift */; };
+		2722B92F2B0C7A5F00D24617 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2722B92E2B0C7A5F00D24617 /* Assets.xcassets */; };
+		2722B93D2B0C7A8B00D24617 /* ForumateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2722B93C2B0C7A8B00D24617 /* ForumateApp.swift */; };
+		2722B93F2B0C7A8B00D24617 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2722B93E2B0C7A8B00D24617 /* ContentView.swift */; };
+		2722B9412B0C7A8C00D24617 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2722B9402B0C7A8C00D24617 /* Assets.xcassets */; };
+		2722B94B2B0C7BB800D24617 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 278E53E82A18E83000DCD159 /* Preview Assets.xcassets */; };
+		2722B94C2B0C7BB800D24617 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 278E53E82A18E83000DCD159 /* Preview Assets.xcassets */; };
+		2722B94D2B0C7BB900D24617 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 278E53E82A18E83000DCD159 /* Preview Assets.xcassets */; };
+		2722B9502B0C7C1700D24617 /* ForumateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2722B94E2B0C7C1300D24617 /* ForumateApp.swift */; };
+		2722B9512B0C7CC000D24617 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275482A22AAD918D0050E65D /* AppDelegate.swift */; };
+		2722B9522B0C7CC100D24617 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275482A22AAD918D0050E65D /* AppDelegate.swift */; };
+		2722B9532B0C7CCF00D24617 /* AppViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F4340E2AAC1A940042F681 /* AppViewModifier.swift */; };
+		2722B9542B0C7CD000D24617 /* AppViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F4340E2AAC1A940042F681 /* AppViewModifier.swift */; };
+		2722B9552B0C7CD500D24617 /* AppInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277546D72A19DE3F000FDAA0 /* AppInfo.swift */; };
+		2722B9562B0C7CD500D24617 /* AppInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277546D72A19DE3F000FDAA0 /* AppInfo.swift */; };
+		2722B9572B0C7CE700D24617 /* PlaceholderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E53EA2A18E83000DCD159 /* PlaceholderView.swift */; };
+		2722B9582B0C7CE800D24617 /* PlaceholderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E53EA2A18E83000DCD159 /* PlaceholderView.swift */; };
+		2722B9592B0C7CEB00D24617 /* StarterIntroCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2733B4CF2A2F918A00BCF528 /* StarterIntroCardView.swift */; };
+		2722B95A2B0C7CEB00D24617 /* StarterIntroCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2733B4D32A2F929300BCF528 /* StarterIntroCard.swift */; };
+		2722B95B2B0C7CEB00D24617 /* StarterIntro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270097D02A19D7E300CA01B5 /* StarterIntro.swift */; };
+		2722B95C2B0C7CEB00D24617 /* StarterIntroCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2733B4CF2A2F918A00BCF528 /* StarterIntroCardView.swift */; };
+		2722B95D2B0C7CEB00D24617 /* StarterIntroCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2733B4D32A2F929300BCF528 /* StarterIntroCard.swift */; };
+		2722B95E2B0C7CEB00D24617 /* StarterIntro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270097D02A19D7E300CA01B5 /* StarterIntro.swift */; };
+		2722B95F2B0C7CED00D24617 /* TopicsTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E53FE2A18E83000DCD159 /* TopicsTab.swift */; };
+		2722B9602B0C7CED00D24617 /* TopicsTabRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E53F92A18E83000DCD159 /* TopicsTabRoot.swift */; };
+		2722B9612B0C7CEE00D24617 /* TopicsTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E53FE2A18E83000DCD159 /* TopicsTab.swift */; };
+		2722B9622B0C7CEE00D24617 /* TopicsTabRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E53F92A18E83000DCD159 /* TopicsTabRoot.swift */; };
+		2722B9632B0C7CF900D24617 /* CommunityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2779C05F2A3464F200CE4DF1 /* CommunityManager.swift */; };
+		2722B9642B0C7CF900D24617 /* Community.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E53FC2A18E83000DCD159 /* Community.swift */; };
+		2722B9652B0C7CF900D24617 /* CommunityLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E53FA2A18E83000DCD159 /* CommunityLabel.swift */; };
+		2722B9662B0C7CF900D24617 /* CommunityList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E53F42A18E83000DCD159 /* CommunityList.swift */; };
+		2722B9672B0C7CF900D24617 /* RecommendCommunityLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2779C0742A3484DC00CE4DF1 /* RecommendCommunityLabel.swift */; };
+		2722B9682B0C7CF900D24617 /* RecommendCommunity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275482982AAD77FB0050E65D /* RecommendCommunity.swift */; };
+		2722B9692B0C7CF900D24617 /* NewCommunity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E53FD2A18E83000DCD159 /* NewCommunity.swift */; };
+		2722B96A2B0C7CFA00D24617 /* CommunityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2779C05F2A3464F200CE4DF1 /* CommunityManager.swift */; };
+		2722B96B2B0C7CFA00D24617 /* Community.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E53FC2A18E83000DCD159 /* Community.swift */; };
+		2722B96C2B0C7CFA00D24617 /* CommunityLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E53FA2A18E83000DCD159 /* CommunityLabel.swift */; };
+		2722B96D2B0C7CFA00D24617 /* CommunityList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E53F42A18E83000DCD159 /* CommunityList.swift */; };
+		2722B96E2B0C7CFA00D24617 /* RecommendCommunityLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2779C0742A3484DC00CE4DF1 /* RecommendCommunityLabel.swift */; };
+		2722B96F2B0C7CFA00D24617 /* RecommendCommunity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275482982AAD77FB0050E65D /* RecommendCommunity.swift */; };
+		2722B9702B0C7CFA00D24617 /* NewCommunity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E53FD2A18E83000DCD159 /* NewCommunity.swift */; };
+		2722B9712B0C7CFC00D24617 /* CommunityDetailState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E53F72A18E83000DCD159 /* CommunityDetailState.swift */; };
+		2722B9722B0C7CFD00D24617 /* CommunityDetailState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E53F72A18E83000DCD159 /* CommunityDetailState.swift */; };
+		2722B9732B0C7D0000D24617 /* AccountMenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27403B4C2AB6A11900EF2008 /* AccountMenuButton.swift */; };
+		2722B9742B0C7D0000D24617 /* ViewByMenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273AFBCE2A1A73F600DD08F5 /* ViewByMenuButton.swift */; };
+		2722B9752B0C7D0000D24617 /* AccountMenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27403B4C2AB6A11900EF2008 /* AccountMenuButton.swift */; };
+		2722B9762B0C7D0000D24617 /* ViewByMenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273AFBCE2A1A73F600DD08F5 /* ViewByMenuButton.swift */; };
+		2722B9772B0C7D0300D24617 /* CommunitySectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273AFBD02A1A750A00DD08F5 /* CommunitySectionHeader.swift */; };
+		2722B9782B0C7D0300D24617 /* CommunityDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E53F82A18E83000DCD159 /* CommunityDetail.swift */; };
+		2722B9792B0C7D0300D24617 /* CategoryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273AFBCA2A1A642900DD08F5 /* CategoryListView.swift */; };
+		2722B97A2B0C7D0300D24617 /* LatestTopicsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273AFBCC2A1A643700DD08F5 /* LatestTopicsView.swift */; };
+		2722B97B2B0C7D0400D24617 /* CommunitySectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273AFBD02A1A750A00DD08F5 /* CommunitySectionHeader.swift */; };
+		2722B97C2B0C7D0400D24617 /* CommunityDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E53F82A18E83000DCD159 /* CommunityDetail.swift */; };
+		2722B97D2B0C7D0400D24617 /* CategoryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273AFBCA2A1A642900DD08F5 /* CategoryListView.swift */; };
+		2722B97E2B0C7D0400D24617 /* LatestTopicsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273AFBCC2A1A643700DD08F5 /* LatestTopicsView.swift */; };
+		2722B97F2B0C7D0800D24617 /* CategoryText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277C15C62A18F52A007940C7 /* CategoryText.swift */; };
+		2722B9802B0C7D0800D24617 /* CategoryLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277C15BD2A18EF00007940C7 /* CategoryLabel.swift */; };
+		2722B9812B0C7D0800D24617 /* CategoryDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277C15C02A18EF6B007940C7 /* CategoryDetail.swift */; };
+		2722B9822B0C7D0900D24617 /* CategoryText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277C15C62A18F52A007940C7 /* CategoryText.swift */; };
+		2722B9832B0C7D0900D24617 /* CategoryLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277C15BD2A18EF00007940C7 /* CategoryLabel.swift */; };
+		2722B9842B0C7D0900D24617 /* CategoryDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277C15C02A18EF6B007940C7 /* CategoryDetail.swift */; };
+		2722B9852B0C7D0C00D24617 /* TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CDD3C32A1BCC01003E3D00 /* TagView.swift */; };
+		2722B9862B0C7D0C00D24617 /* TopicDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273AFBE12A1A928C00DD08F5 /* TopicDetail.swift */; };
+		2722B9872B0C7D0C00D24617 /* TopicLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273AFBD82A1A86A000DD08F5 /* TopicLabel.swift */; };
+		2722B9882B0C7D0D00D24617 /* TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CDD3C32A1BCC01003E3D00 /* TagView.swift */; };
+		2722B9892B0C7D0D00D24617 /* TopicDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273AFBE12A1A928C00DD08F5 /* TopicDetail.swift */; };
+		2722B98A2B0C7D0D00D24617 /* TopicLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273AFBD82A1A86A000DD08F5 /* TopicLabel.swift */; };
+		2722B98B2B0C7D1000D24617 /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276F9F462A2A606600020B1B /* PostView.swift */; };
+		2722B98C2B0C7D1000D24617 /* PostActionCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FDBEAF2AAE382D00A3448C /* PostActionCodeView.swift */; };
+		2722B98D2B0C7D1100D24617 /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276F9F462A2A606600020B1B /* PostView.swift */; };
+		2722B98E2B0C7D1100D24617 /* PostActionCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FDBEAF2AAE382D00A3448C /* PostActionCodeView.swift */; };
+		2722B98F2B0C7D1400D24617 /* TopicsTabState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E53F22A18E83000DCD159 /* TopicsTabState.swift */; };
+		2722B9902B0C7D1400D24617 /* TopicsTabState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E53F22A18E83000DCD159 /* TopicsTabState.swift */; };
+		2722B9932B0C7DEF00D24617 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2722B9912B0C7D4200D24617 /* ContentView.swift */; };
+		2722B9942B0C7E4A00D24617 /* TopicDetailWindowModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DFFCEF2A2B2FD3005661BD /* TopicDetailWindowModel.swift */; };
+		2722B9952B0C7E4B00D24617 /* TopicDetailWindowModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DFFCEF2A2B2FD3005661BD /* TopicDetailWindowModel.swift */; };
+		2722B9962B0C7E5A00D24617 /* PlusManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F4340B2AAC15840042F681 /* PlusManager.swift */; };
+		2722B9972B0C7E5A00D24617 /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2724077D2AA63340003BF1DD /* ThemeManager.swift */; };
+		2722B9982B0C7E5A00D24617 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E53E42A18E83000DCD159 /* AppState.swift */; };
+		2722B9992B0C7E5B00D24617 /* PlusManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F4340B2AAC15840042F681 /* PlusManager.swift */; };
+		2722B99A2B0C7E5B00D24617 /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2724077D2AA63340003BF1DD /* ThemeManager.swift */; };
+		2722B99B2B0C7E5B00D24617 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E53E42A18E83000DCD159 /* AppState.swift */; };
+		2722B99C2B0C7E6600D24617 /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2724077D2AA63340003BF1DD /* ThemeManager.swift */; };
+		2722B99D2B0C7E6E00D24617 /* ColorToImageText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DFFCDE2A2AF64A005661BD /* ColorToImageText.swift */; };
+		2722B99E2B0C7E6E00D24617 /* Image+Platform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274189392AA1172900B5EC61 /* Image+Platform.swift */; };
+		2722B99F2B0C7E6E00D24617 /* Text+Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FDBEB22AAE3B2100A3448C /* Text+Date.swift */; };
+		2722B9A02B0C7E6E00D24617 /* View+Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DFFCE22A2B0509005661BD /* View+Size.swift */; };
+		2722B9A12B0C7E6E00D24617 /* PreviewChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276F9F412A2A348100020B1B /* PreviewChecker.swift */; };
+		2722B9A22B0C7E6E00D24617 /* JSONRawRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272193A02A19CCFA00C221BC /* JSONRawRepresentable.swift */; };
+		2722B9A32B0C7E6E00D24617 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270CD67E2AA22DA0004DBD1D /* Toast.swift */; };
+		2722B9A42B0C7E6E00D24617 /* Logger+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D219032A756E7900501849 /* Logger+Extension.swift */; };
+		2722B9A52B0C7E6E00D24617 /* HexToColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277C15C32A18F033007940C7 /* HexToColor.swift */; };
+		2722B9A62B0C7E6E00D24617 /* EqualHeightHStackLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C8789A2A3F497000AECD06 /* EqualHeightHStackLayout.swift */; };
+		2722B9A72B0C7E6F00D24617 /* ColorToImageText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DFFCDE2A2AF64A005661BD /* ColorToImageText.swift */; };
+		2722B9A82B0C7E6F00D24617 /* Image+Platform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274189392AA1172900B5EC61 /* Image+Platform.swift */; };
+		2722B9A92B0C7E6F00D24617 /* Text+Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FDBEB22AAE3B2100A3448C /* Text+Date.swift */; };
+		2722B9AA2B0C7E6F00D24617 /* View+Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DFFCE22A2B0509005661BD /* View+Size.swift */; };
+		2722B9AB2B0C7E6F00D24617 /* PreviewChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276F9F412A2A348100020B1B /* PreviewChecker.swift */; };
+		2722B9AC2B0C7E6F00D24617 /* JSONRawRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272193A02A19CCFA00C221BC /* JSONRawRepresentable.swift */; };
+		2722B9AD2B0C7E6F00D24617 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270CD67E2AA22DA0004DBD1D /* Toast.swift */; };
+		2722B9AE2B0C7E6F00D24617 /* Logger+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D219032A756E7900501849 /* Logger+Extension.swift */; };
+		2722B9AF2B0C7E6F00D24617 /* HexToColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277C15C32A18F033007940C7 /* HexToColor.swift */; };
+		2722B9B02B0C7E6F00D24617 /* EqualHeightHStackLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C8789A2A3F497000AECD06 /* EqualHeightHStackLayout.swift */; };
+		2722B9B12B0C7E7500D24617 /* styleSheet.css in Resources */ = {isa = PBXBuildFile; fileRef = 27FDBE9D2AADDC3500A3448C /* styleSheet.css */; };
+		2722B9B22B0C7E7600D24617 /* styleSheet.css in Resources */ = {isa = PBXBuildFile; fileRef = 27FDBE9D2AADDC3500A3448C /* styleSheet.css */; };
+		2722B9B32B0C7E7C00D24617 /* Community+Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2779C0632A3468DC00CE4DF1 /* Community+Preview.swift */; };
+		2722B9B42B0C7E7C00D24617 /* PreviewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2779C0792A34977B00CE4DF1 /* PreviewContainer.swift */; };
+		2722B9B52B0C7E7C00D24617 /* Category+Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2726057F2A1A12450018B908 /* Category+Preview.swift */; };
+		2722B9B62B0C7E7C00D24617 /* Topic+Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273AFBDA2A1A870F00DD08F5 /* Topic+Preview.swift */; };
+		2722B9B72B0C7E7C00D24617 /* Community+Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2779C0632A3468DC00CE4DF1 /* Community+Preview.swift */; };
+		2722B9B82B0C7E7C00D24617 /* PreviewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2779C0792A34977B00CE4DF1 /* PreviewContainer.swift */; };
+		2722B9B92B0C7E7C00D24617 /* Category+Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2726057F2A1A12450018B908 /* Category+Preview.swift */; };
+		2722B9BA2B0C7E7C00D24617 /* Topic+Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273AFBDA2A1A870F00DD08F5 /* Topic+Preview.swift */; };
+		2722B9BB2B0C7E9200D24617 /* Shared.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 278E53E62A18E83000DCD159 /* Shared.xcassets */; };
+		2722B9BC2B0C7E9200D24617 /* Shared.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 278E53E62A18E83000DCD159 /* Shared.xcassets */; };
+		2722B9BD2B0C7E9F00D24617 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 271808C52A32496D008B1970 /* Localizable.xcstrings */; };
+		2722B9BF2B0C7EA000D24617 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 271808C52A32496D008B1970 /* Localizable.xcstrings */; };
 		2724077E2AA63340003BF1DD /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2724077D2AA63340003BF1DD /* ThemeManager.swift */; };
 		2726053F2A1A005C0018B908 /* ForumateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2726053E2A1A005C0018B908 /* ForumateTests.swift */; };
 		272605802A1A12450018B908 /* Category+Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2726057F2A1A12450018B908 /* Category+Preview.swift */; };
@@ -46,9 +163,7 @@
 		273AFBDE2A1A8CF100DD08F5 /* AcknowKit in Frameworks */ = {isa = PBXBuildFile; productRef = 273AFBDD2A1A8CF100DD08F5 /* AcknowKit */; };
 		273AFBE02A1A8D1800DD08F5 /* AcknowSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273AFBDF2A1A8D1800DD08F5 /* AcknowSection.swift */; };
 		273AFBE22A1A928C00DD08F5 /* TopicDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273AFBE12A1A928C00DD08F5 /* TopicDetail.swift */; };
-		273AFBF12A1A94E100DD08F5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 273AFBF02A1A94E100DD08F5 /* Preview Assets.xcassets */; };
 		273AFBF92A1A951200DD08F5 /* AppInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277546D72A19DE3F000FDAA0 /* AppInfo.swift */; };
-		273AFBFA2A1A951C00DD08F5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E53FF2A18E83000DCD159 /* ContentView.swift */; };
 		273AFC022A1A954900DD08F5 /* AcknowKit in Frameworks */ = {isa = PBXBuildFile; productRef = 273AFC012A1A954900DD08F5 /* AcknowKit */; };
 		273AFC032A1A95FD00DD08F5 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E53E42A18E83000DCD159 /* AppState.swift */; };
 		273AFC042A1A960600DD08F5 /* Category+Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2726057F2A1A12450018B908 /* Category+Preview.swift */; };
@@ -117,7 +232,7 @@
 		277C15C72A18F52A007940C7 /* CategoryText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277C15C62A18F52A007940C7 /* CategoryText.swift */; };
 		278E54022A18E83000DCD159 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E53E42A18E83000DCD159 /* AppState.swift */; };
 		278E54032A18E83000DCD159 /* ForumateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E53E52A18E83000DCD159 /* ForumateApp.swift */; };
-		278E54042A18E83000DCD159 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 278E53E62A18E83000DCD159 /* Assets.xcassets */; };
+		278E54042A18E83000DCD159 /* Shared.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 278E53E62A18E83000DCD159 /* Shared.xcassets */; };
 		278E54052A18E83000DCD159 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 278E53E82A18E83000DCD159 /* Preview Assets.xcassets */; };
 		278E54062A18E83000DCD159 /* PlaceholderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E53EA2A18E83000DCD159 /* PlaceholderView.swift */; };
 		278E54072A18E83000DCD159 /* SettingsTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E53ED2A18E83000DCD159 /* SettingsTab.swift */; };
@@ -136,6 +251,162 @@
 		278F75892AAD715B003D61ED /* ShowRecommendCommunity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278F75872AAD715B003D61ED /* ShowRecommendCommunity.swift */; };
 		278F758B2AAD7207003D61ED /* BoolSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278F758A2AAD7207003D61ED /* BoolSetting.swift */; };
 		278F758C2AAD7207003D61ED /* BoolSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278F758A2AAD7207003D61ED /* BoolSetting.swift */; };
+		279283BC2B0D285A00094683 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 279283BB2B0D285A00094683 /* Assets.xcassets */; };
+		279283BE2B0D287800094683 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 279283BD2B0D287800094683 /* Assets.xcassets */; };
+		279283C92B0D29C900094683 /* ForumateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279283C82B0D29C900094683 /* ForumateApp.swift */; };
+		279283CB2B0D29C900094683 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279283CA2B0D29C900094683 /* ContentView.swift */; };
+		279283CD2B0D29CA00094683 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 279283CC2B0D29CA00094683 /* Assets.xcassets */; };
+		279283D52B0D2A6300094683 /* AppViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F4340E2AAC1A940042F681 /* AppViewModifier.swift */; };
+		279283D62B0D2A6300094683 /* AppInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277546D72A19DE3F000FDAA0 /* AppInfo.swift */; };
+		279283D72B0D2A6300094683 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275482A22AAD918D0050E65D /* AppDelegate.swift */; };
+		279283D82B0D2A6C00094683 /* StarterIntroCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2733B4D32A2F929300BCF528 /* StarterIntroCard.swift */; };
+		279283D92B0D2A6C00094683 /* StarterIntro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270097D02A19D7E300CA01B5 /* StarterIntro.swift */; };
+		279283DA2B0D2A6C00094683 /* PlaceholderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E53EA2A18E83000DCD159 /* PlaceholderView.swift */; };
+		279283DB2B0D2A6C00094683 /* StarterIntroCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2733B4CF2A2F918A00BCF528 /* StarterIntroCardView.swift */; };
+		279283DC2B0D2A7600094683 /* TopicsTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E53FE2A18E83000DCD159 /* TopicsTab.swift */; };
+		279283DD2B0D2A7600094683 /* CommunityList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E53F42A18E83000DCD159 /* CommunityList.swift */; };
+		279283DE2B0D2A7600094683 /* TopicsTabRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E53F92A18E83000DCD159 /* TopicsTabRoot.swift */; };
+		279283DF2B0D2A7E00094683 /* CommunityLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E53FA2A18E83000DCD159 /* CommunityLabel.swift */; };
+		279283E02B0D2A7E00094683 /* RecommendCommunityLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2779C0742A3484DC00CE4DF1 /* RecommendCommunityLabel.swift */; };
+		279283E12B0D2A7E00094683 /* Community.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E53FC2A18E83000DCD159 /* Community.swift */; };
+		279283E22B0D2A7E00094683 /* CommunityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2779C05F2A3464F200CE4DF1 /* CommunityManager.swift */; };
+		279283E32B0D2A7E00094683 /* NewCommunity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E53FD2A18E83000DCD159 /* NewCommunity.swift */; };
+		279283E42B0D2A7E00094683 /* RecommendCommunity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275482982AAD77FB0050E65D /* RecommendCommunity.swift */; };
+		279283E52B0D2A8B00094683 /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276F9F462A2A606600020B1B /* PostView.swift */; };
+		279283E62B0D2A8B00094683 /* CategoryText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277C15C62A18F52A007940C7 /* CategoryText.swift */; };
+		279283E72B0D2A8B00094683 /* TopicDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273AFBE12A1A928C00DD08F5 /* TopicDetail.swift */; };
+		279283E82B0D2A8B00094683 /* CommunityDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E53F82A18E83000DCD159 /* CommunityDetail.swift */; };
+		279283E92B0D2A8B00094683 /* TopicLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273AFBD82A1A86A000DD08F5 /* TopicLabel.swift */; };
+		279283EA2B0D2A8B00094683 /* CategoryDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277C15C02A18EF6B007940C7 /* CategoryDetail.swift */; };
+		279283EB2B0D2A8B00094683 /* PostActionCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FDBEAF2AAE382D00A3448C /* PostActionCodeView.swift */; };
+		279283EC2B0D2A8B00094683 /* CommunityDetailState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E53F72A18E83000DCD159 /* CommunityDetailState.swift */; };
+		279283ED2B0D2A8B00094683 /* TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CDD3C32A1BCC01003E3D00 /* TagView.swift */; };
+		279283EE2B0D2A8B00094683 /* CategoryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273AFBCA2A1A642900DD08F5 /* CategoryListView.swift */; };
+		279283EF2B0D2A8B00094683 /* LatestTopicsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273AFBCC2A1A643700DD08F5 /* LatestTopicsView.swift */; };
+		279283F02B0D2A8B00094683 /* CategoryLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277C15BD2A18EF00007940C7 /* CategoryLabel.swift */; };
+		279283F12B0D2A8B00094683 /* CommunitySectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273AFBD02A1A750A00DD08F5 /* CommunitySectionHeader.swift */; };
+		279283F22B0D2A8B00094683 /* ViewByMenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273AFBCE2A1A73F600DD08F5 /* ViewByMenuButton.swift */; };
+		279283F32B0D2A8B00094683 /* AccountMenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27403B4C2AB6A11900EF2008 /* AccountMenuButton.swift */; };
+		279283F42B0D2A9000094683 /* TopicsTabState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E53F22A18E83000DCD159 /* TopicsTabState.swift */; };
+		279283F52B0D2A9300094683 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D2190D2A75759C00501849 /* Account.swift */; };
+		279283F62B0D2A9300094683 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D2190D2A75759C00501849 /* Account.swift */; };
+		279283F72B0D2A9400094683 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D2190D2A75759C00501849 /* Account.swift */; };
+		279283F82B0D2A9800094683 /* InboxTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E53EF2A18E83000DCD159 /* InboxTab.swift */; };
+		279283F92B0D2A9800094683 /* InboxTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E53EF2A18E83000DCD159 /* InboxTab.swift */; };
+		279283FA2B0D2A9900094683 /* InboxTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E53EF2A18E83000DCD159 /* InboxTab.swift */; };
+		279283FB2B0D2A9C00094683 /* SettingsTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E53ED2A18E83000DCD159 /* SettingsTab.swift */; };
+		279283FC2B0D2A9C00094683 /* SettingsTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E53ED2A18E83000DCD159 /* SettingsTab.swift */; };
+		279283FD2B0D2A9C00094683 /* SettingsTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E53ED2A18E83000DCD159 /* SettingsTab.swift */; };
+		279283FE2B0D2A9F00094683 /* SettingsTabRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270097CB2A19D66E00CA01B5 /* SettingsTabRoot.swift */; };
+		279283FF2B0D2A9F00094683 /* SettingsTabRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270097CB2A19D66E00CA01B5 /* SettingsTabRoot.swift */; };
+		279284002B0D2AA000094683 /* SettingsTabRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270097CB2A19D66E00CA01B5 /* SettingsTabRoot.swift */; };
+		279284012B0D2AA600094683 /* SettingsTabDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2779C07E2A34AA6A00CE4DF1 /* SettingsTabDestination.swift */; };
+		279284022B0D2AA600094683 /* SettingsTabState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270097CE2A19D68700CA01B5 /* SettingsTabState.swift */; };
+		279284032B0D2AA700094683 /* SettingsTabDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2779C07E2A34AA6A00CE4DF1 /* SettingsTabDestination.swift */; };
+		279284042B0D2AA700094683 /* SettingsTabState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270097CE2A19D68700CA01B5 /* SettingsTabState.swift */; };
+		279284052B0D2AA800094683 /* SettingsTabDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2779C07E2A34AA6A00CE4DF1 /* SettingsTabDestination.swift */; };
+		279284062B0D2AA800094683 /* SettingsTabState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270097CE2A19D68700CA01B5 /* SettingsTabState.swift */; };
+		279284072B0D2AC000094683 /* ThemeSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27024A9A2AA45EE9005650B4 /* ThemeSection.swift */; };
+		279284082B0D2AC000094683 /* ContributorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F434092AAC131E0042F681 /* ContributorView.swift */; };
+		279284092B0D2AC000094683 /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DFFCE72A2B13EB005661BD /* Setting.swift */; };
+		2792840A2B0D2AC000094683 /* OpenLinkType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C00A312A2CC4F400CA9ACD /* OpenLinkType.swift */; };
+		2792840B2B0D2AC000094683 /* ForumateSubscriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277AE5F02AA8E05F000017B8 /* ForumateSubscriptionView.swift */; };
+		2792840C2B0D2AC000094683 /* GeneralSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273AFBD52A1A801500DD08F5 /* GeneralSection.swift */; };
+		2792840D2B0D2AC000094683 /* IconSelectorSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D219112A75954900501849 /* IconSelectorSection.swift */; };
+		2792840E2B0D2AC000094683 /* SupportSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2735D6052A2F850B000D5966 /* SupportSection.swift */; };
+		2792840F2B0D2AC000094683 /* PrivacyPolicySection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2735D6072A2F852D000D5966 /* PrivacyPolicySection.swift */; };
+		279284102B0D2AC000094683 /* SettingIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273AFBD22A1A7AE400DD08F5 /* SettingIcon.swift */; };
+		279284112B0D2AC000094683 /* PickerStyleType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C00A392A2CC6BF00CA9ACD /* PickerStyleType.swift */; };
+		279284122B0D2AC000094683 /* ShowMenuBarExtra.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FDBEAB2AAE247E00A3448C /* ShowMenuBarExtra.swift */; };
+		279284132B0D2AC000094683 /* BoolSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278F758A2AAD7207003D61ED /* BoolSetting.swift */; };
+		279284142B0D2AC000094683 /* AcknowSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273AFBDF2A1A8D1800DD08F5 /* AcknowSection.swift */; };
+		279284152B0D2AC000094683 /* ShowRecommendCommunity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278F75872AAD715B003D61ED /* ShowRecommendCommunity.swift */; };
+		279284162B0D2AC000094683 /* SplitViewStyleType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C00A352A2CC51B00CA9ACD /* SplitViewStyleType.swift */; };
+		279284172B0D2AC000094683 /* ForumatePlusSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274C4C9D2A3F81D10018BFA4 /* ForumatePlusSection.swift */; };
+		279284182B0D2AC200094683 /* ThemeSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27024A9A2AA45EE9005650B4 /* ThemeSection.swift */; };
+		279284192B0D2AC200094683 /* ContributorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F434092AAC131E0042F681 /* ContributorView.swift */; };
+		2792841A2B0D2AC200094683 /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DFFCE72A2B13EB005661BD /* Setting.swift */; };
+		2792841B2B0D2AC200094683 /* OpenLinkType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C00A312A2CC4F400CA9ACD /* OpenLinkType.swift */; };
+		2792841C2B0D2AC200094683 /* ForumateSubscriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277AE5F02AA8E05F000017B8 /* ForumateSubscriptionView.swift */; };
+		2792841D2B0D2AC200094683 /* GeneralSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273AFBD52A1A801500DD08F5 /* GeneralSection.swift */; };
+		2792841E2B0D2AC200094683 /* IconSelectorSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D219112A75954900501849 /* IconSelectorSection.swift */; };
+		2792841F2B0D2AC200094683 /* SupportSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2735D6052A2F850B000D5966 /* SupportSection.swift */; };
+		279284202B0D2AC200094683 /* PrivacyPolicySection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2735D6072A2F852D000D5966 /* PrivacyPolicySection.swift */; };
+		279284212B0D2AC200094683 /* SettingIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273AFBD22A1A7AE400DD08F5 /* SettingIcon.swift */; };
+		279284222B0D2AC200094683 /* PickerStyleType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C00A392A2CC6BF00CA9ACD /* PickerStyleType.swift */; };
+		279284232B0D2AC200094683 /* ShowMenuBarExtra.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FDBEAB2AAE247E00A3448C /* ShowMenuBarExtra.swift */; };
+		279284242B0D2AC200094683 /* BoolSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278F758A2AAD7207003D61ED /* BoolSetting.swift */; };
+		279284252B0D2AC200094683 /* AcknowSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273AFBDF2A1A8D1800DD08F5 /* AcknowSection.swift */; };
+		279284262B0D2AC200094683 /* ShowRecommendCommunity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278F75872AAD715B003D61ED /* ShowRecommendCommunity.swift */; };
+		279284272B0D2AC200094683 /* SplitViewStyleType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C00A352A2CC51B00CA9ACD /* SplitViewStyleType.swift */; };
+		279284282B0D2AC200094683 /* ForumatePlusSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274C4C9D2A3F81D10018BFA4 /* ForumatePlusSection.swift */; };
+		279284292B0D2AC300094683 /* ThemeSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27024A9A2AA45EE9005650B4 /* ThemeSection.swift */; };
+		2792842A2B0D2AC300094683 /* ContributorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F434092AAC131E0042F681 /* ContributorView.swift */; };
+		2792842B2B0D2AC300094683 /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DFFCE72A2B13EB005661BD /* Setting.swift */; };
+		2792842C2B0D2AC300094683 /* OpenLinkType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C00A312A2CC4F400CA9ACD /* OpenLinkType.swift */; };
+		2792842D2B0D2AC300094683 /* ForumateSubscriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277AE5F02AA8E05F000017B8 /* ForumateSubscriptionView.swift */; };
+		2792842E2B0D2AC300094683 /* GeneralSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273AFBD52A1A801500DD08F5 /* GeneralSection.swift */; };
+		2792842F2B0D2AC300094683 /* IconSelectorSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D219112A75954900501849 /* IconSelectorSection.swift */; };
+		279284302B0D2AC300094683 /* SupportSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2735D6052A2F850B000D5966 /* SupportSection.swift */; };
+		279284312B0D2AC300094683 /* PrivacyPolicySection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2735D6072A2F852D000D5966 /* PrivacyPolicySection.swift */; };
+		279284322B0D2AC300094683 /* SettingIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273AFBD22A1A7AE400DD08F5 /* SettingIcon.swift */; };
+		279284332B0D2AC300094683 /* PickerStyleType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C00A392A2CC6BF00CA9ACD /* PickerStyleType.swift */; };
+		279284342B0D2AC300094683 /* ShowMenuBarExtra.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FDBEAB2AAE247E00A3448C /* ShowMenuBarExtra.swift */; };
+		279284352B0D2AC300094683 /* BoolSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278F758A2AAD7207003D61ED /* BoolSetting.swift */; };
+		279284362B0D2AC300094683 /* AcknowSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273AFBDF2A1A8D1800DD08F5 /* AcknowSection.swift */; };
+		279284372B0D2AC300094683 /* ShowRecommendCommunity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278F75872AAD715B003D61ED /* ShowRecommendCommunity.swift */; };
+		279284382B0D2AC300094683 /* SplitViewStyleType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C00A352A2CC51B00CA9ACD /* SplitViewStyleType.swift */; };
+		279284392B0D2AC300094683 /* ForumatePlusSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274C4C9D2A3F81D10018BFA4 /* ForumatePlusSection.swift */; };
+		2792843A2B0D2AC300094683 /* ContributorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F434092AAC131E0042F681 /* ContributorView.swift */; };
+		2792843B2B0D2AD100094683 /* TopicDetailWindowModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DFFCEF2A2B2FD3005661BD /* TopicDetailWindowModel.swift */; };
+		2792843C2B0D2AD600094683 /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2724077D2AA63340003BF1DD /* ThemeManager.swift */; };
+		2792843D2B0D2AD600094683 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E53E42A18E83000DCD159 /* AppState.swift */; };
+		2792843E2B0D2AD600094683 /* PlusManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F4340B2AAC15840042F681 /* PlusManager.swift */; };
+		2792843F2B0D2ADB00094683 /* Logger+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D219032A756E7900501849 /* Logger+Extension.swift */; };
+		279284402B0D2ADB00094683 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270CD67E2AA22DA0004DBD1D /* Toast.swift */; };
+		279284412B0D2ADB00094683 /* HexToColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277C15C32A18F033007940C7 /* HexToColor.swift */; };
+		279284422B0D2ADB00094683 /* Text+Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FDBEB22AAE3B2100A3448C /* Text+Date.swift */; };
+		279284432B0D2ADB00094683 /* EqualHeightHStackLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C8789A2A3F497000AECD06 /* EqualHeightHStackLayout.swift */; };
+		279284442B0D2ADB00094683 /* JSONRawRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272193A02A19CCFA00C221BC /* JSONRawRepresentable.swift */; };
+		279284452B0D2ADB00094683 /* PreviewChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276F9F412A2A348100020B1B /* PreviewChecker.swift */; };
+		279284462B0D2ADB00094683 /* ColorToImageText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DFFCDE2A2AF64A005661BD /* ColorToImageText.swift */; };
+		279284472B0D2ADB00094683 /* Image+Platform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274189392AA1172900B5EC61 /* Image+Platform.swift */; };
+		279284482B0D2ADB00094683 /* View+Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DFFCE22A2B0509005661BD /* View+Size.swift */; };
+		279284492B0D2AE100094683 /* styleSheet.css in Resources */ = {isa = PBXBuildFile; fileRef = 27FDBE9D2AADDC3500A3448C /* styleSheet.css */; };
+		2792844A2B0D2AE600094683 /* Topic+Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273AFBDA2A1A870F00DD08F5 /* Topic+Preview.swift */; };
+		2792844B2B0D2AE600094683 /* Category+Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2726057F2A1A12450018B908 /* Category+Preview.swift */; };
+		2792844C2B0D2AE600094683 /* PreviewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2779C0792A34977B00CE4DF1 /* PreviewContainer.swift */; };
+		2792844D2B0D2AE600094683 /* Community+Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2779C0632A3468DC00CE4DF1 /* Community+Preview.swift */; };
+		2792844E2B0D2AED00094683 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 271808C52A32496D008B1970 /* Localizable.xcstrings */; };
+		279284502B0D2B3F00094683 /* Shared.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 278E53E62A18E83000DCD159 /* Shared.xcassets */; };
+		279284522B0D2BAD00094683 /* HtmlText in Frameworks */ = {isa = PBXBuildFile; productRef = 279284512B0D2BAD00094683 /* HtmlText */; };
+		279284542B0D2BAD00094683 /* Flow in Frameworks */ = {isa = PBXBuildFile; productRef = 279284532B0D2BAD00094683 /* Flow */; };
+		279284562B0D2BAD00094683 /* AcknowKit in Frameworks */ = {isa = PBXBuildFile; productRef = 279284552B0D2BAD00094683 /* AcknowKit */; };
+		279284582B0D2BAD00094683 /* DiscourseKit in Frameworks */ = {isa = PBXBuildFile; productRef = 279284572B0D2BAD00094683 /* DiscourseKit */; };
+		2792845C2B0D2BAD00094683 /* SimpleToast in Frameworks */ = {isa = PBXBuildFile; productRef = 2792845B2B0D2BAD00094683 /* SimpleToast */; };
+		2792845E2B0D2BFF00094683 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 2792845D2B0D2BFF00094683 /* SDWebImageSwiftUI */; };
+		279284602B0D2BFF00094683 /* SDWebImageSVGCoder in Frameworks */ = {isa = PBXBuildFile; productRef = 2792845F2B0D2BFF00094683 /* SDWebImageSVGCoder */; };
+		279284622B0D2C0A00094683 /* LoremSwiftum in Frameworks */ = {isa = PBXBuildFile; productRef = 279284612B0D2C0A00094683 /* LoremSwiftum */; };
+		279284642B0D2C6600094683 /* HtmlText in Frameworks */ = {isa = PBXBuildFile; productRef = 279284632B0D2C6600094683 /* HtmlText */; };
+		279284662B0D2C6600094683 /* Flow in Frameworks */ = {isa = PBXBuildFile; productRef = 279284652B0D2C6600094683 /* Flow */; };
+		279284682B0D2C6600094683 /* AcknowKit in Frameworks */ = {isa = PBXBuildFile; productRef = 279284672B0D2C6600094683 /* AcknowKit */; };
+		2792846A2B0D2C6600094683 /* DiscourseKit in Frameworks */ = {isa = PBXBuildFile; productRef = 279284692B0D2C6600094683 /* DiscourseKit */; };
+		2792846C2B0D2C6600094683 /* SimpleToast in Frameworks */ = {isa = PBXBuildFile; productRef = 2792846B2B0D2C6600094683 /* SimpleToast */; };
+		2792846E2B0D2C6600094683 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 2792846D2B0D2C6600094683 /* SDWebImageSwiftUI */; };
+		279284702B0D2C6600094683 /* SDWebImageSVGCoder in Frameworks */ = {isa = PBXBuildFile; productRef = 2792846F2B0D2C6600094683 /* SDWebImageSVGCoder */; };
+		279284722B0D2C6600094683 /* LoremSwiftum in Frameworks */ = {isa = PBXBuildFile; productRef = 279284712B0D2C6600094683 /* LoremSwiftum */; };
+		279284742B0D2C8500094683 /* HtmlText in Frameworks */ = {isa = PBXBuildFile; productRef = 279284732B0D2C8500094683 /* HtmlText */; };
+		279284762B0D2C8500094683 /* Flow in Frameworks */ = {isa = PBXBuildFile; productRef = 279284752B0D2C8500094683 /* Flow */; };
+		279284782B0D2C8500094683 /* AcknowKit in Frameworks */ = {isa = PBXBuildFile; productRef = 279284772B0D2C8500094683 /* AcknowKit */; };
+		2792847A2B0D2C8500094683 /* DiscourseKit in Frameworks */ = {isa = PBXBuildFile; productRef = 279284792B0D2C8500094683 /* DiscourseKit */; };
+		2792847C2B0D2C8500094683 /* SimpleToast in Frameworks */ = {isa = PBXBuildFile; productRef = 2792847B2B0D2C8500094683 /* SimpleToast */; };
+		2792847E2B0D2C8500094683 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 2792847D2B0D2C8500094683 /* SDWebImageSwiftUI */; };
+		279284802B0D2C8500094683 /* SDWebImageSVGCoder in Frameworks */ = {isa = PBXBuildFile; productRef = 2792847F2B0D2C8500094683 /* SDWebImageSVGCoder */; };
+		279284822B0D2C8500094683 /* LoremSwiftum in Frameworks */ = {isa = PBXBuildFile; productRef = 279284812B0D2C8500094683 /* LoremSwiftum */; };
+		279284842B0D2DD100094683 /* InfoPlist.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 279284832B0D2DD100094683 /* InfoPlist.xcstrings */; };
+		279284862B0D2DEB00094683 /* InfoPlist.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 279284852B0D2DEB00094683 /* InfoPlist.xcstrings */; };
+		279284882B0D2DFA00094683 /* InfoPlist.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 279284872B0D2DFA00094683 /* InfoPlist.xcstrings */; };
+		2792848A2B0D2E0300094683 /* InfoPlist.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 279284892B0D2E0300094683 /* InfoPlist.xcstrings */; };
 		27AFDC952AADB2380040C4F1 /* SDWebImageSVGCoder in Frameworks */ = {isa = PBXBuildFile; productRef = 27AFDC942AADB2380040C4F1 /* SDWebImageSVGCoder */; };
 		27AFDC972AADB23E0040C4F1 /* SDWebImageSVGCoder in Frameworks */ = {isa = PBXBuildFile; productRef = 27AFDC962AADB23E0040C4F1 /* SDWebImageSVGCoder */; };
 		27C00A2C2A2CC10700CA9ACD /* HtmlText in Frameworks */ = {isa = PBXBuildFile; productRef = 27C00A2B2A2CC10700CA9ACD /* HtmlText */; };
@@ -149,7 +420,6 @@
 		27C8789B2A3F497000AECD06 /* EqualHeightHStackLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C8789A2A3F497000AECD06 /* EqualHeightHStackLayout.swift */; };
 		27C8789C2A3F497000AECD06 /* EqualHeightHStackLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C8789A2A3F497000AECD06 /* EqualHeightHStackLayout.swift */; };
 		27CDD3832A1BAEAC003E3D00 /* Flow in Frameworks */ = {isa = PBXBuildFile; productRef = 27CDD3822A1BAEAC003E3D00 /* Flow */; };
-		27CDD3972A1BB5B9003E3D00 /* ForumateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E53E52A18E83000DCD159 /* ForumateApp.swift */; };
 		27CDD3C42A1BCC01003E3D00 /* TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CDD3C32A1BCC01003E3D00 /* TagView.swift */; };
 		27CDD3C52A1BCC3F003E3D00 /* TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CDD3C32A1BCC01003E3D00 /* TagView.swift */; };
 		27D219042A756E7900501849 /* Logger+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D219032A756E7900501849 /* Logger+Extension.swift */; };
@@ -225,10 +495,23 @@
 		271808C52A32496D008B1970 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		271808C92A324995008B1970 /* InfoPlist.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = InfoPlist.xcstrings; sourceTree = "<group>"; };
 		272193A02A19CCFA00C221BC /* JSONRawRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONRawRepresentable.swift; sourceTree = "<group>"; };
+		2722B9282B0C7A5E00D24617 /* Forumate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Forumate.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2722B92A2B0C7A5E00D24617 /* ForumateApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForumateApp.swift; sourceTree = "<group>"; };
+		2722B92C2B0C7A5E00D24617 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		2722B92E2B0C7A5F00D24617 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2722B93A2B0C7A8B00D24617 /* Forumate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Forumate.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2722B93C2B0C7A8B00D24617 /* ForumateApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForumateApp.swift; sourceTree = "<group>"; };
+		2722B93E2B0C7A8B00D24617 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		2722B9402B0C7A8C00D24617 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2722B94E2B0C7C1300D24617 /* ForumateApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForumateApp.swift; sourceTree = "<group>"; };
+		2722B9912B0C7D4200D24617 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2724077D2AA63340003BF1DD /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
 		2726053C2A1A005C0018B908 /* ForumateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ForumateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2726053E2A1A005C0018B908 /* ForumateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForumateTests.swift; sourceTree = "<group>"; };
 		2726057F2A1A12450018B908 /* Category+Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Category+Preview.swift"; sourceTree = "<group>"; };
+		2728E0292B0D343F0074CDAC /* Common.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Common.xcconfig; sourceTree = "<group>"; };
+		2728E02A2B0D343F0074CDAC /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
+		2728E02B2B0D343F0074CDAC /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		2733B4CF2A2F918A00BCF528 /* StarterIntroCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarterIntroCardView.swift; sourceTree = "<group>"; };
 		2733B4D32A2F929300BCF528 /* StarterIntroCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarterIntroCard.swift; sourceTree = "<group>"; };
 		2735D6052A2F850B000D5966 /* SupportSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportSection.swift; sourceTree = "<group>"; };
@@ -244,7 +527,6 @@
 		273AFBDF2A1A8D1800DD08F5 /* AcknowSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcknowSection.swift; sourceTree = "<group>"; };
 		273AFBE12A1A928C00DD08F5 /* TopicDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicDetail.swift; sourceTree = "<group>"; };
 		273AFBE72A1A94E100DD08F5 /* ForumateWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ForumateWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		273AFBF02A1A94E100DD08F5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		27403B4C2AB6A11900EF2008 /* AccountMenuButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountMenuButton.swift; sourceTree = "<group>"; };
 		274189392AA1172900B5EC61 /* Image+Platform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+Platform.swift"; sourceTree = "<group>"; };
 		274C4C9D2A3F81D10018BFA4 /* ForumatePlusSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForumatePlusSection.swift; sourceTree = "<group>"; };
@@ -266,7 +548,7 @@
 		277C15C62A18F52A007940C7 /* CategoryText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryText.swift; sourceTree = "<group>"; };
 		278E53E42A18E83000DCD159 /* AppState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		278E53E52A18E83000DCD159 /* ForumateApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForumateApp.swift; sourceTree = "<group>"; };
-		278E53E62A18E83000DCD159 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		278E53E62A18E83000DCD159 /* Shared.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Shared.xcassets; sourceTree = "<group>"; };
 		278E53E82A18E83000DCD159 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		278E53EA2A18E83000DCD159 /* PlaceholderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceholderView.swift; sourceTree = "<group>"; };
 		278E53ED2A18E83000DCD159 /* SettingsTab.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTab.swift; sourceTree = "<group>"; };
@@ -285,6 +567,16 @@
 		278E54012A18E83000DCD159 /* Forumate.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = Forumate.entitlements; sourceTree = "<group>"; };
 		278F75872AAD715B003D61ED /* ShowRecommendCommunity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowRecommendCommunity.swift; sourceTree = "<group>"; };
 		278F758A2AAD7207003D61ED /* BoolSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoolSetting.swift; sourceTree = "<group>"; };
+		279283BB2B0D285A00094683 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		279283BD2B0D287800094683 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		279283C32B0D29C800094683 /* Forumate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Forumate.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		279283C82B0D29C900094683 /* ForumateApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForumateApp.swift; sourceTree = "<group>"; };
+		279283CA2B0D29C900094683 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		279283CC2B0D29CA00094683 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		279284832B0D2DD100094683 /* InfoPlist.xcstrings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json.xcstrings; path = InfoPlist.xcstrings; sourceTree = "<group>"; };
+		279284852B0D2DEB00094683 /* InfoPlist.xcstrings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json.xcstrings; path = InfoPlist.xcstrings; sourceTree = "<group>"; };
+		279284872B0D2DFA00094683 /* InfoPlist.xcstrings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json.xcstrings; path = InfoPlist.xcstrings; sourceTree = "<group>"; };
+		279284892B0D2E0300094683 /* InfoPlist.xcstrings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json.xcstrings; path = InfoPlist.xcstrings; sourceTree = "<group>"; };
 		27C00A2A2A2CC0FE00CA9ACD /* HtmlText */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = HtmlText; sourceTree = "<group>"; };
 		27C00A312A2CC4F400CA9ACD /* OpenLinkType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenLinkType.swift; sourceTree = "<group>"; };
 		27C00A352A2CC51B00CA9ACD /* SplitViewStyleType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitViewStyleType.swift; sourceTree = "<group>"; };
@@ -311,6 +603,36 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		2722B9252B0C7A5E00D24617 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2792847E2B0D2C8500094683 /* SDWebImageSwiftUI in Frameworks */,
+				279284782B0D2C8500094683 /* AcknowKit in Frameworks */,
+				279284822B0D2C8500094683 /* LoremSwiftum in Frameworks */,
+				2792847A2B0D2C8500094683 /* DiscourseKit in Frameworks */,
+				279284802B0D2C8500094683 /* SDWebImageSVGCoder in Frameworks */,
+				279284762B0D2C8500094683 /* Flow in Frameworks */,
+				279284742B0D2C8500094683 /* HtmlText in Frameworks */,
+				2792847C2B0D2C8500094683 /* SimpleToast in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2722B9372B0C7A8B00D24617 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2792846E2B0D2C6600094683 /* SDWebImageSwiftUI in Frameworks */,
+				279284682B0D2C6600094683 /* AcknowKit in Frameworks */,
+				279284722B0D2C6600094683 /* LoremSwiftum in Frameworks */,
+				2792846A2B0D2C6600094683 /* DiscourseKit in Frameworks */,
+				279284702B0D2C6600094683 /* SDWebImageSVGCoder in Frameworks */,
+				279284662B0D2C6600094683 /* Flow in Frameworks */,
+				279284642B0D2C6600094683 /* HtmlText in Frameworks */,
+				2792846C2B0D2C6600094683 /* SimpleToast in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		272605392A1A005C0018B908 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -330,6 +652,21 @@
 				27C00A302A2CC10F00CA9ACD /* HtmlText in Frameworks */,
 				273AFC022A1A954900DD08F5 /* AcknowKit in Frameworks */,
 				270CD67D2AA2294C004DBD1D /* SimpleToast in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		279283C02B0D29C800094683 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				279284562B0D2BAD00094683 /* AcknowKit in Frameworks */,
+				279284522B0D2BAD00094683 /* HtmlText in Frameworks */,
+				279284602B0D2BFF00094683 /* SDWebImageSVGCoder in Frameworks */,
+				279284582B0D2BAD00094683 /* DiscourseKit in Frameworks */,
+				2792845E2B0D2BFF00094683 /* SDWebImageSwiftUI in Frameworks */,
+				279284622B0D2C0A00094683 /* LoremSwiftum in Frameworks */,
+				2792845C2B0D2BAD00094683 /* SimpleToast in Frameworks */,
+				279284542B0D2BAD00094683 /* Flow in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -359,6 +696,51 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		2722B9292B0C7A5E00D24617 /* ForumateTV */ = {
+			isa = PBXGroup;
+			children = (
+				2722B92A2B0C7A5E00D24617 /* ForumateApp.swift */,
+				2722B92C2B0C7A5E00D24617 /* ContentView.swift */,
+				2722B92E2B0C7A5F00D24617 /* Assets.xcassets */,
+				279284832B0D2DD100094683 /* InfoPlist.xcstrings */,
+			);
+			path = ForumateTV;
+			sourceTree = "<group>";
+		};
+		2722B93B2B0C7A8B00D24617 /* ForumateMac */ = {
+			isa = PBXGroup;
+			children = (
+				2722B93C2B0C7A8B00D24617 /* ForumateApp.swift */,
+				2722B93E2B0C7A8B00D24617 /* ContentView.swift */,
+				2722B9402B0C7A8C00D24617 /* Assets.xcassets */,
+				279284872B0D2DFA00094683 /* InfoPlist.xcstrings */,
+			);
+			path = ForumateMac;
+			sourceTree = "<group>";
+		};
+		2722B9492B0C7AF400D24617 /* ForumateiOS */ = {
+			isa = PBXGroup;
+			children = (
+				278E53E52A18E83000DCD159 /* ForumateApp.swift */,
+				278E53FF2A18E83000DCD159 /* ContentView.swift */,
+				279283BB2B0D285A00094683 /* Assets.xcassets */,
+				271808C92A324995008B1970 /* InfoPlist.xcstrings */,
+			);
+			path = ForumateiOS;
+			sourceTree = "<group>";
+		};
+		2722B94A2B0C7B1200D24617 /* Forumate */ = {
+			isa = PBXGroup;
+			children = (
+				2722B9492B0C7AF400D24617 /* ForumateiOS */,
+				273AFBE82A1A94E100DD08F5 /* ForumateWatch */,
+				2722B9292B0C7A5E00D24617 /* ForumateTV */,
+				2722B93B2B0C7A8B00D24617 /* ForumateMac */,
+				279283C42B0D29C900094683 /* ForumateVision */,
+			);
+			path = Forumate;
+			sourceTree = "<group>";
+		};
 		2726053D2A1A005C0018B908 /* ForumateTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -376,6 +758,16 @@
 				2779C0632A3468DC00CE4DF1 /* Community+Preview.swift */,
 			);
 			path = PreviewData;
+			sourceTree = "<group>";
+		};
+		2728E0282B0D343F0074CDAC /* Configs */ = {
+			isa = PBXGroup;
+			children = (
+				2728E0292B0D343F0074CDAC /* Common.xcconfig */,
+				2728E02A2B0D343F0074CDAC /* Debug.xcconfig */,
+				2728E02B2B0D343F0074CDAC /* Release.xcconfig */,
+			);
+			path = Configs;
 			sourceTree = "<group>";
 		};
 		2733B4CE2A2F916F00BCF528 /* StarterIntro */ = {
@@ -414,20 +806,15 @@
 			path = Topic;
 			sourceTree = "<group>";
 		};
-		273AFBE82A1A94E100DD08F5 /* ForumateWatch Watch App */ = {
+		273AFBE82A1A94E100DD08F5 /* ForumateWatch */ = {
 			isa = PBXGroup;
 			children = (
-				273AFBEF2A1A94E100DD08F5 /* Preview Content */,
+				2722B94E2B0C7C1300D24617 /* ForumateApp.swift */,
+				2722B9912B0C7D4200D24617 /* ContentView.swift */,
+				279283BD2B0D287800094683 /* Assets.xcassets */,
+				279284852B0D2DEB00094683 /* InfoPlist.xcstrings */,
 			);
-			path = "ForumateWatch Watch App";
-			sourceTree = "<group>";
-		};
-		273AFBEF2A1A94E100DD08F5 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				273AFBF02A1A94E100DD08F5 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
+			path = ForumateWatch;
 			sourceTree = "<group>";
 		};
 		273C10F12A2CBFDC001537E2 /* Packages */ = {
@@ -576,14 +963,12 @@
 			path = Category;
 			sourceTree = "<group>";
 		};
-		278E53E22A18E83000DCD159 /* Forumate */ = {
+		278E53E22A18E83000DCD159 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				278E53E52A18E83000DCD159 /* ForumateApp.swift */,
 				275482A22AAD918D0050E65D /* AppDelegate.swift */,
 				27F4340E2AAC1A940042F681 /* AppViewModifier.swift */,
 				277546D72A19DE3F000FDAA0 /* AppInfo.swift */,
-				278E53FF2A18E83000DCD159 /* ContentView.swift */,
 				278E53E92A18E83000DCD159 /* View */,
 				27DFFCEE2A2B2FC4005661BD /* Model */,
 				278E53E32A18E83000DCD159 /* ViewModel */,
@@ -594,7 +979,7 @@
 				278E54142A18E85300DCD159 /* Other */,
 				278E53E72A18E83000DCD159 /* Preview Content */,
 			);
-			path = Forumate;
+			path = Shared;
 			sourceTree = "<group>";
 		};
 		278E53E32A18E83000DCD159 /* ViewModel */ = {
@@ -710,11 +1095,10 @@
 		278E54142A18E85300DCD159 /* Other */ = {
 			isa = PBXGroup;
 			children = (
-				278E53E62A18E83000DCD159 /* Assets.xcassets */,
+				278E53E62A18E83000DCD159 /* Shared.xcassets */,
 				278E54002A18E83000DCD159 /* Info.plist */,
 				278E54012A18E83000DCD159 /* Forumate.entitlements */,
 				271808C52A32496D008B1970 /* Localizable.xcstrings */,
-				271808C92A324995008B1970 /* InfoPlist.xcstrings */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -736,6 +1120,17 @@
 				2779C07E2A34AA6A00CE4DF1 /* SettingsTabDestination.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		279283C42B0D29C900094683 /* ForumateVision */ = {
+			isa = PBXGroup;
+			children = (
+				279283C82B0D29C900094683 /* ForumateApp.swift */,
+				279283CA2B0D29C900094683 /* ContentView.swift */,
+				279283CC2B0D29CA00094683 /* Assets.xcassets */,
+				279284892B0D2E0300094683 /* InfoPlist.xcstrings */,
+			);
+			path = ForumateVision;
 			sourceTree = "<group>";
 		};
 		27C8789E2A3F6E7E00AECD06 /* TestFlight */ = {
@@ -779,12 +1174,13 @@
 		27EEA07D29EFCD1B00ADA5BE = {
 			isa = PBXGroup;
 			children = (
+				2728E0282B0D343F0074CDAC /* Configs */,
 				27C8789E2A3F6E7E00AECD06 /* TestFlight */,
 				27C878982A3F45F800AECD06 /* README.md */,
 				273C10F12A2CBFDC001537E2 /* Packages */,
-				278E53E22A18E83000DCD159 /* Forumate */,
+				278E53E22A18E83000DCD159 /* Shared */,
+				2722B94A2B0C7B1200D24617 /* Forumate */,
 				2726053D2A1A005C0018B908 /* ForumateTests */,
-				273AFBE82A1A94E100DD08F5 /* ForumateWatch Watch App */,
 				27EEA08729EFCD1B00ADA5BE /* Products */,
 				2747FD2F2A18BDD0003CB67B /* Frameworks */,
 			);
@@ -796,6 +1192,9 @@
 				27EEA08629EFCD1B00ADA5BE /* Forumate.app */,
 				2726053C2A1A005C0018B908 /* ForumateTests.xctest */,
 				273AFBE72A1A94E100DD08F5 /* ForumateWatch.app */,
+				2722B9282B0C7A5E00D24617 /* Forumate.app */,
+				2722B93A2B0C7A8B00D24617 /* Forumate.app */,
+				279283C32B0D29C800094683 /* Forumate.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -811,6 +1210,60 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		2722B9272B0C7A5E00D24617 /* ForumateTV */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2722B9352B0C7A5F00D24617 /* Build configuration list for PBXNativeTarget "ForumateTV" */;
+			buildPhases = (
+				2722B9242B0C7A5E00D24617 /* Sources */,
+				2722B9252B0C7A5E00D24617 /* Frameworks */,
+				2722B9262B0C7A5E00D24617 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ForumateTV;
+			packageProductDependencies = (
+				279284732B0D2C8500094683 /* HtmlText */,
+				279284752B0D2C8500094683 /* Flow */,
+				279284772B0D2C8500094683 /* AcknowKit */,
+				279284792B0D2C8500094683 /* DiscourseKit */,
+				2792847B2B0D2C8500094683 /* SimpleToast */,
+				2792847D2B0D2C8500094683 /* SDWebImageSwiftUI */,
+				2792847F2B0D2C8500094683 /* SDWebImageSVGCoder */,
+				279284812B0D2C8500094683 /* LoremSwiftum */,
+			);
+			productName = ForumateTV;
+			productReference = 2722B9282B0C7A5E00D24617 /* Forumate.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2722B9392B0C7A8B00D24617 /* ForumateMac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2722B9462B0C7A8C00D24617 /* Build configuration list for PBXNativeTarget "ForumateMac" */;
+			buildPhases = (
+				2722B9362B0C7A8B00D24617 /* Sources */,
+				2722B9372B0C7A8B00D24617 /* Frameworks */,
+				2722B9382B0C7A8B00D24617 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ForumateMac;
+			packageProductDependencies = (
+				279284632B0D2C6600094683 /* HtmlText */,
+				279284652B0D2C6600094683 /* Flow */,
+				279284672B0D2C6600094683 /* AcknowKit */,
+				279284692B0D2C6600094683 /* DiscourseKit */,
+				2792846B2B0D2C6600094683 /* SimpleToast */,
+				2792846D2B0D2C6600094683 /* SDWebImageSwiftUI */,
+				2792846F2B0D2C6600094683 /* SDWebImageSVGCoder */,
+				279284712B0D2C6600094683 /* LoremSwiftum */,
+			);
+			productName = ForumateMac;
+			productReference = 2722B93A2B0C7A8B00D24617 /* Forumate.app */;
+			productType = "com.apple.product-type.application";
+		};
 		2726053B2A1A005C0018B908 /* ForumateTests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 272605442A1A005C0018B908 /* Build configuration list for PBXNativeTarget "ForumateTests" */;
@@ -829,9 +1282,9 @@
 			productReference = 2726053C2A1A005C0018B908 /* ForumateTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		273AFBE62A1A94E100DD08F5 /* Forumate Watch App */ = {
+		273AFBE62A1A94E100DD08F5 /* ForumateWatch */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 273AFBF82A1A94E100DD08F5 /* Build configuration list for PBXNativeTarget "Forumate Watch App" */;
+			buildConfigurationList = 273AFBF82A1A94E100DD08F5 /* Build configuration list for PBXNativeTarget "ForumateWatch" */;
 			buildPhases = (
 				273AFBE32A1A94E100DD08F5 /* Sources */,
 				273AFBE42A1A94E100DD08F5 /* Frameworks */,
@@ -841,7 +1294,7 @@
 			);
 			dependencies = (
 			);
-			name = "Forumate Watch App";
+			name = ForumateWatch;
 			packageProductDependencies = (
 				273AFC012A1A954900DD08F5 /* AcknowKit */,
 				27CDD3822A1BAEAC003E3D00 /* Flow */,
@@ -856,9 +1309,36 @@
 			productReference = 273AFBE72A1A94E100DD08F5 /* ForumateWatch.app */;
 			productType = "com.apple.product-type.application";
 		};
-		27EEA08529EFCD1B00ADA5BE /* Forumate */ = {
+		279283C22B0D29C800094683 /* ForumateVision */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 27EEA09529EFCD1C00ADA5BE /* Build configuration list for PBXNativeTarget "Forumate" */;
+			buildConfigurationList = 279283D22B0D29CA00094683 /* Build configuration list for PBXNativeTarget "ForumateVision" */;
+			buildPhases = (
+				279283BF2B0D29C800094683 /* Sources */,
+				279283C02B0D29C800094683 /* Frameworks */,
+				279283C12B0D29C800094683 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ForumateVision;
+			packageProductDependencies = (
+				279284512B0D2BAD00094683 /* HtmlText */,
+				279284532B0D2BAD00094683 /* Flow */,
+				279284552B0D2BAD00094683 /* AcknowKit */,
+				279284572B0D2BAD00094683 /* DiscourseKit */,
+				2792845B2B0D2BAD00094683 /* SimpleToast */,
+				2792845D2B0D2BFF00094683 /* SDWebImageSwiftUI */,
+				2792845F2B0D2BFF00094683 /* SDWebImageSVGCoder */,
+				279284612B0D2C0A00094683 /* LoremSwiftum */,
+			);
+			productName = ForumateVision;
+			productReference = 279283C32B0D29C800094683 /* Forumate.app */;
+			productType = "com.apple.product-type.application";
+		};
+		27EEA08529EFCD1B00ADA5BE /* ForumateiOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 27EEA09529EFCD1C00ADA5BE /* Build configuration list for PBXNativeTarget "ForumateiOS" */;
 			buildPhases = (
 				27EEA08229EFCD1B00ADA5BE /* Sources */,
 				27EEA08329EFCD1B00ADA5BE /* Frameworks */,
@@ -870,7 +1350,7 @@
 			dependencies = (
 				270808FB2A9F99050089E5DC /* PBXTargetDependency */,
 			);
-			name = Forumate;
+			name = ForumateiOS;
 			packageProductDependencies = (
 				273AFBC52A1A3DFE00DD08F5 /* Flow */,
 				273AFBDD2A1A8CF100DD08F5 /* AcknowKit */,
@@ -892,15 +1372,24 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1430;
+				LastSwiftUpdateCheck = 1510;
 				LastUpgradeCheck = 1500;
 				TargetAttributes = {
+					2722B9272B0C7A5E00D24617 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+					2722B9392B0C7A8B00D24617 = {
+						CreatedOnToolsVersion = 15.0;
+					};
 					2726053B2A1A005C0018B908 = {
 						CreatedOnToolsVersion = 14.3.1;
 						TestTargetID = 27EEA08529EFCD1B00ADA5BE;
 					};
 					273AFBE62A1A94E100DD08F5 = {
 						CreatedOnToolsVersion = 14.3.1;
+					};
+					279283C22B0D29C800094683 = {
+						CreatedOnToolsVersion = 15.1;
 					};
 					27EEA08529EFCD1B00ADA5BE = {
 						CreatedOnToolsVersion = 14.3;
@@ -931,14 +1420,43 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				27EEA08529EFCD1B00ADA5BE /* Forumate */,
+				27EEA08529EFCD1B00ADA5BE /* ForumateiOS */,
+				273AFBE62A1A94E100DD08F5 /* ForumateWatch */,
+				2722B9272B0C7A5E00D24617 /* ForumateTV */,
+				2722B9392B0C7A8B00D24617 /* ForumateMac */,
+				279283C22B0D29C800094683 /* ForumateVision */,
 				2726053B2A1A005C0018B908 /* ForumateTests */,
-				273AFBE62A1A94E100DD08F5 /* Forumate Watch App */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		2722B9262B0C7A5E00D24617 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				279284842B0D2DD100094683 /* InfoPlist.xcstrings in Resources */,
+				2722B94C2B0C7BB800D24617 /* Preview Assets.xcassets in Resources */,
+				2722B9BF2B0C7EA000D24617 /* Localizable.xcstrings in Resources */,
+				2722B92F2B0C7A5F00D24617 /* Assets.xcassets in Resources */,
+				2722B9BB2B0C7E9200D24617 /* Shared.xcassets in Resources */,
+				2722B9B12B0C7E7500D24617 /* styleSheet.css in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2722B9382B0C7A8B00D24617 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				279284882B0D2DFA00094683 /* InfoPlist.xcstrings in Resources */,
+				2722B94D2B0C7BB900D24617 /* Preview Assets.xcassets in Resources */,
+				2722B9BD2B0C7E9F00D24617 /* Localizable.xcstrings in Resources */,
+				2722B9412B0C7A8C00D24617 /* Assets.xcassets in Resources */,
+				2722B9BC2B0C7E9200D24617 /* Shared.xcassets in Resources */,
+				2722B9B22B0C7E7600D24617 /* styleSheet.css in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2726053A2A1A005C0018B908 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -950,11 +1468,24 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				273AFBF12A1A94E100DD08F5 /* Preview Assets.xcassets in Resources */,
-				271808CB2A324995008B1970 /* InfoPlist.xcstrings in Resources */,
-				270808FC2A9FA3D50089E5DC /* Assets.xcassets in Resources */,
+				279284862B0D2DEB00094683 /* InfoPlist.xcstrings in Resources */,
+				270808FC2A9FA3D50089E5DC /* Shared.xcassets in Resources */,
 				271808C72A32496D008B1970 /* Localizable.xcstrings in Resources */,
+				2722B94B2B0C7BB800D24617 /* Preview Assets.xcassets in Resources */,
+				279283BE2B0D287800094683 /* Assets.xcassets in Resources */,
 				27FDBEA32AADDC3500A3448C /* styleSheet.css in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		279283C12B0D29C800094683 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				279283CD2B0D29CA00094683 /* Assets.xcassets in Resources */,
+				2792848A2B0D2E0300094683 /* InfoPlist.xcstrings in Resources */,
+				279284502B0D2B3F00094683 /* Shared.xcassets in Resources */,
+				279284492B0D2AE100094683 /* styleSheet.css in Resources */,
+				2792844E2B0D2AED00094683 /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -963,9 +1494,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				278E54052A18E83000DCD159 /* Preview Assets.xcassets in Resources */,
-				278E54042A18E83000DCD159 /* Assets.xcassets in Resources */,
+				278E54042A18E83000DCD159 /* Shared.xcassets in Resources */,
 				271808CA2A324995008B1970 /* InfoPlist.xcstrings in Resources */,
 				271808C62A32496D008B1970 /* Localizable.xcstrings in Resources */,
+				279283BC2B0D285A00094683 /* Assets.xcassets in Resources */,
 				27FDBEA22AADDC3500A3448C /* styleSheet.css in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -973,6 +1505,170 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		2722B9242B0C7A5E00D24617 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2722B9512B0C7CC000D24617 /* AppDelegate.swift in Sources */,
+				279284312B0D2AC300094683 /* PrivacyPolicySection.swift in Sources */,
+				2722B9972B0C7E5A00D24617 /* ThemeManager.swift in Sources */,
+				2792842E2B0D2AC300094683 /* GeneralSection.swift in Sources */,
+				2722B9552B0C7CD500D24617 /* AppInfo.swift in Sources */,
+				2722B9592B0C7CEB00D24617 /* StarterIntroCardView.swift in Sources */,
+				279283F82B0D2A9800094683 /* InboxTab.swift in Sources */,
+				2722B9582B0C7CE800D24617 /* PlaceholderView.swift in Sources */,
+				279284392B0D2AC300094683 /* ForumatePlusSection.swift in Sources */,
+				2722B9A62B0C7E6E00D24617 /* EqualHeightHStackLayout.swift in Sources */,
+				2722B9B62B0C7E7C00D24617 /* Topic+Preview.swift in Sources */,
+				2722B9782B0C7D0300D24617 /* CommunityDetail.swift in Sources */,
+				2722B95A2B0C7CEB00D24617 /* StarterIntroCard.swift in Sources */,
+				2722B9A32B0C7E6E00D24617 /* Toast.swift in Sources */,
+				2722B9792B0C7D0300D24617 /* CategoryListView.swift in Sources */,
+				279284362B0D2AC300094683 /* AcknowSection.swift in Sources */,
+				2722B98C2B0C7D1000D24617 /* PostActionCodeView.swift in Sources */,
+				2722B9632B0C7CF900D24617 /* CommunityManager.swift in Sources */,
+				279284382B0D2AC300094683 /* SplitViewStyleType.swift in Sources */,
+				2722B9602B0C7CED00D24617 /* TopicsTabRoot.swift in Sources */,
+				2722B9802B0C7D0800D24617 /* CategoryLabel.swift in Sources */,
+				2722B98B2B0C7D1000D24617 /* PostView.swift in Sources */,
+				2722B9A12B0C7E6E00D24617 /* PreviewChecker.swift in Sources */,
+				2722B9672B0C7CF900D24617 /* RecommendCommunityLabel.swift in Sources */,
+				2722B9772B0C7D0300D24617 /* CommunitySectionHeader.swift in Sources */,
+				2722B99D2B0C7E6E00D24617 /* ColorToImageText.swift in Sources */,
+				279284322B0D2AC300094683 /* SettingIcon.swift in Sources */,
+				279284292B0D2AC300094683 /* ThemeSection.swift in Sources */,
+				2722B9752B0C7D0000D24617 /* AccountMenuButton.swift in Sources */,
+				279284332B0D2AC300094683 /* PickerStyleType.swift in Sources */,
+				2722B9962B0C7E5A00D24617 /* PlusManager.swift in Sources */,
+				279284352B0D2AC300094683 /* BoolSetting.swift in Sources */,
+				2722B9852B0C7D0C00D24617 /* TagView.swift in Sources */,
+				2722B9B32B0C7E7C00D24617 /* Community+Preview.swift in Sources */,
+				2722B92D2B0C7A5E00D24617 /* ContentView.swift in Sources */,
+				2722B9662B0C7CF900D24617 /* CommunityList.swift in Sources */,
+				2722B92B2B0C7A5E00D24617 /* ForumateApp.swift in Sources */,
+				2722B9982B0C7E5A00D24617 /* AppState.swift in Sources */,
+				2722B97A2B0C7D0300D24617 /* LatestTopicsView.swift in Sources */,
+				2792842C2B0D2AC300094683 /* OpenLinkType.swift in Sources */,
+				2722B9542B0C7CD000D24617 /* AppViewModifier.swift in Sources */,
+				2722B98F2B0C7D1400D24617 /* TopicsTabState.swift in Sources */,
+				2722B99E2B0C7E6E00D24617 /* Image+Platform.swift in Sources */,
+				2722B9682B0C7CF900D24617 /* RecommendCommunity.swift in Sources */,
+				2722B9A22B0C7E6E00D24617 /* JSONRawRepresentable.swift in Sources */,
+				2722B9762B0C7D0000D24617 /* ViewByMenuButton.swift in Sources */,
+				2722B9B52B0C7E7C00D24617 /* Category+Preview.swift in Sources */,
+				279283FB2B0D2A9C00094683 /* SettingsTab.swift in Sources */,
+				279284302B0D2AC300094683 /* SupportSection.swift in Sources */,
+				2722B9B42B0C7E7C00D24617 /* PreviewContainer.swift in Sources */,
+				2722B9652B0C7CF900D24617 /* CommunityLabel.swift in Sources */,
+				2722B95B2B0C7CEB00D24617 /* StarterIntro.swift in Sources */,
+				2722B9942B0C7E4A00D24617 /* TopicDetailWindowModel.swift in Sources */,
+				2722B9642B0C7CF900D24617 /* Community.swift in Sources */,
+				2722B9872B0C7D0C00D24617 /* TopicLabel.swift in Sources */,
+				279283FF2B0D2A9F00094683 /* SettingsTabRoot.swift in Sources */,
+				279283F52B0D2A9300094683 /* Account.swift in Sources */,
+				2722B9862B0C7D0C00D24617 /* TopicDetail.swift in Sources */,
+				2722B97F2B0C7D0800D24617 /* CategoryText.swift in Sources */,
+				2722B9812B0C7D0800D24617 /* CategoryDetail.swift in Sources */,
+				2792842A2B0D2AC300094683 /* ContributorView.swift in Sources */,
+				2792842B2B0D2AC300094683 /* Setting.swift in Sources */,
+				2722B9A52B0C7E6E00D24617 /* HexToColor.swift in Sources */,
+				2722B99F2B0C7E6E00D24617 /* Text+Date.swift in Sources */,
+				279284342B0D2AC300094683 /* ShowMenuBarExtra.swift in Sources */,
+				2722B9A42B0C7E6E00D24617 /* Logger+Extension.swift in Sources */,
+				2722B9692B0C7CF900D24617 /* NewCommunity.swift in Sources */,
+				279284012B0D2AA600094683 /* SettingsTabDestination.swift in Sources */,
+				279284372B0D2AC300094683 /* ShowRecommendCommunity.swift in Sources */,
+				2792842F2B0D2AC300094683 /* IconSelectorSection.swift in Sources */,
+				2722B95F2B0C7CED00D24617 /* TopicsTab.swift in Sources */,
+				2722B9712B0C7CFC00D24617 /* CommunityDetailState.swift in Sources */,
+				2792842D2B0D2AC300094683 /* ForumateSubscriptionView.swift in Sources */,
+				279284022B0D2AA600094683 /* SettingsTabState.swift in Sources */,
+				2722B9A02B0C7E6E00D24617 /* View+Size.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2722B9362B0C7A8B00D24617 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2722B9522B0C7CC100D24617 /* AppDelegate.swift in Sources */,
+				279284202B0D2AC200094683 /* PrivacyPolicySection.swift in Sources */,
+				2722B99A2B0C7E5B00D24617 /* ThemeManager.swift in Sources */,
+				2792841D2B0D2AC200094683 /* GeneralSection.swift in Sources */,
+				2722B9562B0C7CD500D24617 /* AppInfo.swift in Sources */,
+				2722B95C2B0C7CEB00D24617 /* StarterIntroCardView.swift in Sources */,
+				279283F92B0D2A9800094683 /* InboxTab.swift in Sources */,
+				2722B9572B0C7CE700D24617 /* PlaceholderView.swift in Sources */,
+				279284282B0D2AC200094683 /* ForumatePlusSection.swift in Sources */,
+				2722B9B02B0C7E6F00D24617 /* EqualHeightHStackLayout.swift in Sources */,
+				2722B9BA2B0C7E7C00D24617 /* Topic+Preview.swift in Sources */,
+				2722B97C2B0C7D0400D24617 /* CommunityDetail.swift in Sources */,
+				2722B95D2B0C7CEB00D24617 /* StarterIntroCard.swift in Sources */,
+				2722B9AD2B0C7E6F00D24617 /* Toast.swift in Sources */,
+				2722B97D2B0C7D0400D24617 /* CategoryListView.swift in Sources */,
+				279284252B0D2AC200094683 /* AcknowSection.swift in Sources */,
+				2722B98E2B0C7D1100D24617 /* PostActionCodeView.swift in Sources */,
+				2722B96A2B0C7CFA00D24617 /* CommunityManager.swift in Sources */,
+				279284272B0D2AC200094683 /* SplitViewStyleType.swift in Sources */,
+				2722B9622B0C7CEE00D24617 /* TopicsTabRoot.swift in Sources */,
+				2722B9832B0C7D0900D24617 /* CategoryLabel.swift in Sources */,
+				2722B98D2B0C7D1100D24617 /* PostView.swift in Sources */,
+				2722B9AB2B0C7E6F00D24617 /* PreviewChecker.swift in Sources */,
+				2722B96E2B0C7CFA00D24617 /* RecommendCommunityLabel.swift in Sources */,
+				2722B97B2B0C7D0400D24617 /* CommunitySectionHeader.swift in Sources */,
+				2722B9A72B0C7E6F00D24617 /* ColorToImageText.swift in Sources */,
+				279284212B0D2AC200094683 /* SettingIcon.swift in Sources */,
+				279284182B0D2AC200094683 /* ThemeSection.swift in Sources */,
+				2722B9732B0C7D0000D24617 /* AccountMenuButton.swift in Sources */,
+				279284222B0D2AC200094683 /* PickerStyleType.swift in Sources */,
+				2722B9992B0C7E5B00D24617 /* PlusManager.swift in Sources */,
+				279284242B0D2AC200094683 /* BoolSetting.swift in Sources */,
+				2722B9882B0C7D0D00D24617 /* TagView.swift in Sources */,
+				2722B9B72B0C7E7C00D24617 /* Community+Preview.swift in Sources */,
+				2722B93F2B0C7A8B00D24617 /* ContentView.swift in Sources */,
+				2722B96D2B0C7CFA00D24617 /* CommunityList.swift in Sources */,
+				2722B93D2B0C7A8B00D24617 /* ForumateApp.swift in Sources */,
+				2722B99B2B0C7E5B00D24617 /* AppState.swift in Sources */,
+				2722B97E2B0C7D0400D24617 /* LatestTopicsView.swift in Sources */,
+				2792841B2B0D2AC200094683 /* OpenLinkType.swift in Sources */,
+				2722B9532B0C7CCF00D24617 /* AppViewModifier.swift in Sources */,
+				2722B9902B0C7D1400D24617 /* TopicsTabState.swift in Sources */,
+				2722B9A82B0C7E6F00D24617 /* Image+Platform.swift in Sources */,
+				2722B96F2B0C7CFA00D24617 /* RecommendCommunity.swift in Sources */,
+				2722B9AC2B0C7E6F00D24617 /* JSONRawRepresentable.swift in Sources */,
+				2722B9742B0C7D0000D24617 /* ViewByMenuButton.swift in Sources */,
+				2722B9B92B0C7E7C00D24617 /* Category+Preview.swift in Sources */,
+				279283FC2B0D2A9C00094683 /* SettingsTab.swift in Sources */,
+				2792841F2B0D2AC200094683 /* SupportSection.swift in Sources */,
+				2722B9B82B0C7E7C00D24617 /* PreviewContainer.swift in Sources */,
+				2722B96C2B0C7CFA00D24617 /* CommunityLabel.swift in Sources */,
+				2722B95E2B0C7CEB00D24617 /* StarterIntro.swift in Sources */,
+				2722B9952B0C7E4B00D24617 /* TopicDetailWindowModel.swift in Sources */,
+				2722B96B2B0C7CFA00D24617 /* Community.swift in Sources */,
+				2722B98A2B0C7D0D00D24617 /* TopicLabel.swift in Sources */,
+				279283FE2B0D2A9F00094683 /* SettingsTabRoot.swift in Sources */,
+				279283F62B0D2A9300094683 /* Account.swift in Sources */,
+				2722B9892B0C7D0D00D24617 /* TopicDetail.swift in Sources */,
+				2722B9822B0C7D0900D24617 /* CategoryText.swift in Sources */,
+				2722B9842B0C7D0900D24617 /* CategoryDetail.swift in Sources */,
+				279284192B0D2AC200094683 /* ContributorView.swift in Sources */,
+				2792841A2B0D2AC200094683 /* Setting.swift in Sources */,
+				2722B9AF2B0C7E6F00D24617 /* HexToColor.swift in Sources */,
+				2722B9A92B0C7E6F00D24617 /* Text+Date.swift in Sources */,
+				279284232B0D2AC200094683 /* ShowMenuBarExtra.swift in Sources */,
+				2722B9AE2B0C7E6F00D24617 /* Logger+Extension.swift in Sources */,
+				2722B9702B0C7CFA00D24617 /* NewCommunity.swift in Sources */,
+				279284032B0D2AA700094683 /* SettingsTabDestination.swift in Sources */,
+				279284262B0D2AC200094683 /* ShowRecommendCommunity.swift in Sources */,
+				2792841E2B0D2AC200094683 /* IconSelectorSection.swift in Sources */,
+				2722B9612B0C7CEE00D24617 /* TopicsTab.swift in Sources */,
+				2722B9722B0C7CFD00D24617 /* CommunityDetailState.swift in Sources */,
+				2792841C2B0D2AC200094683 /* ForumateSubscriptionView.swift in Sources */,
+				279284042B0D2AA700094683 /* SettingsTabState.swift in Sources */,
+				2722B9AA2B0C7E6F00D24617 /* View+Size.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		272605382A1A005C0018B908 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -986,9 +1682,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				27FDBEB12AAE382D00A3448C /* PostActionCodeView.swift in Sources */,
+				2722B99C2B0C7E6600D24617 /* ThemeManager.swift in Sources */,
 				273AFC042A1A960600DD08F5 /* Category+Preview.swift in Sources */,
 				273AFC082A1A962200DD08F5 /* JSONRawRepresentable.swift in Sources */,
 				2733B4D12A2F918A00BCF528 /* StarterIntroCardView.swift in Sources */,
+				2792843A2B0D2AC300094683 /* ContributorView.swift in Sources */,
 				273AFC142A1A967D00DD08F5 /* LatestTopicsView.swift in Sources */,
 				2733B4D52A2F929300BCF528 /* StarterIntroCard.swift in Sources */,
 				27D2190F2A75759C00501849 /* Account.swift in Sources */,
@@ -996,7 +1694,6 @@
 				273AFC0D2A1A964200DD08F5 /* SettingsTabRoot.swift in Sources */,
 				273AFC242A1A97CC00DD08F5 /* InboxTab.swift in Sources */,
 				273AFC072A1A961F00DD08F5 /* HexToColor.swift in Sources */,
-				273AFBFA2A1A951C00DD08F5 /* ContentView.swift in Sources */,
 				27F434102AAC1A940042F681 /* AppViewModifier.swift in Sources */,
 				270CD6802AA22DA7004DBD1D /* Toast.swift in Sources */,
 				273AFC1F2A1A967D00DD08F5 /* CommunityDetail.swift in Sources */,
@@ -1043,21 +1740,104 @@
 				273AFC1C2A1A967D00DD08F5 /* CommunityList.swift in Sources */,
 				273AFC132A1A967300DD08F5 /* Community.swift in Sources */,
 				276F9F482A2A606600020B1B /* PostView.swift in Sources */,
+				2722B9932B0C7DEF00D24617 /* ContentView.swift in Sources */,
 				2779C07B2A34978700CE4DF1 /* PreviewContainer.swift in Sources */,
 				273AFC112A1A964C00DD08F5 /* TopicsTabState.swift in Sources */,
 				273AFC092A1A963800DD08F5 /* PlaceholderView.swift in Sources */,
 				273AFC232A1A968100DD08F5 /* TopicsTab.swift in Sources */,
 				27FDBEAD2AAE248400A3448C /* ShowMenuBarExtra.swift in Sources */,
 				273AFC032A1A95FD00DD08F5 /* AppState.swift in Sources */,
+				2722B9502B0C7C1700D24617 /* ForumateApp.swift in Sources */,
 				273AFC202A1A967D00DD08F5 /* CategoryDetail.swift in Sources */,
 				27403B4E2AB6A11D00EF2008 /* AccountMenuButton.swift in Sources */,
 				273AFC1A2A1A967D00DD08F5 /* NewCommunity.swift in Sources */,
 				273AFC122A1A966900DD08F5 /* CommunityDetailState.swift in Sources */,
-				27CDD3972A1BB5B9003E3D00 /* ForumateApp.swift in Sources */,
 				27C00A332A2CC4F400CA9ACD /* OpenLinkType.swift in Sources */,
 				27D219052A756E7900501849 /* Logger+Extension.swift in Sources */,
 				27CDD3C52A1BCC3F003E3D00 /* TagView.swift in Sources */,
 				278F75892AAD715B003D61ED /* ShowRecommendCommunity.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		279283BF2B0D29C800094683 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				279283F02B0D2A8B00094683 /* CategoryLabel.swift in Sources */,
+				279283EA2B0D2A8B00094683 /* CategoryDetail.swift in Sources */,
+				279283E12B0D2A7E00094683 /* Community.swift in Sources */,
+				2792843E2B0D2AD600094683 /* PlusManager.swift in Sources */,
+				279283E22B0D2A7E00094683 /* CommunityManager.swift in Sources */,
+				279283FA2B0D2A9900094683 /* InboxTab.swift in Sources */,
+				279284162B0D2AC000094683 /* SplitViewStyleType.swift in Sources */,
+				279283CB2B0D29C900094683 /* ContentView.swift in Sources */,
+				2792840B2B0D2AC000094683 /* ForumateSubscriptionView.swift in Sources */,
+				2792843C2B0D2AD600094683 /* ThemeManager.swift in Sources */,
+				279284172B0D2AC000094683 /* ForumatePlusSection.swift in Sources */,
+				2792844B2B0D2AE600094683 /* Category+Preview.swift in Sources */,
+				279283E02B0D2A7E00094683 /* RecommendCommunityLabel.swift in Sources */,
+				279283E62B0D2A8B00094683 /* CategoryText.swift in Sources */,
+				279283FD2B0D2A9C00094683 /* SettingsTab.swift in Sources */,
+				279283D62B0D2A6300094683 /* AppInfo.swift in Sources */,
+				279283D92B0D2A6C00094683 /* StarterIntro.swift in Sources */,
+				279284472B0D2ADB00094683 /* Image+Platform.swift in Sources */,
+				279284092B0D2AC000094683 /* Setting.swift in Sources */,
+				279284132B0D2AC000094683 /* BoolSetting.swift in Sources */,
+				279284412B0D2ADB00094683 /* HexToColor.swift in Sources */,
+				279284052B0D2AA800094683 /* SettingsTabDestination.swift in Sources */,
+				2792840C2B0D2AC000094683 /* GeneralSection.swift in Sources */,
+				2792843B2B0D2AD100094683 /* TopicDetailWindowModel.swift in Sources */,
+				279283DE2B0D2A7600094683 /* TopicsTabRoot.swift in Sources */,
+				279283D82B0D2A6C00094683 /* StarterIntroCard.swift in Sources */,
+				2792840E2B0D2AC000094683 /* SupportSection.swift in Sources */,
+				279284082B0D2AC000094683 /* ContributorView.swift in Sources */,
+				2792840D2B0D2AC000094683 /* IconSelectorSection.swift in Sources */,
+				279284422B0D2ADB00094683 /* Text+Date.swift in Sources */,
+				279284122B0D2AC000094683 /* ShowMenuBarExtra.swift in Sources */,
+				279284112B0D2AC000094683 /* PickerStyleType.swift in Sources */,
+				279284452B0D2ADB00094683 /* PreviewChecker.swift in Sources */,
+				279284072B0D2AC000094683 /* ThemeSection.swift in Sources */,
+				2792843F2B0D2ADB00094683 /* Logger+Extension.swift in Sources */,
+				2792844A2B0D2AE600094683 /* Topic+Preview.swift in Sources */,
+				279283EF2B0D2A8B00094683 /* LatestTopicsView.swift in Sources */,
+				279283F12B0D2A8B00094683 /* CommunitySectionHeader.swift in Sources */,
+				279283E72B0D2A8B00094683 /* TopicDetail.swift in Sources */,
+				279284462B0D2ADB00094683 /* ColorToImageText.swift in Sources */,
+				279283E82B0D2A8B00094683 /* CommunityDetail.swift in Sources */,
+				279284402B0D2ADB00094683 /* Toast.swift in Sources */,
+				279283DD2B0D2A7600094683 /* CommunityList.swift in Sources */,
+				279283E52B0D2A8B00094683 /* PostView.swift in Sources */,
+				279283C92B0D29C900094683 /* ForumateApp.swift in Sources */,
+				2792844D2B0D2AE600094683 /* Community+Preview.swift in Sources */,
+				279283E92B0D2A8B00094683 /* TopicLabel.swift in Sources */,
+				279284152B0D2AC000094683 /* ShowRecommendCommunity.swift in Sources */,
+				279284142B0D2AC000094683 /* AcknowSection.swift in Sources */,
+				279283D72B0D2A6300094683 /* AppDelegate.swift in Sources */,
+				279283F72B0D2A9400094683 /* Account.swift in Sources */,
+				279283F32B0D2A8B00094683 /* AccountMenuButton.swift in Sources */,
+				279283F42B0D2A9000094683 /* TopicsTabState.swift in Sources */,
+				279283ED2B0D2A8B00094683 /* TagView.swift in Sources */,
+				279283DA2B0D2A6C00094683 /* PlaceholderView.swift in Sources */,
+				2792844C2B0D2AE600094683 /* PreviewContainer.swift in Sources */,
+				279284482B0D2ADB00094683 /* View+Size.swift in Sources */,
+				279283EC2B0D2A8B00094683 /* CommunityDetailState.swift in Sources */,
+				279283EB2B0D2A8B00094683 /* PostActionCodeView.swift in Sources */,
+				279284102B0D2AC000094683 /* SettingIcon.swift in Sources */,
+				279283F22B0D2A8B00094683 /* ViewByMenuButton.swift in Sources */,
+				2792840F2B0D2AC000094683 /* PrivacyPolicySection.swift in Sources */,
+				279284002B0D2AA000094683 /* SettingsTabRoot.swift in Sources */,
+				279283D52B0D2A6300094683 /* AppViewModifier.swift in Sources */,
+				279284442B0D2ADB00094683 /* JSONRawRepresentable.swift in Sources */,
+				2792843D2B0D2AD600094683 /* AppState.swift in Sources */,
+				279283DB2B0D2A6C00094683 /* StarterIntroCardView.swift in Sources */,
+				279284062B0D2AA800094683 /* SettingsTabState.swift in Sources */,
+				279284432B0D2ADB00094683 /* EqualHeightHStackLayout.swift in Sources */,
+				279283E42B0D2A7E00094683 /* RecommendCommunity.swift in Sources */,
+				2792840A2B0D2AC000094683 /* OpenLinkType.swift in Sources */,
+				279283DC2B0D2A7600094683 /* TopicsTab.swift in Sources */,
+				279283E32B0D2A7E00094683 /* NewCommunity.swift in Sources */,
+				279283EE2B0D2A8B00094683 /* CategoryListView.swift in Sources */,
+				279283DF2B0D2A7E00094683 /* CommunityLabel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1149,19 +1929,135 @@
 		270808FB2A9F99050089E5DC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			platformFilter = ios;
-			target = 273AFBE62A1A94E100DD08F5 /* Forumate Watch App */;
+			target = 273AFBE62A1A94E100DD08F5 /* ForumateWatch */;
 			targetProxy = 270808FA2A9F99050089E5DC /* PBXContainerItemProxy */;
 		};
 		272605412A1A005C0018B908 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 27EEA08529EFCD1B00ADA5BE /* Forumate */;
+			target = 27EEA08529EFCD1B00ADA5BE /* ForumateiOS */;
 			targetProxy = 272605402A1A005C0018B908 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		2722B9332B0C7A5F00D24617 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2728E02A2B0D343F0074CDAC /* Debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = VB7MJ8R223;
+				ENABLE_PREVIEWS = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Shared/Other/Info.plist;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Automatic;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = top.kyleye.Forumate;
+				SDKROOT = appletvos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+			};
+			name = Debug;
+		};
+		2722B9342B0C7A5F00D24617 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2728E02B2B0D343F0074CDAC /* Release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = VB7MJ8R223;
+				ENABLE_PREVIEWS = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Shared/Other/Info.plist;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Automatic;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = top.kyleye.Forumate;
+				SDKROOT = appletvos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2722B9472B0C7A8C00D24617 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2728E02A2B0D343F0074CDAC /* Debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = VB7MJ8R223;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Shared/Other/Info.plist;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright ©️ 2023 YEXULEI. All rights reserved";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = top.kyleye.Forumate;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		2722B9482B0C7A8C00D24617 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2728E02B2B0D343F0074CDAC /* Release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = VB7MJ8R223;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Shared/Other/Info.plist;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright ©️ 2023 YEXULEI. All rights reserved";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = top.kyleye.Forumate;
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 		272605422A1A005C0018B908 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2728E02A2B0D343F0074CDAC /* Debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -1185,6 +2081,7 @@
 		};
 		272605432A1A005C0018B908 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2728E02B2B0D343F0074CDAC /* Release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -1209,16 +2106,17 @@
 		};
 		273AFBF62A1A94E100DD08F5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2728E02A2B0D343F0074CDAC /* Debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"ForumateWatch Watch App/Preview Content\"";
 				DEVELOPMENT_TEAM = VB7MJ8R223;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = Forumate;
+				INFOPLIST_FILE = Shared/Other/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "$(FORUMATE_APP_NAME)";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = top.kyleye.Forumate;
 				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
@@ -1226,7 +2124,6 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.7.0;
 				PRODUCT_BUNDLE_IDENTIFIER = top.kyleye.Forumate.watchkitapp;
 				PRODUCT_NAME = ForumateWatch;
 				SDKROOT = watchos;
@@ -1240,16 +2137,17 @@
 		};
 		273AFBF72A1A94E100DD08F5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2728E02B2B0D343F0074CDAC /* Release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"ForumateWatch Watch App/Preview Content\"";
 				DEVELOPMENT_TEAM = VB7MJ8R223;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = Forumate;
+				INFOPLIST_FILE = Shared/Other/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "$(FORUMATE_APP_NAME)";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = top.kyleye.Forumate;
 				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
@@ -1257,7 +2155,6 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.7.0;
 				PRODUCT_BUNDLE_IDENTIFIER = top.kyleye.Forumate.watchkitapp;
 				PRODUCT_NAME = ForumateWatch;
 				SDKROOT = watchos;
@@ -1270,8 +2167,65 @@
 			};
 			name = Release;
 		};
+		279283D32B0D29CA00094683 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2728E02A2B0D343F0074CDAC /* Debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = VB7MJ8R223;
+				ENABLE_PREVIEWS = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Shared/Other/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = top.kyleye.Forumate;
+				SDKROOT = xros;
+				SUPPORTED_PLATFORMS = "xros xrsimulator";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+			};
+			name = Debug;
+		};
+		279283D42B0D29CA00094683 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2728E02B2B0D343F0074CDAC /* Release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = VB7MJ8R223;
+				ENABLE_PREVIEWS = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Shared/Other/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = top.kyleye.Forumate;
+				SDKROOT = xros;
+				SUPPORTED_PLATFORMS = "xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		27EEA09329EFCD1C00ADA5BE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2728E02A2B0D343F0074CDAC /* Debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -1329,6 +2283,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TVOS_DEPLOYMENT_TARGET = 17.0;
@@ -1339,6 +2294,7 @@
 		};
 		27EEA09429EFCD1C00ADA5BE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2728E02B2B0D343F0074CDAC /* Release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -1389,6 +2345,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "";
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				TVOS_DEPLOYMENT_TARGET = 17.0;
@@ -1399,6 +2356,7 @@
 		};
 		27EEA09629EFCD1C00ADA5BE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2728E02A2B0D343F0074CDAC /* Debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_ALTERNATE_APPICON_NAMES = AppIconAlternate1;
@@ -1406,17 +2364,15 @@
 				"ASSETCATALOG_COMPILER_APPICON_NAME[sdk=appletvos*]" = "App Icon & Top Shelf Image";
 				"ASSETCATALOG_COMPILER_APPICON_NAME[sdk=appletvsimulator*]" = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = Forumate/Other/Forumate.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_ASSET_PATHS = "\"Forumate/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Shared/Preview Content\"";
 				DEVELOPMENT_TEAM = VB7MJ8R223;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Forumate/Other/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = Forumate;
+				INFOPLIST_FILE = Shared/Other/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.social-networking";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
@@ -1433,22 +2389,21 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 0.7.0;
 				PRODUCT_BUNDLE_IDENTIFIER = top.kyleye.Forumate;
-				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "appletvos appletvsimulator iphoneos iphonesimulator macosx xros xrsimulator";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = YES;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2,3,7";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		27EEA09729EFCD1C00ADA5BE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2728E02B2B0D343F0074CDAC /* Release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_ALTERNATE_APPICON_NAMES = AppIconAlternate1;
@@ -1456,17 +2411,15 @@
 				"ASSETCATALOG_COMPILER_APPICON_NAME[sdk=appletvos*]" = "App Icon & Top Shelf Image";
 				"ASSETCATALOG_COMPILER_APPICON_NAME[sdk=appletvsimulator*]" = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = Forumate/Other/Forumate.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_ASSET_PATHS = "\"Forumate/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Shared/Preview Content\"";
 				DEVELOPMENT_TEAM = VB7MJ8R223;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Forumate/Other/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = Forumate;
+				INFOPLIST_FILE = Shared/Other/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.social-networking";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
@@ -1483,23 +2436,39 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 0.7.0;
 				PRODUCT_BUNDLE_IDENTIFIER = top.kyleye.Forumate;
-				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "appletvos appletvsimulator iphoneos iphonesimulator macosx xros xrsimulator";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = YES;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2,3,7";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		2722B9352B0C7A5F00D24617 /* Build configuration list for PBXNativeTarget "ForumateTV" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2722B9332B0C7A5F00D24617 /* Debug */,
+				2722B9342B0C7A5F00D24617 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2722B9462B0C7A8C00D24617 /* Build configuration list for PBXNativeTarget "ForumateMac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2722B9472B0C7A8C00D24617 /* Debug */,
+				2722B9482B0C7A8C00D24617 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		272605442A1A005C0018B908 /* Build configuration list for PBXNativeTarget "ForumateTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1509,11 +2478,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		273AFBF82A1A94E100DD08F5 /* Build configuration list for PBXNativeTarget "Forumate Watch App" */ = {
+		273AFBF82A1A94E100DD08F5 /* Build configuration list for PBXNativeTarget "ForumateWatch" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				273AFBF62A1A94E100DD08F5 /* Debug */,
 				273AFBF72A1A94E100DD08F5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		279283D22B0D29CA00094683 /* Build configuration list for PBXNativeTarget "ForumateVision" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				279283D32B0D29CA00094683 /* Debug */,
+				279283D42B0D29CA00094683 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1527,7 +2505,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		27EEA09529EFCD1C00ADA5BE /* Build configuration list for PBXNativeTarget "Forumate" */ = {
+		27EEA09529EFCD1C00ADA5BE /* Build configuration list for PBXNativeTarget "ForumateiOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				27EEA09629EFCD1C00ADA5BE /* Debug */,
@@ -1640,6 +2618,123 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 2754829D2AAD8D980050E65D /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
 			productName = SDWebImageSwiftUI;
+		};
+		279284512B0D2BAD00094683 /* HtmlText */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = HtmlText;
+		};
+		279284532B0D2BAD00094683 /* Flow */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 273AFBC42A1A3DFD00DD08F5 /* XCRemoteSwiftPackageReference "SwiftUI-Flow" */;
+			productName = Flow;
+		};
+		279284552B0D2BAD00094683 /* AcknowKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 273AFBDC2A1A8CF100DD08F5 /* XCRemoteSwiftPackageReference "AcknowKit" */;
+			productName = AcknowKit;
+		};
+		279284572B0D2BAD00094683 /* DiscourseKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 27DFFCF32A2B3574005661BD /* XCRemoteSwiftPackageReference "DiscourseKit" */;
+			productName = DiscourseKit;
+		};
+		2792845B2B0D2BAD00094683 /* SimpleToast */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 270CD6792AA228D5004DBD1D /* XCRemoteSwiftPackageReference "SimpleToast" */;
+			productName = SimpleToast;
+		};
+		2792845D2B0D2BFF00094683 /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2754829D2AAD8D980050E65D /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+		2792845F2B0D2BFF00094683 /* SDWebImageSVGCoder */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 27AFDC932AADB22A0040C4F1 /* XCRemoteSwiftPackageReference "SDWebImageSVGCoder" */;
+			productName = SDWebImageSVGCoder;
+		};
+		279284612B0D2C0A00094683 /* LoremSwiftum */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 27FDBEA42AADE9B600A3448C /* XCRemoteSwiftPackageReference "LoremSwiftum" */;
+			productName = LoremSwiftum;
+		};
+		279284632B0D2C6600094683 /* HtmlText */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = HtmlText;
+		};
+		279284652B0D2C6600094683 /* Flow */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 273AFBC42A1A3DFD00DD08F5 /* XCRemoteSwiftPackageReference "SwiftUI-Flow" */;
+			productName = Flow;
+		};
+		279284672B0D2C6600094683 /* AcknowKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 273AFBDC2A1A8CF100DD08F5 /* XCRemoteSwiftPackageReference "AcknowKit" */;
+			productName = AcknowKit;
+		};
+		279284692B0D2C6600094683 /* DiscourseKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 27DFFCF32A2B3574005661BD /* XCRemoteSwiftPackageReference "DiscourseKit" */;
+			productName = DiscourseKit;
+		};
+		2792846B2B0D2C6600094683 /* SimpleToast */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 270CD6792AA228D5004DBD1D /* XCRemoteSwiftPackageReference "SimpleToast" */;
+			productName = SimpleToast;
+		};
+		2792846D2B0D2C6600094683 /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2754829D2AAD8D980050E65D /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+		2792846F2B0D2C6600094683 /* SDWebImageSVGCoder */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 27AFDC932AADB22A0040C4F1 /* XCRemoteSwiftPackageReference "SDWebImageSVGCoder" */;
+			productName = SDWebImageSVGCoder;
+		};
+		279284712B0D2C6600094683 /* LoremSwiftum */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 27FDBEA42AADE9B600A3448C /* XCRemoteSwiftPackageReference "LoremSwiftum" */;
+			productName = LoremSwiftum;
+		};
+		279284732B0D2C8500094683 /* HtmlText */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = HtmlText;
+		};
+		279284752B0D2C8500094683 /* Flow */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 273AFBC42A1A3DFD00DD08F5 /* XCRemoteSwiftPackageReference "SwiftUI-Flow" */;
+			productName = Flow;
+		};
+		279284772B0D2C8500094683 /* AcknowKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 273AFBDC2A1A8CF100DD08F5 /* XCRemoteSwiftPackageReference "AcknowKit" */;
+			productName = AcknowKit;
+		};
+		279284792B0D2C8500094683 /* DiscourseKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 27DFFCF32A2B3574005661BD /* XCRemoteSwiftPackageReference "DiscourseKit" */;
+			productName = DiscourseKit;
+		};
+		2792847B2B0D2C8500094683 /* SimpleToast */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 270CD6792AA228D5004DBD1D /* XCRemoteSwiftPackageReference "SimpleToast" */;
+			productName = SimpleToast;
+		};
+		2792847D2B0D2C8500094683 /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2754829D2AAD8D980050E65D /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+		2792847F2B0D2C8500094683 /* SDWebImageSVGCoder */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 27AFDC932AADB22A0040C4F1 /* XCRemoteSwiftPackageReference "SDWebImageSVGCoder" */;
+			productName = SDWebImageSVGCoder;
+		};
+		279284812B0D2C8500094683 /* LoremSwiftum */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 27FDBEA42AADE9B600A3448C /* XCRemoteSwiftPackageReference "LoremSwiftum" */;
+			productName = LoremSwiftum;
 		};
 		27AFDC942AADB2380040C4F1 /* SDWebImageSVGCoder */ = {
 			isa = XCSwiftPackageProductDependency;
