@@ -11,9 +11,11 @@ struct GeneralSection: View {
     @AppStorage(DefaultViewByTypeSetting.self)
     private var defaultViewByType
     
+    #if os(iOS) || os(watchOS) || os(macOS) || os(visionOS)
     @AppStorage(SplitViewStyleTypeSetting.self)
     private var navigationSplitViewStyle
-    
+    #endif
+
     @AppStorage(PickerStyleTypeSetting.self)
     private var pickerStyle
 
@@ -42,11 +44,13 @@ struct GeneralSection: View {
                 Text("Community Setting")
             }
             Section {
+                #if os(iOS) || os(watchOS) || os(macOS) || os(visionOS)
                 Picker("Navigation Split View Style", selection: $navigationSplitViewStyle) {
                     ForEach(SplitViewStyleType.allCases, id: \.rawValue) { type in
                         Text(type.rawValue).tag(type)
                     }
                 }
+                #endif
                 Picker("Picker Style", selection: $pickerStyle) {
                     ForEach(PickerStyleType.allCases, id: \.rawValue) { type in
                         Text(type.rawValue).tag(type)

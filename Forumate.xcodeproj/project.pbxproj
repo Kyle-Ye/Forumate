@@ -46,7 +46,6 @@
 		2722B95C2B0C7CEB00D24617 /* StarterIntroCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2733B4CF2A2F918A00BCF528 /* StarterIntroCardView.swift */; };
 		2722B95D2B0C7CEB00D24617 /* StarterIntroCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2733B4D32A2F929300BCF528 /* StarterIntroCard.swift */; };
 		2722B95E2B0C7CEB00D24617 /* StarterIntro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270097D02A19D7E300CA01B5 /* StarterIntro.swift */; };
-		2722B95F2B0C7CED00D24617 /* TopicsTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E53FE2A18E83000DCD159 /* TopicsTab.swift */; };
 		2722B9602B0C7CED00D24617 /* TopicsTabRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E53F92A18E83000DCD159 /* TopicsTabRoot.swift */; };
 		2722B9612B0C7CEE00D24617 /* TopicsTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E53FE2A18E83000DCD159 /* TopicsTab.swift */; };
 		2722B9622B0C7CEE00D24617 /* TopicsTabRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E53F92A18E83000DCD159 /* TopicsTabRoot.swift */; };
@@ -143,6 +142,8 @@
 		2724077E2AA63340003BF1DD /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2724077D2AA63340003BF1DD /* ThemeManager.swift */; };
 		2726053F2A1A005C0018B908 /* ForumateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2726053E2A1A005C0018B908 /* ForumateTests.swift */; };
 		272605802A1A12450018B908 /* Category+Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2726057F2A1A12450018B908 /* Category+Preview.swift */; };
+		2728E02E2B0D395B0074CDAC /* SettingsTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2728E02D2B0D395B0074CDAC /* SettingsTab.swift */; };
+		2728E0332B0D3A5B0074CDAC /* TopicsTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2728E0322B0D3A5B0074CDAC /* TopicsTab.swift */; };
 		2733B4D02A2F918A00BCF528 /* StarterIntroCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2733B4CF2A2F918A00BCF528 /* StarterIntroCardView.swift */; };
 		2733B4D12A2F918A00BCF528 /* StarterIntroCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2733B4CF2A2F918A00BCF528 /* StarterIntroCardView.swift */; };
 		2733B4D42A2F929300BCF528 /* StarterIntroCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2733B4D32A2F929300BCF528 /* StarterIntroCard.swift */; };
@@ -294,7 +295,6 @@
 		279283F82B0D2A9800094683 /* InboxTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E53EF2A18E83000DCD159 /* InboxTab.swift */; };
 		279283F92B0D2A9800094683 /* InboxTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E53EF2A18E83000DCD159 /* InboxTab.swift */; };
 		279283FA2B0D2A9900094683 /* InboxTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E53EF2A18E83000DCD159 /* InboxTab.swift */; };
-		279283FB2B0D2A9C00094683 /* SettingsTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E53ED2A18E83000DCD159 /* SettingsTab.swift */; };
 		279283FC2B0D2A9C00094683 /* SettingsTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E53ED2A18E83000DCD159 /* SettingsTab.swift */; };
 		279283FD2B0D2A9C00094683 /* SettingsTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E53ED2A18E83000DCD159 /* SettingsTab.swift */; };
 		279283FE2B0D2A9F00094683 /* SettingsTabRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270097CB2A19D66E00CA01B5 /* SettingsTabRoot.swift */; };
@@ -355,7 +355,6 @@
 		279284352B0D2AC300094683 /* BoolSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278F758A2AAD7207003D61ED /* BoolSetting.swift */; };
 		279284362B0D2AC300094683 /* AcknowSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273AFBDF2A1A8D1800DD08F5 /* AcknowSection.swift */; };
 		279284372B0D2AC300094683 /* ShowRecommendCommunity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278F75872AAD715B003D61ED /* ShowRecommendCommunity.swift */; };
-		279284382B0D2AC300094683 /* SplitViewStyleType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C00A352A2CC51B00CA9ACD /* SplitViewStyleType.swift */; };
 		279284392B0D2AC300094683 /* ForumatePlusSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274C4C9D2A3F81D10018BFA4 /* ForumatePlusSection.swift */; };
 		2792843A2B0D2AC300094683 /* ContributorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F434092AAC131E0042F681 /* ContributorView.swift */; };
 		2792843B2B0D2AD100094683 /* TopicDetailWindowModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DFFCEF2A2B2FD3005661BD /* TopicDetailWindowModel.swift */; };
@@ -512,6 +511,8 @@
 		2728E0292B0D343F0074CDAC /* Common.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Common.xcconfig; sourceTree = "<group>"; };
 		2728E02A2B0D343F0074CDAC /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 		2728E02B2B0D343F0074CDAC /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
+		2728E02D2B0D395B0074CDAC /* SettingsTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTab.swift; sourceTree = "<group>"; };
+		2728E0322B0D3A5B0074CDAC /* TopicsTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicsTab.swift; sourceTree = "<group>"; };
 		2733B4CF2A2F918A00BCF528 /* StarterIntroCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarterIntroCardView.swift; sourceTree = "<group>"; };
 		2733B4D32A2F929300BCF528 /* StarterIntroCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarterIntroCard.swift; sourceTree = "<group>"; };
 		2735D6052A2F850B000D5966 /* SupportSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportSection.swift; sourceTree = "<group>"; };
@@ -701,6 +702,7 @@
 			children = (
 				2722B92A2B0C7A5E00D24617 /* ForumateApp.swift */,
 				2722B92C2B0C7A5E00D24617 /* ContentView.swift */,
+				2728E02C2B0D39480074CDAC /* View */,
 				2722B92E2B0C7A5F00D24617 /* Assets.xcassets */,
 				279284832B0D2DD100094683 /* InfoPlist.xcstrings */,
 			);
@@ -768,6 +770,39 @@
 				2728E02B2B0D343F0074CDAC /* Release.xcconfig */,
 			);
 			path = Configs;
+			sourceTree = "<group>";
+		};
+		2728E02C2B0D39480074CDAC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2728E02F2B0D396A0074CDAC /* Tab */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2728E02F2B0D396A0074CDAC /* Tab */ = {
+			isa = PBXGroup;
+			children = (
+				2728E0312B0D3A4F0074CDAC /* Topics */,
+				2728E0302B0D39700074CDAC /* Settings */,
+			);
+			path = Tab;
+			sourceTree = "<group>";
+		};
+		2728E0302B0D39700074CDAC /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				2728E02D2B0D395B0074CDAC /* SettingsTab.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		2728E0312B0D3A4F0074CDAC /* Topics */ = {
+			isa = PBXGroup;
+			children = (
+				2728E0322B0D3A5B0074CDAC /* TopicsTab.swift */,
+			);
+			path = Topics;
 			sourceTree = "<group>";
 		};
 		2733B4CE2A2F916F00BCF528 /* StarterIntro */ = {
@@ -1527,8 +1562,8 @@
 				279284362B0D2AC300094683 /* AcknowSection.swift in Sources */,
 				2722B98C2B0C7D1000D24617 /* PostActionCodeView.swift in Sources */,
 				2722B9632B0C7CF900D24617 /* CommunityManager.swift in Sources */,
-				279284382B0D2AC300094683 /* SplitViewStyleType.swift in Sources */,
 				2722B9602B0C7CED00D24617 /* TopicsTabRoot.swift in Sources */,
+				2728E0332B0D3A5B0074CDAC /* TopicsTab.swift in Sources */,
 				2722B9802B0C7D0800D24617 /* CategoryLabel.swift in Sources */,
 				2722B98B2B0C7D1000D24617 /* PostView.swift in Sources */,
 				2722B9A12B0C7E6E00D24617 /* PreviewChecker.swift in Sources */,
@@ -1556,7 +1591,7 @@
 				2722B9A22B0C7E6E00D24617 /* JSONRawRepresentable.swift in Sources */,
 				2722B9762B0C7D0000D24617 /* ViewByMenuButton.swift in Sources */,
 				2722B9B52B0C7E7C00D24617 /* Category+Preview.swift in Sources */,
-				279283FB2B0D2A9C00094683 /* SettingsTab.swift in Sources */,
+				2728E02E2B0D395B0074CDAC /* SettingsTab.swift in Sources */,
 				279284302B0D2AC300094683 /* SupportSection.swift in Sources */,
 				2722B9B42B0C7E7C00D24617 /* PreviewContainer.swift in Sources */,
 				2722B9652B0C7CF900D24617 /* CommunityLabel.swift in Sources */,
@@ -1579,7 +1614,6 @@
 				279284012B0D2AA600094683 /* SettingsTabDestination.swift in Sources */,
 				279284372B0D2AC300094683 /* ShowRecommendCommunity.swift in Sources */,
 				2792842F2B0D2AC300094683 /* IconSelectorSection.swift in Sources */,
-				2722B95F2B0C7CED00D24617 /* TopicsTab.swift in Sources */,
 				2722B9712B0C7CFC00D24617 /* CommunityDetailState.swift in Sources */,
 				2792842D2B0D2AC300094683 /* ForumateSubscriptionView.swift in Sources */,
 				279284022B0D2AA600094683 /* SettingsTabState.swift in Sources */,

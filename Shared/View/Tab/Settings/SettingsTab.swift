@@ -20,10 +20,8 @@ struct SettingsTab: View {
                     Group {
                         switch destination.id {
                         case .forumatePlus: ForumatePlusSection()
-                        #if os(iOS) || os(tvOS) || os(macOS)
-                        case .iconSelector: IconSelectorSection()
-                        #endif
                         #if os(iOS) || os(macOS)
+                        case .iconSelector: IconSelectorSection()
                         case .theme: ThemeSection()
                         #endif
                         case .general: GeneralSection()
