@@ -1,0 +1,17 @@
+//
+//  Common.xcconfig
+//  Forumate
+//
+//  Created by Kyle on 2023/11/22.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+FORUMATE_APP_NAME = Forumate
+FORUMATE_APP_VERSION = 0.7.0
+
+PRODUCT_NAME = $(FORUMATE_APP_NAME)
+MARKETING_VERSION = $(FORUMATE_APP_VERSION)
+DEVELOPMENT_ASSET_PATHS = "Shared/Preview Content"
+CODE_SIGN_ENTITLEMENTS = Shared/Other/Forumate.entitlements
