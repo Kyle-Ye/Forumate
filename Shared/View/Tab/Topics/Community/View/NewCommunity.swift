@@ -38,6 +38,7 @@ struct NewCommunity: View {
                     Text("Forumate only supports communities built using the Discourse platform and running HTTPS. Please consult the support page for help regarding supported communities.")
                 }
             }
+            .formStyle(.grouped)
             .submitLabel(.send)
             .onSubmit { tryAddCommunity() }
             .toolbar {
