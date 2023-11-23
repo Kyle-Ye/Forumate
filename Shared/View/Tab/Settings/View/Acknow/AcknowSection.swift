@@ -33,10 +33,11 @@ struct AcknowSection: View {
     )
     
     var body: some View {
-        List {
+        Form {
             AcknowLibrarySection(library: forumateLibrary)
             AcknowLibrarySection(library: discourseKitLibrary)
         }
+        .formStyle(.grouped)
     }
 }
 

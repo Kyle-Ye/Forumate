@@ -11,8 +11,12 @@ import SwiftUI
 struct ThemeSection: View {
     @Environment(ThemeManager.self) private var themeManager
     @Environment(PlusManager.self) private var plusManager
-    @State private var presentSubscription = false
     @Environment(\.colorScheme) private var colorScheme
+    #if os(macOS)
+    @Environment(SettingViewState.self) var settingViewState
+    #else
+    @State private var presentSubscription = false
+    #endif
 
     private var followSystemBinding: Binding<Bool> {
         Binding {
@@ -33,7 +37,7 @@ struct ThemeSection: View {
 
     var body: some View {
         @Bindable var themeManager = themeManager
-        List {
+        Form {
             Section {
                 HStack {
                     Spacer()
@@ -62,11 +66,17 @@ struct ThemeSection: View {
                         themeManager.enableCustomColor = false
                     }
                     .onTapGesture {
+                        #if os(macOS)
+                        settingViewState.selection = .forumatePlus
+                        #else
                         presentSubscription.toggle()
+                        #endif
                     }
+                    #if !os(macOS)
                     .sheet(isPresented: $presentSubscription) {
                         ForumatePlusSectionSheet()
                     }
+                    #endif
                 }
                 ColorPicker("Light", selection: $themeManager.lightColor, supportsOpacity: true)
                     .foregroundStyle(themeManager.enableCustomColor ? .primary : .secondary)
@@ -82,6 +92,8 @@ struct ThemeSection: View {
                 Text("If you spot some theme color is not refreshed, you may consider relauching the app.")
             }
         }
+        .formStyle(.grouped)
+        .controlSize(.large)
     }
 
     private struct AppearanceItem: View {
@@ -107,6 +119,15 @@ struct ThemeSection: View {
 
         var body: some View {
             VStack {
+                #if os(macOS)
+                Image(systemName: "macbook")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .symbolRenderingMode(.palette)
+                    .paletteSelectionEffect(.automatic)
+                    .foregroundStyle(.primary, isDark ? themeManager.darkColor : themeManager.lightColor)
+                    .padding()
+                #else
                 Rectangle()
                     .foregroundStyle(.thickMaterial)
                     .aspectRatio(ratio, contentMode: .fit)
@@ -128,6 +149,7 @@ struct ThemeSection: View {
                             .foregroundStyle(.selection)
                     }
                     .environment(\.colorScheme, isDark ? .dark : .light)
+                #endif
                 Label {
                     Text(isDark ? "Dark" : "Light")
                 } icon: {

@@ -52,6 +52,11 @@ struct ForumateApp: App {
         MenuBarExtra("Forumate Helper", systemImage: "f.square.fill", isInserted: $showMenuBarExtra) {
             ForumateHelpMenuBar()
         }
+        Settings {
+            SettingView()
+                .environment(plusManager)
+                .environment(themeManager)
+        }
     }
 }
 

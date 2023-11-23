@@ -72,7 +72,7 @@ struct CommunityList: View {
         #if os(watchOS) || os(tvOS)
         .searchable(text: $searchText)
         #else
-        .searchable(text: $searchText, isPresented: $isSearching)
+        .searchable(text: $searchText, isPresented: $isSearching, placement: .sidebar)
         .onChange(of: searchText) { _, newValue in
             isSearching = !newValue.isEmpty
         }

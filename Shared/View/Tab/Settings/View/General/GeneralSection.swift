@@ -33,7 +33,7 @@ struct GeneralSection: View {
     #endif
 
     var body: some View {
-        List {
+        Form {
             Section {
                 Picker("Default View By Type", selection: $defaultViewByType) {
                     ForEach(CommunityDetailState.ViewByType.allCases, id: \.rawValue) { type in
@@ -59,10 +59,14 @@ struct GeneralSection: View {
             } header: {
                 Text("System UI Style")
             } footer: {
+                #if os(macOS)
+                EmptyView()
+                #else
                 VStack(alignment: .leading) {
                     Text("Navigation Split View Style is used in Tabs")
                     Text("Picker Style is used in Settings tab")
                 }
+                #endif
             }
             Section {
                 #if os(iOS) || os(visionOS)
@@ -83,11 +87,10 @@ struct GeneralSection: View {
             } header: {
                 Text("Other")
             }
+            .controlSize(.large)
         }
+        .formStyle(.grouped)
         .pickerStyleType(PickerStyleTypeSetting.value)
-        #if os(iOS) || os(visionOS)
-            .listStyle(.insetGrouped)
-        #endif
     }
 }
 
