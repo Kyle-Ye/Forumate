@@ -87,7 +87,9 @@ struct GeneralSection: View {
             } header: {
                 Text("Other")
             }
+            #if !os(tvOS)
             .controlSize(.large)
+            #endif
         }
         .formStyle(.grouped)
         .pickerStyleType(PickerStyleTypeSetting.value)
