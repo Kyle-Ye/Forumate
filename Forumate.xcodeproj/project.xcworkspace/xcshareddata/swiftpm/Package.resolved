@@ -5,8 +5,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/Kyle-Ye/AcknowKit.git",
       "state" : {
-        "revision" : "f4b73e729fc51d53c2046ad89e3ac78560ea46f8",
-        "version" : "0.0.4"
+        "revision" : "3f4b012df7b8e5836f5b6e0714229ccca06aa78e",
+        "version" : "0.0.6"
       }
     },
     {
@@ -23,8 +23,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/QMUI/LookinServer/",
       "state" : {
-        "revision" : "943be9791316830f8cc550f5d7995d26a05aae1d",
-        "version" : "1.2.3"
+        "revision" : "6030404aea08f6a4db8f0a95e79d36810ef4254c",
+        "version" : "1.2.4"
       }
     },
     {
@@ -41,8 +41,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/SDWebImage/SDWebImage.git",
       "state" : {
-        "revision" : "fd1950de05a5ad77cb252fd88576c1e1809ee50d",
-        "version" : "5.18.4"
+        "revision" : "1b9a2e902cbde5fdf362faa0f4fd76ea74d74305",
+        "version" : "5.18.5"
       }
     },
     {

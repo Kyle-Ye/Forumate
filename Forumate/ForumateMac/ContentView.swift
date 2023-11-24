@@ -7,7 +7,6 @@
 
 import DiscourseKit
 import SwiftUI
-import SafariServices
 
 struct ContentView: View {
     @EnvironmentObject private var appState: AppState
@@ -15,35 +14,20 @@ struct ContentView: View {
     @State private var showStarterIntro = false
 
     var body: some View {
-        TabView {
-            TopicsTab()
-                .tabItem {
-                    Label("Topics", systemImage: "doc.text.image")
+        TopicsTab()
+            .onAppear {
+                if appState.shouldShowStarterIntro {
+                    showStarterIntro = true
                 }
-            #if DEBUG
-            InboxTab()
-                .tabItem {
-                    Label("Inbox", systemImage: "tray")
+                if appState.isFirstLaunch {
+                    try? appState.didFirstLaunch()
                 }
-            #endif
-            SettingsTab()
-                .tabItem {
-                    Label("Settings", systemImage: "gearshape")
-                }
-        }
-        .onAppear {
-            if appState.shouldShowStarterIntro {
-                showStarterIntro = true
             }
-            if appState.isFirstLaunch {
-                try? appState.didFirstLaunch()
+            .sheet(isPresented: $showStarterIntro) {
+                appState.updateStarterIntro()
+            } content: {
+                StarterIntro()
             }
-        }
-        .sheet(isPresented: $showStarterIntro) {
-            appState.updateStarterIntro()
-        } content: {
-            StarterIntro()
-        }
     }
 }
 

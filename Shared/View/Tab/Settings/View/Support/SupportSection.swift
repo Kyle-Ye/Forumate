@@ -9,7 +9,7 @@ import SwiftUI
 
 struct SupportSection: View {
     var body: some View {
-        List {
+        Form {
             Section {
                 Link(destination: URL(string: "https://github.com/Kyle-Ye/Forumate/issues/new?template=BUG_REPORT.yml")!) {
                     Label("Bug Report", image: "github.fill")
@@ -52,6 +52,7 @@ struct SupportSection: View {
             }
         }
         .symbolRenderingMode(.multicolor)
+        .formStyle(.grouped)
     }
 }
 

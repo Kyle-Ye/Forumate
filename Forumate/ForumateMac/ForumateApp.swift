@@ -11,7 +11,8 @@ import SwiftUI
 
 @main
 struct ForumateApp: App {
-    @NSApplicationDelegateAdaptor(AppDelegate.self) var delegate
+    @NSApplicationDelegateAdaptor(AppDelegate.self) private var delegate
+    @Environment(\.openWindow) private var openWindow
 
     private let container: ModelContainer = {
         do {
@@ -46,12 +47,36 @@ struct ForumateApp: App {
                 .modifier(AppViewModifier())
                 .environmentObject(appState)
                 .environment(plusManager)
-                .modelContainer(container)
                 .environment(themeManager)
+                .modelContainer(container)
         }
         MenuBarExtra("Forumate Helper", systemImage: "f.square.fill", isInserted: $showMenuBarExtra) {
             ForumateHelpMenuBar()
+                .modifier(AppViewModifier())
+                .environment(plusManager)
+                .environment(themeManager)
         }
+        Settings {
+            SettingView()
+                .modifier(AppViewModifier())
+                .environment(plusManager)
+                .environment(themeManager)
+        }
+        WindowGroup("Acknowledgements", id: "acknowledgements") {
+            AcknowledgementsWindowView()
+                .modifier(AppViewModifier())
+                .environment(themeManager)
+        }
+        .commands {
+            CommandGroup(after: .appSettings) {
+                Button {
+                    openWindow(id: "acknowledgements")
+                } label: {
+                    Text("Acknowledgements") + Text(verbatim: "...")
+                }
+            }
+        }
+        .defaultSize(width: 400, height: 300)
     }
 }
 

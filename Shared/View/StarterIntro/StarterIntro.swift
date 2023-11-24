@@ -56,19 +56,16 @@ struct StarterIntro: View {
     }
 }
 
-struct StarterIntro_Previews: PreviewProvider, View {
-    @State private var present = true
-    
-    var body: some View {
-        Button("Show Starter Intro") {
-            present.toggle()
-        }
-        .sheet(isPresented: $present) {
-            StarterIntro()
-        }
+#Preview("Sheet") {
+    @State var present = true
+    return Button("Show Starter Intro") {
+        present.toggle()
     }
-    
-    static var previews: some View {
-        StarterIntro_Previews()
+    .sheet(isPresented: $present) {
+        StarterIntro()
     }
+}
+
+#Preview("Intro") {
+    StarterIntro()
 }

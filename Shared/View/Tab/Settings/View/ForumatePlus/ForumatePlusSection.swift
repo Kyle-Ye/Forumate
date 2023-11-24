@@ -13,7 +13,7 @@ struct ForumatePlusSection: View {
     @State private var presentSubscription = false
 
     var body: some View {
-        List {
+        Form {
             Section {
                 if plusManager.plusEntitlement {
                     Text(verbatim: "✅")
@@ -66,6 +66,7 @@ struct ForumatePlusSection: View {
                 }
             }
         }
+        .formStyle(.grouped)
         .navigationTitle("Forumate+")
     }
 }
@@ -77,15 +78,6 @@ struct ForumatePlusSectionSheet: View {
     var body: some View {
         NavigationStack {
             ForumatePlusSection()
-            #if canImport(AppKit)
-                .toolbar {
-                    Button {
-                        dismiss()
-                    } label: {
-                        Label("Close", systemImage: "xmark.circle.fill")
-                    }
-                }
-            #endif
         }
         .onInAppPurchaseCompletion { _, result in
             if case let .success(.success(transaction)) = result {
@@ -93,6 +85,17 @@ struct ForumatePlusSectionSheet: View {
                 dismiss()
             }
         }
+        #if canImport(AppKit)
+        .toolbar {
+            ToolbarItem(placement: .cancellationAction) {
+                Button {
+                    dismiss()
+                } label: {
+                    Label("Close", systemImage: "xmark.circle.fill")
+                }
+            }
+        }
+        #endif
     }
 }
 
@@ -102,4 +105,10 @@ struct ForumatePlusSectionSheet: View {
         ForumatePlusSection()
     }
     .environment(plusManager)
+}
+
+#Preview("Sheet") {
+    @State var plusManager = PlusManager()
+    return ForumatePlusSectionSheet()
+        .environment(plusManager)
 }
