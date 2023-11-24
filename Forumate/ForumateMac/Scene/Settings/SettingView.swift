@@ -33,9 +33,6 @@ struct SettingView: View {
             PrivacySettingTab()
                 .tabItem { Label("Privacy Policy", systemImage: "lock") }
                 .tag(SettingsTabDestination.ID.privacy)
-            AcknowSettingTab()
-                .tabItem { Label("Acknowledgement", systemImage: "heart") }
-                .tag(SettingsTabDestination.ID.acknowledgement)
         }
         .environment(state)
         .frame(minWidth: 600, minHeight: 400)

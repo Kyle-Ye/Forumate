@@ -406,6 +406,7 @@
 		2792848A2B0D2E0300094683 /* InfoPlist.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 279284892B0D2E0300094683 /* InfoPlist.xcstrings */; };
 		27AFDC952AADB2380040C4F1 /* SDWebImageSVGCoder in Frameworks */ = {isa = PBXBuildFile; productRef = 27AFDC942AADB2380040C4F1 /* SDWebImageSVGCoder */; };
 		27AFDC972AADB23E0040C4F1 /* SDWebImageSVGCoder in Frameworks */ = {isa = PBXBuildFile; productRef = 27AFDC962AADB23E0040C4F1 /* SDWebImageSVGCoder */; };
+		27BC5EFF2B110D6900A64707 /* AcknowledgementsWindowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BC5EFE2B110D6900A64707 /* AcknowledgementsWindowView.swift */; };
 		27C00A2C2A2CC10700CA9ACD /* HtmlText in Frameworks */ = {isa = PBXBuildFile; productRef = 27C00A2B2A2CC10700CA9ACD /* HtmlText */; };
 		27C00A302A2CC10F00CA9ACD /* HtmlText in Frameworks */ = {isa = PBXBuildFile; productRef = 27C00A2F2A2CC10F00CA9ACD /* HtmlText */; };
 		27C00A322A2CC4F400CA9ACD /* OpenLinkType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C00A312A2CC4F400CA9ACD /* OpenLinkType.swift */; };
@@ -437,7 +438,6 @@
 		27DFFCF92A2B35B3005661BD /* DiscourseKit in Frameworks */ = {isa = PBXBuildFile; productRef = 27DFFCF82A2B35B3005661BD /* DiscourseKit */; };
 		27E661262B0FC18000C8366C /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E661252B0FC18000C8366C /* SettingView.swift */; };
 		27E6612B2B0FC2E900C8366C /* GeneralSettingTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E6612A2B0FC2E900C8366C /* GeneralSettingTab.swift */; };
-		27E6612F2B0FCBFC00C8366C /* AcknowSettingTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E6612E2B0FCBFC00C8366C /* AcknowSettingTab.swift */; };
 		27E661312B0FCD3F00C8366C /* SupportSettingTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E661302B0FCD3F00C8366C /* SupportSettingTab.swift */; };
 		27E661332B0FCD4900C8366C /* PrivacySettingTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E661322B0FCD4900C8366C /* PrivacySettingTab.swift */; };
 		27E661352B0FCD5600C8366C /* ThemeSettingTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E661342B0FCD5600C8366C /* ThemeSettingTab.swift */; };
@@ -584,6 +584,7 @@
 		279284852B0D2DEB00094683 /* InfoPlist.xcstrings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json.xcstrings; path = InfoPlist.xcstrings; sourceTree = "<group>"; };
 		279284872B0D2DFA00094683 /* InfoPlist.xcstrings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json.xcstrings; path = InfoPlist.xcstrings; sourceTree = "<group>"; };
 		279284892B0D2E0300094683 /* InfoPlist.xcstrings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json.xcstrings; path = InfoPlist.xcstrings; sourceTree = "<group>"; };
+		27BC5EFE2B110D6900A64707 /* AcknowledgementsWindowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcknowledgementsWindowView.swift; sourceTree = "<group>"; };
 		27C00A2A2A2CC0FE00CA9ACD /* HtmlText */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = HtmlText; sourceTree = "<group>"; };
 		27C00A312A2CC4F400CA9ACD /* OpenLinkType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenLinkType.swift; sourceTree = "<group>"; };
 		27C00A352A2CC51B00CA9ACD /* SplitViewStyleType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitViewStyleType.swift; sourceTree = "<group>"; };
@@ -601,7 +602,6 @@
 		27DFFCEF2A2B2FD3005661BD /* TopicDetailWindowModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicDetailWindowModel.swift; sourceTree = "<group>"; };
 		27E661252B0FC18000C8366C /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 		27E6612A2B0FC2E900C8366C /* GeneralSettingTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralSettingTab.swift; sourceTree = "<group>"; };
-		27E6612E2B0FCBFC00C8366C /* AcknowSettingTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcknowSettingTab.swift; sourceTree = "<group>"; };
 		27E661302B0FCD3F00C8366C /* SupportSettingTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportSettingTab.swift; sourceTree = "<group>"; };
 		27E661322B0FCD4900C8366C /* PrivacySettingTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacySettingTab.swift; sourceTree = "<group>"; };
 		27E661342B0FCD5600C8366C /* ThemeSettingTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeSettingTab.swift; sourceTree = "<group>"; };
@@ -1183,6 +1183,14 @@
 			path = ForumateVision;
 			sourceTree = "<group>";
 		};
+		27BC5EFD2B110D4A00A64707 /* Acknowledgements */ = {
+			isa = PBXGroup;
+			children = (
+				27BC5EFE2B110D6900A64707 /* AcknowledgementsWindowView.swift */,
+			);
+			path = Acknowledgements;
+			sourceTree = "<group>";
+		};
 		27C8789E2A3F6E7E00AECD06 /* TestFlight */ = {
 			isa = PBXGroup;
 			children = (
@@ -1231,6 +1239,7 @@
 		27E661282B0FC2B500C8366C /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				27BC5EFD2B110D4A00A64707 /* Acknowledgements */,
 				27E661292B0FC2BC00C8366C /* Settings */,
 			);
 			path = Scene;
@@ -1245,7 +1254,6 @@
 				27E661342B0FCD5600C8366C /* ThemeSettingTab.swift */,
 				27E661302B0FCD3F00C8366C /* SupportSettingTab.swift */,
 				27E661322B0FCD4900C8366C /* PrivacySettingTab.swift */,
-				27E6612E2B0FCBFC00C8366C /* AcknowSettingTab.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -1686,7 +1694,6 @@
 				2722B9AD2B0C7E6F00D24617 /* Toast.swift in Sources */,
 				2722B97D2B0C7D0400D24617 /* CategoryListView.swift in Sources */,
 				279284252B0D2AC200094683 /* AcknowSection.swift in Sources */,
-				27E6612F2B0FCBFC00C8366C /* AcknowSettingTab.swift in Sources */,
 				2722B98E2B0C7D1100D24617 /* PostActionCodeView.swift in Sources */,
 				2722B96A2B0C7CFA00D24617 /* CommunityManager.swift in Sources */,
 				279284272B0D2AC200094683 /* SplitViewStyleType.swift in Sources */,
@@ -1727,6 +1734,7 @@
 				2722B96C2B0C7CFA00D24617 /* CommunityLabel.swift in Sources */,
 				2722B95E2B0C7CEB00D24617 /* StarterIntro.swift in Sources */,
 				2722B9952B0C7E4B00D24617 /* TopicDetailWindowModel.swift in Sources */,
+				27BC5EFF2B110D6900A64707 /* AcknowledgementsWindowView.swift in Sources */,
 				2722B96B2B0C7CFA00D24617 /* Community.swift in Sources */,
 				2722B98A2B0C7D0D00D24617 /* TopicLabel.swift in Sources */,
 				279283FE2B0D2A9F00094683 /* SettingsTabRoot.swift in Sources */,
