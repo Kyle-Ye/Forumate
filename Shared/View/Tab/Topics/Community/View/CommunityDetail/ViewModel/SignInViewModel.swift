@@ -27,6 +27,8 @@ class SignInViewModel: NSObject, ObservableObject {
         #if os(iOS) || os(macOS) || os(tvOS) || os(visionOS)
         authSession.presentationContextProvider = self
         #endif
+        // TODO: Add a setting item to decide this
+        // authSession.prefersEphemeralWebBrowserSession
         authSession.start()
     }
 
@@ -39,6 +41,7 @@ class SignInViewModel: NSObject, ObservableObject {
 
 extension SignInViewModel: ASWebAuthenticationPresentationContextProviding {
     func presentationAnchor(for _: ASWebAuthenticationSession) -> ASPresentationAnchor {
+        // TODO: FIXME
         ASPresentationAnchor()
     }
 }

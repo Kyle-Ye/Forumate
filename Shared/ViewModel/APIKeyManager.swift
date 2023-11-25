@@ -14,37 +14,48 @@ enum APIKeyManager {
 
     private static let tag = "\(Bundle.main.bundleIdentifier!).keys.user_api_key".data(using: .utf8)!
 
-    private static func createPrivateKey() throws -> SecKey {
-        let attributes: [String: Any] = [
-            kSecClass as String: kSecClassKey,
-            kSecAttrType as String: kSecAttrKeyTypeRSA,
+    private static var createAttributes: [String: Any] {
+        [
+            kSecAttrType as String: kSecAttrKeyTypeRSA as String,
             kSecAttrKeySizeInBits as String: 2048,
             kSecPrivateKeyAttrs as String: [
                 kSecAttrIsPermanent as String: true,
                 kSecAttrApplicationTag as String: tag,
             ],
         ]
+    }
+
+    private static var queryAttributes: [String: Any] {
+        [
+            kSecAttrApplicationTag as String: tag,
+            kSecClass as String: kSecClassKey as String,
+            kSecAttrKeyClass as String: kSecAttrKeyClassPrivate as String,
+            kSecReturnRef as String: true,
+        ]
+    }
+
+    private static func createPrivateKey() throws -> SecKey {
         var error: Unmanaged<CFError>?
-        guard let privateKey = SecKeyCreateRandomKey(attributes as CFDictionary, &error) else {
+        guard let privateKey = SecKeyCreateRandomKey(createAttributes as CFDictionary, &error) else {
             throw error!.takeRetainedValue() as Error
         }
         return privateKey
     }
 
     private static func getPrivateKey() throws -> SecKey {
-        let attributes: [String: Any] = [
-            kSecClass as String: kSecClassKey,
-            kSecAttrApplicationTag as String: tag,
-            kSecAttrKeyType as String: kSecAttrKeyTypeRSA,
-            kSecReturnRef as String: true,
-        ]
         var item: CFTypeRef?
-        let res = SecItemCopyMatching(attributes as CFDictionary, &item)
+        let res = SecItemCopyMatching(queryAttributes as CFDictionary, &item)
         if res == errSecSuccess {
             return item as! SecKey
         } else {
             return try createPrivateKey()
         }
+    }
+
+    @discardableResult
+    private static func deletePrivateKey() -> Bool {
+        let res = SecItemDelete(queryAttributes as CFDictionary)
+        return res == errSecSuccess
     }
 
     private static func getPublicKey() throws -> SecKey? {
@@ -54,18 +65,19 @@ enum APIKeyManager {
     }
 
     static func getPublicKeyString() throws -> String? {
-        guard let publicKey = try APIKeyManager.getPublicKey() else {
+        guard let publicKey = try getPublicKey() else {
             return nil
         }
         var error: Unmanaged<CFError>?
-        guard let data = SecKeyCopyExternalRepresentation(publicKey, &error) else {
+        guard let publicKeyData = SecKeyCopyExternalRepresentation(publicKey, &error) else {
             throw error!.takeRetainedValue() as Error
         }
-        let publicKeyString = (data as Data).base64EncodedString(options: .lineLength64Characters)
-        return #"""
-        -----BEGIN PUBLIC KEY-----
+        let publicKeyString = (publicKeyData as Data).base64EncodedString(options: [.lineLength64Characters])
+        let publicKeyResult = #"""
+        -----BEGIN RSA PUBLIC KEY-----
         \#(publicKeyString)
-        -----END PUBLIC KEY-----
+        -----END RSA PUBLIC KEY-----
         """#
+        return publicKeyResult
     }
 }
