@@ -23,10 +23,11 @@ A native client to access Discourse server for Apple Platforms.
 
 | Forumate | Xcode  | iOS & iPadOS | watchOS | tvOS  | macOS |
 | :------: | :----: | :----------: | :-----: | :---: | :---: |
-|   0.7    | 15.0.1 |    17.0+     |  10.0+  | 17.0+ | 14.0+ |
+|  0.8.0   | 15.0.1 |    17.0+     |  10.0+  | 17.0+ | 14.0+ |
 
 |  Forumate  |   Xcode   |  iOS & iPadOS  |   watchOS   | macOS(Catalyst) | visionOS |
 | :--------: | :-------: | :------------: | :---------: | :-------------: | :------: |
+|   0.7.0    |  15.0.1   |     17.0+      |    10.0+    |      14.0+      |    ❌    |
 | 0.6.0-beta | 15 Beta 8 |   17 Beta 8    |  10 Beta 8  |    14 Beta 7    | 1 Beta 3 |
 | 0.5.2-beta | 15 Beta 7 | 17 Beta 6 ～ 7 | 10 Beta 6~7 |    14 Beta 6    |    ❌    |
 | 0.5.1-beta | 15 Beta 6 |   17 Beta 5    |  10 Beta 5  |    14 Beta 5    |    ❌    |
@@ -50,7 +51,7 @@ Waiting to be released
 
 ### Other Channel
 
-For macOS users, you can download the Notarized App on [GitHub Releases]( https://github.com/Kyle-Ye/Forumate/releases)
+For macOS users, you can download the Notarized App on [GitHub Releases](https://github.com/Kyle-Ye/Forumate/releases)
 
 > Mac App Store℠ and TestFlight® are trademarks of Apple Inc., registered in the U.S. and other countries.
 
