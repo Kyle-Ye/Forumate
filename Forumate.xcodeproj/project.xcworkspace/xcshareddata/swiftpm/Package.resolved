@@ -10,6 +10,15 @@
       }
     },
     {
+      "identity" : "discoursekit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Kyle-Ye/DiscourseKit",
+      "state" : {
+        "revision" : "e53086314aba65054c64de3e6a4597466ba2613f",
+        "version" : "0.2.3"
+      }
+    },
+    {
       "identity" : "lookinserver",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/QMUI/LookinServer/",
@@ -25,15 +34,6 @@
       "state" : {
         "branch" : "master",
         "revision" : "8942e732e50458cde5dccf9996afa16f29372853"
-      }
-    },
-    {
-      "identity" : "mocker",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/WeTransfer/Mocker.git",
-      "state" : {
-        "revision" : "5d86f27a8f80d4ba388bc1a379a3c2289a1f3d18",
-        "version" : "2.6.0"
       }
     },
     {

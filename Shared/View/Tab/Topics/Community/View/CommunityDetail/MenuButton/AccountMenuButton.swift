@@ -39,6 +39,7 @@ struct AccountMenuButton: View {
                 Task {
                     guard try await state.checkUserAPISupport() else {
                         // Forum not support user API auth
+                        // TODO: show a toast here
                         return
                     }
                     guard let publicKey = try? APIKeyManager.getPublicKeyString() else {

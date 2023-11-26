@@ -7,8 +7,11 @@
 
 import Foundation
 import Security
+import os.log
 
 enum APIKeyManager {
+    private static let logger = Logger(subsystem: Logger.subsystem, category: "APIKeyManager")
+
     static let callbackSchema = "discourse"
     static let authRedirectURL = URL(string: "\(callbackSchema)://auth_redirect")!
 
@@ -80,4 +83,23 @@ enum APIKeyManager {
         """#
         return publicKeyResult
     }
+
+    static func decrypt(_ payload: Data) throws -> Data {
+        let privateKey = try getPrivateKey()
+        guard SecKeyIsAlgorithmSupported(privateKey, .decrypt, .rsaEncryptionPKCS1) else {
+            logger.error("The generate private key does not support RSA Encryption PKCS1")
+            throw APIKeyManagerError.algorithmNotSupported
+        }
+
+        var error: Unmanaged<CFError>?
+        guard let decryptedData = SecKeyCreateDecryptedData(privateKey, .rsaEncryptionPKCS1, payload as CFData, &error) else {
+            throw error!.takeRetainedValue() as Error
+        }
+        return decryptedData as Data
+    }
+}
+
+enum APIKeyManagerError: Error {
+    case invalidCallbackURL
+    case algorithmNotSupported
 }
