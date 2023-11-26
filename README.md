@@ -48,9 +48,9 @@ Waiting to be released
 
 [Join beta on TestFlight](https://testflight.apple.com/join/4kpEtmsk)
 
-### GitHub Release
+### Other Channel
 
-For macOS users, you can download the Notarized macOS Catalyst binary on https://github.com/Kyle-Ye/Forumate/releases/
+For macOS users, you can download the Notarized App on [GitHub Releases]( https://github.com/Kyle-Ye/Forumate/releases)
 
 > Mac App Store℠ and TestFlight® are trademarks of Apple Inc., registered in the U.S. and other countries.
 
