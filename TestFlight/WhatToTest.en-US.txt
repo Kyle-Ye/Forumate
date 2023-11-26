@@ -1,5 +1,5 @@
-What's new in v0.7.0
+What's new in v0.8.0
 
-- Updated layout for topic detail view
-- New toolbar item for topic detail view
-- Recommend Community System update
+- macOS native build support
+- tvOS build support
+- Forum Account support
