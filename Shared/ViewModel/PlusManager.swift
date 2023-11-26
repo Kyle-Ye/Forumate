@@ -95,7 +95,7 @@ enum PlusError: LocalizedError {
     var errorDescription: String? {
         switch self {
         case .plusOnlyFeature: 
-            NSLocalizedString("You need an active Forumate+ membership to unlock this feature.", comment: "Plus only feature Description")
+            String(localized: "You need an active Forumate+ membership to unlock this feature.", comment: "Plus only feature Description")
         }
     }
 }

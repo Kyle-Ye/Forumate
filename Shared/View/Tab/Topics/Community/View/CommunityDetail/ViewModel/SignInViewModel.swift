@@ -15,6 +15,7 @@ class SignInViewModel: NSObject {
     private static let logger = Logger(subsystem: Logger.subsystem, category: "Account")
 
     // TODO: Support iOS, visionOS and macOS direct sign-in first. watchOS and tvOS support should via nearby iOS device.
+    // watchOS: WatchConnectivity
     func signIn(request url: URL) {
         // https://meta.discourse.org/t/user-api-keys-specification/48536
         // Use https://sitename.com/user-api-key/new here
