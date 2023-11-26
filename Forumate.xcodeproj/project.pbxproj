@@ -65,7 +65,6 @@
 		2722B9702B0C7CFA00D24617 /* NewCommunity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E53FD2A18E83000DCD159 /* NewCommunity.swift */; };
 		2722B9712B0C7CFC00D24617 /* CommunityDetailState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E53F72A18E83000DCD159 /* CommunityDetailState.swift */; };
 		2722B9722B0C7CFD00D24617 /* CommunityDetailState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E53F72A18E83000DCD159 /* CommunityDetailState.swift */; };
-		2722B9732B0C7D0000D24617 /* AccountMenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27403B4C2AB6A11900EF2008 /* AccountMenuButton.swift */; };
 		2722B9742B0C7D0000D24617 /* ViewByMenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273AFBCE2A1A73F600DD08F5 /* ViewByMenuButton.swift */; };
 		2722B9752B0C7D0000D24617 /* AccountMenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27403B4C2AB6A11900EF2008 /* AccountMenuButton.swift */; };
 		2722B9762B0C7D0000D24617 /* ViewByMenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273AFBCE2A1A73F600DD08F5 /* ViewByMenuButton.swift */; };
@@ -404,6 +403,16 @@
 		279284862B0D2DEB00094683 /* InfoPlist.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 279284852B0D2DEB00094683 /* InfoPlist.xcstrings */; };
 		279284882B0D2DFA00094683 /* InfoPlist.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 279284872B0D2DFA00094683 /* InfoPlist.xcstrings */; };
 		2792848A2B0D2E0300094683 /* InfoPlist.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 279284892B0D2E0300094683 /* InfoPlist.xcstrings */; };
+		27A95FFE2B11E58500638032 /* APIKeyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A95FFD2B11E58500638032 /* APIKeyManager.swift */; };
+		27A95FFF2B11E58500638032 /* APIKeyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A95FFD2B11E58500638032 /* APIKeyManager.swift */; };
+		27A960002B11E58500638032 /* APIKeyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A95FFD2B11E58500638032 /* APIKeyManager.swift */; };
+		27A960012B11E58500638032 /* APIKeyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A95FFD2B11E58500638032 /* APIKeyManager.swift */; };
+		27A960022B11E58500638032 /* APIKeyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A95FFD2B11E58500638032 /* APIKeyManager.swift */; };
+		27A960172B1200B000638032 /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A960162B1200B000638032 /* SignInViewModel.swift */; };
+		27A960182B1200B000638032 /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A960162B1200B000638032 /* SignInViewModel.swift */; };
+		27A960192B1200B000638032 /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A960162B1200B000638032 /* SignInViewModel.swift */; };
+		27A9601A2B1200B000638032 /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A960162B1200B000638032 /* SignInViewModel.swift */; };
+		27A9601B2B1200B000638032 /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A960162B1200B000638032 /* SignInViewModel.swift */; };
 		27AFDC952AADB2380040C4F1 /* SDWebImageSVGCoder in Frameworks */ = {isa = PBXBuildFile; productRef = 27AFDC942AADB2380040C4F1 /* SDWebImageSVGCoder */; };
 		27AFDC972AADB23E0040C4F1 /* SDWebImageSVGCoder in Frameworks */ = {isa = PBXBuildFile; productRef = 27AFDC962AADB23E0040C4F1 /* SDWebImageSVGCoder */; };
 		27BC5EFF2B110D6900A64707 /* AcknowledgementsWindowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BC5EFE2B110D6900A64707 /* AcknowledgementsWindowView.swift */; };
@@ -584,6 +593,8 @@
 		279284852B0D2DEB00094683 /* InfoPlist.xcstrings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json.xcstrings; path = InfoPlist.xcstrings; sourceTree = "<group>"; };
 		279284872B0D2DFA00094683 /* InfoPlist.xcstrings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json.xcstrings; path = InfoPlist.xcstrings; sourceTree = "<group>"; };
 		279284892B0D2E0300094683 /* InfoPlist.xcstrings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json.xcstrings; path = InfoPlist.xcstrings; sourceTree = "<group>"; };
+		27A95FFD2B11E58500638032 /* APIKeyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKeyManager.swift; sourceTree = "<group>"; };
+		27A960162B1200B000638032 /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
 		27BC5EFE2B110D6900A64707 /* AcknowledgementsWindowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcknowledgementsWindowView.swift; sourceTree = "<group>"; };
 		27C00A2A2A2CC0FE00CA9ACD /* HtmlText */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = HtmlText; sourceTree = "<group>"; };
 		27C00A312A2CC4F400CA9ACD /* OpenLinkType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenLinkType.swift; sourceTree = "<group>"; };
@@ -1038,6 +1049,7 @@
 				278E53E42A18E83000DCD159 /* AppState.swift */,
 				2724077D2AA63340003BF1DD /* ThemeManager.swift */,
 				27F4340B2AAC15840042F681 /* PlusManager.swift */,
+				27A95FFD2B11E58500638032 /* APIKeyManager.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -1129,6 +1141,7 @@
 			isa = PBXGroup;
 			children = (
 				278E53F72A18E83000DCD159 /* CommunityDetailState.swift */,
+				27A960162B1200B000638032 /* SignInViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -1605,6 +1618,7 @@
 				279283F82B0D2A9800094683 /* InboxTab.swift in Sources */,
 				2722B9582B0C7CE800D24617 /* PlaceholderView.swift in Sources */,
 				279284392B0D2AC300094683 /* ForumatePlusSection.swift in Sources */,
+				27A960002B11E58500638032 /* APIKeyManager.swift in Sources */,
 				2722B9A62B0C7E6E00D24617 /* EqualHeightHStackLayout.swift in Sources */,
 				2722B9B62B0C7E7C00D24617 /* Topic+Preview.swift in Sources */,
 				2722B9782B0C7D0300D24617 /* CommunityDetail.swift in Sources */,
@@ -1612,6 +1626,7 @@
 				2722B9A32B0C7E6E00D24617 /* Toast.swift in Sources */,
 				2722B9792B0C7D0300D24617 /* CategoryListView.swift in Sources */,
 				279284362B0D2AC300094683 /* AcknowSection.swift in Sources */,
+				27A960192B1200B000638032 /* SignInViewModel.swift in Sources */,
 				2722B98C2B0C7D1000D24617 /* PostActionCodeView.swift in Sources */,
 				2722B9632B0C7CF900D24617 /* CommunityManager.swift in Sources */,
 				2722B9602B0C7CED00D24617 /* TopicsTabRoot.swift in Sources */,
@@ -1706,7 +1721,6 @@
 				2722B9A72B0C7E6F00D24617 /* ColorToImageText.swift in Sources */,
 				279284212B0D2AC200094683 /* SettingIcon.swift in Sources */,
 				279284182B0D2AC200094683 /* ThemeSection.swift in Sources */,
-				2722B9732B0C7D0000D24617 /* AccountMenuButton.swift in Sources */,
 				27E661262B0FC18000C8366C /* SettingView.swift in Sources */,
 				279284222B0D2AC200094683 /* PickerStyleType.swift in Sources */,
 				2722B9992B0C7E5B00D24617 /* PlusManager.swift in Sources */,
@@ -1727,8 +1741,10 @@
 				2722B96F2B0C7CFA00D24617 /* RecommendCommunity.swift in Sources */,
 				2722B9AC2B0C7E6F00D24617 /* JSONRawRepresentable.swift in Sources */,
 				27E661332B0FCD4900C8366C /* PrivacySettingTab.swift in Sources */,
+				27A960012B11E58500638032 /* APIKeyManager.swift in Sources */,
 				2722B9742B0C7D0000D24617 /* ViewByMenuButton.swift in Sources */,
 				2722B9B92B0C7E7C00D24617 /* Category+Preview.swift in Sources */,
+				27A9601A2B1200B000638032 /* SignInViewModel.swift in Sources */,
 				2792841F2B0D2AC200094683 /* SupportSection.swift in Sources */,
 				2722B9B82B0C7E7C00D24617 /* PreviewContainer.swift in Sources */,
 				2722B96C2B0C7CFA00D24617 /* CommunityLabel.swift in Sources */,
@@ -1782,6 +1798,7 @@
 				273AFC142A1A967D00DD08F5 /* LatestTopicsView.swift in Sources */,
 				2733B4D52A2F929300BCF528 /* StarterIntroCard.swift in Sources */,
 				27D2190F2A75759C00501849 /* Account.swift in Sources */,
+				27A960182B1200B000638032 /* SignInViewModel.swift in Sources */,
 				2779C0612A3464F200CE4DF1 /* CommunityManager.swift in Sources */,
 				273AFC0D2A1A964200DD08F5 /* SettingsTabRoot.swift in Sources */,
 				273AFC242A1A97CC00DD08F5 /* InboxTab.swift in Sources */,
@@ -1841,6 +1858,7 @@
 				273AFC032A1A95FD00DD08F5 /* AppState.swift in Sources */,
 				2722B9502B0C7C1700D24617 /* ForumateApp.swift in Sources */,
 				273AFC202A1A967D00DD08F5 /* CategoryDetail.swift in Sources */,
+				27A95FFF2B11E58500638032 /* APIKeyManager.swift in Sources */,
 				27403B4E2AB6A11D00EF2008 /* AccountMenuButton.swift in Sources */,
 				273AFC1A2A1A967D00DD08F5 /* NewCommunity.swift in Sources */,
 				273AFC122A1A966900DD08F5 /* CommunityDetailState.swift in Sources */,
@@ -1864,6 +1882,7 @@
 				279284162B0D2AC000094683 /* SplitViewStyleType.swift in Sources */,
 				279283CB2B0D29C900094683 /* ContentView.swift in Sources */,
 				2792840B2B0D2AC000094683 /* ForumateSubscriptionView.swift in Sources */,
+				27A9601B2B1200B000638032 /* SignInViewModel.swift in Sources */,
 				2792843C2B0D2AD600094683 /* ThemeManager.swift in Sources */,
 				279284172B0D2AC000094683 /* ForumatePlusSection.swift in Sources */,
 				2792844B2B0D2AE600094683 /* Category+Preview.swift in Sources */,
@@ -1923,6 +1942,7 @@
 				2792843D2B0D2AD600094683 /* AppState.swift in Sources */,
 				279283DB2B0D2A6C00094683 /* StarterIntroCardView.swift in Sources */,
 				279284062B0D2AA800094683 /* SettingsTabState.swift in Sources */,
+				27A960022B11E58500638032 /* APIKeyManager.swift in Sources */,
 				279284432B0D2ADB00094683 /* EqualHeightHStackLayout.swift in Sources */,
 				279283E42B0D2A7E00094683 /* RecommendCommunity.swift in Sources */,
 				2792840A2B0D2AC000094683 /* OpenLinkType.swift in Sources */,
@@ -1946,6 +1966,7 @@
 				278F758B2AAD7207003D61ED /* BoolSetting.swift in Sources */,
 				27D2190E2A75759C00501849 /* Account.swift in Sources */,
 				2779C0602A3464F200CE4DF1 /* CommunityManager.swift in Sources */,
+				27A960172B1200B000638032 /* SignInViewModel.swift in Sources */,
 				27F4340F2AAC1A940042F681 /* AppViewModifier.swift in Sources */,
 				27DFFCDF2A2AF64A005661BD /* ColorToImageText.swift in Sources */,
 				278E540E2A18E83000DCD159 /* CommunityLabel.swift in Sources */,
@@ -2005,6 +2026,7 @@
 				277C15C42A18F033007940C7 /* HexToColor.swift in Sources */,
 				277C15C72A18F52A007940C7 /* CategoryText.swift in Sources */,
 				276F9F422A2A348100020B1B /* PreviewChecker.swift in Sources */,
+				27A95FFE2B11E58500638032 /* APIKeyManager.swift in Sources */,
 				273AFBD62A1A801500DD08F5 /* GeneralSection.swift in Sources */,
 				278E54082A18E83000DCD159 /* InboxTab.swift in Sources */,
 				278E54062A18E83000DCD159 /* PlaceholderView.swift in Sources */,
