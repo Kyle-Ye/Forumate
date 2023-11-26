@@ -872,6 +872,7 @@
 			children = (
 				2722B94E2B0C7C1300D24617 /* ForumateApp.swift */,
 				2722B9912B0C7D4200D24617 /* ContentView.swift */,
+				2754F6412B1359B300F4BF2E /* View */,
 				279283BD2B0D287800094683 /* Assets.xcassets */,
 				279284852B0D2DEB00094683 /* InfoPlist.xcstrings */,
 			);
@@ -919,6 +920,21 @@
 				278E53F52A18E83000DCD159 /* CommunityDetail */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		2754F6412B1359B300F4BF2E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2754F6422B1359BE00F4BF2E /* Tab */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2754F6422B1359BE00F4BF2E /* Tab */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tab;
 			sourceTree = "<group>";
 		};
 		276F9F452A2A604D00020B1B /* Post */ = {

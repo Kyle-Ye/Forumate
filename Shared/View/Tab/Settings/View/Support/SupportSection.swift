@@ -6,6 +6,35 @@
 //
 
 import SwiftUI
+#if os(watchOS)
+import AuthenticationServices
+
+/// A workaround to open link in watchOS platform
+struct WatchLink<Label>: View where Label: View {
+    init(destination: URL, @ViewBuilder label: () -> Label) {
+        self.destination = destination
+        self.label = label()
+    }
+
+    let destination: URL
+    let label: Label
+
+    var body: some View {
+        Button {
+            let session = ASWebAuthenticationSession(
+                url: destination,
+                callbackURLScheme: nil
+            ) { _, _ in
+            }
+            session.prefersEphemeralWebBrowserSession = true
+            session.start()
+        } label: {
+            label
+        }
+    }
+}
+typealias Link = WatchLink
+#endif
 
 struct SupportSection: View {
     var body: some View {
