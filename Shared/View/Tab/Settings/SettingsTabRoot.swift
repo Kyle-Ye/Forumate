@@ -74,7 +74,7 @@ struct SettingsTabRoot: View {
                 }
             } footer: {
                 Text(verbatim: """
-                \(AppInfo.name) v\(AppInfo.version)-beta Build \(AppInfo.buildNumber)
+                \(AppInfo.name) v\(AppInfo.version) Build \(AppInfo.buildNumber)
                 \(AppInfo.OSVersion)
                 """)
                 .multilineTextAlignment(.leading)

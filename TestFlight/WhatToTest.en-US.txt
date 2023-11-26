@@ -1,4 +1,4 @@
-What's new in v0.7.0-beta
+What's new in v0.7.0
 
 - Updated layout for topic detail view
 - New toolbar item for topic detail view

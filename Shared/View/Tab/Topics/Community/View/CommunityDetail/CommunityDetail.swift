@@ -35,9 +35,9 @@ struct CommunityDetail: View {
         }
         .listStyle(.plain)
         .toolbar {
-            #if !os(macOS)
-            AccountMenuButton()
-            #endif
+//            #if !os(macOS)
+//            AccountMenuButton()
+//            #endif
             ViewByMenuButton()
         }
         .navigationTitle(state.community.title)
