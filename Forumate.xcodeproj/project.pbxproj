@@ -208,6 +208,7 @@
 		275482A12AAD8DA00050E65D /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 275482A02AAD8DA00050E65D /* SDWebImageSwiftUI */; };
 		275482A32AAD918D0050E65D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275482A22AAD918D0050E65D /* AppDelegate.swift */; };
 		275482A42AAD91940050E65D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275482A22AAD918D0050E65D /* AppDelegate.swift */; };
+		275727592B16275500CAAE84 /* OpenURL+watchOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275727582B16275500CAAE84 /* OpenURL+watchOS.swift */; };
 		275E04102A2CE75900A91F5B /* ViewByMenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273AFBCE2A1A73F600DD08F5 /* ViewByMenuButton.swift */; };
 		276F9F422A2A348100020B1B /* PreviewChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276F9F412A2A348100020B1B /* PreviewChecker.swift */; };
 		276F9F432A2A348100020B1B /* PreviewChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276F9F412A2A348100020B1B /* PreviewChecker.swift */; };
@@ -549,6 +550,7 @@
 		274C4CA12A3F84F10018BFA4 /* Forumate.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = Forumate.storekit; sourceTree = "<group>"; };
 		275482982AAD77FB0050E65D /* RecommendCommunity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendCommunity.swift; sourceTree = "<group>"; };
 		275482A22AAD918D0050E65D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		275727582B16275500CAAE84 /* OpenURL+watchOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OpenURL+watchOS.swift"; sourceTree = "<group>"; };
 		276F9F412A2A348100020B1B /* PreviewChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewChecker.swift; sourceTree = "<group>"; };
 		276F9F462A2A606600020B1B /* PostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
 		277546D72A19DE3F000FDAA0 /* AppInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInfo.swift; sourceTree = "<group>"; };
@@ -872,6 +874,7 @@
 			children = (
 				2722B94E2B0C7C1300D24617 /* ForumateApp.swift */,
 				2722B9912B0C7D4200D24617 /* ContentView.swift */,
+				275727582B16275500CAAE84 /* OpenURL+watchOS.swift */,
 				2754F6412B1359B300F4BF2E /* View */,
 				279283BD2B0D287800094683 /* Assets.xcassets */,
 				279284852B0D2DEB00094683 /* InfoPlist.xcstrings */,
@@ -1864,6 +1867,7 @@
 				273AFC212A1A967D00DD08F5 /* CategoryText.swift in Sources */,
 				273AFC1C2A1A967D00DD08F5 /* CommunityList.swift in Sources */,
 				273AFC132A1A967300DD08F5 /* Community.swift in Sources */,
+				275727592B16275500CAAE84 /* OpenURL+watchOS.swift in Sources */,
 				276F9F482A2A606600020B1B /* PostView.swift in Sources */,
 				2722B9932B0C7DEF00D24617 /* ContentView.swift in Sources */,
 				2779C07B2A34978700CE4DF1 /* PreviewContainer.swift in Sources */,
