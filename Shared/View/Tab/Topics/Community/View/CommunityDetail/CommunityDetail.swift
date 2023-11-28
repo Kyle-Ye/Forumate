@@ -50,12 +50,10 @@ struct CommunityDetail: View {
     }
 }
 
-struct CommunityView_Previews: PreviewProvider {
-    static var previews: some View {
-        NavigationStack {
-            CommunityDetail(community: .swift)
-        }
-        .environmentObject(AppState())
-        .environmentObject(TopicsTabState())
+#Preview {
+    NavigationStack {
+        CommunityDetail(community: .swift)
     }
+    .environmentObject(AppState())
+    .environmentObject(TopicsTabState())
 }

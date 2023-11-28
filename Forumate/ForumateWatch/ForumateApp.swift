@@ -31,6 +31,7 @@ struct ForumateApp: App {
                 .environmentObject(appState)
                 .environment(plusManager)
                 .modelContainer(container)
+                .environment(\.openURL, .authenticationSessionAction)
         }
     }
 }

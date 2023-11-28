@@ -10,14 +10,16 @@ import Combine
 import DiscourseKit
 import os.log
 
-class SignInViewModel: NSObject, ObservableObject {
+@Observable
+class SignInViewModel: NSObject {
     private static let logger = Logger(subsystem: Logger.subsystem, category: "Account")
 
     // TODO: Support iOS, visionOS and macOS direct sign-in first. watchOS and tvOS support should via nearby iOS device.
+    // watchOS: WatchConnectivity
     func signIn(request url: URL) {
         // https://meta.discourse.org/t/user-api-keys-specification/48536
         // Use https://sitename.com/user-api-key/new here
-        #if os(iOS) || os(macOS) || os(visionOS)
+        #if os(iOS) || os(macOS) || os(visionOS) || os(watchOS)
         let authSession = ASWebAuthenticationSession(
             url: url,
             callbackURLScheme: APIKeyManager.callbackSchema
@@ -35,7 +37,7 @@ class SignInViewModel: NSObject, ObservableObject {
                 _ = try? processResponseURL(url: url)
             }
         }
-        authSession.presentationContextProvider = self
+//        authSession.presentationContextProvider = self
         // TODO: Add a setting item to decide this
         // authSession.prefersEphemeralWebBrowserSession
         authSession.start()

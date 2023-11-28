@@ -18,7 +18,7 @@ struct AccountMenuButton: View {
     @Environment(\.openURL) private var openURL
     @EnvironmentObject private var state: CommunityDetailState
 
-    @StateObject var viewModel = SignInViewModel()
+    @State private var viewModel = SignInViewModel()
 
     @AppStorage("forumate_client_id")
     private var clientID = UUID().uuidString
